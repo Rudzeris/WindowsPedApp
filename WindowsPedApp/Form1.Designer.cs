@@ -28,29 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.MainMenu = new System.Windows.Forms.Panel();
+            this.MainMenuLabel2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.MainMenuLabel1 = new System.Windows.Forms.Label();
+            this.MainMenuNameProg = new System.Windows.Forms.Label();
             this.MainMenuButtonExit = new System.Windows.Forms.Button();
-            this.MainMenuButton2 = new System.Windows.Forms.Button();
-            this.MainMenuButton1 = new System.Windows.Forms.Button();
+            this.MainMenuButtonLiteratures = new System.Windows.Forms.Button();
+            this.MainMenuButtonInstruction = new System.Windows.Forms.Button();
+            this.Instruction = new System.Windows.Forms.Panel();
+            this.ButtonHome = new System.Windows.Forms.Button();
             this.MainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // MainMenu
             // 
+            this.MainMenu.Controls.Add(this.MainMenuLabel2);
             this.MainMenu.Controls.Add(this.pictureBox2);
-            this.MainMenu.Controls.Add(this.MainMenuLabel1);
+            this.MainMenu.Controls.Add(this.MainMenuNameProg);
             this.MainMenu.Controls.Add(this.MainMenuButtonExit);
-            this.MainMenu.Controls.Add(this.MainMenuButton2);
-            this.MainMenu.Controls.Add(this.MainMenuButton1);
-            this.MainMenu.Enabled = false;
-            this.MainMenu.Location = new System.Drawing.Point(12, 12);
+            this.MainMenu.Controls.Add(this.MainMenuButtonLiteratures);
+            this.MainMenu.Controls.Add(this.MainMenuButtonInstruction);
+            this.MainMenu.Location = new System.Drawing.Point(540, 12);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(520, 637);
             this.MainMenu.TabIndex = 0;
-            this.MainMenu.Visible = false;
+            // 
+            // MainMenuLabel2
+            // 
+            this.MainMenuLabel2.Location = new System.Drawing.Point(226, 230);
+            this.MainMenuLabel2.Name = "MainMenuLabel2";
+            this.MainMenuLabel2.Size = new System.Drawing.Size(263, 111);
+            this.MainMenuLabel2.TabIndex = 5;
+            this.MainMenuLabel2.Text = resources.GetString("MainMenuLabel2.Text");
+            this.MainMenuLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox2
             // 
@@ -67,15 +79,15 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
-            // MainMenuLabel1
+            // MainMenuNameProg
             // 
-            this.MainMenuLabel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.MainMenuLabel1.Location = new System.Drawing.Point(0, 0);
-            this.MainMenuLabel1.Name = "MainMenuLabel1";
-            this.MainMenuLabel1.Size = new System.Drawing.Size(520, 198);
-            this.MainMenuLabel1.TabIndex = 4;
-            this.MainMenuLabel1.Text = "label1";
-            this.MainMenuLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MainMenuNameProg.Dock = System.Windows.Forms.DockStyle.Top;
+            this.MainMenuNameProg.Location = new System.Drawing.Point(0, 0);
+            this.MainMenuNameProg.Name = "MainMenuNameProg";
+            this.MainMenuNameProg.Size = new System.Drawing.Size(520, 47);
+            this.MainMenuNameProg.TabIndex = 4;
+            this.MainMenuNameProg.Text = "Название приложения";
+            this.MainMenuNameProg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MainMenuButtonExit
             // 
@@ -89,29 +101,48 @@
             this.MainMenuButtonExit.Text = "Выход";
             this.MainMenuButtonExit.UseVisualStyleBackColor = false;
             // 
-            // MainMenuButton2
+            // MainMenuButtonLiteratures
             // 
-            this.MainMenuButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.MainMenuButton2.AutoSize = true;
-            this.MainMenuButton2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.MainMenuButton2.Location = new System.Drawing.Point(113, 540);
-            this.MainMenuButton2.Name = "MainMenuButton2";
-            this.MainMenuButton2.Size = new System.Drawing.Size(294, 25);
-            this.MainMenuButton2.TabIndex = 2;
-            this.MainMenuButton2.Text = "Список литературы";
-            this.MainMenuButton2.UseVisualStyleBackColor = false;
+            this.MainMenuButtonLiteratures.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.MainMenuButtonLiteratures.AutoSize = true;
+            this.MainMenuButtonLiteratures.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.MainMenuButtonLiteratures.Location = new System.Drawing.Point(113, 540);
+            this.MainMenuButtonLiteratures.Name = "MainMenuButtonLiteratures";
+            this.MainMenuButtonLiteratures.Size = new System.Drawing.Size(294, 25);
+            this.MainMenuButtonLiteratures.TabIndex = 2;
+            this.MainMenuButtonLiteratures.Text = "Список литературы";
+            this.MainMenuButtonLiteratures.UseVisualStyleBackColor = false;
+            this.MainMenuButtonLiteratures.Click += new System.EventHandler(this.OpenLiteratures);
             // 
-            // MainMenuButton1
+            // MainMenuButtonInstruction
             // 
-            this.MainMenuButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.MainMenuButton1.AutoSize = true;
-            this.MainMenuButton1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.MainMenuButton1.Location = new System.Drawing.Point(113, 500);
-            this.MainMenuButton1.Name = "MainMenuButton1";
-            this.MainMenuButton1.Size = new System.Drawing.Size(294, 25);
-            this.MainMenuButton1.TabIndex = 0;
-            this.MainMenuButton1.Text = "Инструкция";
-            this.MainMenuButton1.UseVisualStyleBackColor = false;
+            this.MainMenuButtonInstruction.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.MainMenuButtonInstruction.AutoSize = true;
+            this.MainMenuButtonInstruction.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.MainMenuButtonInstruction.Location = new System.Drawing.Point(113, 500);
+            this.MainMenuButtonInstruction.Name = "MainMenuButtonInstruction";
+            this.MainMenuButtonInstruction.Size = new System.Drawing.Size(294, 25);
+            this.MainMenuButtonInstruction.TabIndex = 0;
+            this.MainMenuButtonInstruction.Text = "Инструкция";
+            this.MainMenuButtonInstruction.UseVisualStyleBackColor = false;
+            this.MainMenuButtonInstruction.Click += new System.EventHandler(this.OpenInstruction);
+            // 
+            // Instruction
+            // 
+            this.Instruction.Location = new System.Drawing.Point(12, 12);
+            this.Instruction.Name = "Instruction";
+            this.Instruction.Size = new System.Drawing.Size(520, 637);
+            this.Instruction.TabIndex = 1;
+            // 
+            // ButtonHome
+            // 
+            this.ButtonHome.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ButtonHome.Location = new System.Drawing.Point(12, 12);
+            this.ButtonHome.Name = "ButtonHome";
+            this.ButtonHome.Size = new System.Drawing.Size(30, 30);
+            this.ButtonHome.TabIndex = 2;
+            this.ButtonHome.UseVisualStyleBackColor = false;
+            this.ButtonHome.Click += new System.EventHandler(this.OpenMainMenu);
             // 
             // Form1
             // 
@@ -119,6 +150,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1548, 661);
+            this.Controls.Add(this.ButtonHome);
+            this.Controls.Add(this.Instruction);
             this.Controls.Add(this.MainMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
@@ -133,10 +166,13 @@
         #endregion
 
         private Panel MainMenu;
-        private Button MainMenuButton1;
+        private Button MainMenuButtonInstruction;
         private Button MainMenuButtonExit;
-        private Button MainMenuButton2;
-        private Label MainMenuLabel1;
+        private Button MainMenuButtonLiteratures;
         private PictureBox pictureBox2;
+        private Label MainMenuLabel2;
+        private Panel Instruction;
+        private Label MainMenuNameProg;
+        private Button ButtonHome;
     }
 }
