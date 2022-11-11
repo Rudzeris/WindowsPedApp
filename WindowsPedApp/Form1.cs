@@ -18,7 +18,8 @@ namespace WindowsPedApp
         private void CloseAll()
         {
             MainMenu.Visible = false;
-            Instruction.Visible = false;
+            Literatures.Visible = false;
+            Menu.Visible = false;
         }
         private void OpenMainMenu()
         {
@@ -31,20 +32,35 @@ namespace WindowsPedApp
         }
         private void OpenMainMenu(object sender, EventArgs e)
         {
-            OpenMainMenu();
+            if (Text == "Main Menu")
+                OpenMenu(sender, e);
+            else
+                OpenMainMenu();
         }
         private void OpenInstruction(object sender, EventArgs e)
         {
             CloseAll();
-            Instruction.Visible = true;
-            Instruction.Size = new Size(sizeDefault);
-            Instruction.Location = locationDefault;
             Text = "Instruction";
         }
         private void OpenLiteratures(object sender, EventArgs e)
         {
             CloseAll();
+            Literatures.Visible = true;
+            Literatures.Size = new Size(sizeDefault);
+            Literatures.Location = locationDefault;
             Text = "Literatures";
+        }
+        private void MainMenuButtonExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void OpenMenu(object sender, EventArgs e)
+        {
+            CloseAll();
+            Menu.Visible = true;
+            Menu.Size = new Size(sizeDefault);
+            Menu.Location = locationDefault;
+            Text = "Menu";
         }
     }
 }
