@@ -9,6 +9,13 @@ namespace WindowsPedApp
             InitializeComponent();
             Size = new Size(560, 700);
 
+            LiteraturesRichTextBox.Text = "\t1) Книга1\n" +
+                "\t2) Книга2\n" +
+                "\t3) Книга3\n" +
+                "\t4) Книга4\n" +
+                "\t5) Книга5\n" +
+                "\t6) Книга6\n";
+
             CloseAll();
             OpenMainMenu();
         }
@@ -61,6 +68,18 @@ namespace WindowsPedApp
             Menu.Size = new Size(sizeDefault);
             Menu.Location = locationDefault;
             Text = "Menu";
+        }
+        private void MainMenuCloseHelper(object sender, EventArgs e)
+        {
+            MainMenuPictureBoxHelper.Visible = false;
+            MainMenuHelperLabel.Visible = false;
+            MainMenuButtonCloseHelper.Visible = false;
+        }
+        private void MenuCloseHelper(object sender, EventArgs e)
+        {
+            MenuPictureBoxHelper.Visible = false;
+            MenuHelperLabel.Visible = false;
+            MenuButtonCloseHelper.Visible = false;
         }
     }
 }

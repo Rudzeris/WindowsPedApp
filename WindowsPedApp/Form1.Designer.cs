@@ -30,8 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.MainMenu = new System.Windows.Forms.Panel();
-            this.MainMenuLabel2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.MainMenuButtonCloseHelper = new System.Windows.Forms.Button();
+            this.MainMenuHelperLabel = new System.Windows.Forms.Label();
+            this.MainMenuPictureBoxHelper = new System.Windows.Forms.PictureBox();
             this.MainMenuNameProg = new System.Windows.Forms.Label();
             this.MainMenuButtonExit = new System.Windows.Forms.Button();
             this.MainMenuButtonLiteratures = new System.Windows.Forms.Button();
@@ -40,23 +41,25 @@
             this.LiteraturesRichTextBox = new System.Windows.Forms.RichTextBox();
             this.ButtonHome = new System.Windows.Forms.Button();
             this.Menu = new System.Windows.Forms.Panel();
+            this.MenuButtonCloseHelper = new System.Windows.Forms.Button();
             this.Other = new System.Windows.Forms.Button();
             this.CreateTechnicalMap = new System.Windows.Forms.Button();
             this.CreateLesson = new System.Windows.Forms.Button();
-            this.MaiMenu2Label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.MenuHelperLabel = new System.Windows.Forms.Label();
+            this.MenuPictureBoxHelper = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.MainMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MainMenuPictureBoxHelper)).BeginInit();
             this.Literatures.SuspendLayout();
             this.Menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MenuPictureBoxHelper)).BeginInit();
             this.SuspendLayout();
             // 
             // MainMenu
             // 
-            this.MainMenu.Controls.Add(this.MainMenuLabel2);
-            this.MainMenu.Controls.Add(this.pictureBox2);
+            this.MainMenu.Controls.Add(this.MainMenuButtonCloseHelper);
+            this.MainMenu.Controls.Add(this.MainMenuHelperLabel);
+            this.MainMenu.Controls.Add(this.MainMenuPictureBoxHelper);
             this.MainMenu.Controls.Add(this.MainMenuNameProg);
             this.MainMenu.Controls.Add(this.MainMenuButtonExit);
             this.MainMenu.Controls.Add(this.MainMenuButtonLiteratures);
@@ -66,33 +69,49 @@
             this.MainMenu.Size = new System.Drawing.Size(520, 637);
             this.MainMenu.TabIndex = 0;
             // 
-            // MainMenuLabel2
+            // MainMenuButtonCloseHelper
             // 
-            this.MainMenuLabel2.Location = new System.Drawing.Point(226, 230);
-            this.MainMenuLabel2.Name = "MainMenuLabel2";
-            this.MainMenuLabel2.Size = new System.Drawing.Size(263, 111);
-            this.MainMenuLabel2.TabIndex = 5;
-            this.MainMenuLabel2.Text = resources.GetString("MainMenuLabel2.Text");
-            this.MainMenuLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MainMenuButtonCloseHelper.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MainMenuButtonCloseHelper.FlatAppearance.BorderSize = 0;
+            this.MainMenuButtonCloseHelper.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MainMenuButtonCloseHelper.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.MainMenuButtonCloseHelper.Location = new System.Drawing.Point(226, 204);
+            this.MainMenuButtonCloseHelper.Name = "MainMenuButtonCloseHelper";
+            this.MainMenuButtonCloseHelper.Size = new System.Drawing.Size(23, 23);
+            this.MainMenuButtonCloseHelper.TabIndex = 6;
+            this.MainMenuButtonCloseHelper.Text = "X";
+            this.MainMenuButtonCloseHelper.UseVisualStyleBackColor = false;
+            this.MainMenuButtonCloseHelper.Click += new System.EventHandler(this.MainMenuCloseHelper);
             // 
-            // pictureBox2
+            // MainMenuHelperLabel
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.MainMenuHelperLabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MainMenuHelperLabel.Location = new System.Drawing.Point(226, 230);
+            this.MainMenuHelperLabel.Name = "MainMenuHelperLabel";
+            this.MainMenuHelperLabel.Size = new System.Drawing.Size(263, 111);
+            this.MainMenuHelperLabel.TabIndex = 5;
+            this.MainMenuHelperLabel.Text = resources.GetString("MainMenuHelperLabel.Text");
+            this.MainMenuHelperLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // MainMenuPictureBoxHelper
+            // 
+            this.MainMenuPictureBoxHelper.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pictureBox2.BackgroundImage = global::WindowsPedApp.Resources.Resource1.Helper;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.InitialImage = null;
-            this.pictureBox2.Location = new System.Drawing.Point(371, 344);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.MainMenuPictureBoxHelper.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MainMenuPictureBoxHelper.BackgroundImage = global::WindowsPedApp.Resources.Resource1.Helper;
+            this.MainMenuPictureBoxHelper.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MainMenuPictureBoxHelper.InitialImage = null;
+            this.MainMenuPictureBoxHelper.Location = new System.Drawing.Point(371, 344);
+            this.MainMenuPictureBoxHelper.Name = "MainMenuPictureBoxHelper";
+            this.MainMenuPictureBoxHelper.Size = new System.Drawing.Size(100, 100);
+            this.MainMenuPictureBoxHelper.TabIndex = 1;
+            this.MainMenuPictureBoxHelper.TabStop = false;
             // 
             // MainMenuNameProg
             // 
             this.MainMenuNameProg.Dock = System.Windows.Forms.DockStyle.Top;
+            this.MainMenuNameProg.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MainMenuNameProg.Location = new System.Drawing.Point(0, 0);
             this.MainMenuNameProg.Name = "MainMenuNameProg";
             this.MainMenuNameProg.Size = new System.Drawing.Size(520, 47);
@@ -142,18 +161,22 @@
             // Literatures
             // 
             this.Literatures.Controls.Add(this.LiteraturesRichTextBox);
-            this.Literatures.Location = new System.Drawing.Point(532, 12);
+            this.Literatures.Location = new System.Drawing.Point(12, 12);
             this.Literatures.Name = "Literatures";
             this.Literatures.Size = new System.Drawing.Size(520, 637);
             this.Literatures.TabIndex = 1;
             // 
             // LiteraturesRichTextBox
             // 
+            this.LiteraturesRichTextBox.AcceptsTab = true;
             this.LiteraturesRichTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.LiteraturesRichTextBox.Location = new System.Drawing.Point(10, 10);
+            this.LiteraturesRichTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LiteraturesRichTextBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LiteraturesRichTextBox.Location = new System.Drawing.Point(50, 36);
             this.LiteraturesRichTextBox.Name = "LiteraturesRichTextBox";
+            this.LiteraturesRichTextBox.ReadOnly = true;
             this.LiteraturesRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.LiteraturesRichTextBox.Size = new System.Drawing.Size(500, 617);
+            this.LiteraturesRichTextBox.Size = new System.Drawing.Size(420, 590);
             this.LiteraturesRichTextBox.TabIndex = 0;
             this.LiteraturesRichTextBox.Text = "";
             // 
@@ -169,16 +192,31 @@
             // 
             // Menu
             // 
+            this.Menu.Controls.Add(this.MenuButtonCloseHelper);
             this.Menu.Controls.Add(this.Other);
             this.Menu.Controls.Add(this.CreateTechnicalMap);
             this.Menu.Controls.Add(this.CreateLesson);
-            this.Menu.Controls.Add(this.MaiMenu2Label2);
-            this.Menu.Controls.Add(this.pictureBox1);
+            this.Menu.Controls.Add(this.MenuHelperLabel);
+            this.Menu.Controls.Add(this.MenuPictureBoxHelper);
             this.Menu.Controls.Add(this.label2);
-            this.Menu.Location = new System.Drawing.Point(12, 12);
+            this.Menu.Location = new System.Drawing.Point(540, 12);
             this.Menu.Name = "Menu";
             this.Menu.Size = new System.Drawing.Size(520, 637);
             this.Menu.TabIndex = 3;
+            // 
+            // MenuButtonCloseHelper
+            // 
+            this.MenuButtonCloseHelper.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MenuButtonCloseHelper.FlatAppearance.BorderSize = 0;
+            this.MenuButtonCloseHelper.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MenuButtonCloseHelper.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.MenuButtonCloseHelper.Location = new System.Drawing.Point(226, 204);
+            this.MenuButtonCloseHelper.Name = "MenuButtonCloseHelper";
+            this.MenuButtonCloseHelper.Size = new System.Drawing.Size(23, 23);
+            this.MenuButtonCloseHelper.TabIndex = 7;
+            this.MenuButtonCloseHelper.Text = "X";
+            this.MenuButtonCloseHelper.UseVisualStyleBackColor = false;
+            this.MenuButtonCloseHelper.Click += new System.EventHandler(this.MenuCloseHelper);
             // 
             // Other
             // 
@@ -216,33 +254,35 @@
             this.CreateLesson.Text = "Создать урок";
             this.CreateLesson.UseVisualStyleBackColor = false;
             // 
-            // MaiMenu2Label2
+            // MenuHelperLabel
             // 
-            this.MaiMenu2Label2.Location = new System.Drawing.Point(226, 230);
-            this.MaiMenu2Label2.Name = "MaiMenu2Label2";
-            this.MaiMenu2Label2.Size = new System.Drawing.Size(263, 111);
-            this.MaiMenu2Label2.TabIndex = 5;
-            this.MaiMenu2Label2.Text = "MainMenu2Labe2";
-            this.MaiMenu2Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MenuHelperLabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MenuHelperLabel.Location = new System.Drawing.Point(226, 230);
+            this.MenuHelperLabel.Name = "MenuHelperLabel";
+            this.MenuHelperLabel.Size = new System.Drawing.Size(263, 111);
+            this.MenuHelperLabel.TabIndex = 5;
+            this.MenuHelperLabel.Text = "MainMenu2Labe2";
+            this.MenuHelperLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // MenuPictureBoxHelper
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.MenuPictureBoxHelper.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pictureBox1.BackgroundImage = global::WindowsPedApp.Resources.Resource1.Helper;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(371, 344);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.MenuPictureBoxHelper.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MenuPictureBoxHelper.BackgroundImage = global::WindowsPedApp.Resources.Resource1.Helper;
+            this.MenuPictureBoxHelper.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MenuPictureBoxHelper.InitialImage = null;
+            this.MenuPictureBoxHelper.Location = new System.Drawing.Point(371, 344);
+            this.MenuPictureBoxHelper.Name = "MenuPictureBoxHelper";
+            this.MenuPictureBoxHelper.Size = new System.Drawing.Size(100, 100);
+            this.MenuPictureBoxHelper.TabIndex = 1;
+            this.MenuPictureBoxHelper.TabStop = false;
             // 
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(520, 47);
@@ -257,19 +297,19 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1370, 661);
             this.Controls.Add(this.ButtonHome);
-            this.Controls.Add(this.Menu);
             this.Controls.Add(this.MainMenu);
             this.Controls.Add(this.Literatures);
+            this.Controls.Add(this.Menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Form1";
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MainMenuPictureBoxHelper)).EndInit();
             this.Literatures.ResumeLayout(false);
             this.Menu.ResumeLayout(false);
             this.Menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MenuPictureBoxHelper)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -280,18 +320,20 @@
         private Button MainMenuButtonInstruction;
         private Button MainMenuButtonExit;
         private Button MainMenuButtonLiteratures;
-        private PictureBox pictureBox2;
-        private Label MainMenuLabel2;
+        private PictureBox MainMenuPictureBoxHelper;
+        private Label MainMenuHelperLabel;
         private Panel Literatures;
         private Label MainMenuNameProg;
         private Button ButtonHome;
-        private RichTextBox LiteraturesRichTextBox;
         private Panel Menu;
-        private Label MaiMenu2Label2;
-        private PictureBox pictureBox1;
+        private Label MenuHelperLabel;
+        private PictureBox MenuPictureBoxHelper;
         private Label label2;
         private Button CreateTechnicalMap;
         private Button CreateLesson;
         private Button Other;
+        private RichTextBox LiteraturesRichTextBox;
+        private Button MainMenuButtonCloseHelper;
+        private Button MenuButtonCloseHelper;
     }
 }
