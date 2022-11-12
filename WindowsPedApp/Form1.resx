@@ -57,7 +57,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="MainMenuHelperLabel.Text" xml:space="preserve">
-    <value>Здравствуйте! Это приложение разработано специально для преподавателей. Оно поможет грамотно и интересно составить нетрадиционные занятия для студентов. Это уникальное приложение поможет повысить мотивацию обучающихся, а также облегчить нелёгкий труд по подготовке к занятиям.</value>
-  </data>
 </root>
