@@ -44,10 +44,13 @@
             this.CreateTechnicalMap = new System.Windows.Forms.Button();
             this.CreateLesson = new System.Windows.Forms.Button();
             this.Instruction = new System.Windows.Forms.Panel();
+            this.InstructionRichText = new System.Windows.Forms.RichTextBox();
+            this.StrategyCard = new System.Windows.Forms.Panel();
             this.MainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainMenuPictureBoxHelper)).BeginInit();
             this.Literatures.SuspendLayout();
             this.Menu.SuspendLayout();
+            this.Instruction.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainMenu
@@ -120,7 +123,7 @@
             this.MainMenuButtonCloseHelper.FlatAppearance.BorderSize = 0;
             this.MainMenuButtonCloseHelper.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MainMenuButtonCloseHelper.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.MainMenuButtonCloseHelper.Location = new System.Drawing.Point(226, 204);
+            this.MainMenuButtonCloseHelper.Location = new System.Drawing.Point(746, 204);
             this.MainMenuButtonCloseHelper.Name = "MainMenuButtonCloseHelper";
             this.MainMenuButtonCloseHelper.Size = new System.Drawing.Size(23, 23);
             this.MainMenuButtonCloseHelper.TabIndex = 6;
@@ -132,7 +135,7 @@
             // MainMenuHelperLabel
             // 
             this.MainMenuHelperLabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MainMenuHelperLabel.Location = new System.Drawing.Point(226, 230);
+            this.MainMenuHelperLabel.Location = new System.Drawing.Point(746, 230);
             this.MainMenuHelperLabel.Name = "MainMenuHelperLabel";
             this.MainMenuHelperLabel.Size = new System.Drawing.Size(263, 111);
             this.MainMenuHelperLabel.TabIndex = 5;
@@ -145,7 +148,7 @@
             this.MainMenuPictureBoxHelper.BackgroundImage = global::WindowsPedApp.Resources.Resource1.Helper;
             this.MainMenuPictureBoxHelper.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.MainMenuPictureBoxHelper.InitialImage = null;
-            this.MainMenuPictureBoxHelper.Location = new System.Drawing.Point(389, 344);
+            this.MainMenuPictureBoxHelper.Location = new System.Drawing.Point(909, 344);
             this.MainMenuPictureBoxHelper.Name = "MainMenuPictureBoxHelper";
             this.MainMenuPictureBoxHelper.Size = new System.Drawing.Size(100, 100);
             this.MainMenuPictureBoxHelper.TabIndex = 1;
@@ -182,7 +185,7 @@
             this.ButtonHome.TabIndex = 2;
             this.ButtonHome.Tag = "Button";
             this.ButtonHome.UseVisualStyleBackColor = false;
-            this.ButtonHome.Click += new System.EventHandler(this.OpenMainMenu);
+            this.ButtonHome.Click += new System.EventHandler(this.OpenMainMenuOrMenu);
             // 
             // Menu
             // 
@@ -219,6 +222,7 @@
             this.CreateTechnicalMap.Tag = "Button";
             this.CreateTechnicalMap.Text = "Создать технологическую карту";
             this.CreateTechnicalMap.UseVisualStyleBackColor = false;
+            this.CreateTechnicalMap.Click += new System.EventHandler(this.OpenStrategyCard);
             // 
             // CreateLesson
             // 
@@ -235,10 +239,32 @@
             // 
             // Instruction
             // 
+            this.Instruction.Controls.Add(this.InstructionRichText);
             this.Instruction.Location = new System.Drawing.Point(540, 12);
             this.Instruction.Name = "Instruction";
             this.Instruction.Size = new System.Drawing.Size(520, 637);
             this.Instruction.TabIndex = 4;
+            // 
+            // InstructionRichText
+            // 
+            this.InstructionRichText.AcceptsTab = true;
+            this.InstructionRichText.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.InstructionRichText.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.InstructionRichText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.InstructionRichText.Location = new System.Drawing.Point(50, 36);
+            this.InstructionRichText.Name = "InstructionRichText";
+            this.InstructionRichText.ReadOnly = true;
+            this.InstructionRichText.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.InstructionRichText.Size = new System.Drawing.Size(420, 590);
+            this.InstructionRichText.TabIndex = 1;
+            this.InstructionRichText.Text = "";
+            // 
+            // StrategyCard
+            // 
+            this.StrategyCard.Location = new System.Drawing.Point(12, 12);
+            this.StrategyCard.Name = "StrategyCard";
+            this.StrategyCard.Size = new System.Drawing.Size(520, 637);
+            this.StrategyCard.TabIndex = 7;
             // 
             // Form1
             // 
@@ -250,10 +276,11 @@
             this.Controls.Add(this.MainMenuPictureBoxHelper);
             this.Controls.Add(this.MainMenuButtonCloseHelper);
             this.Controls.Add(this.ButtonHome);
+            this.Controls.Add(this.Menu);
             this.Controls.Add(this.MainMenu);
             this.Controls.Add(this.Literatures);
-            this.Controls.Add(this.Menu);
             this.Controls.Add(this.Instruction);
+            this.Controls.Add(this.StrategyCard);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Form1";
@@ -263,6 +290,7 @@
             this.Literatures.ResumeLayout(false);
             this.Menu.ResumeLayout(false);
             this.Menu.PerformLayout();
+            this.Instruction.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -285,5 +313,7 @@
         private RichTextBox LiteraturesRichTextBox;
         private Button MainMenuButtonCloseHelper;
         private Panel Instruction;
+        private RichTextBox InstructionRichText;
+        private Panel StrategyCard;
     }
 }
