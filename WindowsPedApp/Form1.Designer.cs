@@ -47,50 +47,52 @@
             this.Instruction = new System.Windows.Forms.Panel();
             this.InstructionRichText = new System.Windows.Forms.RichTextBox();
             this.TechnicalMap = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.richTextBox9 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox8 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox7 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox6 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.TechnicalMap2 = new System.Windows.Forms.RichTextBox();
+            this.TechnicalMap1 = new System.Windows.Forms.RichTextBox();
+            this.TAPL21 = new System.Windows.Forms.RichTextBox();
+            this.TAPL2 = new System.Windows.Forms.RichTextBox();
+            this.TAPL11 = new System.Windows.Forms.RichTextBox();
+            this.TAPL1 = new System.Windows.Forms.RichTextBox();
+            this.TypeAndPurposeLesson = new System.Windows.Forms.RichTextBox();
+            this.Resource21 = new System.Windows.Forms.RichTextBox();
+            this.Resource2 = new System.Windows.Forms.RichTextBox();
+            this.Resource11 = new System.Windows.Forms.RichTextBox();
+            this.Resource1 = new System.Windows.Forms.RichTextBox();
+            this.Resources = new System.Windows.Forms.RichTextBox();
+            this.FCR31 = new System.Windows.Forms.RichTextBox();
+            this.FCR3 = new System.Windows.Forms.RichTextBox();
+            this.FCR21 = new System.Windows.Forms.RichTextBox();
+            this.FCR2 = new System.Windows.Forms.RichTextBox();
+            this.FCR11 = new System.Windows.Forms.RichTextBox();
+            this.FCR1 = new System.Windows.Forms.RichTextBox();
+            this.FormConnectResurces = new System.Windows.Forms.RichTextBox();
+            this.Result31 = new System.Windows.Forms.RichTextBox();
+            this.Result3 = new System.Windows.Forms.RichTextBox();
+            this.Result21 = new System.Windows.Forms.RichTextBox();
+            this.Result2 = new System.Windows.Forms.RichTextBox();
+            this.Result11 = new System.Windows.Forms.RichTextBox();
+            this.Result1 = new System.Windows.Forms.RichTextBox();
+            this.Results = new System.Windows.Forms.RichTextBox();
+            this.Task31 = new System.Windows.Forms.RichTextBox();
+            this.Task3 = new System.Windows.Forms.RichTextBox();
+            this.Task2 = new System.Windows.Forms.RichTextBox();
+            this.Task21 = new System.Windows.Forms.RichTextBox();
+            this.Task11 = new System.Windows.Forms.RichTextBox();
+            this.Task1 = new System.Windows.Forms.RichTextBox();
+            this.Tasks = new System.Windows.Forms.RichTextBox();
+            this.TasksAndResults = new System.Windows.Forms.RichTextBox();
+            this.Date2 = new System.Windows.Forms.DateTimePicker();
+            this.Date1 = new System.Windows.Forms.RichTextBox();
+            this.LessonTopic2 = new System.Windows.Forms.RichTextBox();
+            this.LessonTopic1 = new System.Windows.Forms.RichTextBox();
+            this.Subject2 = new System.Windows.Forms.RichTextBox();
+            this.Subject1 = new System.Windows.Forms.RichTextBox();
+            this.Class2 = new System.Windows.Forms.RichTextBox();
+            this.Class1 = new System.Windows.Forms.RichTextBox();
+            this.Teacher2 = new System.Windows.Forms.RichTextBox();
+            this.Teacher1 = new System.Windows.Forms.RichTextBox();
             this.Other = new System.Windows.Forms.Panel();
             this.CreateLesson = new System.Windows.Forms.Panel();
-            this.richTextBox10 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox11 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox12 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox13 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox14 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox15 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox16 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox17 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox18 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox19 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox20 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox21 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox22 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox23 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox24 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox25 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox26 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox27 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox28 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox29 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox30 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox31 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox32 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox33 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox34 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox35 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox36 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox37 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox38 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox39 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox40 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox41 = new System.Windows.Forms.RichTextBox();
             this.MainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainMenuPictureBoxHelper)).BeginInit();
             this.Literatures.SuspendLayout();
@@ -309,131 +311,483 @@
             // 
             // TechnicalMap
             // 
-            this.TechnicalMap.Controls.Add(this.richTextBox41);
-            this.TechnicalMap.Controls.Add(this.richTextBox40);
-            this.TechnicalMap.Controls.Add(this.richTextBox39);
-            this.TechnicalMap.Controls.Add(this.richTextBox38);
-            this.TechnicalMap.Controls.Add(this.richTextBox37);
-            this.TechnicalMap.Controls.Add(this.richTextBox36);
-            this.TechnicalMap.Controls.Add(this.richTextBox35);
-            this.TechnicalMap.Controls.Add(this.richTextBox34);
-            this.TechnicalMap.Controls.Add(this.richTextBox33);
-            this.TechnicalMap.Controls.Add(this.richTextBox32);
-            this.TechnicalMap.Controls.Add(this.richTextBox31);
-            this.TechnicalMap.Controls.Add(this.richTextBox30);
-            this.TechnicalMap.Controls.Add(this.richTextBox29);
-            this.TechnicalMap.Controls.Add(this.richTextBox28);
-            this.TechnicalMap.Controls.Add(this.richTextBox27);
-            this.TechnicalMap.Controls.Add(this.richTextBox26);
-            this.TechnicalMap.Controls.Add(this.richTextBox25);
-            this.TechnicalMap.Controls.Add(this.richTextBox24);
-            this.TechnicalMap.Controls.Add(this.richTextBox23);
-            this.TechnicalMap.Controls.Add(this.richTextBox22);
-            this.TechnicalMap.Controls.Add(this.richTextBox21);
-            this.TechnicalMap.Controls.Add(this.richTextBox20);
-            this.TechnicalMap.Controls.Add(this.richTextBox19);
-            this.TechnicalMap.Controls.Add(this.richTextBox18);
-            this.TechnicalMap.Controls.Add(this.richTextBox17);
-            this.TechnicalMap.Controls.Add(this.richTextBox16);
-            this.TechnicalMap.Controls.Add(this.richTextBox14);
-            this.TechnicalMap.Controls.Add(this.richTextBox15);
-            this.TechnicalMap.Controls.Add(this.richTextBox13);
-            this.TechnicalMap.Controls.Add(this.richTextBox12);
-            this.TechnicalMap.Controls.Add(this.richTextBox11);
-            this.TechnicalMap.Controls.Add(this.richTextBox10);
-            this.TechnicalMap.Controls.Add(this.dateTimePicker1);
-            this.TechnicalMap.Controls.Add(this.richTextBox9);
-            this.TechnicalMap.Controls.Add(this.richTextBox8);
-            this.TechnicalMap.Controls.Add(this.richTextBox7);
-            this.TechnicalMap.Controls.Add(this.richTextBox6);
-            this.TechnicalMap.Controls.Add(this.richTextBox5);
-            this.TechnicalMap.Controls.Add(this.richTextBox4);
-            this.TechnicalMap.Controls.Add(this.richTextBox3);
-            this.TechnicalMap.Controls.Add(this.richTextBox2);
-            this.TechnicalMap.Controls.Add(this.richTextBox1);
+            this.TechnicalMap.Controls.Add(this.TechnicalMap2);
+            this.TechnicalMap.Controls.Add(this.TechnicalMap1);
+            this.TechnicalMap.Controls.Add(this.TAPL21);
+            this.TechnicalMap.Controls.Add(this.TAPL2);
+            this.TechnicalMap.Controls.Add(this.TAPL11);
+            this.TechnicalMap.Controls.Add(this.TAPL1);
+            this.TechnicalMap.Controls.Add(this.TypeAndPurposeLesson);
+            this.TechnicalMap.Controls.Add(this.Resource21);
+            this.TechnicalMap.Controls.Add(this.Resource2);
+            this.TechnicalMap.Controls.Add(this.Resource11);
+            this.TechnicalMap.Controls.Add(this.Resource1);
+            this.TechnicalMap.Controls.Add(this.Resources);
+            this.TechnicalMap.Controls.Add(this.FCR31);
+            this.TechnicalMap.Controls.Add(this.FCR3);
+            this.TechnicalMap.Controls.Add(this.FCR21);
+            this.TechnicalMap.Controls.Add(this.FCR2);
+            this.TechnicalMap.Controls.Add(this.FCR11);
+            this.TechnicalMap.Controls.Add(this.FCR1);
+            this.TechnicalMap.Controls.Add(this.FormConnectResurces);
+            this.TechnicalMap.Controls.Add(this.Result31);
+            this.TechnicalMap.Controls.Add(this.Result3);
+            this.TechnicalMap.Controls.Add(this.Result21);
+            this.TechnicalMap.Controls.Add(this.Result2);
+            this.TechnicalMap.Controls.Add(this.Result11);
+            this.TechnicalMap.Controls.Add(this.Result1);
+            this.TechnicalMap.Controls.Add(this.Results);
+            this.TechnicalMap.Controls.Add(this.Task31);
+            this.TechnicalMap.Controls.Add(this.Task3);
+            this.TechnicalMap.Controls.Add(this.Task2);
+            this.TechnicalMap.Controls.Add(this.Task21);
+            this.TechnicalMap.Controls.Add(this.Task11);
+            this.TechnicalMap.Controls.Add(this.Task1);
+            this.TechnicalMap.Controls.Add(this.Tasks);
+            this.TechnicalMap.Controls.Add(this.TasksAndResults);
+            this.TechnicalMap.Controls.Add(this.Date2);
+            this.TechnicalMap.Controls.Add(this.Date1);
+            this.TechnicalMap.Controls.Add(this.LessonTopic2);
+            this.TechnicalMap.Controls.Add(this.LessonTopic1);
+            this.TechnicalMap.Controls.Add(this.Subject2);
+            this.TechnicalMap.Controls.Add(this.Subject1);
+            this.TechnicalMap.Controls.Add(this.Class2);
+            this.TechnicalMap.Controls.Add(this.Class1);
+            this.TechnicalMap.Controls.Add(this.Teacher2);
+            this.TechnicalMap.Controls.Add(this.Teacher1);
             this.TechnicalMap.Location = new System.Drawing.Point(12, 12);
             this.TechnicalMap.Name = "TechnicalMap";
             this.TechnicalMap.Size = new System.Drawing.Size(520, 637);
             this.TechnicalMap.TabIndex = 7;
             // 
-            // dateTimePicker1
+            // TechnicalMap2
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(89, 112);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(128, 23);
-            this.dateTimePicker1.TabIndex = 9;
+            this.TechnicalMap2.Location = new System.Drawing.Point(223, 14);
+            this.TechnicalMap2.Name = "TechnicalMap2";
+            this.TechnicalMap2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.TechnicalMap2.Size = new System.Drawing.Size(36, 20);
+            this.TechnicalMap2.TabIndex = 43;
+            this.TechnicalMap2.Text = "";
             // 
-            // richTextBox9
+            // TechnicalMap1
             // 
-            this.richTextBox9.Location = new System.Drawing.Point(33, 112);
-            this.richTextBox9.Name = "richTextBox9";
-            this.richTextBox9.Size = new System.Drawing.Size(50, 20);
-            this.richTextBox9.TabIndex = 8;
-            this.richTextBox9.Text = "";
+            this.TechnicalMap1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.TechnicalMap1.Location = new System.Drawing.Point(35, 14);
+            this.TechnicalMap1.Name = "TechnicalMap1";
+            this.TechnicalMap1.ReadOnly = true;
+            this.TechnicalMap1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.TechnicalMap1.Size = new System.Drawing.Size(188, 20);
+            this.TechnicalMap1.TabIndex = 42;
+            this.TechnicalMap1.Text = "Технологическая карта урока №";
             // 
-            // richTextBox8
+            // TAPL21
             // 
-            this.richTextBox8.Location = new System.Drawing.Point(33, 66);
-            this.richTextBox8.Name = "richTextBox8";
-            this.richTextBox8.Size = new System.Drawing.Size(468, 40);
-            this.richTextBox8.TabIndex = 7;
-            this.richTextBox8.Text = "";
+            this.TAPL21.Location = new System.Drawing.Point(109, 605);
+            this.TAPL21.Name = "TAPL21";
+            this.TAPL21.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.TAPL21.Size = new System.Drawing.Size(392, 20);
+            this.TAPL21.TabIndex = 41;
+            this.TAPL21.Text = "";
             // 
-            // richTextBox7
+            // TAPL2
             // 
-            this.richTextBox7.Location = new System.Drawing.Point(33, 40);
-            this.richTextBox7.Name = "richTextBox7";
-            this.richTextBox7.Size = new System.Drawing.Size(50, 20);
-            this.richTextBox7.TabIndex = 6;
-            this.richTextBox7.Text = "";
+            this.TAPL2.Location = new System.Drawing.Point(33, 605);
+            this.TAPL2.Name = "TAPL2";
+            this.TAPL2.ReadOnly = true;
+            this.TAPL2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.TAPL2.Size = new System.Drawing.Size(70, 20);
+            this.TAPL2.TabIndex = 40;
+            this.TAPL2.Text = "Цель урока";
             // 
-            // richTextBox6
+            // TAPL11
             // 
-            this.richTextBox6.Location = new System.Drawing.Point(425, 14);
-            this.richTextBox6.Name = "richTextBox6";
-            this.richTextBox6.Size = new System.Drawing.Size(76, 20);
-            this.richTextBox6.TabIndex = 5;
-            this.richTextBox6.Text = "";
+            this.TAPL11.Location = new System.Drawing.Point(109, 579);
+            this.TAPL11.Name = "TAPL11";
+            this.TAPL11.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.TAPL11.Size = new System.Drawing.Size(392, 20);
+            this.TAPL11.TabIndex = 39;
+            this.TAPL11.Text = "";
             // 
-            // richTextBox5
+            // TAPL1
             // 
-            this.richTextBox5.Location = new System.Drawing.Point(369, 14);
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.Size = new System.Drawing.Size(50, 20);
-            this.richTextBox5.TabIndex = 4;
-            this.richTextBox5.Text = "";
+            this.TAPL1.Location = new System.Drawing.Point(33, 579);
+            this.TAPL1.Name = "TAPL1";
+            this.TAPL1.ReadOnly = true;
+            this.TAPL1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.TAPL1.Size = new System.Drawing.Size(70, 20);
+            this.TAPL1.TabIndex = 38;
+            this.TAPL1.Text = "Тип урока";
             // 
-            // richTextBox4
+            // TypeAndPurposeLesson
             // 
-            this.richTextBox4.Location = new System.Drawing.Point(313, 14);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(50, 20);
-            this.richTextBox4.TabIndex = 3;
-            this.richTextBox4.Text = "";
+            this.TypeAndPurposeLesson.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.TypeAndPurposeLesson.Location = new System.Drawing.Point(89, 553);
+            this.TypeAndPurposeLesson.Name = "TypeAndPurposeLesson";
+            this.TypeAndPurposeLesson.ReadOnly = true;
+            this.TypeAndPurposeLesson.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.TypeAndPurposeLesson.Size = new System.Drawing.Size(108, 20);
+            this.TypeAndPurposeLesson.TabIndex = 37;
+            this.TypeAndPurposeLesson.Text = "Тип и цель урока";
             // 
-            // richTextBox3
+            // Resource21
             // 
-            this.richTextBox3.Location = new System.Drawing.Point(257, 14);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(50, 20);
-            this.richTextBox3.TabIndex = 2;
-            this.richTextBox3.Text = "";
+            this.Resource21.Location = new System.Drawing.Point(145, 527);
+            this.Resource21.Name = "Resource21";
+            this.Resource21.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Resource21.Size = new System.Drawing.Size(356, 20);
+            this.Resource21.TabIndex = 36;
+            this.Resource21.Text = "";
             // 
-            // richTextBox2
+            // Resource2
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(89, 14);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(162, 20);
-            this.richTextBox2.TabIndex = 1;
-            this.richTextBox2.Text = "";
+            this.Resource2.Location = new System.Drawing.Point(33, 527);
+            this.Resource2.Name = "Resource2";
+            this.Resource2.ReadOnly = true;
+            this.Resource2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Resource2.Size = new System.Drawing.Size(106, 20);
+            this.Resource2.TabIndex = 35;
+            this.Resource2.Text = "Дополнительные";
             // 
-            // richTextBox1
+            // Resource11
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(33, 14);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(50, 20);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.Resource11.Location = new System.Drawing.Point(109, 501);
+            this.Resource11.Name = "Resource11";
+            this.Resource11.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Resource11.Size = new System.Drawing.Size(392, 20);
+            this.Resource11.TabIndex = 34;
+            this.Resource11.Text = "";
+            // 
+            // Resource1
+            // 
+            this.Resource1.Location = new System.Drawing.Point(33, 501);
+            this.Resource1.Name = "Resource1";
+            this.Resource1.ReadOnly = true;
+            this.Resource1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Resource1.Size = new System.Drawing.Size(70, 20);
+            this.Resource1.TabIndex = 33;
+            this.Resource1.Text = "Основные";
+            // 
+            // Resources
+            // 
+            this.Resources.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.Resources.Location = new System.Drawing.Point(89, 475);
+            this.Resources.Name = "Resources";
+            this.Resources.ReadOnly = true;
+            this.Resources.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Resources.Size = new System.Drawing.Size(62, 20);
+            this.Resources.TabIndex = 32;
+            this.Resources.Text = "Ресурсы";
+            // 
+            // FCR31
+            // 
+            this.FCR31.Location = new System.Drawing.Point(145, 449);
+            this.FCR31.Name = "FCR31";
+            this.FCR31.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.FCR31.Size = new System.Drawing.Size(356, 20);
+            this.FCR31.TabIndex = 31;
+            this.FCR31.Text = "";
+            // 
+            // FCR3
+            // 
+            this.FCR3.Location = new System.Drawing.Point(33, 449);
+            this.FCR3.Name = "FCR3";
+            this.FCR3.ReadOnly = true;
+            this.FCR3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.FCR3.Size = new System.Drawing.Size(106, 20);
+            this.FCR3.TabIndex = 30;
+            this.FCR3.Text = "Формы обучения";
+            // 
+            // FCR21
+            // 
+            this.FCR21.Location = new System.Drawing.Point(167, 423);
+            this.FCR21.Name = "FCR21";
+            this.FCR21.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.FCR21.Size = new System.Drawing.Size(334, 20);
+            this.FCR21.TabIndex = 29;
+            this.FCR21.Text = "";
+            // 
+            // FCR2
+            // 
+            this.FCR2.Location = new System.Drawing.Point(33, 423);
+            this.FCR2.Name = "FCR2";
+            this.FCR2.ReadOnly = true;
+            this.FCR2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.FCR2.Size = new System.Drawing.Size(128, 20);
+            this.FCR2.TabIndex = 28;
+            this.FCR2.Text = "Формы деятельности";
+            // 
+            // FCR11
+            // 
+            this.FCR11.Location = new System.Drawing.Point(179, 397);
+            this.FCR11.Name = "FCR11";
+            this.FCR11.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.FCR11.Size = new System.Drawing.Size(322, 20);
+            this.FCR11.TabIndex = 27;
+            this.FCR11.Text = "";
+            // 
+            // FCR1
+            // 
+            this.FCR1.Location = new System.Drawing.Point(33, 397);
+            this.FCR1.Name = "FCR1";
+            this.FCR1.ReadOnly = true;
+            this.FCR1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.FCR1.Size = new System.Drawing.Size(140, 20);
+            this.FCR1.TabIndex = 26;
+            this.FCR1.Text = "Межпредметные связи";
+            // 
+            // FormConnectResurces
+            // 
+            this.FormConnectResurces.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.FormConnectResurces.Location = new System.Drawing.Point(33, 371);
+            this.FormConnectResurces.Name = "FormConnectResurces";
+            this.FormConnectResurces.ReadOnly = true;
+            this.FormConnectResurces.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.FormConnectResurces.Size = new System.Drawing.Size(146, 20);
+            this.FormConnectResurces.TabIndex = 25;
+            this.FormConnectResurces.Text = "Формы, связи и ресурсы";
+            // 
+            // Result31
+            // 
+            this.Result31.Location = new System.Drawing.Point(203, 345);
+            this.Result31.Name = "Result31";
+            this.Result31.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Result31.Size = new System.Drawing.Size(298, 20);
+            this.Result31.TabIndex = 24;
+            this.Result31.Text = "";
+            // 
+            // Result3
+            // 
+            this.Result3.Location = new System.Drawing.Point(33, 345);
+            this.Result3.Name = "Result3";
+            this.Result3.ReadOnly = true;
+            this.Result3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Result3.Size = new System.Drawing.Size(164, 20);
+            this.Result3.TabIndex = 23;
+            this.Result3.Text = "Метапредметные";
+            // 
+            // Result21
+            // 
+            this.Result21.Location = new System.Drawing.Point(203, 319);
+            this.Result21.Name = "Result21";
+            this.Result21.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Result21.Size = new System.Drawing.Size(298, 20);
+            this.Result21.TabIndex = 22;
+            this.Result21.Text = "";
+            // 
+            // Result2
+            // 
+            this.Result2.Location = new System.Drawing.Point(33, 319);
+            this.Result2.Name = "Result2";
+            this.Result2.ReadOnly = true;
+            this.Result2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Result2.Size = new System.Drawing.Size(164, 20);
+            this.Result2.TabIndex = 21;
+            this.Result2.Text = "Личностные";
+            // 
+            // Result11
+            // 
+            this.Result11.Location = new System.Drawing.Point(203, 293);
+            this.Result11.Name = "Result11";
+            this.Result11.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Result11.Size = new System.Drawing.Size(298, 20);
+            this.Result11.TabIndex = 20;
+            this.Result11.Text = "";
+            // 
+            // Result1
+            // 
+            this.Result1.Location = new System.Drawing.Point(33, 293);
+            this.Result1.Name = "Result1";
+            this.Result1.ReadOnly = true;
+            this.Result1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Result1.Size = new System.Drawing.Size(164, 20);
+            this.Result1.TabIndex = 19;
+            this.Result1.Text = "Предметные";
+            // 
+            // Results
+            // 
+            this.Results.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.Results.Location = new System.Drawing.Point(89, 263);
+            this.Results.Name = "Results";
+            this.Results.ReadOnly = true;
+            this.Results.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Results.Size = new System.Drawing.Size(162, 20);
+            this.Results.TabIndex = 18;
+            this.Results.Text = "Планируемые результаты";
+            // 
+            // Task31
+            // 
+            this.Task31.Location = new System.Drawing.Point(203, 241);
+            this.Task31.Name = "Task31";
+            this.Task31.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Task31.Size = new System.Drawing.Size(298, 20);
+            this.Task31.TabIndex = 17;
+            this.Task31.Text = "";
+            // 
+            // Task3
+            // 
+            this.Task3.Location = new System.Drawing.Point(33, 241);
+            this.Task3.Name = "Task3";
+            this.Task3.ReadOnly = true;
+            this.Task3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Task3.Size = new System.Drawing.Size(164, 20);
+            this.Task3.TabIndex = 16;
+            this.Task3.Text = "Развивающие";
+            // 
+            // Task2
+            // 
+            this.Task2.Location = new System.Drawing.Point(33, 216);
+            this.Task2.Name = "Task2";
+            this.Task2.ReadOnly = true;
+            this.Task2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Task2.Size = new System.Drawing.Size(98, 20);
+            this.Task2.TabIndex = 15;
+            this.Task2.Text = "Воспитательные";
+            // 
+            // Task21
+            // 
+            this.Task21.Location = new System.Drawing.Point(137, 216);
+            this.Task21.Name = "Task21";
+            this.Task21.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Task21.Size = new System.Drawing.Size(364, 20);
+            this.Task21.TabIndex = 14;
+            this.Task21.Text = "";
+            // 
+            // Task11
+            // 
+            this.Task11.Location = new System.Drawing.Point(179, 190);
+            this.Task11.Name = "Task11";
+            this.Task11.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Task11.Size = new System.Drawing.Size(322, 20);
+            this.Task11.TabIndex = 13;
+            this.Task11.Text = "";
+            // 
+            // Task1
+            // 
+            this.Task1.Location = new System.Drawing.Point(33, 190);
+            this.Task1.Name = "Task1";
+            this.Task1.ReadOnly = true;
+            this.Task1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Task1.Size = new System.Drawing.Size(140, 20);
+            this.Task1.TabIndex = 12;
+            this.Task1.Text = "Общеобразовательные";
+            // 
+            // Tasks
+            // 
+            this.Tasks.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.Tasks.Location = new System.Drawing.Point(89, 164);
+            this.Tasks.Name = "Tasks";
+            this.Tasks.ReadOnly = true;
+            this.Tasks.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Tasks.Size = new System.Drawing.Size(50, 20);
+            this.Tasks.TabIndex = 11;
+            this.Tasks.Text = "Задачи";
+            // 
+            // TasksAndResults
+            // 
+            this.TasksAndResults.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.TasksAndResults.Location = new System.Drawing.Point(33, 138);
+            this.TasksAndResults.Name = "TasksAndResults";
+            this.TasksAndResults.ReadOnly = true;
+            this.TasksAndResults.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.TasksAndResults.Size = new System.Drawing.Size(204, 20);
+            this.TasksAndResults.TabIndex = 10;
+            this.TasksAndResults.Text = "Задачи и планируемые результаты";
+            // 
+            // Date2
+            // 
+            this.Date2.Location = new System.Drawing.Point(89, 112);
+            this.Date2.Name = "Date2";
+            this.Date2.Size = new System.Drawing.Size(128, 23);
+            this.Date2.TabIndex = 9;
+            // 
+            // Date1
+            // 
+            this.Date1.Location = new System.Drawing.Point(33, 112);
+            this.Date1.Name = "Date1";
+            this.Date1.ReadOnly = true;
+            this.Date1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Date1.Size = new System.Drawing.Size(50, 20);
+            this.Date1.TabIndex = 8;
+            this.Date1.Text = " Дата";
+            // 
+            // LessonTopic2
+            // 
+            this.LessonTopic2.Location = new System.Drawing.Point(115, 66);
+            this.LessonTopic2.MaxLength = 200;
+            this.LessonTopic2.Name = "LessonTopic2";
+            this.LessonTopic2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.LessonTopic2.Size = new System.Drawing.Size(386, 40);
+            this.LessonTopic2.TabIndex = 7;
+            this.LessonTopic2.Text = "";
+            // 
+            // LessonTopic1
+            // 
+            this.LessonTopic1.Location = new System.Drawing.Point(33, 66);
+            this.LessonTopic1.Name = "LessonTopic1";
+            this.LessonTopic1.ReadOnly = true;
+            this.LessonTopic1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.LessonTopic1.Size = new System.Drawing.Size(70, 20);
+            this.LessonTopic1.TabIndex = 6;
+            this.LessonTopic1.Text = "Тема урока";
+            // 
+            // Subject2
+            // 
+            this.Subject2.Location = new System.Drawing.Point(417, 40);
+            this.Subject2.Name = "Subject2";
+            this.Subject2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Subject2.Size = new System.Drawing.Size(84, 20);
+            this.Subject2.TabIndex = 5;
+            this.Subject2.Text = "";
+            // 
+            // Subject1
+            // 
+            this.Subject1.Location = new System.Drawing.Point(357, 40);
+            this.Subject1.Name = "Subject1";
+            this.Subject1.ReadOnly = true;
+            this.Subject1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Subject1.Size = new System.Drawing.Size(54, 20);
+            this.Subject1.TabIndex = 4;
+            this.Subject1.Text = "Предмет";
+            // 
+            // Class2
+            // 
+            this.Class2.Location = new System.Drawing.Point(301, 40);
+            this.Class2.Name = "Class2";
+            this.Class2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Class2.Size = new System.Drawing.Size(50, 20);
+            this.Class2.TabIndex = 3;
+            this.Class2.Text = "";
+            // 
+            // Class1
+            // 
+            this.Class1.Location = new System.Drawing.Point(257, 40);
+            this.Class1.Name = "Class1";
+            this.Class1.ReadOnly = true;
+            this.Class1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Class1.Size = new System.Drawing.Size(38, 20);
+            this.Class1.TabIndex = 2;
+            this.Class1.Text = "класс";
+            // 
+            // Teacher2
+            // 
+            this.Teacher2.Location = new System.Drawing.Point(89, 40);
+            this.Teacher2.Name = "Teacher2";
+            this.Teacher2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Teacher2.Size = new System.Drawing.Size(162, 20);
+            this.Teacher2.TabIndex = 1;
+            this.Teacher2.Text = "";
+            // 
+            // Teacher1
+            // 
+            this.Teacher1.BackColor = System.Drawing.SystemColors.Window;
+            this.Teacher1.Location = new System.Drawing.Point(33, 40);
+            this.Teacher1.MaxLength = 10;
+            this.Teacher1.Name = "Teacher1";
+            this.Teacher1.ReadOnly = true;
+            this.Teacher1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Teacher1.Size = new System.Drawing.Size(52, 20);
+            this.Teacher1.TabIndex = 0;
+            this.Teacher1.Text = "Учитель";
             // 
             // Other
             // 
@@ -448,262 +802,6 @@
             this.CreateLesson.Name = "CreateLesson";
             this.CreateLesson.Size = new System.Drawing.Size(520, 637);
             this.CreateLesson.TabIndex = 9;
-            // 
-            // richTextBox10
-            // 
-            this.richTextBox10.Location = new System.Drawing.Point(33, 138);
-            this.richTextBox10.Name = "richTextBox10";
-            this.richTextBox10.Size = new System.Drawing.Size(468, 20);
-            this.richTextBox10.TabIndex = 10;
-            this.richTextBox10.Text = "";
-            // 
-            // richTextBox11
-            // 
-            this.richTextBox11.Location = new System.Drawing.Point(33, 164);
-            this.richTextBox11.Name = "richTextBox11";
-            this.richTextBox11.Size = new System.Drawing.Size(50, 20);
-            this.richTextBox11.TabIndex = 11;
-            this.richTextBox11.Text = "";
-            // 
-            // richTextBox12
-            // 
-            this.richTextBox12.Location = new System.Drawing.Point(33, 190);
-            this.richTextBox12.Name = "richTextBox12";
-            this.richTextBox12.Size = new System.Drawing.Size(164, 20);
-            this.richTextBox12.TabIndex = 12;
-            this.richTextBox12.Text = "";
-            // 
-            // richTextBox13
-            // 
-            this.richTextBox13.Location = new System.Drawing.Point(203, 190);
-            this.richTextBox13.Name = "richTextBox13";
-            this.richTextBox13.Size = new System.Drawing.Size(298, 20);
-            this.richTextBox13.TabIndex = 13;
-            this.richTextBox13.Text = "";
-            // 
-            // richTextBox14
-            // 
-            this.richTextBox14.Location = new System.Drawing.Point(33, 216);
-            this.richTextBox14.Name = "richTextBox14";
-            this.richTextBox14.Size = new System.Drawing.Size(164, 20);
-            this.richTextBox14.TabIndex = 15;
-            this.richTextBox14.Text = "";
-            // 
-            // richTextBox15
-            // 
-            this.richTextBox15.Location = new System.Drawing.Point(203, 216);
-            this.richTextBox15.Name = "richTextBox15";
-            this.richTextBox15.Size = new System.Drawing.Size(298, 20);
-            this.richTextBox15.TabIndex = 14;
-            this.richTextBox15.Text = "";
-            // 
-            // richTextBox16
-            // 
-            this.richTextBox16.Location = new System.Drawing.Point(33, 241);
-            this.richTextBox16.Name = "richTextBox16";
-            this.richTextBox16.Size = new System.Drawing.Size(164, 20);
-            this.richTextBox16.TabIndex = 16;
-            this.richTextBox16.Text = "";
-            // 
-            // richTextBox17
-            // 
-            this.richTextBox17.Location = new System.Drawing.Point(203, 241);
-            this.richTextBox17.Name = "richTextBox17";
-            this.richTextBox17.Size = new System.Drawing.Size(298, 20);
-            this.richTextBox17.TabIndex = 17;
-            this.richTextBox17.Text = "";
-            // 
-            // richTextBox18
-            // 
-            this.richTextBox18.Location = new System.Drawing.Point(89, 267);
-            this.richTextBox18.Name = "richTextBox18";
-            this.richTextBox18.Size = new System.Drawing.Size(108, 20);
-            this.richTextBox18.TabIndex = 18;
-            this.richTextBox18.Text = "";
-            // 
-            // richTextBox19
-            // 
-            this.richTextBox19.Location = new System.Drawing.Point(33, 293);
-            this.richTextBox19.Name = "richTextBox19";
-            this.richTextBox19.Size = new System.Drawing.Size(164, 20);
-            this.richTextBox19.TabIndex = 19;
-            this.richTextBox19.Text = "";
-            // 
-            // richTextBox20
-            // 
-            this.richTextBox20.Location = new System.Drawing.Point(203, 293);
-            this.richTextBox20.Name = "richTextBox20";
-            this.richTextBox20.Size = new System.Drawing.Size(298, 20);
-            this.richTextBox20.TabIndex = 20;
-            this.richTextBox20.Text = "";
-            // 
-            // richTextBox21
-            // 
-            this.richTextBox21.Location = new System.Drawing.Point(33, 319);
-            this.richTextBox21.Name = "richTextBox21";
-            this.richTextBox21.Size = new System.Drawing.Size(164, 20);
-            this.richTextBox21.TabIndex = 21;
-            this.richTextBox21.Text = "";
-            // 
-            // richTextBox22
-            // 
-            this.richTextBox22.Location = new System.Drawing.Point(203, 319);
-            this.richTextBox22.Name = "richTextBox22";
-            this.richTextBox22.Size = new System.Drawing.Size(298, 20);
-            this.richTextBox22.TabIndex = 22;
-            this.richTextBox22.Text = "";
-            // 
-            // richTextBox23
-            // 
-            this.richTextBox23.Location = new System.Drawing.Point(33, 345);
-            this.richTextBox23.Name = "richTextBox23";
-            this.richTextBox23.Size = new System.Drawing.Size(164, 20);
-            this.richTextBox23.TabIndex = 23;
-            this.richTextBox23.Text = "";
-            // 
-            // richTextBox24
-            // 
-            this.richTextBox24.Location = new System.Drawing.Point(203, 345);
-            this.richTextBox24.Name = "richTextBox24";
-            this.richTextBox24.Size = new System.Drawing.Size(298, 20);
-            this.richTextBox24.TabIndex = 24;
-            this.richTextBox24.Text = "";
-            // 
-            // richTextBox25
-            // 
-            this.richTextBox25.Location = new System.Drawing.Point(33, 371);
-            this.richTextBox25.Name = "richTextBox25";
-            this.richTextBox25.Size = new System.Drawing.Size(106, 20);
-            this.richTextBox25.TabIndex = 25;
-            this.richTextBox25.Text = "";
-            // 
-            // richTextBox26
-            // 
-            this.richTextBox26.Location = new System.Drawing.Point(33, 397);
-            this.richTextBox26.Name = "richTextBox26";
-            this.richTextBox26.Size = new System.Drawing.Size(164, 20);
-            this.richTextBox26.TabIndex = 26;
-            this.richTextBox26.Text = "";
-            // 
-            // richTextBox27
-            // 
-            this.richTextBox27.Location = new System.Drawing.Point(203, 397);
-            this.richTextBox27.Name = "richTextBox27";
-            this.richTextBox27.Size = new System.Drawing.Size(298, 20);
-            this.richTextBox27.TabIndex = 27;
-            this.richTextBox27.Text = "";
-            // 
-            // richTextBox28
-            // 
-            this.richTextBox28.Location = new System.Drawing.Point(33, 423);
-            this.richTextBox28.Name = "richTextBox28";
-            this.richTextBox28.Size = new System.Drawing.Size(164, 20);
-            this.richTextBox28.TabIndex = 28;
-            this.richTextBox28.Text = "";
-            // 
-            // richTextBox29
-            // 
-            this.richTextBox29.Location = new System.Drawing.Point(203, 423);
-            this.richTextBox29.Name = "richTextBox29";
-            this.richTextBox29.Size = new System.Drawing.Size(298, 20);
-            this.richTextBox29.TabIndex = 29;
-            this.richTextBox29.Text = "";
-            // 
-            // richTextBox30
-            // 
-            this.richTextBox30.Location = new System.Drawing.Point(33, 449);
-            this.richTextBox30.Name = "richTextBox30";
-            this.richTextBox30.Size = new System.Drawing.Size(164, 20);
-            this.richTextBox30.TabIndex = 30;
-            this.richTextBox30.Text = "";
-            // 
-            // richTextBox31
-            // 
-            this.richTextBox31.Location = new System.Drawing.Point(203, 449);
-            this.richTextBox31.Name = "richTextBox31";
-            this.richTextBox31.Size = new System.Drawing.Size(298, 20);
-            this.richTextBox31.TabIndex = 31;
-            this.richTextBox31.Text = "";
-            // 
-            // richTextBox32
-            // 
-            this.richTextBox32.Location = new System.Drawing.Point(89, 475);
-            this.richTextBox32.Name = "richTextBox32";
-            this.richTextBox32.Size = new System.Drawing.Size(108, 20);
-            this.richTextBox32.TabIndex = 32;
-            this.richTextBox32.Text = "";
-            // 
-            // richTextBox33
-            // 
-            this.richTextBox33.Location = new System.Drawing.Point(33, 501);
-            this.richTextBox33.Name = "richTextBox33";
-            this.richTextBox33.Size = new System.Drawing.Size(164, 20);
-            this.richTextBox33.TabIndex = 33;
-            this.richTextBox33.Text = "";
-            // 
-            // richTextBox34
-            // 
-            this.richTextBox34.Location = new System.Drawing.Point(203, 501);
-            this.richTextBox34.Name = "richTextBox34";
-            this.richTextBox34.Size = new System.Drawing.Size(298, 20);
-            this.richTextBox34.TabIndex = 34;
-            this.richTextBox34.Text = "";
-            // 
-            // richTextBox35
-            // 
-            this.richTextBox35.Location = new System.Drawing.Point(33, 527);
-            this.richTextBox35.Name = "richTextBox35";
-            this.richTextBox35.Size = new System.Drawing.Size(164, 20);
-            this.richTextBox35.TabIndex = 35;
-            this.richTextBox35.Text = "";
-            // 
-            // richTextBox36
-            // 
-            this.richTextBox36.Location = new System.Drawing.Point(203, 527);
-            this.richTextBox36.Name = "richTextBox36";
-            this.richTextBox36.Size = new System.Drawing.Size(298, 20);
-            this.richTextBox36.TabIndex = 36;
-            this.richTextBox36.Text = "";
-            // 
-            // richTextBox37
-            // 
-            this.richTextBox37.Location = new System.Drawing.Point(89, 553);
-            this.richTextBox37.Name = "richTextBox37";
-            this.richTextBox37.Size = new System.Drawing.Size(108, 20);
-            this.richTextBox37.TabIndex = 37;
-            this.richTextBox37.Text = "";
-            // 
-            // richTextBox38
-            // 
-            this.richTextBox38.Location = new System.Drawing.Point(33, 579);
-            this.richTextBox38.Name = "richTextBox38";
-            this.richTextBox38.Size = new System.Drawing.Size(164, 20);
-            this.richTextBox38.TabIndex = 38;
-            this.richTextBox38.Text = "";
-            // 
-            // richTextBox39
-            // 
-            this.richTextBox39.Location = new System.Drawing.Point(203, 579);
-            this.richTextBox39.Name = "richTextBox39";
-            this.richTextBox39.Size = new System.Drawing.Size(298, 20);
-            this.richTextBox39.TabIndex = 39;
-            this.richTextBox39.Text = "";
-            // 
-            // richTextBox40
-            // 
-            this.richTextBox40.Location = new System.Drawing.Point(33, 605);
-            this.richTextBox40.Name = "richTextBox40";
-            this.richTextBox40.Size = new System.Drawing.Size(164, 20);
-            this.richTextBox40.TabIndex = 40;
-            this.richTextBox40.Text = "";
-            // 
-            // richTextBox41
-            // 
-            this.richTextBox41.Location = new System.Drawing.Point(203, 605);
-            this.richTextBox41.Name = "richTextBox41";
-            this.richTextBox41.Size = new System.Drawing.Size(298, 20);
-            this.richTextBox41.TabIndex = 41;
-            this.richTextBox41.Text = "";
             // 
             // Form1
             // 
@@ -759,47 +857,49 @@
         private Panel TechnicalMap;
         private Panel Other;
         private Panel CreateLesson;
-        private RichTextBox richTextBox1;
-        private RichTextBox richTextBox8;
-        private RichTextBox richTextBox7;
-        private RichTextBox richTextBox6;
-        private RichTextBox richTextBox5;
-        private RichTextBox richTextBox4;
-        private RichTextBox richTextBox3;
-        private RichTextBox richTextBox2;
-        private DateTimePicker dateTimePicker1;
-        private RichTextBox richTextBox9;
-        private RichTextBox richTextBox39;
-        private RichTextBox richTextBox38;
-        private RichTextBox richTextBox37;
-        private RichTextBox richTextBox36;
-        private RichTextBox richTextBox35;
-        private RichTextBox richTextBox34;
-        private RichTextBox richTextBox33;
-        private RichTextBox richTextBox32;
-        private RichTextBox richTextBox31;
-        private RichTextBox richTextBox30;
-        private RichTextBox richTextBox29;
-        private RichTextBox richTextBox28;
-        private RichTextBox richTextBox27;
-        private RichTextBox richTextBox26;
-        private RichTextBox richTextBox25;
-        private RichTextBox richTextBox24;
-        private RichTextBox richTextBox23;
-        private RichTextBox richTextBox22;
-        private RichTextBox richTextBox21;
-        private RichTextBox richTextBox20;
-        private RichTextBox richTextBox19;
-        private RichTextBox richTextBox18;
-        private RichTextBox richTextBox17;
-        private RichTextBox richTextBox16;
-        private RichTextBox richTextBox14;
-        private RichTextBox richTextBox15;
-        private RichTextBox richTextBox13;
-        private RichTextBox richTextBox12;
-        private RichTextBox richTextBox11;
-        private RichTextBox richTextBox10;
-        private RichTextBox richTextBox41;
-        private RichTextBox richTextBox40;
+        private RichTextBox Teacher1;
+        private RichTextBox LessonTopic2;
+        private RichTextBox LessonTopic1;
+        private RichTextBox Subject2;
+        private RichTextBox Subject1;
+        private RichTextBox Class2;
+        private RichTextBox Class1;
+        private RichTextBox Teacher2;
+        private DateTimePicker Date2;
+        private RichTextBox Date1;
+        private RichTextBox TAPL11;
+        private RichTextBox TAPL1;
+        private RichTextBox TypeAndPurposeLesson;
+        private RichTextBox Resource21;
+        private RichTextBox Resource2;
+        private RichTextBox Resource11;
+        private RichTextBox Resource1;
+        private RichTextBox Resources;
+        private RichTextBox FCR31;
+        private RichTextBox FCR3;
+        private RichTextBox FCR21;
+        private RichTextBox FCR2;
+        private RichTextBox FCR11;
+        private RichTextBox FCR1;
+        private RichTextBox FormConnectResurces;
+        private RichTextBox Result31;
+        private RichTextBox Result3;
+        private RichTextBox Result21;
+        private RichTextBox Result2;
+        private RichTextBox Result11;
+        private RichTextBox Result1;
+        private RichTextBox Results;
+        private RichTextBox Task31;
+        private RichTextBox Task3;
+        private RichTextBox Task2;
+        private RichTextBox Task21;
+        private RichTextBox Task11;
+        private RichTextBox Task1;
+        private RichTextBox Tasks;
+        private RichTextBox TasksAndResults;
+        private RichTextBox TAPL21;
+        private RichTextBox TAPL2;
+        private RichTextBox TechnicalMap2;
+        private RichTextBox TechnicalMap1;
     }
 }
