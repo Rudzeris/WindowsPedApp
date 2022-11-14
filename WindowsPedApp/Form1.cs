@@ -37,7 +37,7 @@ namespace WindowsPedApp
             Size = new Size(560, 700);
 
             MainMenuHelperLabel.Location= new Point(226, 230);
-            MainMenuButtonCloseHelper.Location = new Point(226, 204);
+            ButtonMainMenuCloseHelper.Location = new Point(226, 204);
             MainMenuPictureBoxHelper.Location = new Point(389, 344);
 
             LiteraturesRichTextBox.Text = "\t1) Книга1\n" +
@@ -61,7 +61,7 @@ namespace WindowsPedApp
         {
             MainMenuPictureBoxHelper.Visible = true;
             MainMenuHelperLabel.Visible = true;
-            MainMenuButtonCloseHelper.Visible = true;
+            ButtonMainMenuCloseHelper.Visible = true;
             MainMenuHelperLabel.Text = str;
         }
 
@@ -101,7 +101,7 @@ namespace WindowsPedApp
 
 
             MainMenuHelperLabel.Location = new Point(280, 230);
-            MainMenuButtonCloseHelper.Location = new Point(263+260, 204);
+            ButtonMainMenuCloseHelper.Location = new Point(263+260, 204);
             MainMenuPictureBoxHelper.Location = new Point(389, 344);
 
         }
@@ -130,11 +130,11 @@ namespace WindowsPedApp
         {
             MainMenuPictureBoxHelper.Visible = false;
             MainMenuHelperLabel.Visible = false;
-            MainMenuButtonCloseHelper.Visible = false;
+            ButtonMainMenuCloseHelper.Visible = false;
             InstructionRichText.Size = new Size(420, 590);
 
             MainMenuHelperLabel.Location = new Point(226, 230);
-            MainMenuButtonCloseHelper.Location = new Point(226, 204);
+            ButtonMainMenuCloseHelper.Location = new Point(226, 204);
             MainMenuPictureBoxHelper.Location = new Point(389, 344);
 
         }

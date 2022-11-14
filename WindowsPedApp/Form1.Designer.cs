@@ -30,22 +30,24 @@
         {
             this.MainMenu = new System.Windows.Forms.Panel();
             this.MainMenuNameProg = new System.Windows.Forms.Label();
-            this.MainMenuButtonExit = new System.Windows.Forms.Button();
-            this.MainMenuButtonLiteratures = new System.Windows.Forms.Button();
-            this.MainMenuButtonInstruction = new System.Windows.Forms.Button();
-            this.MainMenuButtonCloseHelper = new System.Windows.Forms.Button();
+            this.ButtonMainMenuExit = new System.Windows.Forms.Button();
+            this.ButtonMainMenuLiteratures = new System.Windows.Forms.Button();
+            this.ButtonMainMenuInstruction = new System.Windows.Forms.Button();
+            this.ButtonMainMenuCloseHelper = new System.Windows.Forms.Button();
             this.MainMenuHelperLabel = new System.Windows.Forms.Label();
             this.MainMenuPictureBoxHelper = new System.Windows.Forms.PictureBox();
             this.Literatures = new System.Windows.Forms.Panel();
             this.LiteraturesRichTextBox = new System.Windows.Forms.RichTextBox();
             this.ButtonHome = new System.Windows.Forms.Button();
             this.Menu = new System.Windows.Forms.Panel();
-            this.Other = new System.Windows.Forms.Button();
-            this.CreateTechnicalMap = new System.Windows.Forms.Button();
-            this.CreateLesson = new System.Windows.Forms.Button();
+            this.ButtonOther = new System.Windows.Forms.Button();
+            this.ButtonCreateTechnicalMap = new System.Windows.Forms.Button();
+            this.ButtonCreateLesson = new System.Windows.Forms.Button();
             this.Instruction = new System.Windows.Forms.Panel();
             this.InstructionRichText = new System.Windows.Forms.RichTextBox();
             this.StrategyCard = new System.Windows.Forms.Panel();
+            this.Other = new System.Windows.Forms.Panel();
+            this.CreateLesson = new System.Windows.Forms.Panel();
             this.MainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainMenuPictureBoxHelper)).BeginInit();
             this.Literatures.SuspendLayout();
@@ -56,9 +58,9 @@
             // MainMenu
             // 
             this.MainMenu.Controls.Add(this.MainMenuNameProg);
-            this.MainMenu.Controls.Add(this.MainMenuButtonExit);
-            this.MainMenu.Controls.Add(this.MainMenuButtonLiteratures);
-            this.MainMenu.Controls.Add(this.MainMenuButtonInstruction);
+            this.MainMenu.Controls.Add(this.ButtonMainMenuExit);
+            this.MainMenu.Controls.Add(this.ButtonMainMenuLiteratures);
+            this.MainMenu.Controls.Add(this.ButtonMainMenuInstruction);
             this.MainMenu.Location = new System.Drawing.Point(540, 12);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(520, 637);
@@ -75,62 +77,62 @@
             this.MainMenuNameProg.Text = "Название приложения";
             this.MainMenuNameProg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // MainMenuButtonExit
+            // ButtonMainMenuExit
             // 
-            this.MainMenuButtonExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.MainMenuButtonExit.AutoSize = true;
-            this.MainMenuButtonExit.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.MainMenuButtonExit.Location = new System.Drawing.Point(113, 580);
-            this.MainMenuButtonExit.Name = "MainMenuButtonExit";
-            this.MainMenuButtonExit.Size = new System.Drawing.Size(294, 25);
-            this.MainMenuButtonExit.TabIndex = 3;
-            this.MainMenuButtonExit.Tag = "Button";
-            this.MainMenuButtonExit.Text = "Выход";
-            this.MainMenuButtonExit.UseVisualStyleBackColor = false;
-            this.MainMenuButtonExit.Click += new System.EventHandler(this.MainMenuButtonExit_Click);
+            this.ButtonMainMenuExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonMainMenuExit.AutoSize = true;
+            this.ButtonMainMenuExit.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ButtonMainMenuExit.Location = new System.Drawing.Point(113, 580);
+            this.ButtonMainMenuExit.Name = "ButtonMainMenuExit";
+            this.ButtonMainMenuExit.Size = new System.Drawing.Size(294, 25);
+            this.ButtonMainMenuExit.TabIndex = 3;
+            this.ButtonMainMenuExit.Tag = "Button";
+            this.ButtonMainMenuExit.Text = "Выход";
+            this.ButtonMainMenuExit.UseVisualStyleBackColor = false;
+            this.ButtonMainMenuExit.Click += new System.EventHandler(this.MainMenuButtonExit_Click);
             // 
-            // MainMenuButtonLiteratures
+            // ButtonMainMenuLiteratures
             // 
-            this.MainMenuButtonLiteratures.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.MainMenuButtonLiteratures.AutoSize = true;
-            this.MainMenuButtonLiteratures.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.MainMenuButtonLiteratures.Location = new System.Drawing.Point(113, 540);
-            this.MainMenuButtonLiteratures.Name = "MainMenuButtonLiteratures";
-            this.MainMenuButtonLiteratures.Size = new System.Drawing.Size(294, 25);
-            this.MainMenuButtonLiteratures.TabIndex = 2;
-            this.MainMenuButtonLiteratures.Tag = "Button";
-            this.MainMenuButtonLiteratures.Text = "Список литературы";
-            this.MainMenuButtonLiteratures.UseVisualStyleBackColor = false;
-            this.MainMenuButtonLiteratures.Click += new System.EventHandler(this.OpenLiteratures);
+            this.ButtonMainMenuLiteratures.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonMainMenuLiteratures.AutoSize = true;
+            this.ButtonMainMenuLiteratures.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ButtonMainMenuLiteratures.Location = new System.Drawing.Point(113, 540);
+            this.ButtonMainMenuLiteratures.Name = "ButtonMainMenuLiteratures";
+            this.ButtonMainMenuLiteratures.Size = new System.Drawing.Size(294, 25);
+            this.ButtonMainMenuLiteratures.TabIndex = 2;
+            this.ButtonMainMenuLiteratures.Tag = "Button";
+            this.ButtonMainMenuLiteratures.Text = "Список литературы";
+            this.ButtonMainMenuLiteratures.UseVisualStyleBackColor = false;
+            this.ButtonMainMenuLiteratures.Click += new System.EventHandler(this.OpenLiteratures);
             // 
-            // MainMenuButtonInstruction
+            // ButtonMainMenuInstruction
             // 
-            this.MainMenuButtonInstruction.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.MainMenuButtonInstruction.AutoSize = true;
-            this.MainMenuButtonInstruction.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.MainMenuButtonInstruction.Location = new System.Drawing.Point(113, 500);
-            this.MainMenuButtonInstruction.Name = "MainMenuButtonInstruction";
-            this.MainMenuButtonInstruction.Size = new System.Drawing.Size(294, 25);
-            this.MainMenuButtonInstruction.TabIndex = 0;
-            this.MainMenuButtonInstruction.Tag = "Button";
-            this.MainMenuButtonInstruction.Text = "Инструкция";
-            this.MainMenuButtonInstruction.UseVisualStyleBackColor = false;
-            this.MainMenuButtonInstruction.Click += new System.EventHandler(this.OpenInstruction);
+            this.ButtonMainMenuInstruction.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonMainMenuInstruction.AutoSize = true;
+            this.ButtonMainMenuInstruction.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ButtonMainMenuInstruction.Location = new System.Drawing.Point(113, 500);
+            this.ButtonMainMenuInstruction.Name = "ButtonMainMenuInstruction";
+            this.ButtonMainMenuInstruction.Size = new System.Drawing.Size(294, 25);
+            this.ButtonMainMenuInstruction.TabIndex = 0;
+            this.ButtonMainMenuInstruction.Tag = "Button";
+            this.ButtonMainMenuInstruction.Text = "Инструкция";
+            this.ButtonMainMenuInstruction.UseVisualStyleBackColor = false;
+            this.ButtonMainMenuInstruction.Click += new System.EventHandler(this.OpenInstruction);
             // 
-            // MainMenuButtonCloseHelper
+            // ButtonMainMenuCloseHelper
             // 
-            this.MainMenuButtonCloseHelper.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.MainMenuButtonCloseHelper.FlatAppearance.BorderSize = 0;
-            this.MainMenuButtonCloseHelper.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MainMenuButtonCloseHelper.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.MainMenuButtonCloseHelper.Location = new System.Drawing.Point(746, 204);
-            this.MainMenuButtonCloseHelper.Name = "MainMenuButtonCloseHelper";
-            this.MainMenuButtonCloseHelper.Size = new System.Drawing.Size(23, 23);
-            this.MainMenuButtonCloseHelper.TabIndex = 6;
-            this.MainMenuButtonCloseHelper.Tag = "Button";
-            this.MainMenuButtonCloseHelper.Text = "X";
-            this.MainMenuButtonCloseHelper.UseVisualStyleBackColor = false;
-            this.MainMenuButtonCloseHelper.Click += new System.EventHandler(this.MainMenuCloseHelper);
+            this.ButtonMainMenuCloseHelper.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ButtonMainMenuCloseHelper.FlatAppearance.BorderSize = 0;
+            this.ButtonMainMenuCloseHelper.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonMainMenuCloseHelper.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ButtonMainMenuCloseHelper.Location = new System.Drawing.Point(746, 204);
+            this.ButtonMainMenuCloseHelper.Name = "ButtonMainMenuCloseHelper";
+            this.ButtonMainMenuCloseHelper.Size = new System.Drawing.Size(23, 23);
+            this.ButtonMainMenuCloseHelper.TabIndex = 6;
+            this.ButtonMainMenuCloseHelper.Tag = "Button";
+            this.ButtonMainMenuCloseHelper.Text = "X";
+            this.ButtonMainMenuCloseHelper.UseVisualStyleBackColor = false;
+            this.ButtonMainMenuCloseHelper.Click += new System.EventHandler(this.MainMenuCloseHelper);
             // 
             // MainMenuHelperLabel
             // 
@@ -189,53 +191,53 @@
             // 
             // Menu
             // 
-            this.Menu.Controls.Add(this.Other);
-            this.Menu.Controls.Add(this.CreateTechnicalMap);
-            this.Menu.Controls.Add(this.CreateLesson);
+            this.Menu.Controls.Add(this.ButtonOther);
+            this.Menu.Controls.Add(this.ButtonCreateTechnicalMap);
+            this.Menu.Controls.Add(this.ButtonCreateLesson);
             this.Menu.Location = new System.Drawing.Point(540, 12);
             this.Menu.Name = "Menu";
             this.Menu.Size = new System.Drawing.Size(520, 637);
             this.Menu.TabIndex = 3;
             // 
-            // Other
+            // ButtonOther
             // 
-            this.Other.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Other.AutoSize = true;
-            this.Other.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.Other.Location = new System.Drawing.Point(113, 580);
-            this.Other.Name = "Other";
-            this.Other.Size = new System.Drawing.Size(294, 25);
-            this.Other.TabIndex = 3;
-            this.Other.Tag = "Button";
-            this.Other.Text = "Дополнительно";
-            this.Other.UseVisualStyleBackColor = false;
+            this.ButtonOther.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ButtonOther.AutoSize = true;
+            this.ButtonOther.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ButtonOther.Location = new System.Drawing.Point(113, 580);
+            this.ButtonOther.Name = "ButtonOther";
+            this.ButtonOther.Size = new System.Drawing.Size(294, 25);
+            this.ButtonOther.TabIndex = 3;
+            this.ButtonOther.Tag = "Button";
+            this.ButtonOther.Text = "Дополнительно";
+            this.ButtonOther.UseVisualStyleBackColor = false;
             // 
-            // CreateTechnicalMap
+            // ButtonCreateTechnicalMap
             // 
-            this.CreateTechnicalMap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.CreateTechnicalMap.AutoSize = true;
-            this.CreateTechnicalMap.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.CreateTechnicalMap.Location = new System.Drawing.Point(113, 540);
-            this.CreateTechnicalMap.Name = "CreateTechnicalMap";
-            this.CreateTechnicalMap.Size = new System.Drawing.Size(294, 25);
-            this.CreateTechnicalMap.TabIndex = 2;
-            this.CreateTechnicalMap.Tag = "Button";
-            this.CreateTechnicalMap.Text = "Создать технологическую карту";
-            this.CreateTechnicalMap.UseVisualStyleBackColor = false;
-            this.CreateTechnicalMap.Click += new System.EventHandler(this.OpenStrategyCard);
+            this.ButtonCreateTechnicalMap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonCreateTechnicalMap.AutoSize = true;
+            this.ButtonCreateTechnicalMap.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ButtonCreateTechnicalMap.Location = new System.Drawing.Point(113, 540);
+            this.ButtonCreateTechnicalMap.Name = "ButtonCreateTechnicalMap";
+            this.ButtonCreateTechnicalMap.Size = new System.Drawing.Size(294, 25);
+            this.ButtonCreateTechnicalMap.TabIndex = 2;
+            this.ButtonCreateTechnicalMap.Tag = "Button";
+            this.ButtonCreateTechnicalMap.Text = "Создать технологическую карту";
+            this.ButtonCreateTechnicalMap.UseVisualStyleBackColor = false;
+            this.ButtonCreateTechnicalMap.Click += new System.EventHandler(this.OpenStrategyCard);
             // 
-            // CreateLesson
+            // ButtonCreateLesson
             // 
-            this.CreateLesson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.CreateLesson.AutoSize = true;
-            this.CreateLesson.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.CreateLesson.Location = new System.Drawing.Point(113, 500);
-            this.CreateLesson.Name = "CreateLesson";
-            this.CreateLesson.Size = new System.Drawing.Size(294, 25);
-            this.CreateLesson.TabIndex = 0;
-            this.CreateLesson.Tag = "Button";
-            this.CreateLesson.Text = "Создать урок";
-            this.CreateLesson.UseVisualStyleBackColor = false;
+            this.ButtonCreateLesson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonCreateLesson.AutoSize = true;
+            this.ButtonCreateLesson.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ButtonCreateLesson.Location = new System.Drawing.Point(113, 500);
+            this.ButtonCreateLesson.Name = "ButtonCreateLesson";
+            this.ButtonCreateLesson.Size = new System.Drawing.Size(294, 25);
+            this.ButtonCreateLesson.TabIndex = 0;
+            this.ButtonCreateLesson.Tag = "Button";
+            this.ButtonCreateLesson.Text = "Создать урок";
+            this.ButtonCreateLesson.UseVisualStyleBackColor = false;
             // 
             // Instruction
             // 
@@ -261,10 +263,24 @@
             // 
             // StrategyCard
             // 
-            this.StrategyCard.Location = new System.Drawing.Point(12, 12);
+            this.StrategyCard.Location = new System.Drawing.Point(540, 12);
             this.StrategyCard.Name = "StrategyCard";
             this.StrategyCard.Size = new System.Drawing.Size(520, 637);
             this.StrategyCard.TabIndex = 7;
+            // 
+            // Other
+            // 
+            this.Other.Location = new System.Drawing.Point(12, 12);
+            this.Other.Name = "Other";
+            this.Other.Size = new System.Drawing.Size(520, 637);
+            this.Other.TabIndex = 8;
+            // 
+            // CreateLesson
+            // 
+            this.CreateLesson.Location = new System.Drawing.Point(540, 12);
+            this.CreateLesson.Name = "CreateLesson";
+            this.CreateLesson.Size = new System.Drawing.Size(520, 637);
+            this.CreateLesson.TabIndex = 9;
             // 
             // Form1
             // 
@@ -272,15 +288,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1370, 661);
+            this.Controls.Add(this.Other);
             this.Controls.Add(this.MainMenuHelperLabel);
             this.Controls.Add(this.MainMenuPictureBoxHelper);
-            this.Controls.Add(this.MainMenuButtonCloseHelper);
+            this.Controls.Add(this.ButtonMainMenuCloseHelper);
             this.Controls.Add(this.ButtonHome);
             this.Controls.Add(this.Menu);
             this.Controls.Add(this.MainMenu);
             this.Controls.Add(this.Literatures);
             this.Controls.Add(this.Instruction);
             this.Controls.Add(this.StrategyCard);
+            this.Controls.Add(this.CreateLesson);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Form1";
@@ -298,22 +316,24 @@
         #endregion
 
         private Panel MainMenu;
-        private Button MainMenuButtonInstruction;
-        private Button MainMenuButtonExit;
-        private Button MainMenuButtonLiteratures;
+        private Button ButtonMainMenuInstruction;
+        private Button ButtonMainMenuExit;
+        private Button ButtonMainMenuLiteratures;
         private PictureBox MainMenuPictureBoxHelper;
         private Label MainMenuHelperLabel;
         private Panel Literatures;
         private Label MainMenuNameProg;
         private Button ButtonHome;
         private Panel Menu;
-        private Button CreateTechnicalMap;
-        private Button CreateLesson;
-        private Button Other;
+        private Button ButtonCreateTechnicalMap;
+        private Button ButtonCreateLesson;
+        private Button ButtonOther;
         private RichTextBox LiteraturesRichTextBox;
-        private Button MainMenuButtonCloseHelper;
+        private Button ButtonMainMenuCloseHelper;
         private Panel Instruction;
         private RichTextBox InstructionRichText;
         private Panel StrategyCard;
+        private Panel Other;
+        private Panel CreateLesson;
     }
 }
