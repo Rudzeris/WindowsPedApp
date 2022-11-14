@@ -107,7 +107,7 @@
             this.MainMenu.Controls.Add(this.ButtonMainMenuExit);
             this.MainMenu.Controls.Add(this.ButtonMainMenuLiteratures);
             this.MainMenu.Controls.Add(this.ButtonMainMenuInstruction);
-            this.MainMenu.Location = new System.Drawing.Point(540, 12);
+            this.MainMenu.Location = new System.Drawing.Point(12, 12);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(520, 637);
             this.MainMenu.TabIndex = 0;
@@ -120,7 +120,7 @@
             this.MainMenuNameProg.Name = "MainMenuNameProg";
             this.MainMenuNameProg.Size = new System.Drawing.Size(520, 47);
             this.MainMenuNameProg.TabIndex = 4;
-            this.MainMenuNameProg.Text = "Название приложения";
+            this.MainMenuNameProg.Text = "Rudzeris App";
             this.MainMenuNameProg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ButtonMainMenuExit
