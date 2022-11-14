@@ -47,8 +47,8 @@
             this.Instruction = new System.Windows.Forms.Panel();
             this.InstructionRichText = new System.Windows.Forms.RichTextBox();
             this.TechnicalMap = new System.Windows.Forms.Panel();
-            this.TechnicalMap2 = new System.Windows.Forms.RichTextBox();
             this.TechnicalMap1 = new System.Windows.Forms.RichTextBox();
+            this.TechnicalMap2 = new System.Windows.Forms.RichTextBox();
             this.TAPL21 = new System.Windows.Forms.RichTextBox();
             this.TAPL2 = new System.Windows.Forms.RichTextBox();
             this.TAPL11 = new System.Windows.Forms.RichTextBox();
@@ -360,25 +360,29 @@
             this.TechnicalMap.Size = new System.Drawing.Size(520, 637);
             this.TechnicalMap.TabIndex = 7;
             // 
-            // TechnicalMap2
-            // 
-            this.TechnicalMap2.Location = new System.Drawing.Point(230, 8);
-            this.TechnicalMap2.Name = "TechnicalMap2";
-            this.TechnicalMap2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.TechnicalMap2.Size = new System.Drawing.Size(36, 20);
-            this.TechnicalMap2.TabIndex = 43;
-            this.TechnicalMap2.Text = "";
-            // 
             // TechnicalMap1
             // 
+            this.TechnicalMap1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TechnicalMap1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.TechnicalMap1.Location = new System.Drawing.Point(36, 8);
+            this.TechnicalMap1.Location = new System.Drawing.Point(36, 3);
             this.TechnicalMap1.Name = "TechnicalMap1";
             this.TechnicalMap1.ReadOnly = true;
             this.TechnicalMap1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.TechnicalMap1.Size = new System.Drawing.Size(188, 20);
+            this.TechnicalMap1.Size = new System.Drawing.Size(198, 20);
             this.TechnicalMap1.TabIndex = 42;
             this.TechnicalMap1.Text = "Технологическая карта урока №";
+            // 
+            // TechnicalMap2
+            // 
+            this.TechnicalMap2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.TechnicalMap2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.TechnicalMap2.Location = new System.Drawing.Point(240, 3);
+            this.TechnicalMap2.MaxLength = 7;
+            this.TechnicalMap2.Name = "TechnicalMap2";
+            this.TechnicalMap2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.TechnicalMap2.Size = new System.Drawing.Size(89, 20);
+            this.TechnicalMap2.TabIndex = 43;
+            this.TechnicalMap2.Text = "";
             // 
             // TAPL21
             // 
@@ -421,7 +425,7 @@
             // TypeAndPurposeLesson
             // 
             this.TypeAndPurposeLesson.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.TypeAndPurposeLesson.Location = new System.Drawing.Point(50, 557);
+            this.TypeAndPurposeLesson.Location = new System.Drawing.Point(50, 556);
             this.TypeAndPurposeLesson.Name = "TypeAndPurposeLesson";
             this.TypeAndPurposeLesson.ReadOnly = true;
             this.TypeAndPurposeLesson.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -470,7 +474,7 @@
             // Resources
             // 
             this.Resources.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.Resources.Location = new System.Drawing.Point(50, 484);
+            this.Resources.Location = new System.Drawing.Point(50, 483);
             this.Resources.Name = "Resources";
             this.Resources.ReadOnly = true;
             this.Resources.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -480,7 +484,7 @@
             // 
             // FCR31
             // 
-            this.FCR31.Location = new System.Drawing.Point(132, 459);
+            this.FCR31.Location = new System.Drawing.Point(132, 457);
             this.FCR31.Name = "FCR31";
             this.FCR31.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.FCR31.Size = new System.Drawing.Size(369, 20);
@@ -489,7 +493,7 @@
             // 
             // FCR3
             // 
-            this.FCR3.Location = new System.Drawing.Point(20, 459);
+            this.FCR3.Location = new System.Drawing.Point(20, 457);
             this.FCR3.Name = "FCR3";
             this.FCR3.ReadOnly = true;
             this.FCR3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -499,7 +503,7 @@
             // 
             // FCR21
             // 
-            this.FCR21.Location = new System.Drawing.Point(154, 433);
+            this.FCR21.Location = new System.Drawing.Point(154, 431);
             this.FCR21.Name = "FCR21";
             this.FCR21.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.FCR21.Size = new System.Drawing.Size(347, 20);
@@ -508,7 +512,7 @@
             // 
             // FCR2
             // 
-            this.FCR2.Location = new System.Drawing.Point(20, 433);
+            this.FCR2.Location = new System.Drawing.Point(20, 431);
             this.FCR2.Name = "FCR2";
             this.FCR2.ReadOnly = true;
             this.FCR2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -518,7 +522,7 @@
             // 
             // FCR11
             // 
-            this.FCR11.Location = new System.Drawing.Point(166, 407);
+            this.FCR11.Location = new System.Drawing.Point(166, 405);
             this.FCR11.Name = "FCR11";
             this.FCR11.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.FCR11.Size = new System.Drawing.Size(335, 20);
@@ -527,7 +531,7 @@
             // 
             // FCR1
             // 
-            this.FCR1.Location = new System.Drawing.Point(20, 407);
+            this.FCR1.Location = new System.Drawing.Point(20, 405);
             this.FCR1.Name = "FCR1";
             this.FCR1.ReadOnly = true;
             this.FCR1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -537,18 +541,19 @@
             // 
             // FormConnectResurces
             // 
+            this.FormConnectResurces.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.FormConnectResurces.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.FormConnectResurces.Location = new System.Drawing.Point(20, 383);
+            this.FormConnectResurces.Location = new System.Drawing.Point(20, 379);
             this.FormConnectResurces.Name = "FormConnectResurces";
             this.FormConnectResurces.ReadOnly = true;
             this.FormConnectResurces.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.FormConnectResurces.Size = new System.Drawing.Size(146, 20);
+            this.FormConnectResurces.Size = new System.Drawing.Size(152, 20);
             this.FormConnectResurces.TabIndex = 25;
             this.FormConnectResurces.Text = "Формы, связи и ресурсы";
             // 
             // Result31
             // 
-            this.Result31.Location = new System.Drawing.Point(190, 357);
+            this.Result31.Location = new System.Drawing.Point(190, 348);
             this.Result31.Name = "Result31";
             this.Result31.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.Result31.Size = new System.Drawing.Size(311, 20);
@@ -557,7 +562,7 @@
             // 
             // Result3
             // 
-            this.Result3.Location = new System.Drawing.Point(20, 357);
+            this.Result3.Location = new System.Drawing.Point(20, 348);
             this.Result3.Name = "Result3";
             this.Result3.ReadOnly = true;
             this.Result3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -567,7 +572,7 @@
             // 
             // Result21
             // 
-            this.Result21.Location = new System.Drawing.Point(190, 331);
+            this.Result21.Location = new System.Drawing.Point(190, 322);
             this.Result21.Name = "Result21";
             this.Result21.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.Result21.Size = new System.Drawing.Size(311, 20);
@@ -576,7 +581,7 @@
             // 
             // Result2
             // 
-            this.Result2.Location = new System.Drawing.Point(20, 331);
+            this.Result2.Location = new System.Drawing.Point(20, 322);
             this.Result2.Name = "Result2";
             this.Result2.ReadOnly = true;
             this.Result2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -586,7 +591,7 @@
             // 
             // Result11
             // 
-            this.Result11.Location = new System.Drawing.Point(190, 305);
+            this.Result11.Location = new System.Drawing.Point(190, 296);
             this.Result11.Name = "Result11";
             this.Result11.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.Result11.Size = new System.Drawing.Size(311, 20);
@@ -595,7 +600,7 @@
             // 
             // Result1
             // 
-            this.Result1.Location = new System.Drawing.Point(20, 305);
+            this.Result1.Location = new System.Drawing.Point(20, 296);
             this.Result1.Name = "Result1";
             this.Result1.ReadOnly = true;
             this.Result1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -606,7 +611,7 @@
             // Results
             // 
             this.Results.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.Results.Location = new System.Drawing.Point(50, 283);
+            this.Results.Location = new System.Drawing.Point(50, 273);
             this.Results.Name = "Results";
             this.Results.ReadOnly = true;
             this.Results.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -616,7 +621,7 @@
             // 
             // Task31
             // 
-            this.Task31.Location = new System.Drawing.Point(190, 256);
+            this.Task31.Location = new System.Drawing.Point(190, 249);
             this.Task31.Name = "Task31";
             this.Task31.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.Task31.Size = new System.Drawing.Size(311, 20);
@@ -625,7 +630,7 @@
             // 
             // Task3
             // 
-            this.Task3.Location = new System.Drawing.Point(20, 256);
+            this.Task3.Location = new System.Drawing.Point(20, 249);
             this.Task3.Name = "Task3";
             this.Task3.ReadOnly = true;
             this.Task3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -635,7 +640,7 @@
             // 
             // Task2
             // 
-            this.Task2.Location = new System.Drawing.Point(20, 231);
+            this.Task2.Location = new System.Drawing.Point(20, 224);
             this.Task2.Name = "Task2";
             this.Task2.ReadOnly = true;
             this.Task2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -645,7 +650,7 @@
             // 
             // Task21
             // 
-            this.Task21.Location = new System.Drawing.Point(124, 231);
+            this.Task21.Location = new System.Drawing.Point(124, 224);
             this.Task21.Name = "Task21";
             this.Task21.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.Task21.Size = new System.Drawing.Size(377, 20);
@@ -654,7 +659,7 @@
             // 
             // Task11
             // 
-            this.Task11.Location = new System.Drawing.Point(166, 205);
+            this.Task11.Location = new System.Drawing.Point(166, 198);
             this.Task11.Name = "Task11";
             this.Task11.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.Task11.Size = new System.Drawing.Size(335, 20);
@@ -663,7 +668,7 @@
             // 
             // Task1
             // 
-            this.Task1.Location = new System.Drawing.Point(20, 205);
+            this.Task1.Location = new System.Drawing.Point(20, 198);
             this.Task1.Name = "Task1";
             this.Task1.ReadOnly = true;
             this.Task1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -674,7 +679,7 @@
             // Tasks
             // 
             this.Tasks.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.Tasks.Location = new System.Drawing.Point(50, 183);
+            this.Tasks.Location = new System.Drawing.Point(50, 176);
             this.Tasks.Name = "Tasks";
             this.Tasks.ReadOnly = true;
             this.Tasks.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -684,25 +689,26 @@
             // 
             // TasksAndResults
             // 
+            this.TasksAndResults.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TasksAndResults.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.TasksAndResults.Location = new System.Drawing.Point(20, 160);
+            this.TasksAndResults.Location = new System.Drawing.Point(20, 152);
             this.TasksAndResults.Name = "TasksAndResults";
             this.TasksAndResults.ReadOnly = true;
             this.TasksAndResults.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.TasksAndResults.Size = new System.Drawing.Size(204, 20);
+            this.TasksAndResults.Size = new System.Drawing.Size(214, 20);
             this.TasksAndResults.TabIndex = 10;
             this.TasksAndResults.Text = "Задачи и планируемые результаты";
             // 
             // Date2
             // 
-            this.Date2.Location = new System.Drawing.Point(76, 128);
+            this.Date2.Location = new System.Drawing.Point(76, 123);
             this.Date2.Name = "Date2";
             this.Date2.Size = new System.Drawing.Size(128, 23);
             this.Date2.TabIndex = 9;
             // 
             // Date1
             // 
-            this.Date1.Location = new System.Drawing.Point(20, 131);
+            this.Date1.Location = new System.Drawing.Point(20, 126);
             this.Date1.Name = "Date1";
             this.Date1.ReadOnly = true;
             this.Date1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -712,17 +718,17 @@
             // 
             // LessonTopic2
             // 
-            this.LessonTopic2.Location = new System.Drawing.Point(96, 86);
+            this.LessonTopic2.Location = new System.Drawing.Point(96, 81);
             this.LessonTopic2.MaxLength = 200;
             this.LessonTopic2.Name = "LessonTopic2";
             this.LessonTopic2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.LessonTopic2.Size = new System.Drawing.Size(405, 36);
             this.LessonTopic2.TabIndex = 7;
-            this.LessonTopic2.Text = "1\n1\n1\n";
+            this.LessonTopic2.Text = "";
             // 
             // LessonTopic1
             // 
-            this.LessonTopic1.Location = new System.Drawing.Point(20, 86);
+            this.LessonTopic1.Location = new System.Drawing.Point(20, 81);
             this.LessonTopic1.Name = "LessonTopic1";
             this.LessonTopic1.ReadOnly = true;
             this.LessonTopic1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -732,7 +738,7 @@
             // 
             // Subject2
             // 
-            this.Subject2.Location = new System.Drawing.Point(80, 60);
+            this.Subject2.Location = new System.Drawing.Point(80, 55);
             this.Subject2.Name = "Subject2";
             this.Subject2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.Subject2.Size = new System.Drawing.Size(421, 20);
@@ -741,7 +747,7 @@
             // 
             // Subject1
             // 
-            this.Subject1.Location = new System.Drawing.Point(20, 60);
+            this.Subject1.Location = new System.Drawing.Point(20, 55);
             this.Subject1.Name = "Subject1";
             this.Subject1.ReadOnly = true;
             this.Subject1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -751,7 +757,7 @@
             // 
             // Class2
             // 
-            this.Class2.Location = new System.Drawing.Point(325, 34);
+            this.Class2.Location = new System.Drawing.Point(323, 29);
             this.Class2.Name = "Class2";
             this.Class2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.Class2.Size = new System.Drawing.Size(176, 20);
@@ -760,7 +766,7 @@
             // 
             // Class1
             // 
-            this.Class1.Location = new System.Drawing.Point(275, 34);
+            this.Class1.Location = new System.Drawing.Point(273, 29);
             this.Class1.Name = "Class1";
             this.Class1.ReadOnly = true;
             this.Class1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -770,7 +776,7 @@
             // 
             // Teacher2
             // 
-            this.Teacher2.Location = new System.Drawing.Point(78, 34);
+            this.Teacher2.Location = new System.Drawing.Point(76, 29);
             this.Teacher2.Name = "Teacher2";
             this.Teacher2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
             this.Teacher2.Size = new System.Drawing.Size(191, 20);
@@ -780,7 +786,7 @@
             // Teacher1
             // 
             this.Teacher1.BackColor = System.Drawing.SystemColors.Control;
-            this.Teacher1.Location = new System.Drawing.Point(20, 34);
+            this.Teacher1.Location = new System.Drawing.Point(20, 29);
             this.Teacher1.MaxLength = 10;
             this.Teacher1.Name = "Teacher1";
             this.Teacher1.ReadOnly = true;
@@ -791,7 +797,7 @@
             // 
             // Other
             // 
-            this.Other.Location = new System.Drawing.Point(540, 12);
+            this.Other.Location = new System.Drawing.Point(12, 12);
             this.Other.Name = "Other";
             this.Other.Size = new System.Drawing.Size(520, 637);
             this.Other.TabIndex = 8;
@@ -809,7 +815,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1370, 661);
-            this.Controls.Add(this.Other);
             this.Controls.Add(this.MainMenuHelperLabel);
             this.Controls.Add(this.MainMenuPictureBoxHelper);
             this.Controls.Add(this.ButtonMainMenuCloseHelper);
@@ -820,6 +825,7 @@
             this.Controls.Add(this.Instruction);
             this.Controls.Add(this.TechnicalMap);
             this.Controls.Add(this.CreateLesson);
+            this.Controls.Add(this.Other);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Form1";

@@ -62,7 +62,7 @@ namespace WindowsPedApp
             {
                 OpenMainMenu();
             }else
-            if (Text == "Main Menu" || Text=="Create Lesson" || Text=="Strategy Card" || Text == "Other")
+            if (Text == "Main Menu" || Text=="Create Lesson" || Text=="Technical map" || Text == "Other")
             {
                 OpenMenu(sender, e);
             }
@@ -121,18 +121,24 @@ namespace WindowsPedApp
         {
             CloseAll();
             CreateLesson.Visible = true;
+            CreateLesson.Location = locationDefault;
+            CreateLesson.Size = new Size(sizeDefault);
             Text = "Create Lesson";
         }
         private void OpenTechnicalMap(object sender,EventArgs e)
         {
             CloseAll();
             TechnicalMap.Visible = true;
-            Text = "Strategy Card";
+            TechnicalMap.Location = locationDefault;
+            TechnicalMap.Size = new Size(sizeDefault);
+            Text = "Technical map";
         }
         private void OpenOther(object sender, EventArgs e)
         {
             CloseAll();
             Other.Visible = true;
+            Other.Location = locationDefault;
+            Other.Size = new Size(sizeDefault);
             Text = "Other";
         }
     }
