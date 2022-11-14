@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.MainMenu = new System.Windows.Forms.Panel();
             this.MainMenuNameProg = new System.Windows.Forms.Label();
             this.ButtonMainMenuExit = new System.Windows.Forms.Button();
@@ -176,7 +177,7 @@
             this.LiteraturesRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.LiteraturesRichTextBox.Size = new System.Drawing.Size(420, 590);
             this.LiteraturesRichTextBox.TabIndex = 0;
-            this.LiteraturesRichTextBox.Text = "";
+            this.LiteraturesRichTextBox.Text = resources.GetString("LiteraturesRichTextBox.Text");
             // 
             // ButtonHome
             // 
@@ -211,6 +212,7 @@
             this.ButtonOther.Tag = "Button";
             this.ButtonOther.Text = "Дополнительно";
             this.ButtonOther.UseVisualStyleBackColor = false;
+            this.ButtonOther.Click += new System.EventHandler(this.OpenOther);
             // 
             // ButtonCreateTechnicalMap
             // 
@@ -238,6 +240,7 @@
             this.ButtonCreateLesson.Tag = "Button";
             this.ButtonCreateLesson.Text = "Создать урок";
             this.ButtonCreateLesson.UseVisualStyleBackColor = false;
+            this.ButtonCreateLesson.Click += new System.EventHandler(this.OpenCreateLesson);
             // 
             // Instruction
             // 
@@ -293,9 +296,9 @@
             this.Controls.Add(this.MainMenuPictureBoxHelper);
             this.Controls.Add(this.ButtonMainMenuCloseHelper);
             this.Controls.Add(this.ButtonHome);
+            this.Controls.Add(this.Literatures);
             this.Controls.Add(this.Menu);
             this.Controls.Add(this.MainMenu);
-            this.Controls.Add(this.Literatures);
             this.Controls.Add(this.Instruction);
             this.Controls.Add(this.StrategyCard);
             this.Controls.Add(this.CreateLesson);

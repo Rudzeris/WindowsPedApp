@@ -30,15 +30,11 @@ namespace WindowsPedApp
             " а также заинтересовать молодых амбициозных студентов. У ак правильно создать и оформить" +
             " презентацию?Ф Ц на это ¬ы тоже найдЄте ответ! ∆елаю ¬ам при€тного пользовани€, надеюсь," +
             " что это приложение упростит ¬ам задачу, а студенты будут с удовольствием ходить на ¬аши зан€ти€!";
-
+        string sw="";
         public Form1()
         {
             InitializeComponent();
             Size = new Size(560, 700);
-
-            MainMenuHelperLabel.Location= new Point(226, 230);
-            ButtonMainMenuCloseHelper.Location = new Point(226, 204);
-            MainMenuPictureBoxHelper.Location = new Point(389, 344);
 
             LiteraturesRichTextBox.Text = "\t1)  нига1\n" +
                 "\t2)  нига2\n" +
@@ -62,16 +58,24 @@ namespace WindowsPedApp
             MainMenuPictureBoxHelper.Visible = true;
             MainMenuHelperLabel.Visible = true;
             ButtonMainMenuCloseHelper.Visible = true;
+            MainMenuHelperLabel.Location = new Point(226, 230);
+            ButtonMainMenuCloseHelper.Location = new Point(226, 204);
+            MainMenuPictureBoxHelper.Location = new Point(389, 344);
             MainMenuHelperLabel.Text = str;
         }
 
         private void CloseAll()
         {
+            object a=new object();
+            EventArgs b = new EventArgs();
+            MainMenuCloseHelper(a,b);
             Instruction.Visible = false;
             MainMenu.Visible = false;
             Literatures.Visible = false;
             Menu.Visible = false;
             StrategyCard.Visible = false;
+            CreateLesson.Visible = false;
+            Other.Visible = false;
         }
         private void OpenMainMenu()
         {
@@ -84,10 +88,14 @@ namespace WindowsPedApp
         }
         private void OpenMainMenuOrMenu(object sender, EventArgs e)
         {
-            if (Text == "Main Menu")
-                OpenMenu(sender, e);
-            else
+            if (Text == "Instruction" || Text == "Literatures" || Text == "Menu")
+            {
                 OpenMainMenu();
+            }else
+            if (Text == "Main Menu" || Text=="Create Lesson" || Text=="Strategy Card" || Text == "Other")
+            {
+                OpenMenu(sender, e);
+            }
         }
         private void OpenInstruction(object sender, EventArgs e)
         {
@@ -112,6 +120,7 @@ namespace WindowsPedApp
             Literatures.Size = new Size(sizeDefault);
             Literatures.Location = locationDefault;
             Text = "Literatures";
+            MainMenuCloseHelper(sender, e);
         }
         private void MainMenuButtonExit_Click(object sender, EventArgs e)
         {
@@ -140,15 +149,21 @@ namespace WindowsPedApp
         }
         private void OpenCreateLesson(object sender,EventArgs e)
         {
-
+            CloseAll();
+            CreateLesson.Visible = true;
+            Text = "Create Lesson";
         }
         private void OpenStrategyCard(object sender,EventArgs e)
         {
-
+            CloseAll();
+            StrategyCard.Visible = true;
+            Text = "Strategy Card";
         }
         private void OpenOther(object sender, EventArgs e)
         {
-
+            CloseAll();
+            Other.Visible = true;
+            Text = "Other";
         }
     }
 }
