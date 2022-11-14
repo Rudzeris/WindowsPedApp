@@ -87,8 +87,8 @@
             this.LessonTopic1 = new System.Windows.Forms.RichTextBox();
             this.Subject2 = new System.Windows.Forms.RichTextBox();
             this.Subject1 = new System.Windows.Forms.RichTextBox();
-            this.Class2 = new System.Windows.Forms.RichTextBox();
-            this.Class1 = new System.Windows.Forms.RichTextBox();
+            this.Group2 = new System.Windows.Forms.RichTextBox();
+            this.Group1 = new System.Windows.Forms.RichTextBox();
             this.Teacher2 = new System.Windows.Forms.RichTextBox();
             this.Teacher1 = new System.Windows.Forms.RichTextBox();
             this.Other = new System.Windows.Forms.Panel();
@@ -107,7 +107,7 @@
             this.MainMenu.Controls.Add(this.ButtonMainMenuExit);
             this.MainMenu.Controls.Add(this.ButtonMainMenuLiteratures);
             this.MainMenu.Controls.Add(this.ButtonMainMenuInstruction);
-            this.MainMenu.Location = new System.Drawing.Point(12, 12);
+            this.MainMenu.Location = new System.Drawing.Point(540, 12);
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(520, 637);
             this.MainMenu.TabIndex = 0;
@@ -351,8 +351,8 @@
             this.TechnicalMap.Controls.Add(this.LessonTopic1);
             this.TechnicalMap.Controls.Add(this.Subject2);
             this.TechnicalMap.Controls.Add(this.Subject1);
-            this.TechnicalMap.Controls.Add(this.Class2);
-            this.TechnicalMap.Controls.Add(this.Class1);
+            this.TechnicalMap.Controls.Add(this.Group2);
+            this.TechnicalMap.Controls.Add(this.Group1);
             this.TechnicalMap.Controls.Add(this.Teacher2);
             this.TechnicalMap.Controls.Add(this.Teacher1);
             this.TechnicalMap.Location = new System.Drawing.Point(12, 12);
@@ -755,24 +755,24 @@
             this.Subject1.TabIndex = 4;
             this.Subject1.Text = "Предмет";
             // 
-            // Class2
+            // Group2
             // 
-            this.Class2.Location = new System.Drawing.Point(323, 29);
-            this.Class2.Name = "Class2";
-            this.Class2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.Class2.Size = new System.Drawing.Size(176, 20);
-            this.Class2.TabIndex = 3;
-            this.Class2.Text = "";
+            this.Group2.Location = new System.Drawing.Point(323, 29);
+            this.Group2.Name = "Group2";
+            this.Group2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Group2.Size = new System.Drawing.Size(176, 20);
+            this.Group2.TabIndex = 3;
+            this.Group2.Text = "";
             // 
-            // Class1
+            // Group1
             // 
-            this.Class1.Location = new System.Drawing.Point(273, 29);
-            this.Class1.Name = "Class1";
-            this.Class1.ReadOnly = true;
-            this.Class1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.Class1.Size = new System.Drawing.Size(44, 20);
-            this.Class1.TabIndex = 2;
-            this.Class1.Text = "группа";
+            this.Group1.Location = new System.Drawing.Point(273, 29);
+            this.Group1.Name = "Group1";
+            this.Group1.ReadOnly = true;
+            this.Group1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Group1.Size = new System.Drawing.Size(44, 20);
+            this.Group1.TabIndex = 2;
+            this.Group1.Text = "группа";
             // 
             // Teacher2
             // 
@@ -868,8 +868,8 @@
         private RichTextBox LessonTopic1;
         private RichTextBox Subject2;
         private RichTextBox Subject1;
-        private RichTextBox Class2;
-        private RichTextBox Class1;
+        private RichTextBox Group2;
+        private RichTextBox Group1;
         private RichTextBox Teacher2;
         private DateTimePicker Date2;
         private RichTextBox Date1;
