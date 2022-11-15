@@ -63,6 +63,16 @@ namespace WindowsPedApp.Resources {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap BackArrow {
+            get {
+                object obj = ResourceManager.GetObject("BackArrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap Helper {
             get {
                 object obj = ResourceManager.GetObject("Helper", resourceCulture);

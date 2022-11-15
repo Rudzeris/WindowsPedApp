@@ -94,6 +94,10 @@
             this.Other = new System.Windows.Forms.Panel();
             this.CreateLesson = new System.Windows.Forms.Panel();
             this.LessonPanel2 = new System.Windows.Forms.Panel();
+            this.LessonPoint20 = new System.Windows.Forms.RichTextBox();
+            this.LessonPoint26 = new System.Windows.Forms.RichTextBox();
+            this.LessonPoint25 = new System.Windows.Forms.RichTextBox();
+            this.LessonPoint24 = new System.Windows.Forms.RichTextBox();
             this.LessonPoint23 = new System.Windows.Forms.RichTextBox();
             this.LessonPoint22 = new System.Windows.Forms.RichTextBox();
             this.LessonPoint21 = new System.Windows.Forms.RichTextBox();
@@ -103,9 +107,8 @@
             this.LessonPoint13 = new System.Windows.Forms.RichTextBox();
             this.LessonPoint12 = new System.Windows.Forms.RichTextBox();
             this.LessonPoint11 = new System.Windows.Forms.RichTextBox();
-            this.LessonPoint24 = new System.Windows.Forms.RichTextBox();
-            this.LessonPoint25 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.LessonCompletePanel = new System.Windows.Forms.Panel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.MainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HelperPictureBox)).BeginInit();
             this.Literatures.SuspendLayout();
@@ -114,6 +117,7 @@
             this.TechnologicalMap.SuspendLayout();
             this.CreateLesson.SuspendLayout();
             this.LessonPanel2.SuspendLayout();
+            this.LessonCompletePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainMenu
@@ -237,20 +241,23 @@
             this.LiteraturesRichTextBox.Name = "LiteraturesRichTextBox";
             this.LiteraturesRichTextBox.ReadOnly = true;
             this.LiteraturesRichTextBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.LiteraturesRichTextBox.Size = new System.Drawing.Size(420, 590);
+            this.LiteraturesRichTextBox.Size = new System.Drawing.Size(420, 570);
             this.LiteraturesRichTextBox.TabIndex = 0;
             this.LiteraturesRichTextBox.Text = resources.GetString("LiteraturesRichTextBox.Text");
             // 
             // ButtonHome
             // 
-            this.ButtonHome.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ButtonHome.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ButtonHome.BackgroundImage = global::WindowsPedApp.Resources.Resource1.BackArrow;
+            this.ButtonHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ButtonHome.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.ButtonHome.Location = new System.Drawing.Point(12, 12);
             this.ButtonHome.Name = "ButtonHome";
             this.ButtonHome.Size = new System.Drawing.Size(30, 30);
             this.ButtonHome.TabIndex = 2;
             this.ButtonHome.Tag = "Button";
             this.ButtonHome.UseVisualStyleBackColor = false;
-            this.ButtonHome.Click += new System.EventHandler(this.OpenMainMenuOrMenu);
+            this.ButtonHome.Click += new System.EventHandler(this.ButtonMainBack);
             // 
             // Menu
             // 
@@ -322,7 +329,7 @@
             this.InstructionRichText.Name = "InstructionRichText";
             this.InstructionRichText.ReadOnly = true;
             this.InstructionRichText.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.InstructionRichText.Size = new System.Drawing.Size(420, 590);
+            this.InstructionRichText.Size = new System.Drawing.Size(420, 570);
             this.InstructionRichText.TabIndex = 1;
             this.InstructionRichText.Text = resources.GetString("InstructionRichText.Text");
             // 
@@ -829,23 +836,91 @@
             this.CreateLesson.Controls.Add(this.LessonPoint13);
             this.CreateLesson.Controls.Add(this.LessonPoint12);
             this.CreateLesson.Controls.Add(this.LessonPoint11);
-            this.CreateLesson.Location = new System.Drawing.Point(12, 12);
+            this.CreateLesson.Location = new System.Drawing.Point(540, 12);
             this.CreateLesson.Name = "CreateLesson";
             this.CreateLesson.Size = new System.Drawing.Size(520, 637);
             this.CreateLesson.TabIndex = 9;
             // 
             // LessonPanel2
             // 
-            this.LessonPanel2.Controls.Add(this.richTextBox3);
+            this.LessonPanel2.Controls.Add(this.LessonPoint20);
+            this.LessonPanel2.Controls.Add(this.LessonPoint26);
             this.LessonPanel2.Controls.Add(this.LessonPoint25);
             this.LessonPanel2.Controls.Add(this.LessonPoint24);
             this.LessonPanel2.Controls.Add(this.LessonPoint23);
             this.LessonPanel2.Controls.Add(this.LessonPoint22);
             this.LessonPanel2.Controls.Add(this.LessonPoint21);
-            this.LessonPanel2.Location = new System.Drawing.Point(24, 317);
+            this.LessonPanel2.Location = new System.Drawing.Point(24, 350);
             this.LessonPanel2.Name = "LessonPanel2";
-            this.LessonPanel2.Size = new System.Drawing.Size(476, 308);
+            this.LessonPanel2.Size = new System.Drawing.Size(476, 249);
             this.LessonPanel2.TabIndex = 6;
+            // 
+            // LessonPoint20
+            // 
+            this.LessonPoint20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.LessonPoint20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LessonPoint20.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LessonPoint20.HideSelection = false;
+            this.LessonPoint20.Location = new System.Drawing.Point(24, 3);
+            this.LessonPoint20.MaxLength = 80;
+            this.LessonPoint20.Name = "LessonPoint20";
+            this.LessonPoint20.ReadOnly = true;
+            this.LessonPoint20.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LessonPoint20.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.LessonPoint20.Size = new System.Drawing.Size(420, 26);
+            this.LessonPoint20.TabIndex = 13;
+            this.LessonPoint20.Text = "Наш выбор";
+            // 
+            // LessonPoint26
+            // 
+            this.LessonPoint26.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LessonPoint26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LessonPoint26.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LessonPoint26.HideSelection = false;
+            this.LessonPoint26.Location = new System.Drawing.Point(24, 209);
+            this.LessonPoint26.MaxLength = 80;
+            this.LessonPoint26.Name = "LessonPoint26";
+            this.LessonPoint26.ReadOnly = true;
+            this.LessonPoint26.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LessonPoint26.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.LessonPoint26.Size = new System.Drawing.Size(420, 26);
+            this.LessonPoint26.TabIndex = 12;
+            this.LessonPoint26.Text = "F";
+            this.LessonPoint26.Click += new System.EventHandler(this.LessonPoint26_Click);
+            // 
+            // LessonPoint25
+            // 
+            this.LessonPoint25.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LessonPoint25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LessonPoint25.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LessonPoint25.HideSelection = false;
+            this.LessonPoint25.Location = new System.Drawing.Point(24, 177);
+            this.LessonPoint25.MaxLength = 80;
+            this.LessonPoint25.Name = "LessonPoint25";
+            this.LessonPoint25.ReadOnly = true;
+            this.LessonPoint25.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LessonPoint25.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.LessonPoint25.Size = new System.Drawing.Size(420, 26);
+            this.LessonPoint25.TabIndex = 11;
+            this.LessonPoint25.Text = "E";
+            this.LessonPoint25.Click += new System.EventHandler(this.LessonPoint25_Click);
+            // 
+            // LessonPoint24
+            // 
+            this.LessonPoint24.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LessonPoint24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LessonPoint24.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LessonPoint24.HideSelection = false;
+            this.LessonPoint24.Location = new System.Drawing.Point(24, 145);
+            this.LessonPoint24.MaxLength = 80;
+            this.LessonPoint24.Name = "LessonPoint24";
+            this.LessonPoint24.ReadOnly = true;
+            this.LessonPoint24.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LessonPoint24.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.LessonPoint24.Size = new System.Drawing.Size(420, 26);
+            this.LessonPoint24.TabIndex = 10;
+            this.LessonPoint24.Text = "D";
+            this.LessonPoint24.Click += new System.EventHandler(this.LessonPoint24_Click);
             // 
             // LessonPoint23
             // 
@@ -853,15 +928,16 @@
             this.LessonPoint23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LessonPoint23.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.LessonPoint23.HideSelection = false;
-            this.LessonPoint23.Location = new System.Drawing.Point(24, 107);
+            this.LessonPoint23.Location = new System.Drawing.Point(24, 113);
             this.LessonPoint23.MaxLength = 80;
             this.LessonPoint23.Name = "LessonPoint23";
             this.LessonPoint23.ReadOnly = true;
             this.LessonPoint23.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.LessonPoint23.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.LessonPoint23.Size = new System.Drawing.Size(420, 44);
+            this.LessonPoint23.Size = new System.Drawing.Size(420, 26);
             this.LessonPoint23.TabIndex = 9;
-            this.LessonPoint23.Text = "";
+            this.LessonPoint23.Text = "C";
+            this.LessonPoint23.Click += new System.EventHandler(this.LessonPoint23_Click);
             // 
             // LessonPoint22
             // 
@@ -869,15 +945,16 @@
             this.LessonPoint22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LessonPoint22.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.LessonPoint22.HideSelection = false;
-            this.LessonPoint22.Location = new System.Drawing.Point(24, 57);
+            this.LessonPoint22.Location = new System.Drawing.Point(24, 81);
             this.LessonPoint22.MaxLength = 80;
             this.LessonPoint22.Name = "LessonPoint22";
             this.LessonPoint22.ReadOnly = true;
             this.LessonPoint22.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.LessonPoint22.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.LessonPoint22.Size = new System.Drawing.Size(420, 44);
+            this.LessonPoint22.Size = new System.Drawing.Size(420, 26);
             this.LessonPoint22.TabIndex = 8;
-            this.LessonPoint22.Text = "";
+            this.LessonPoint22.Text = "B";
+            this.LessonPoint22.Click += new System.EventHandler(this.LessonPoint22_Click);
             // 
             // LessonPoint21
             // 
@@ -885,21 +962,22 @@
             this.LessonPoint21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LessonPoint21.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.LessonPoint21.HideSelection = false;
-            this.LessonPoint21.Location = new System.Drawing.Point(24, 7);
+            this.LessonPoint21.Location = new System.Drawing.Point(24, 49);
             this.LessonPoint21.MaxLength = 80;
             this.LessonPoint21.Name = "LessonPoint21";
             this.LessonPoint21.ReadOnly = true;
             this.LessonPoint21.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.LessonPoint21.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.LessonPoint21.Size = new System.Drawing.Size(420, 44);
+            this.LessonPoint21.Size = new System.Drawing.Size(420, 26);
             this.LessonPoint21.TabIndex = 7;
-            this.LessonPoint21.Text = "";
+            this.LessonPoint21.Text = "A";
+            this.LessonPoint21.Click += new System.EventHandler(this.LessonPoint21_Click);
             // 
             // LessonButton1
             // 
             this.LessonButton1.Location = new System.Drawing.Point(48, 288);
             this.LessonButton1.Name = "LessonButton1";
-            this.LessonButton1.Size = new System.Drawing.Size(420, 23);
+            this.LessonButton1.Size = new System.Drawing.Size(420, 50);
             this.LessonButton1.TabIndex = 5;
             this.LessonButton1.UseVisualStyleBackColor = true;
             this.LessonButton1.Click += new System.EventHandler(this.LessonButton1_Click);
@@ -989,53 +1067,21 @@
             this.LessonPoint11.Text = "Урок усвоения новых знаний ";
             this.LessonPoint11.Click += new System.EventHandler(this.LessonPoint11_Click);
             // 
-            // LessonPoint24
+            // LessonCompletePanel
             // 
-            this.LessonPoint24.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LessonPoint24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LessonPoint24.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LessonPoint24.HideSelection = false;
-            this.LessonPoint24.Location = new System.Drawing.Point(24, 157);
-            this.LessonPoint24.MaxLength = 80;
-            this.LessonPoint24.Name = "LessonPoint24";
-            this.LessonPoint24.ReadOnly = true;
-            this.LessonPoint24.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LessonPoint24.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.LessonPoint24.Size = new System.Drawing.Size(420, 44);
-            this.LessonPoint24.TabIndex = 10;
-            this.LessonPoint24.Text = "";
+            this.LessonCompletePanel.Controls.Add(this.richTextBox1);
+            this.LessonCompletePanel.Location = new System.Drawing.Point(12, 12);
+            this.LessonCompletePanel.Name = "LessonCompletePanel";
+            this.LessonCompletePanel.Size = new System.Drawing.Size(520, 637);
+            this.LessonCompletePanel.TabIndex = 10;
             // 
-            // LessonPoint25
+            // richTextBox1
             // 
-            this.LessonPoint25.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LessonPoint25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LessonPoint25.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.LessonPoint25.HideSelection = false;
-            this.LessonPoint25.Location = new System.Drawing.Point(24, 207);
-            this.LessonPoint25.MaxLength = 80;
-            this.LessonPoint25.Name = "LessonPoint25";
-            this.LessonPoint25.ReadOnly = true;
-            this.LessonPoint25.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LessonPoint25.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.LessonPoint25.Size = new System.Drawing.Size(420, 44);
-            this.LessonPoint25.TabIndex = 11;
-            this.LessonPoint25.Text = "";
-            // 
-            // richTextBox3
-            // 
-            this.richTextBox3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox3.HideSelection = false;
-            this.richTextBox3.Location = new System.Drawing.Point(24, 257);
-            this.richTextBox3.MaxLength = 80;
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.ReadOnly = true;
-            this.richTextBox3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.richTextBox3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox3.Size = new System.Drawing.Size(420, 44);
-            this.richTextBox3.TabIndex = 12;
-            this.richTextBox3.Text = "";
+            this.richTextBox1.Location = new System.Drawing.Point(50, 36);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(420, 570);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = "";
             // 
             // Form1
             // 
@@ -1054,6 +1100,7 @@
             this.Controls.Add(this.TechnologicalMap);
             this.Controls.Add(this.CreateLesson);
             this.Controls.Add(this.Other);
+            this.Controls.Add(this.LessonCompletePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Form1";
@@ -1067,6 +1114,7 @@
             this.TechnologicalMap.ResumeLayout(false);
             this.CreateLesson.ResumeLayout(false);
             this.LessonPanel2.ResumeLayout(false);
+            this.LessonCompletePanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1147,8 +1195,11 @@
         private RichTextBox LessonPoint23;
         private RichTextBox LessonPoint22;
         private RichTextBox LessonPoint21;
-        private RichTextBox richTextBox3;
+        private RichTextBox LessonPoint26;
         private RichTextBox LessonPoint25;
         private RichTextBox LessonPoint24;
+        private RichTextBox LessonPoint20;
+        private Panel LessonCompletePanel;
+        private RichTextBox richTextBox1;
     }
 }
