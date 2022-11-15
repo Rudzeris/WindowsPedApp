@@ -1,4 +1,5 @@
 using System.Collections.Specialized;
+using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace WindowsPedApp
@@ -11,31 +12,35 @@ namespace WindowsPedApp
             "Оно поможет грамотно и интересно составить нетрадиционные занятия для студентов. " +
             "Это уникальное приложение поможет повысить мотивацию обучающихся, " +
             "а также облегчить нелёгкий труд по подготовке к занятиям.";
-        string InstructionHelperText = "Здесь указан основной функционал приложения и как им пользоваться";
+        string InstructionHelperText = "Здесь указан основной функционал приложения и как им пользоваться.";
         string MenuHelperText = "Тебе сюда пока нельзя, вiйди отсюда розбiйник. Сверху слева кнопка. Беги!";
-        string CreateLessonText = "Выберите урок в зависимости от дидактической цели.";
+        string CreateLessonText = "Выберите урок в зависимости от дидактической цели. Здесь только одна кнопка - кнопка по центру.";
 
         //ClassTechnicalMaps CTM = new ClassTechnicalMaps();
+
+        char LessonPoint1X;
 
         public Form1()
         {
             InitializeComponent();
             Size = new Size(560, 700);
 
-            Test11.SelectionAlignment = HorizontalAlignment.Center;
-            Test12.SelectionAlignment = HorizontalAlignment.Center;
-            Test13.SelectionAlignment = HorizontalAlignment.Center;
-            Test14.SelectionAlignment = HorizontalAlignment.Center;
-            Test15.SelectionAlignment = HorizontalAlignment.Center;
+            LessonPoint11.SelectionAlignment = HorizontalAlignment.Center;
+            LessonPoint12.SelectionAlignment = HorizontalAlignment.Center;
+            LessonPoint13.SelectionAlignment = HorizontalAlignment.Center;
+            LessonPoint14.SelectionAlignment = HorizontalAlignment.Center;
+            LessonPoint15.SelectionAlignment = HorizontalAlignment.Center;
 
             OpenMainMenu();
         }
         Point sizeDefault = new Point(520,637);
         Point locationDefault = new Point(12,12);
 
-        private void HelperBackColor(Color a)
+        private void HelperNewLocation(int x,int y)
         {
-
+            HelperLabel.Location = new Point(HelperLabel.Location.X + x, HelperLabel.Location.Y+ y);
+            HelperButtonClose.Location = new Point(HelperButtonClose.Location.X+ x, HelperButtonClose.Location.Y+ y);
+            HelperPictureBox.Location = new Point(HelperPictureBox.Location.X+ x, HelperPictureBox.Location.Y+ y);
         }
 
         private void OpenHelper(string str)
@@ -101,6 +106,7 @@ namespace WindowsPedApp
             TechnologicalMap.Visible = false;
             CreateLesson.Visible = false;
             Other.Visible = false;
+            LessonPanel2.Visible = false;
         }
         private void OpenMainMenu()
         {
@@ -115,6 +121,19 @@ namespace WindowsPedApp
             MainMenu.Size = new Size(sizeDefault);
             MainMenu.Location = locationDefault;
         }
+
+        private void LessonPoint1Default()
+        {
+            LessonPoint1X = '#';
+            LessonPoint11.BackColor = CreateLesson.BackColor;
+            LessonPoint12.BackColor = CreateLesson.BackColor;
+            LessonPoint13.BackColor = CreateLesson.BackColor;
+            LessonPoint14.BackColor = CreateLesson.BackColor;
+            LessonPoint15.BackColor = CreateLesson.BackColor;
+            LessonButton1.BackColor = Color.Red;
+            LessonPanel2.Visible = false;
+        }
+
         private void OpenMainMenuOrMenu(object sender, EventArgs e)
         {
             if (Text == "Instruction" || Text == "Literatures" || Text == "Menu")
@@ -123,7 +142,12 @@ namespace WindowsPedApp
             }else
             if (Text == "Main Menu" || Text=="Create Lesson" || Text=="Technological map" || Text == "Other")
             {
-                OpenMenu(sender, e);
+                if (Text == "Create Lesson" && LessonPoint1X != '#')
+                {
+                    LessonPoint1Default();
+                }
+                else
+                    OpenMenu(sender, e);
             }
         }
         private void OpenInstruction(object sender, EventArgs e)
@@ -185,10 +209,12 @@ namespace WindowsPedApp
             CreateLesson.Size = new Size(sizeDefault);
 
             OpenHelper(CreateLessonText);
-
             HelperLabel.Location = new Point(280, 230);
             HelperButtonClose.Location = new Point(263 + 260, 204);
             HelperPictureBox.Location = new Point(389, 344);
+            HelperNewLocation(-50, 100);
+
+            LessonPoint1Default();
         }
         private void OpenTechnologicalMap(object sender,EventArgs e)
         {
@@ -205,6 +231,73 @@ namespace WindowsPedApp
             Other.Visible = true;
             Other.Location = locationDefault;
             Other.Size = new Size(sizeDefault);
+        }
+
+        public void OpenLessonPoint2X()
+        {
+            switch (LessonPoint1X)
+            {
+                case '1':
+
+                    break;
+                case '2':
+
+                    break;
+                case '3':
+
+                    break;
+                case '4':
+
+                    break;
+                case '5':
+
+                    break;
+            }
+        }
+        private void LessonPoint11_Click(object sender, EventArgs e)
+        {
+            LessonPoint1Default();
+            LessonPoint11.BackColor=Color.Teal;
+            LessonPoint1X = '1';
+            LessonButton1.BackColor = Color.Green;
+        }
+
+        private void LessonPoint12_Click(object sender, EventArgs e)
+        {
+            LessonPoint1Default();
+            LessonPoint12.BackColor = Color.Teal;
+            LessonPoint1X = '2';
+            LessonButton1.BackColor = Color.Green;
+        }
+
+        private void LessonPoint13_Click(object sender, EventArgs e)
+        {
+            LessonPoint1Default();
+            LessonPoint13.BackColor = Color.Teal;
+            LessonPoint1X = '3';
+            LessonButton1.BackColor = Color.Green;
+        }
+
+        private void LessonPoint14_Click(object sender, EventArgs e)
+        {
+            LessonPoint1Default();
+            LessonPoint14.BackColor = Color.Teal;
+            LessonPoint1X = '4';
+            LessonButton1.BackColor = Color.Green;
+        }
+
+        private void LessonPoint15_Click(object sender, EventArgs e)
+        {
+            LessonPoint1Default();
+            LessonPoint15.BackColor = Color.Teal;
+            LessonPoint1X = '5';
+            LessonButton1.BackColor = Color.Green;
+        }
+
+        private void LessonButton1_Click(object sender, EventArgs e)
+        {
+            LessonPanel2.Visible = true;
+
         }
 
         //public class ClassTechnicalMaps
