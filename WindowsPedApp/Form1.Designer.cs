@@ -108,7 +108,9 @@
             this.LessonPoint12 = new System.Windows.Forms.RichTextBox();
             this.LessonPoint11 = new System.Windows.Forms.RichTextBox();
             this.LessonCompletePanel = new System.Windows.Forms.Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.LessonStructureButton = new System.Windows.Forms.Button();
+            this.LessonCompletePictureBox = new System.Windows.Forms.PictureBox();
+            this.LessonCompleteRichBox = new System.Windows.Forms.RichTextBox();
             this.MainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HelperPictureBox)).BeginInit();
             this.Literatures.SuspendLayout();
@@ -118,6 +120,7 @@
             this.CreateLesson.SuspendLayout();
             this.LessonPanel2.SuspendLayout();
             this.LessonCompletePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LessonCompletePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // MainMenu
@@ -1069,19 +1072,42 @@
             // 
             // LessonCompletePanel
             // 
-            this.LessonCompletePanel.Controls.Add(this.richTextBox1);
+            this.LessonCompletePanel.Controls.Add(this.LessonStructureButton);
+            this.LessonCompletePanel.Controls.Add(this.LessonCompletePictureBox);
+            this.LessonCompletePanel.Controls.Add(this.LessonCompleteRichBox);
             this.LessonCompletePanel.Location = new System.Drawing.Point(12, 12);
             this.LessonCompletePanel.Name = "LessonCompletePanel";
             this.LessonCompletePanel.Size = new System.Drawing.Size(520, 637);
             this.LessonCompletePanel.TabIndex = 10;
             // 
-            // richTextBox1
+            // LessonStructureButton
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(50, 36);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(420, 570);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
+            this.LessonStructureButton.Location = new System.Drawing.Point(187, 7);
+            this.LessonStructureButton.Name = "LessonStructureButton";
+            this.LessonStructureButton.Size = new System.Drawing.Size(123, 23);
+            this.LessonStructureButton.TabIndex = 2;
+            this.LessonStructureButton.Text = "Скрыть структуру";
+            this.LessonStructureButton.UseVisualStyleBackColor = true;
+            this.LessonStructureButton.Click += new System.EventHandler(this.LessonStructureButton_Click);
+            // 
+            // LessonCompletePictureBox
+            // 
+            this.LessonCompletePictureBox.BackgroundImage = global::WindowsPedApp.Resources.Resource1.Structures;
+            this.LessonCompletePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.LessonCompletePictureBox.Location = new System.Drawing.Point(50, 32);
+            this.LessonCompletePictureBox.Name = "LessonCompletePictureBox";
+            this.LessonCompletePictureBox.Size = new System.Drawing.Size(420, 506);
+            this.LessonCompletePictureBox.TabIndex = 1;
+            this.LessonCompletePictureBox.TabStop = false;
+            // 
+            // LessonCompleteRichBox
+            // 
+            this.LessonCompleteRichBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LessonCompleteRichBox.Location = new System.Drawing.Point(50, 36);
+            this.LessonCompleteRichBox.Name = "LessonCompleteRichBox";
+            this.LessonCompleteRichBox.Size = new System.Drawing.Size(420, 570);
+            this.LessonCompleteRichBox.TabIndex = 0;
+            this.LessonCompleteRichBox.Text = "";
             // 
             // Form1
             // 
@@ -1115,6 +1141,7 @@
             this.CreateLesson.ResumeLayout(false);
             this.LessonPanel2.ResumeLayout(false);
             this.LessonCompletePanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.LessonCompletePictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1200,6 +1227,8 @@
         private RichTextBox LessonPoint24;
         private RichTextBox LessonPoint20;
         private Panel LessonCompletePanel;
-        private RichTextBox richTextBox1;
+        private RichTextBox LessonCompleteRichBox;
+        private PictureBox LessonCompletePictureBox;
+        private Button LessonStructureButton;
     }
 }

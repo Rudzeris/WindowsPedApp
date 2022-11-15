@@ -108,7 +108,9 @@ namespace WindowsPedApp
             CreateLesson.Visible = false;
             Other.Visible = false;
             LessonPanel2.Visible = false;
+            LessonCompletePanel.Visible = false;
         }
+
         private void OpenMainMenu()
         {
             Text = "Main Menu";
@@ -160,7 +162,7 @@ namespace WindowsPedApp
             {
                 OpenMainMenu();
             }else
-            if (Text == "Main Menu" || Text=="Create Lesson" || Text=="Technological map" || Text == "Other")
+            if (Text == "Main Menu" || Text=="Create Lesson" || Text=="Technological map" || Text == "Other" || Text == "Lesson Complete")
             {
                 if (Text == "Create Lesson" && LessonPoint1X != '#')
                 {
@@ -261,6 +263,17 @@ namespace WindowsPedApp
             Other.Visible = true;
             Other.Location = locationDefault;
             Other.Size = new Size(sizeDefault);
+        }
+
+        public void OpenLessonComplete(object sender, EventArgs e)
+        {
+            CloseAll();
+            Text = "Lesson Complete";
+            LessonCompletePanel.Visible = true;
+            LessonCompletePanel.Location = locationDefault;
+            LessonCompletePanel.Size = new Size(sizeDefault);
+            LessonCompleteRichBox.Visible = false;
+            LessonCompletePictureBox.Visible = true;
         }
 
         public void OpenLessonPoint2X()
@@ -384,6 +397,7 @@ namespace WindowsPedApp
             else
             {
                 LessonPoint2Enabled(false);
+                OpenLessonComplete(sender, e);
             }
 
         }
@@ -434,6 +448,22 @@ namespace WindowsPedApp
             LessonPoint26.BackColor = Color.Beige;
             LessonPoint2X = '6';
             LessonButton1.BackColor = Color.Blue;
+        }
+
+        private void LessonStructureButton_Click(object sender, EventArgs e)
+        {
+            if (LessonCompletePictureBox.Visible == false)
+            {
+                LessonCompleteRichBox.Visible = true;
+                LessonCompletePictureBox.Visible = true;
+                LessonStructureButton.Text = "Скрыть структуру";
+            }
+            else
+            {
+                LessonCompletePictureBox.Visible = false;
+                LessonCompleteRichBox.Visible = true;
+                LessonStructureButton.Text = "Показать структуру";
+            }
         }
 
         //public class ClassTechnicalMaps
