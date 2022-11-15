@@ -42,13 +42,13 @@
             this.ButtonHome = new System.Windows.Forms.Button();
             this.Menu = new System.Windows.Forms.Panel();
             this.ButtonOther = new System.Windows.Forms.Button();
-            this.ButtonCreateTechnicalMap = new System.Windows.Forms.Button();
+            this.ButtonCreateTechnologicalMap = new System.Windows.Forms.Button();
             this.ButtonCreateLesson = new System.Windows.Forms.Button();
             this.Instruction = new System.Windows.Forms.Panel();
             this.InstructionRichText = new System.Windows.Forms.RichTextBox();
             this.TechnicalMap = new System.Windows.Forms.Panel();
-            this.TechnicalMap1 = new System.Windows.Forms.RichTextBox();
-            this.TechnicalMap2 = new System.Windows.Forms.RichTextBox();
+            this.TechnologicalMap1 = new System.Windows.Forms.RichTextBox();
+            this.TechnologicalMap2 = new System.Windows.Forms.RichTextBox();
             this.TAPL21 = new System.Windows.Forms.RichTextBox();
             this.TAPL2 = new System.Windows.Forms.RichTextBox();
             this.TAPL11 = new System.Windows.Forms.RichTextBox();
@@ -238,7 +238,7 @@
             // Menu
             // 
             this.Menu.Controls.Add(this.ButtonOther);
-            this.Menu.Controls.Add(this.ButtonCreateTechnicalMap);
+            this.Menu.Controls.Add(this.ButtonCreateTechnologicalMap);
             this.Menu.Controls.Add(this.ButtonCreateLesson);
             this.Menu.Location = new System.Drawing.Point(540, 12);
             this.Menu.Name = "Menu";
@@ -259,19 +259,19 @@
             this.ButtonOther.UseVisualStyleBackColor = false;
             this.ButtonOther.Click += new System.EventHandler(this.OpenOther);
             // 
-            // ButtonCreateTechnicalMap
+            // ButtonCreateTechnologicalMap
             // 
-            this.ButtonCreateTechnicalMap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.ButtonCreateTechnicalMap.AutoSize = true;
-            this.ButtonCreateTechnicalMap.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ButtonCreateTechnicalMap.Location = new System.Drawing.Point(113, 540);
-            this.ButtonCreateTechnicalMap.Name = "ButtonCreateTechnicalMap";
-            this.ButtonCreateTechnicalMap.Size = new System.Drawing.Size(294, 25);
-            this.ButtonCreateTechnicalMap.TabIndex = 2;
-            this.ButtonCreateTechnicalMap.Tag = "Button";
-            this.ButtonCreateTechnicalMap.Text = "Создать технологическую карту";
-            this.ButtonCreateTechnicalMap.UseVisualStyleBackColor = false;
-            this.ButtonCreateTechnicalMap.Click += new System.EventHandler(this.OpenTechnicalMap);
+            this.ButtonCreateTechnologicalMap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonCreateTechnologicalMap.AutoSize = true;
+            this.ButtonCreateTechnologicalMap.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ButtonCreateTechnologicalMap.Location = new System.Drawing.Point(113, 540);
+            this.ButtonCreateTechnologicalMap.Name = "ButtonCreateTechnologicalMap";
+            this.ButtonCreateTechnologicalMap.Size = new System.Drawing.Size(294, 25);
+            this.ButtonCreateTechnologicalMap.TabIndex = 2;
+            this.ButtonCreateTechnologicalMap.Tag = "Button";
+            this.ButtonCreateTechnologicalMap.Text = "Создать технологическую карту";
+            this.ButtonCreateTechnologicalMap.UseVisualStyleBackColor = false;
+            this.ButtonCreateTechnologicalMap.Click += new System.EventHandler(this.OpenTechnologicalMap);
             // 
             // ButtonCreateLesson
             // 
@@ -311,8 +311,8 @@
             // 
             // TechnicalMap
             // 
-            this.TechnicalMap.Controls.Add(this.TechnicalMap1);
-            this.TechnicalMap.Controls.Add(this.TechnicalMap2);
+            this.TechnicalMap.Controls.Add(this.TechnologicalMap1);
+            this.TechnicalMap.Controls.Add(this.TechnologicalMap2);
             this.TechnicalMap.Controls.Add(this.TAPL21);
             this.TechnicalMap.Controls.Add(this.TAPL2);
             this.TechnicalMap.Controls.Add(this.TAPL11);
@@ -360,29 +360,29 @@
             this.TechnicalMap.Size = new System.Drawing.Size(520, 637);
             this.TechnicalMap.TabIndex = 7;
             // 
-            // TechnicalMap1
+            // TechnologicalMap1
             // 
-            this.TechnicalMap1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TechnicalMap1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.TechnicalMap1.Location = new System.Drawing.Point(36, 3);
-            this.TechnicalMap1.Name = "TechnicalMap1";
-            this.TechnicalMap1.ReadOnly = true;
-            this.TechnicalMap1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.TechnicalMap1.Size = new System.Drawing.Size(198, 20);
-            this.TechnicalMap1.TabIndex = 42;
-            this.TechnicalMap1.Text = "Технологическая карта урока №";
+            this.TechnologicalMap1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.TechnologicalMap1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.TechnologicalMap1.Location = new System.Drawing.Point(36, 3);
+            this.TechnologicalMap1.Name = "TechnologicalMap1";
+            this.TechnologicalMap1.ReadOnly = true;
+            this.TechnologicalMap1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.TechnologicalMap1.Size = new System.Drawing.Size(198, 20);
+            this.TechnologicalMap1.TabIndex = 42;
+            this.TechnologicalMap1.Text = "Технологическая карта урока №";
             // 
-            // TechnicalMap2
+            // TechnologicalMap2
             // 
-            this.TechnicalMap2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.TechnicalMap2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.TechnicalMap2.Location = new System.Drawing.Point(240, 3);
-            this.TechnicalMap2.MaxLength = 7;
-            this.TechnicalMap2.Name = "TechnicalMap2";
-            this.TechnicalMap2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.TechnicalMap2.Size = new System.Drawing.Size(89, 20);
-            this.TechnicalMap2.TabIndex = 43;
-            this.TechnicalMap2.Text = "";
+            this.TechnologicalMap2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.TechnologicalMap2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.TechnologicalMap2.Location = new System.Drawing.Point(240, 3);
+            this.TechnologicalMap2.MaxLength = 7;
+            this.TechnologicalMap2.Name = "TechnologicalMap2";
+            this.TechnologicalMap2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.TechnologicalMap2.Size = new System.Drawing.Size(89, 20);
+            this.TechnologicalMap2.TabIndex = 43;
+            this.TechnologicalMap2.Text = "";
             // 
             // TAPL21
             // 
@@ -708,7 +708,7 @@
             // 
             // Date1
             // 
-            this.Date1.Location = new System.Drawing.Point(20, 126);
+            this.Date1.Location = new System.Drawing.Point(20, 125);
             this.Date1.Name = "Date1";
             this.Date1.ReadOnly = true;
             this.Date1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
@@ -853,7 +853,7 @@
         private Label MainMenuNameProg;
         private Button ButtonHome;
         private Panel Menu;
-        private Button ButtonCreateTechnicalMap;
+        private Button ButtonCreateTechnologicalMap;
         private Button ButtonCreateLesson;
         private Button ButtonOther;
         private RichTextBox LiteraturesRichTextBox;
@@ -905,7 +905,7 @@
         private RichTextBox TasksAndResults;
         private RichTextBox TAPL21;
         private RichTextBox TAPL2;
-        private RichTextBox TechnicalMap2;
-        private RichTextBox TechnicalMap1;
+        private RichTextBox TechnologicalMap2;
+        private RichTextBox TechnologicalMap1;
     }
 }

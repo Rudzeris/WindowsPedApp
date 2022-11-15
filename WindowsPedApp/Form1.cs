@@ -1,51 +1,8 @@
 using System.Collections.Specialized;
+using System.Windows.Forms;
 
 namespace WindowsPedApp
 {
-    public class ClassTechnicalMaps
-    {
-        public RichTextBox TTechnicalMap = new RichTextBox();
-        public RichTextBox TTeacher = new RichTextBox();
-        public RichTextBox TGroup = new RichTextBox();
-        public RichTextBox TSubject = new RichTextBox();
-        public RichTextBox TLessonTopic = new RichTextBox();
-        public DateTimePicker TDate = new DateTimePicker();
-        public RichTextBox TTask1 = new RichTextBox();
-        public RichTextBox TTask2 = new RichTextBox();
-        public RichTextBox TTask3 = new RichTextBox();
-        public RichTextBox TResult1 = new RichTextBox();
-        public RichTextBox TResult2 = new RichTextBox();
-        public RichTextBox TResult3 = new RichTextBox();
-        public RichTextBox TFCR1 = new RichTextBox();
-        public RichTextBox TFCR2 = new RichTextBox();
-        public RichTextBox TFCR3 = new RichTextBox();
-        public RichTextBox TResource1 = new RichTextBox();
-        public RichTextBox TResource2 = new RichTextBox();
-        public RichTextBox TTAPL1 = new RichTextBox();
-        public RichTextBox TTAPL2 = new RichTextBox();
-        public ClassTechnicalMaps()
-        {
-            TTechnicalMap.Text = "";
-            TTeacher.Text = "";
-            TGroup.Text = "";
-            TSubject.Text = "";
-            TLessonTopic.Text = "";
-            TDate.Text = "";
-            TTask1.Text = "";
-            TTask2.Text = "";
-            TTask3.Text = "";
-            TResult1.Text = "";
-            TResult2.Text = "";
-            TResult3.Text = "";
-            TFCR1.Text = "";
-            TFCR2.Text = "";
-            TFCR3.Text = "";
-            TResource1.Text = "";
-            TResource2.Text = "";
-            TTAPL1.Text = "";
-            TTAPL2.Text = "";
-        }
-    };
     
     public partial class Form1 : Form
     {
@@ -57,7 +14,7 @@ namespace WindowsPedApp
         string InstructionHelperText = "Здесь указан основной функционал приложения и как им пользоваться";
         string MenuHelperText = "Тебе сюда пока нельзя, вiйди отсюда розбiйник. Сверху слева кнопка. Беги!";
 
-        ClassTechnicalMaps CTM = new ClassTechnicalMaps();
+        //ClassTechnicalMaps CTM = new ClassTechnicalMaps();
 
         public Form1()
         {
@@ -108,7 +65,7 @@ namespace WindowsPedApp
             {
                 OpenMainMenu();
             }else
-            if (Text == "Main Menu" || Text=="Create Lesson" || Text=="Technical map" || Text == "Other")
+            if (Text == "Main Menu" || Text=="Create Lesson" || Text=="Technological map" || Text == "Other")
             {
                 OpenMenu(sender, e);
             }
@@ -171,13 +128,13 @@ namespace WindowsPedApp
             CreateLesson.Size = new Size(sizeDefault);
             Text = "Create Lesson";
         }
-        private void OpenTechnicalMap(object sender,EventArgs e)
+        private void OpenTechnologicalMap(object sender,EventArgs e)
         {
             CloseAll();
             TechnicalMap.Visible = true;
             TechnicalMap.Location = locationDefault;
             TechnicalMap.Size = new Size(sizeDefault);
-            Text = "Technical map";
+            Text = "Technological map";
         }
         private void OpenOther(object sender, EventArgs e)
         {
@@ -187,5 +144,50 @@ namespace WindowsPedApp
             Other.Size = new Size(sizeDefault);
             Text = "Other";
         }
+
+        //public class ClassTechnicalMaps
+        //{
+        //    public RichTextBox TTechnicalMap = new RichTextBox();
+        //    public RichTextBox TTeacher = new RichTextBox();
+        //    public RichTextBox TGroup = new RichTextBox();
+        //    public RichTextBox TSubject = new RichTextBox();
+        //    public RichTextBox TLessonTopic = new RichTextBox();
+        //    public DateTimePicker TDate = new DateTimePicker();
+        //    public RichTextBox TTask1 = new RichTextBox();
+        //    public RichTextBox TTask2 = new RichTextBox();
+        //    public RichTextBox TTask3 = new RichTextBox();
+        //    public RichTextBox TResult1 = new RichTextBox();
+        //    public RichTextBox TResult2 = new RichTextBox();
+        //    public RichTextBox TResult3 = new RichTextBox();
+        //    public RichTextBox TFCR1 = new RichTextBox();
+        //    public RichTextBox TFCR2 = new RichTextBox();
+        //    public RichTextBox TFCR3 = new RichTextBox();
+        //    public RichTextBox TResource1 = new RichTextBox();
+        //    public RichTextBox TResource2 = new RichTextBox();
+        //    public RichTextBox TTAPL1 = new RichTextBox();
+        //    public RichTextBox TTAPL2 = new RichTextBox();
+        //    public ClassTechnicalMaps()
+        //    {
+        //        TTechnicalMap.Text = "";
+        //        TTeacher.Text = "";
+        //        TGroup.Text = "";
+        //        TSubject.Text = "";
+        //        TLessonTopic.Text = "";
+        //        TDate.Text = "";
+        //        TTask1.Text = "";
+        //        TTask2.Text = "";
+        //        TTask3.Text = "";
+        //        TResult1.Text = "";
+        //        TResult2.Text = "";
+        //        TResult3.Text = "";
+        //        TFCR1.Text = "";
+        //        TFCR2.Text = "";
+        //        TFCR3.Text = "";
+        //        TResource1.Text = "";
+        //        TResource2.Text = "";
+        //        TTAPL1.Text = "";
+        //        TTAPL2.Text = "";
+        //    }
+        //};
     }
 }
