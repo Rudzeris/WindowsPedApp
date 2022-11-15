@@ -34,9 +34,9 @@
             this.ButtonMainMenuExit = new System.Windows.Forms.Button();
             this.ButtonMainMenuLiteratures = new System.Windows.Forms.Button();
             this.ButtonMainMenuInstruction = new System.Windows.Forms.Button();
-            this.ButtonMainMenuCloseHelper = new System.Windows.Forms.Button();
-            this.MainMenuHelperLabel = new System.Windows.Forms.Label();
-            this.MainMenuPictureBoxHelper = new System.Windows.Forms.PictureBox();
+            this.HelperButtonClose = new System.Windows.Forms.Button();
+            this.HelperLabel = new System.Windows.Forms.Label();
+            this.HelperPictureBox = new System.Windows.Forms.PictureBox();
             this.Literatures = new System.Windows.Forms.Panel();
             this.LiteraturesRichTextBox = new System.Windows.Forms.RichTextBox();
             this.ButtonHome = new System.Windows.Forms.Button();
@@ -46,7 +46,7 @@
             this.ButtonCreateLesson = new System.Windows.Forms.Button();
             this.Instruction = new System.Windows.Forms.Panel();
             this.InstructionRichText = new System.Windows.Forms.RichTextBox();
-            this.TechnicalMap = new System.Windows.Forms.Panel();
+            this.TechnologicalMap = new System.Windows.Forms.Panel();
             this.TechnologicalMap1 = new System.Windows.Forms.RichTextBox();
             this.TechnologicalMap2 = new System.Windows.Forms.RichTextBox();
             this.TAPL21 = new System.Windows.Forms.RichTextBox();
@@ -93,16 +93,23 @@
             this.Teacher1 = new System.Windows.Forms.RichTextBox();
             this.Other = new System.Windows.Forms.Panel();
             this.CreateLesson = new System.Windows.Forms.Panel();
+            this.Test11 = new System.Windows.Forms.RichTextBox();
+            this.Test12 = new System.Windows.Forms.RichTextBox();
+            this.Test13 = new System.Windows.Forms.RichTextBox();
+            this.Test14 = new System.Windows.Forms.RichTextBox();
+            this.Test15 = new System.Windows.Forms.RichTextBox();
             this.MainMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MainMenuPictureBoxHelper)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelperPictureBox)).BeginInit();
             this.Literatures.SuspendLayout();
             this.Menu.SuspendLayout();
             this.Instruction.SuspendLayout();
-            this.TechnicalMap.SuspendLayout();
+            this.TechnologicalMap.SuspendLayout();
+            this.CreateLesson.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainMenu
             // 
+            this.MainMenu.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.MainMenu.Controls.Add(this.MainMenuNameProg);
             this.MainMenu.Controls.Add(this.ButtonMainMenuExit);
             this.MainMenu.Controls.Add(this.ButtonMainMenuLiteratures);
@@ -165,42 +172,43 @@
             this.ButtonMainMenuInstruction.UseVisualStyleBackColor = false;
             this.ButtonMainMenuInstruction.Click += new System.EventHandler(this.OpenInstruction);
             // 
-            // ButtonMainMenuCloseHelper
+            // HelperButtonClose
             // 
-            this.ButtonMainMenuCloseHelper.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ButtonMainMenuCloseHelper.FlatAppearance.BorderSize = 0;
-            this.ButtonMainMenuCloseHelper.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ButtonMainMenuCloseHelper.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ButtonMainMenuCloseHelper.Location = new System.Drawing.Point(746, 204);
-            this.ButtonMainMenuCloseHelper.Name = "ButtonMainMenuCloseHelper";
-            this.ButtonMainMenuCloseHelper.Size = new System.Drawing.Size(23, 23);
-            this.ButtonMainMenuCloseHelper.TabIndex = 6;
-            this.ButtonMainMenuCloseHelper.Tag = "Button";
-            this.ButtonMainMenuCloseHelper.Text = "X";
-            this.ButtonMainMenuCloseHelper.UseVisualStyleBackColor = false;
-            this.ButtonMainMenuCloseHelper.Click += new System.EventHandler(this.MainMenuCloseHelper);
+            this.HelperButtonClose.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.HelperButtonClose.FlatAppearance.BorderSize = 0;
+            this.HelperButtonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HelperButtonClose.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.HelperButtonClose.Location = new System.Drawing.Point(746, 204);
+            this.HelperButtonClose.Name = "HelperButtonClose";
+            this.HelperButtonClose.Size = new System.Drawing.Size(23, 23);
+            this.HelperButtonClose.TabIndex = 6;
+            this.HelperButtonClose.Tag = "Button";
+            this.HelperButtonClose.Text = "X";
+            this.HelperButtonClose.UseVisualStyleBackColor = false;
+            this.HelperButtonClose.Click += new System.EventHandler(this.MainMenuCloseHelper);
             // 
-            // MainMenuHelperLabel
+            // HelperLabel
             // 
-            this.MainMenuHelperLabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MainMenuHelperLabel.Location = new System.Drawing.Point(746, 230);
-            this.MainMenuHelperLabel.Name = "MainMenuHelperLabel";
-            this.MainMenuHelperLabel.Size = new System.Drawing.Size(263, 111);
-            this.MainMenuHelperLabel.TabIndex = 5;
-            this.MainMenuHelperLabel.Text = "Тут будет текст";
-            this.MainMenuHelperLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.HelperLabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.HelperLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.HelperLabel.Location = new System.Drawing.Point(730, 230);
+            this.HelperLabel.Name = "HelperLabel";
+            this.HelperLabel.Size = new System.Drawing.Size(270, 120);
+            this.HelperLabel.TabIndex = 5;
+            this.HelperLabel.Text = "Тут будет текст";
+            this.HelperLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // MainMenuPictureBoxHelper
+            // HelperPictureBox
             // 
-            this.MainMenuPictureBoxHelper.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.MainMenuPictureBoxHelper.BackgroundImage = global::WindowsPedApp.Resources.Resource1.Helper;
-            this.MainMenuPictureBoxHelper.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.MainMenuPictureBoxHelper.InitialImage = null;
-            this.MainMenuPictureBoxHelper.Location = new System.Drawing.Point(909, 344);
-            this.MainMenuPictureBoxHelper.Name = "MainMenuPictureBoxHelper";
-            this.MainMenuPictureBoxHelper.Size = new System.Drawing.Size(100, 100);
-            this.MainMenuPictureBoxHelper.TabIndex = 1;
-            this.MainMenuPictureBoxHelper.TabStop = false;
+            this.HelperPictureBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.HelperPictureBox.BackgroundImage = global::WindowsPedApp.Resources.Resource1.Helper;
+            this.HelperPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.HelperPictureBox.InitialImage = null;
+            this.HelperPictureBox.Location = new System.Drawing.Point(909, 344);
+            this.HelperPictureBox.Name = "HelperPictureBox";
+            this.HelperPictureBox.Size = new System.Drawing.Size(100, 100);
+            this.HelperPictureBox.TabIndex = 1;
+            this.HelperPictureBox.TabStop = false;
             // 
             // Literatures
             // 
@@ -215,7 +223,7 @@
             this.LiteraturesRichTextBox.AcceptsTab = true;
             this.LiteraturesRichTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.LiteraturesRichTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LiteraturesRichTextBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LiteraturesRichTextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LiteraturesRichTextBox.Location = new System.Drawing.Point(50, 36);
             this.LiteraturesRichTextBox.Name = "LiteraturesRichTextBox";
             this.LiteraturesRichTextBox.ReadOnly = true;
@@ -309,56 +317,56 @@
             this.InstructionRichText.TabIndex = 1;
             this.InstructionRichText.Text = resources.GetString("InstructionRichText.Text");
             // 
-            // TechnicalMap
+            // TechnologicalMap
             // 
-            this.TechnicalMap.Controls.Add(this.TechnologicalMap1);
-            this.TechnicalMap.Controls.Add(this.TechnologicalMap2);
-            this.TechnicalMap.Controls.Add(this.TAPL21);
-            this.TechnicalMap.Controls.Add(this.TAPL2);
-            this.TechnicalMap.Controls.Add(this.TAPL11);
-            this.TechnicalMap.Controls.Add(this.TAPL1);
-            this.TechnicalMap.Controls.Add(this.TypeAndPurposeLesson);
-            this.TechnicalMap.Controls.Add(this.Resource21);
-            this.TechnicalMap.Controls.Add(this.Resource2);
-            this.TechnicalMap.Controls.Add(this.Resource11);
-            this.TechnicalMap.Controls.Add(this.Resource1);
-            this.TechnicalMap.Controls.Add(this.Resources);
-            this.TechnicalMap.Controls.Add(this.FCR31);
-            this.TechnicalMap.Controls.Add(this.FCR3);
-            this.TechnicalMap.Controls.Add(this.FCR21);
-            this.TechnicalMap.Controls.Add(this.FCR2);
-            this.TechnicalMap.Controls.Add(this.FCR11);
-            this.TechnicalMap.Controls.Add(this.FCR1);
-            this.TechnicalMap.Controls.Add(this.FormConnectResurces);
-            this.TechnicalMap.Controls.Add(this.Result31);
-            this.TechnicalMap.Controls.Add(this.Result3);
-            this.TechnicalMap.Controls.Add(this.Result21);
-            this.TechnicalMap.Controls.Add(this.Result2);
-            this.TechnicalMap.Controls.Add(this.Result11);
-            this.TechnicalMap.Controls.Add(this.Result1);
-            this.TechnicalMap.Controls.Add(this.Results);
-            this.TechnicalMap.Controls.Add(this.Task31);
-            this.TechnicalMap.Controls.Add(this.Task3);
-            this.TechnicalMap.Controls.Add(this.Task2);
-            this.TechnicalMap.Controls.Add(this.Task21);
-            this.TechnicalMap.Controls.Add(this.Task11);
-            this.TechnicalMap.Controls.Add(this.Task1);
-            this.TechnicalMap.Controls.Add(this.Tasks);
-            this.TechnicalMap.Controls.Add(this.TasksAndResults);
-            this.TechnicalMap.Controls.Add(this.Date2);
-            this.TechnicalMap.Controls.Add(this.Date1);
-            this.TechnicalMap.Controls.Add(this.LessonTopic2);
-            this.TechnicalMap.Controls.Add(this.LessonTopic1);
-            this.TechnicalMap.Controls.Add(this.Subject2);
-            this.TechnicalMap.Controls.Add(this.Subject1);
-            this.TechnicalMap.Controls.Add(this.Group2);
-            this.TechnicalMap.Controls.Add(this.Group1);
-            this.TechnicalMap.Controls.Add(this.Teacher2);
-            this.TechnicalMap.Controls.Add(this.Teacher1);
-            this.TechnicalMap.Location = new System.Drawing.Point(12, 12);
-            this.TechnicalMap.Name = "TechnicalMap";
-            this.TechnicalMap.Size = new System.Drawing.Size(520, 637);
-            this.TechnicalMap.TabIndex = 7;
+            this.TechnologicalMap.Controls.Add(this.TechnologicalMap1);
+            this.TechnologicalMap.Controls.Add(this.TechnologicalMap2);
+            this.TechnologicalMap.Controls.Add(this.TAPL21);
+            this.TechnologicalMap.Controls.Add(this.TAPL2);
+            this.TechnologicalMap.Controls.Add(this.TAPL11);
+            this.TechnologicalMap.Controls.Add(this.TAPL1);
+            this.TechnologicalMap.Controls.Add(this.TypeAndPurposeLesson);
+            this.TechnologicalMap.Controls.Add(this.Resource21);
+            this.TechnologicalMap.Controls.Add(this.Resource2);
+            this.TechnologicalMap.Controls.Add(this.Resource11);
+            this.TechnologicalMap.Controls.Add(this.Resource1);
+            this.TechnologicalMap.Controls.Add(this.Resources);
+            this.TechnologicalMap.Controls.Add(this.FCR31);
+            this.TechnologicalMap.Controls.Add(this.FCR3);
+            this.TechnologicalMap.Controls.Add(this.FCR21);
+            this.TechnologicalMap.Controls.Add(this.FCR2);
+            this.TechnologicalMap.Controls.Add(this.FCR11);
+            this.TechnologicalMap.Controls.Add(this.FCR1);
+            this.TechnologicalMap.Controls.Add(this.FormConnectResurces);
+            this.TechnologicalMap.Controls.Add(this.Result31);
+            this.TechnologicalMap.Controls.Add(this.Result3);
+            this.TechnologicalMap.Controls.Add(this.Result21);
+            this.TechnologicalMap.Controls.Add(this.Result2);
+            this.TechnologicalMap.Controls.Add(this.Result11);
+            this.TechnologicalMap.Controls.Add(this.Result1);
+            this.TechnologicalMap.Controls.Add(this.Results);
+            this.TechnologicalMap.Controls.Add(this.Task31);
+            this.TechnologicalMap.Controls.Add(this.Task3);
+            this.TechnologicalMap.Controls.Add(this.Task2);
+            this.TechnologicalMap.Controls.Add(this.Task21);
+            this.TechnologicalMap.Controls.Add(this.Task11);
+            this.TechnologicalMap.Controls.Add(this.Task1);
+            this.TechnologicalMap.Controls.Add(this.Tasks);
+            this.TechnologicalMap.Controls.Add(this.TasksAndResults);
+            this.TechnologicalMap.Controls.Add(this.Date2);
+            this.TechnologicalMap.Controls.Add(this.Date1);
+            this.TechnologicalMap.Controls.Add(this.LessonTopic2);
+            this.TechnologicalMap.Controls.Add(this.LessonTopic1);
+            this.TechnologicalMap.Controls.Add(this.Subject2);
+            this.TechnologicalMap.Controls.Add(this.Subject1);
+            this.TechnologicalMap.Controls.Add(this.Group2);
+            this.TechnologicalMap.Controls.Add(this.Group1);
+            this.TechnologicalMap.Controls.Add(this.Teacher2);
+            this.TechnologicalMap.Controls.Add(this.Teacher1);
+            this.TechnologicalMap.Location = new System.Drawing.Point(540, 12);
+            this.TechnologicalMap.Name = "TechnologicalMap";
+            this.TechnologicalMap.Size = new System.Drawing.Size(520, 637);
+            this.TechnologicalMap.TabIndex = 7;
             // 
             // TechnologicalMap1
             // 
@@ -797,17 +805,98 @@
             // 
             // Other
             // 
-            this.Other.Location = new System.Drawing.Point(12, 12);
+            this.Other.Location = new System.Drawing.Point(540, 12);
             this.Other.Name = "Other";
             this.Other.Size = new System.Drawing.Size(520, 637);
             this.Other.TabIndex = 8;
             // 
             // CreateLesson
             // 
-            this.CreateLesson.Location = new System.Drawing.Point(540, 12);
+            this.CreateLesson.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.CreateLesson.Controls.Add(this.Test15);
+            this.CreateLesson.Controls.Add(this.Test14);
+            this.CreateLesson.Controls.Add(this.Test13);
+            this.CreateLesson.Controls.Add(this.Test12);
+            this.CreateLesson.Controls.Add(this.Test11);
+            this.CreateLesson.Location = new System.Drawing.Point(12, 12);
             this.CreateLesson.Name = "CreateLesson";
             this.CreateLesson.Size = new System.Drawing.Size(520, 637);
             this.CreateLesson.TabIndex = 9;
+            // 
+            // Test11
+            // 
+            this.Test11.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Test11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Test11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Test11.Location = new System.Drawing.Point(48, 38);
+            this.Test11.MaxLength = 80;
+            this.Test11.Name = "Test11";
+            this.Test11.ReadOnly = true;
+            this.Test11.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Test11.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Test11.Size = new System.Drawing.Size(420, 42);
+            this.Test11.TabIndex = 0;
+            this.Test11.Text = "Урок усвоения новых знаний ";
+            // 
+            // Test12
+            // 
+            this.Test12.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Test12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Test12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Test12.Location = new System.Drawing.Point(48, 86);
+            this.Test12.MaxLength = 80;
+            this.Test12.Name = "Test12";
+            this.Test12.ReadOnly = true;
+            this.Test12.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Test12.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Test12.Size = new System.Drawing.Size(420, 42);
+            this.Test12.TabIndex = 1;
+            this.Test12.Text = "Урок комплексного применения знаний (урок закрепления изученного материала) ";
+            // 
+            // Test13
+            // 
+            this.Test13.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Test13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Test13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Test13.Location = new System.Drawing.Point(48, 134);
+            this.Test13.MaxLength = 80;
+            this.Test13.Name = "Test13";
+            this.Test13.ReadOnly = true;
+            this.Test13.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Test13.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Test13.Size = new System.Drawing.Size(420, 42);
+            this.Test13.TabIndex = 2;
+            this.Test13.Text = "Урок рефлексии по ФГОС (систематизации и обобщения полученных знаний) ";
+            // 
+            // Test14
+            // 
+            this.Test14.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Test14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Test14.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Test14.Location = new System.Drawing.Point(48, 182);
+            this.Test14.MaxLength = 80;
+            this.Test14.Name = "Test14";
+            this.Test14.ReadOnly = true;
+            this.Test14.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Test14.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Test14.Size = new System.Drawing.Size(420, 42);
+            this.Test14.TabIndex = 3;
+            this.Test14.Text = "Урок развивающего контроля ";
+            // 
+            // Test15
+            // 
+            this.Test15.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Test15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Test15.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Test15.Location = new System.Drawing.Point(48, 230);
+            this.Test15.MaxLength = 80;
+            this.Test15.Name = "Test15";
+            this.Test15.ReadOnly = true;
+            this.Test15.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Test15.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.Test15.Size = new System.Drawing.Size(420, 42);
+            this.Test15.TabIndex = 4;
+            this.Test15.Text = "Урок коррекции знаний (работа над ошибками) ";
             // 
             // Form1
             // 
@@ -815,15 +904,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1370, 661);
-            this.Controls.Add(this.MainMenuHelperLabel);
-            this.Controls.Add(this.MainMenuPictureBoxHelper);
-            this.Controls.Add(this.ButtonMainMenuCloseHelper);
+            this.Controls.Add(this.HelperLabel);
+            this.Controls.Add(this.HelperPictureBox);
+            this.Controls.Add(this.HelperButtonClose);
             this.Controls.Add(this.ButtonHome);
             this.Controls.Add(this.Literatures);
             this.Controls.Add(this.Menu);
             this.Controls.Add(this.MainMenu);
             this.Controls.Add(this.Instruction);
-            this.Controls.Add(this.TechnicalMap);
+            this.Controls.Add(this.TechnologicalMap);
             this.Controls.Add(this.CreateLesson);
             this.Controls.Add(this.Other);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -831,12 +920,13 @@
             this.Text = "Form1";
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MainMenuPictureBoxHelper)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelperPictureBox)).EndInit();
             this.Literatures.ResumeLayout(false);
             this.Menu.ResumeLayout(false);
             this.Menu.PerformLayout();
             this.Instruction.ResumeLayout(false);
-            this.TechnicalMap.ResumeLayout(false);
+            this.TechnologicalMap.ResumeLayout(false);
+            this.CreateLesson.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -847,8 +937,8 @@
         private Button ButtonMainMenuInstruction;
         private Button ButtonMainMenuExit;
         private Button ButtonMainMenuLiteratures;
-        private PictureBox MainMenuPictureBoxHelper;
-        private Label MainMenuHelperLabel;
+        private PictureBox HelperPictureBox;
+        private Label HelperLabel;
         private Panel Literatures;
         private Label MainMenuNameProg;
         private Button ButtonHome;
@@ -857,10 +947,10 @@
         private Button ButtonCreateLesson;
         private Button ButtonOther;
         private RichTextBox LiteraturesRichTextBox;
-        private Button ButtonMainMenuCloseHelper;
+        private Button HelperButtonClose;
         private Panel Instruction;
         private RichTextBox InstructionRichText;
-        private Panel TechnicalMap;
+        private Panel TechnologicalMap;
         private Panel Other;
         private Panel CreateLesson;
         private RichTextBox Teacher1;
@@ -907,5 +997,10 @@
         private RichTextBox TAPL2;
         private RichTextBox TechnologicalMap2;
         private RichTextBox TechnologicalMap1;
+        private RichTextBox Test11;
+        private RichTextBox Test15;
+        private RichTextBox Test14;
+        private RichTextBox Test13;
+        private RichTextBox Test12;
     }
 }

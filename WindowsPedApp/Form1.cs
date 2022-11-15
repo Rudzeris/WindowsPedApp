@@ -13,6 +13,7 @@ namespace WindowsPedApp
             "а также облегчить нелёгкий труд по подготовке к занятиям.";
         string InstructionHelperText = "Здесь указан основной функционал приложения и как им пользоваться";
         string MenuHelperText = "Тебе сюда пока нельзя, вiйди отсюда розбiйник. Сверху слева кнопка. Беги!";
+        string CreateLessonText = "Выберите урок в зависимости от дидактической цели.";
 
         //ClassTechnicalMaps CTM = new ClassTechnicalMaps();
 
@@ -21,20 +22,71 @@ namespace WindowsPedApp
             InitializeComponent();
             Size = new Size(560, 700);
 
+            Test11.SelectionAlignment = HorizontalAlignment.Center;
+            Test12.SelectionAlignment = HorizontalAlignment.Center;
+            Test13.SelectionAlignment = HorizontalAlignment.Center;
+            Test14.SelectionAlignment = HorizontalAlignment.Center;
+            Test15.SelectionAlignment = HorizontalAlignment.Center;
+
             OpenMainMenu();
         }
         Point sizeDefault = new Point(520,637);
         Point locationDefault = new Point(12,12);
 
+        private void HelperBackColor(Color a)
+        {
+
+        }
+
         private void OpenHelper(string str)
         {
-            MainMenuPictureBoxHelper.Visible = true;
-            MainMenuHelperLabel.Visible = true;
-            ButtonMainMenuCloseHelper.Visible = true;
-            MainMenuHelperLabel.Location = new Point(226, 230);
-            ButtonMainMenuCloseHelper.Location = new Point(226, 204);
-            MainMenuPictureBoxHelper.Location = new Point(389, 344);
-            MainMenuHelperLabel.Text = str;
+            HelperPictureBox.Visible = true;
+            HelperLabel.Visible = true;
+            HelperButtonClose.Visible = true;
+            HelperLabel.Location = new Point(226, 230);
+            HelperLabel.Size = new Size(270,120);
+            HelperButtonClose.Location = new Point(226, 204);
+            HelperPictureBox.Location = new Point(389, 344);
+            HelperLabel.Text = str;
+
+            switch (Text)
+            {
+                case "Main Menu":
+                    HelperPictureBox.BackColor = MainMenu.BackColor;
+                    HelperLabel.BackColor = MainMenu.BackColor;
+                    HelperButtonClose.BackColor = MainMenu.BackColor;
+                    break;
+                case "Menu":
+                    HelperPictureBox.BackColor = Menu.BackColor;
+                    HelperLabel.BackColor = Menu.BackColor;
+                    HelperButtonClose.BackColor = Menu.BackColor;
+                    break;
+                case "Instruction":
+                    HelperPictureBox.BackColor = Instruction.BackColor;
+                    HelperLabel.BackColor = Instruction.BackColor;
+                    HelperButtonClose.BackColor = Instruction.BackColor;
+                    break;
+                case "Literatures":
+                    HelperPictureBox.BackColor = Literatures.BackColor;
+                    HelperLabel.BackColor = Literatures.BackColor;
+                    HelperButtonClose.BackColor = Literatures.BackColor;
+                    break;
+                case "Create Lesson":
+                    HelperPictureBox.BackColor = CreateLesson.BackColor;
+                    HelperLabel.BackColor = CreateLesson.BackColor;
+                    HelperButtonClose.BackColor = CreateLesson.BackColor;
+                    break;
+                case "Technological map":
+                    HelperPictureBox.BackColor = TechnologicalMap.BackColor;
+                    HelperLabel.BackColor = TechnologicalMap.BackColor;
+                    HelperButtonClose.BackColor = TechnologicalMap.BackColor;
+                    break;
+                case "Other":
+                    HelperPictureBox.BackColor = Other.BackColor;
+                    HelperLabel.BackColor = Other.BackColor;
+                    HelperButtonClose.BackColor = Other.BackColor;
+                    break;
+            };
         }
 
         private void CloseAll()
@@ -46,18 +98,22 @@ namespace WindowsPedApp
             MainMenu.Visible = false;
             Literatures.Visible = false;
             Menu.Visible = false;
-            TechnicalMap.Visible = false;
+            TechnologicalMap.Visible = false;
             CreateLesson.Visible = false;
             Other.Visible = false;
         }
         private void OpenMainMenu()
         {
+            Text = "Main Menu";
             CloseAll();
             OpenHelper(MainMenuHelperText);
+            int xy = 100;
+            HelperLabel.Size = new Size(HelperLabel.Size.Width, HelperLabel.Size.Height+xy);
+            HelperLabel.Location = new Point(HelperLabel.Location.X, HelperLabel.Location.Y-xy);
+            HelperButtonClose.Location = new Point(HelperButtonClose.Location.X, HelperButtonClose.Location.Y - xy);
             MainMenu.Visible = true;
             MainMenu.Size = new Size(sizeDefault);
             MainMenu.Location = locationDefault;
-            Text = "Main Menu";
         }
         private void OpenMainMenuOrMenu(object sender, EventArgs e)
         {
@@ -73,26 +129,26 @@ namespace WindowsPedApp
         private void OpenInstruction(object sender, EventArgs e)
         {
             CloseAll();
-            OpenHelper(InstructionHelperText);
             Text = "Instruction";
+            OpenHelper(InstructionHelperText);
             Instruction.Visible = true;
             Instruction.Size = new Size(sizeDefault);
             Instruction.Location = locationDefault;
             InstructionRichText.Size = new Size(200, 590);
 
 
-            MainMenuHelperLabel.Location = new Point(280, 230);
-            ButtonMainMenuCloseHelper.Location = new Point(263+260, 204);
-            MainMenuPictureBoxHelper.Location = new Point(389, 344);
+            HelperLabel.Location = new Point(280, 230);
+            HelperButtonClose.Location = new Point(263+260, 204);
+            HelperPictureBox.Location = new Point(389, 344);
 
         }
         private void OpenLiteratures(object sender, EventArgs e)
         {
+            Text = "Literatures";
             CloseAll();
             Literatures.Visible = true;
             Literatures.Size = new Size(sizeDefault);
             Literatures.Location = locationDefault;
-            Text = "Literatures";
             MainMenuCloseHelper(sender, e);
         }
         private void MainMenuButtonExit_Click(object sender, EventArgs e)
@@ -102,47 +158,53 @@ namespace WindowsPedApp
         private void OpenMenu(object sender, EventArgs e)
         {
             CloseAll();
+            Text = "Menu";
             OpenHelper(MenuHelperText);
             Menu.Visible = true;
             Menu.Size = new Size(sizeDefault);
             Menu.Location = locationDefault;
-            Text = "Menu";
         }
         private void MainMenuCloseHelper(object sender, EventArgs e)
         {
-            MainMenuPictureBoxHelper.Visible = false;
-            MainMenuHelperLabel.Visible = false;
-            ButtonMainMenuCloseHelper.Visible = false;
+            HelperPictureBox.Visible = false;
+            HelperLabel.Visible = false;
+            HelperButtonClose.Visible = false;
             InstructionRichText.Size = new Size(420, 590);
 
-            MainMenuHelperLabel.Location = new Point(226, 230);
-            ButtonMainMenuCloseHelper.Location = new Point(226, 204);
-            MainMenuPictureBoxHelper.Location = new Point(389, 344);
+            HelperLabel.Location = new Point(226, 230);
+            HelperButtonClose.Location = new Point(226, 204);
+            HelperPictureBox.Location = new Point(389, 344);
 
         }
         private void OpenCreateLesson(object sender,EventArgs e)
         {
             CloseAll();
+            Text = "Create Lesson";
             CreateLesson.Visible = true;
             CreateLesson.Location = locationDefault;
             CreateLesson.Size = new Size(sizeDefault);
-            Text = "Create Lesson";
+
+            OpenHelper(CreateLessonText);
+
+            HelperLabel.Location = new Point(280, 230);
+            HelperButtonClose.Location = new Point(263 + 260, 204);
+            HelperPictureBox.Location = new Point(389, 344);
         }
         private void OpenTechnologicalMap(object sender,EventArgs e)
         {
             CloseAll();
-            TechnicalMap.Visible = true;
-            TechnicalMap.Location = locationDefault;
-            TechnicalMap.Size = new Size(sizeDefault);
             Text = "Technological map";
+            TechnologicalMap.Visible = true;
+            TechnologicalMap.Location = locationDefault;
+            TechnologicalMap.Size = new Size(sizeDefault);
         }
         private void OpenOther(object sender, EventArgs e)
         {
             CloseAll();
+            Text = "Other";
             Other.Visible = true;
             Other.Location = locationDefault;
             Other.Size = new Size(sizeDefault);
-            Text = "Other";
         }
 
         //public class ClassTechnicalMaps
