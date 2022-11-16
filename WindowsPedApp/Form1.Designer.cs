@@ -158,7 +158,18 @@
             this.TestBox3 = new System.Windows.Forms.RichTextBox();
             this.TestBox2 = new System.Windows.Forms.RichTextBox();
             this.TestBox1 = new System.Windows.Forms.RichTextBox();
-            this.MetodPanel = new System.Windows.Forms.Panel();
+            this.MethodicalPanel = new System.Windows.Forms.Panel();
+            this.MethodicalButton9 = new System.Windows.Forms.Button();
+            this.MethodicalButton8 = new System.Windows.Forms.Button();
+            this.MethodicalButton7 = new System.Windows.Forms.Button();
+            this.MethodicalButton6 = new System.Windows.Forms.Button();
+            this.MethodicalButton5 = new System.Windows.Forms.Button();
+            this.MethodicalButton4 = new System.Windows.Forms.Button();
+            this.MethodicalButton3 = new System.Windows.Forms.Button();
+            this.MethodicalButton2 = new System.Windows.Forms.Button();
+            this.MethodicalButton1 = new System.Windows.Forms.Button();
+            this.MethodicalTextPanel = new System.Windows.Forms.Panel();
+            this.MethodicalTextBox = new System.Windows.Forms.RichTextBox();
             this.MainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HelperPictureBox)).BeginInit();
             this.Literatures.SuspendLayout();
@@ -181,6 +192,8 @@
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.MethodicalPanel.SuspendLayout();
+            this.MethodicalTextPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainMenu
@@ -930,7 +943,7 @@
             this.OpenMetodicButton.TabIndex = 1;
             this.OpenMetodicButton.Text = "Методические приемы";
             this.OpenMetodicButton.UseVisualStyleBackColor = true;
-            this.OpenMetodicButton.Click += new System.EventHandler(this.OpenMetodic);
+            this.OpenMetodicButton.Click += new System.EventHandler(this.OpenMethodical);
             // 
             // OpenTestButton
             // 
@@ -1216,7 +1229,7 @@
             // 
             // LessonCompleteRichBox
             // 
-            this.LessonCompleteRichBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LessonCompleteRichBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LessonCompleteRichBox.Location = new System.Drawing.Point(50, 36);
             this.LessonCompleteRichBox.Name = "LessonCompleteRichBox";
             this.LessonCompleteRichBox.Size = new System.Drawing.Size(420, 570);
@@ -1750,12 +1763,129 @@
             this.TestBox1.TabIndex = 0;
             this.TestBox1.Text = "1. Я знаю, что ожидает меня на работе завтра, в ближайшем будущем. ";
             // 
-            // MetodPanel
+            // MethodicalPanel
             // 
-            this.MetodPanel.Location = new System.Drawing.Point(12, 12);
-            this.MetodPanel.Name = "MetodPanel";
-            this.MetodPanel.Size = new System.Drawing.Size(520, 637);
-            this.MetodPanel.TabIndex = 12;
+            this.MethodicalPanel.Controls.Add(this.MethodicalButton9);
+            this.MethodicalPanel.Controls.Add(this.MethodicalButton8);
+            this.MethodicalPanel.Controls.Add(this.MethodicalButton7);
+            this.MethodicalPanel.Controls.Add(this.MethodicalButton6);
+            this.MethodicalPanel.Controls.Add(this.MethodicalButton5);
+            this.MethodicalPanel.Controls.Add(this.MethodicalButton4);
+            this.MethodicalPanel.Controls.Add(this.MethodicalButton3);
+            this.MethodicalPanel.Controls.Add(this.MethodicalButton2);
+            this.MethodicalPanel.Controls.Add(this.MethodicalButton1);
+            this.MethodicalPanel.Location = new System.Drawing.Point(540, 12);
+            this.MethodicalPanel.Name = "MethodicalPanel";
+            this.MethodicalPanel.Size = new System.Drawing.Size(520, 637);
+            this.MethodicalPanel.TabIndex = 12;
+            // 
+            // MethodicalButton9
+            // 
+            this.MethodicalButton9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MethodicalButton9.Location = new System.Drawing.Point(35, 458);
+            this.MethodicalButton9.Name = "MethodicalButton9";
+            this.MethodicalButton9.Size = new System.Drawing.Size(235, 50);
+            this.MethodicalButton9.TabIndex = 12;
+            this.MethodicalButton9.UseVisualStyleBackColor = true;
+            this.MethodicalButton9.Click += new System.EventHandler(this.MethodicalButton9_Click);
+            // 
+            // MethodicalButton8
+            // 
+            this.MethodicalButton8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MethodicalButton8.Location = new System.Drawing.Point(255, 412);
+            this.MethodicalButton8.Name = "MethodicalButton8";
+            this.MethodicalButton8.Size = new System.Drawing.Size(235, 50);
+            this.MethodicalButton8.TabIndex = 11;
+            this.MethodicalButton8.UseVisualStyleBackColor = true;
+            this.MethodicalButton8.Click += new System.EventHandler(this.MethodicalButton8_Click);
+            // 
+            // MethodicalButton7
+            // 
+            this.MethodicalButton7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MethodicalButton7.Location = new System.Drawing.Point(35, 364);
+            this.MethodicalButton7.Name = "MethodicalButton7";
+            this.MethodicalButton7.Size = new System.Drawing.Size(235, 50);
+            this.MethodicalButton7.TabIndex = 10;
+            this.MethodicalButton7.UseVisualStyleBackColor = true;
+            this.MethodicalButton7.Click += new System.EventHandler(this.MethodicalButton7_Click);
+            // 
+            // MethodicalButton6
+            // 
+            this.MethodicalButton6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MethodicalButton6.Location = new System.Drawing.Point(255, 318);
+            this.MethodicalButton6.Name = "MethodicalButton6";
+            this.MethodicalButton6.Size = new System.Drawing.Size(235, 50);
+            this.MethodicalButton6.TabIndex = 9;
+            this.MethodicalButton6.UseVisualStyleBackColor = true;
+            this.MethodicalButton6.Click += new System.EventHandler(this.MethodicalButton6_Click);
+            // 
+            // MethodicalButton5
+            // 
+            this.MethodicalButton5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MethodicalButton5.Location = new System.Drawing.Point(35, 272);
+            this.MethodicalButton5.Name = "MethodicalButton5";
+            this.MethodicalButton5.Size = new System.Drawing.Size(235, 50);
+            this.MethodicalButton5.TabIndex = 8;
+            this.MethodicalButton5.UseVisualStyleBackColor = true;
+            this.MethodicalButton5.Click += new System.EventHandler(this.MethodicalButton5_Click);
+            // 
+            // MethodicalButton4
+            // 
+            this.MethodicalButton4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MethodicalButton4.Location = new System.Drawing.Point(255, 226);
+            this.MethodicalButton4.Name = "MethodicalButton4";
+            this.MethodicalButton4.Size = new System.Drawing.Size(235, 50);
+            this.MethodicalButton4.TabIndex = 7;
+            this.MethodicalButton4.UseVisualStyleBackColor = true;
+            this.MethodicalButton4.Click += new System.EventHandler(this.MethodicalButton4_Click);
+            // 
+            // MethodicalButton3
+            // 
+            this.MethodicalButton3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MethodicalButton3.Location = new System.Drawing.Point(35, 180);
+            this.MethodicalButton3.Name = "MethodicalButton3";
+            this.MethodicalButton3.Size = new System.Drawing.Size(235, 50);
+            this.MethodicalButton3.TabIndex = 6;
+            this.MethodicalButton3.UseVisualStyleBackColor = true;
+            this.MethodicalButton3.Click += new System.EventHandler(this.MethodicalButton3_Click);
+            // 
+            // MethodicalButton2
+            // 
+            this.MethodicalButton2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MethodicalButton2.Location = new System.Drawing.Point(255, 134);
+            this.MethodicalButton2.Name = "MethodicalButton2";
+            this.MethodicalButton2.Size = new System.Drawing.Size(235, 50);
+            this.MethodicalButton2.TabIndex = 5;
+            this.MethodicalButton2.UseVisualStyleBackColor = true;
+            this.MethodicalButton2.Click += new System.EventHandler(this.MethodicalButton2_Click);
+            // 
+            // MethodicalButton1
+            // 
+            this.MethodicalButton1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MethodicalButton1.Location = new System.Drawing.Point(35, 88);
+            this.MethodicalButton1.Name = "MethodicalButton1";
+            this.MethodicalButton1.Size = new System.Drawing.Size(235, 50);
+            this.MethodicalButton1.TabIndex = 4;
+            this.MethodicalButton1.Text = "ОРГАНИЗАЦИОННЫЙ МОМЕНТ ";
+            this.MethodicalButton1.UseVisualStyleBackColor = true;
+            this.MethodicalButton1.Click += new System.EventHandler(this.MethodicalButton1_Click);
+            // 
+            // MethodicalTextPanel
+            // 
+            this.MethodicalTextPanel.Controls.Add(this.MethodicalTextBox);
+            this.MethodicalTextPanel.Location = new System.Drawing.Point(12, 12);
+            this.MethodicalTextPanel.Name = "MethodicalTextPanel";
+            this.MethodicalTextPanel.Size = new System.Drawing.Size(520, 637);
+            this.MethodicalTextPanel.TabIndex = 13;
+            // 
+            // MethodicalTextBox
+            // 
+            this.MethodicalTextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MethodicalTextBox.Location = new System.Drawing.Point(50, 36);
+            this.MethodicalTextBox.Name = "MethodicalTextBox";
+            this.MethodicalTextBox.Size = new System.Drawing.Size(420, 570);
+            this.MethodicalTextBox.TabIndex = 0;
+            this.MethodicalTextBox.Text = "";
             // 
             // Form1
             // 
@@ -1767,6 +1897,7 @@
             this.Controls.Add(this.HelperPictureBox);
             this.Controls.Add(this.HelperButtonClose);
             this.Controls.Add(this.ButtonHome);
+            this.Controls.Add(this.MethodicalPanel);
             this.Controls.Add(this.Other);
             this.Controls.Add(this.MainMenu);
             this.Controls.Add(this.Menu);
@@ -1776,7 +1907,7 @@
             this.Controls.Add(this.CreateLesson);
             this.Controls.Add(this.LessonCompletePanel);
             this.Controls.Add(this.TestPanel);
-            this.Controls.Add(this.MetodPanel);
+            this.Controls.Add(this.MethodicalTextPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Form1";
@@ -1814,6 +1945,8 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.MethodicalPanel.ResumeLayout(false);
+            this.MethodicalTextPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1949,6 +2082,17 @@
         private Panel panel3;
         private Panel panel2;
         private Panel panel1;
-        private Panel MetodPanel;
+        private Panel MethodicalPanel;
+        private Button MethodicalButton9;
+        private Button MethodicalButton8;
+        private Button MethodicalButton7;
+        private Button MethodicalButton6;
+        private Button MethodicalButton5;
+        private Button MethodicalButton4;
+        private Button MethodicalButton3;
+        private Button MethodicalButton2;
+        private Button MethodicalButton1;
+        private Panel MethodicalTextPanel;
+        private RichTextBox MethodicalTextBox;
     }
 }
