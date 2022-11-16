@@ -870,7 +870,7 @@
             this.LessonPoint20.ReadOnly = true;
             this.LessonPoint20.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.LessonPoint20.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.LessonPoint20.Size = new System.Drawing.Size(420, 26);
+            this.LessonPoint20.Size = new System.Drawing.Size(420, 51);
             this.LessonPoint20.TabIndex = 13;
             this.LessonPoint20.Text = "Наш выбор";
             // 
@@ -880,7 +880,7 @@
             this.LessonPoint26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LessonPoint26.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.LessonPoint26.HideSelection = false;
-            this.LessonPoint26.Location = new System.Drawing.Point(24, 209);
+            this.LessonPoint26.Location = new System.Drawing.Point(24, 220);
             this.LessonPoint26.MaxLength = 80;
             this.LessonPoint26.Name = "LessonPoint26";
             this.LessonPoint26.ReadOnly = true;
@@ -897,7 +897,7 @@
             this.LessonPoint25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LessonPoint25.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.LessonPoint25.HideSelection = false;
-            this.LessonPoint25.Location = new System.Drawing.Point(24, 177);
+            this.LessonPoint25.Location = new System.Drawing.Point(24, 188);
             this.LessonPoint25.MaxLength = 80;
             this.LessonPoint25.Name = "LessonPoint25";
             this.LessonPoint25.ReadOnly = true;
@@ -914,7 +914,7 @@
             this.LessonPoint24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LessonPoint24.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.LessonPoint24.HideSelection = false;
-            this.LessonPoint24.Location = new System.Drawing.Point(24, 145);
+            this.LessonPoint24.Location = new System.Drawing.Point(24, 156);
             this.LessonPoint24.MaxLength = 80;
             this.LessonPoint24.Name = "LessonPoint24";
             this.LessonPoint24.ReadOnly = true;
@@ -931,7 +931,7 @@
             this.LessonPoint23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LessonPoint23.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.LessonPoint23.HideSelection = false;
-            this.LessonPoint23.Location = new System.Drawing.Point(24, 113);
+            this.LessonPoint23.Location = new System.Drawing.Point(24, 124);
             this.LessonPoint23.MaxLength = 80;
             this.LessonPoint23.Name = "LessonPoint23";
             this.LessonPoint23.ReadOnly = true;
@@ -948,7 +948,7 @@
             this.LessonPoint22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LessonPoint22.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.LessonPoint22.HideSelection = false;
-            this.LessonPoint22.Location = new System.Drawing.Point(24, 81);
+            this.LessonPoint22.Location = new System.Drawing.Point(24, 92);
             this.LessonPoint22.MaxLength = 80;
             this.LessonPoint22.Name = "LessonPoint22";
             this.LessonPoint22.ReadOnly = true;
@@ -965,7 +965,7 @@
             this.LessonPoint21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LessonPoint21.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.LessonPoint21.HideSelection = false;
-            this.LessonPoint21.Location = new System.Drawing.Point(24, 49);
+            this.LessonPoint21.Location = new System.Drawing.Point(24, 60);
             this.LessonPoint21.MaxLength = 80;
             this.LessonPoint21.Name = "LessonPoint21";
             this.LessonPoint21.ReadOnly = true;
