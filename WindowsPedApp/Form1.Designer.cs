@@ -92,6 +92,10 @@
             this.Teacher2 = new System.Windows.Forms.RichTextBox();
             this.Teacher1 = new System.Windows.Forms.RichTextBox();
             this.Other = new System.Windows.Forms.Panel();
+            this.OpenMotivation = new System.Windows.Forms.Button();
+            this.OpenPresent = new System.Windows.Forms.Button();
+            this.OpenMetodic = new System.Windows.Forms.Button();
+            this.OpenTest = new System.Windows.Forms.Button();
             this.CreateLesson = new System.Windows.Forms.Panel();
             this.LessonPanel2 = new System.Windows.Forms.Panel();
             this.LessonPoint20 = new System.Windows.Forms.RichTextBox();
@@ -111,16 +115,49 @@
             this.LessonStructureButton = new System.Windows.Forms.Button();
             this.LessonCompletePictureBox = new System.Windows.Forms.PictureBox();
             this.LessonCompleteRichBox = new System.Windows.Forms.RichTextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.TestBox1 = new System.Windows.Forms.RichTextBox();
+            this.TestBox2 = new System.Windows.Forms.RichTextBox();
+            this.TestBox3 = new System.Windows.Forms.RichTextBox();
+            this.TestBox4 = new System.Windows.Forms.RichTextBox();
+            this.TestBox5 = new System.Windows.Forms.RichTextBox();
+            this.TestBox6 = new System.Windows.Forms.RichTextBox();
+            this.TestBox7 = new System.Windows.Forms.RichTextBox();
+            this.TestBox8 = new System.Windows.Forms.RichTextBox();
+            this.TestBox9 = new System.Windows.Forms.RichTextBox();
+            this.TestBox10 = new System.Windows.Forms.RichTextBox();
+            this.RadioTB11 = new System.Windows.Forms.RadioButton();
+            this.RadioTB12 = new System.Windows.Forms.RadioButton();
+            this.RadioTB22 = new System.Windows.Forms.RadioButton();
+            this.RadioTB21 = new System.Windows.Forms.RadioButton();
+            this.RadioTB32 = new System.Windows.Forms.RadioButton();
+            this.RadioTB31 = new System.Windows.Forms.RadioButton();
+            this.RadioTB42 = new System.Windows.Forms.RadioButton();
+            this.RadioTB41 = new System.Windows.Forms.RadioButton();
+            this.RadioTB52 = new System.Windows.Forms.RadioButton();
+            this.RadioTB51 = new System.Windows.Forms.RadioButton();
+            this.RadioTB62 = new System.Windows.Forms.RadioButton();
+            this.RadioTB61 = new System.Windows.Forms.RadioButton();
+            this.RadioTB72 = new System.Windows.Forms.RadioButton();
+            this.RadioTB71 = new System.Windows.Forms.RadioButton();
+            this.RadioTB82 = new System.Windows.Forms.RadioButton();
+            this.RadioTB81 = new System.Windows.Forms.RadioButton();
+            this.RadioTB92 = new System.Windows.Forms.RadioButton();
+            this.RadioTB91 = new System.Windows.Forms.RadioButton();
+            this.RadioTB102 = new System.Windows.Forms.RadioButton();
+            this.RadioTB101 = new System.Windows.Forms.RadioButton();
             this.MainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HelperPictureBox)).BeginInit();
             this.Literatures.SuspendLayout();
             this.Menu.SuspendLayout();
             this.Instruction.SuspendLayout();
             this.TechnologicalMap.SuspendLayout();
+            this.Other.SuspendLayout();
             this.CreateLesson.SuspendLayout();
             this.LessonPanel2.SuspendLayout();
             this.LessonCompletePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LessonCompletePictureBox)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainMenu
@@ -151,9 +188,10 @@
             this.ButtonMainMenuExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ButtonMainMenuExit.AutoSize = true;
             this.ButtonMainMenuExit.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ButtonMainMenuExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ButtonMainMenuExit.Location = new System.Drawing.Point(113, 580);
             this.ButtonMainMenuExit.Name = "ButtonMainMenuExit";
-            this.ButtonMainMenuExit.Size = new System.Drawing.Size(294, 25);
+            this.ButtonMainMenuExit.Size = new System.Drawing.Size(294, 29);
             this.ButtonMainMenuExit.TabIndex = 3;
             this.ButtonMainMenuExit.Tag = "Button";
             this.ButtonMainMenuExit.Text = "Выход";
@@ -165,9 +203,10 @@
             this.ButtonMainMenuLiteratures.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ButtonMainMenuLiteratures.AutoSize = true;
             this.ButtonMainMenuLiteratures.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ButtonMainMenuLiteratures.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ButtonMainMenuLiteratures.Location = new System.Drawing.Point(113, 540);
             this.ButtonMainMenuLiteratures.Name = "ButtonMainMenuLiteratures";
-            this.ButtonMainMenuLiteratures.Size = new System.Drawing.Size(294, 25);
+            this.ButtonMainMenuLiteratures.Size = new System.Drawing.Size(294, 29);
             this.ButtonMainMenuLiteratures.TabIndex = 2;
             this.ButtonMainMenuLiteratures.Tag = "Button";
             this.ButtonMainMenuLiteratures.Text = "Список литературы";
@@ -179,9 +218,10 @@
             this.ButtonMainMenuInstruction.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ButtonMainMenuInstruction.AutoSize = true;
             this.ButtonMainMenuInstruction.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ButtonMainMenuInstruction.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ButtonMainMenuInstruction.Location = new System.Drawing.Point(113, 500);
             this.ButtonMainMenuInstruction.Name = "ButtonMainMenuInstruction";
-            this.ButtonMainMenuInstruction.Size = new System.Drawing.Size(294, 25);
+            this.ButtonMainMenuInstruction.Size = new System.Drawing.Size(294, 29);
             this.ButtonMainMenuInstruction.TabIndex = 0;
             this.ButtonMainMenuInstruction.Tag = "Button";
             this.ButtonMainMenuInstruction.Text = "Инструкция";
@@ -211,7 +251,7 @@
             this.HelperLabel.Name = "HelperLabel";
             this.HelperLabel.Size = new System.Drawing.Size(270, 120);
             this.HelperLabel.TabIndex = 5;
-            this.HelperLabel.Text = "Тут будет текст";
+            this.HelperLabel.Text = "Тут будет текст, но это не точно";
             this.HelperLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // HelperPictureBox
@@ -277,9 +317,10 @@
             this.ButtonOther.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ButtonOther.AutoSize = true;
             this.ButtonOther.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ButtonOther.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ButtonOther.Location = new System.Drawing.Point(113, 580);
             this.ButtonOther.Name = "ButtonOther";
-            this.ButtonOther.Size = new System.Drawing.Size(294, 25);
+            this.ButtonOther.Size = new System.Drawing.Size(294, 29);
             this.ButtonOther.TabIndex = 3;
             this.ButtonOther.Tag = "Button";
             this.ButtonOther.Text = "Дополнительно";
@@ -291,9 +332,10 @@
             this.ButtonCreateTechnologicalMap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ButtonCreateTechnologicalMap.AutoSize = true;
             this.ButtonCreateTechnologicalMap.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ButtonCreateTechnologicalMap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ButtonCreateTechnologicalMap.Location = new System.Drawing.Point(113, 540);
             this.ButtonCreateTechnologicalMap.Name = "ButtonCreateTechnologicalMap";
-            this.ButtonCreateTechnologicalMap.Size = new System.Drawing.Size(294, 25);
+            this.ButtonCreateTechnologicalMap.Size = new System.Drawing.Size(294, 29);
             this.ButtonCreateTechnologicalMap.TabIndex = 2;
             this.ButtonCreateTechnologicalMap.Tag = "Button";
             this.ButtonCreateTechnologicalMap.Text = "Создать технологическую карту";
@@ -305,9 +347,10 @@
             this.ButtonCreateLesson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.ButtonCreateLesson.AutoSize = true;
             this.ButtonCreateLesson.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ButtonCreateLesson.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ButtonCreateLesson.Location = new System.Drawing.Point(113, 500);
             this.ButtonCreateLesson.Name = "ButtonCreateLesson";
-            this.ButtonCreateLesson.Size = new System.Drawing.Size(294, 25);
+            this.ButtonCreateLesson.Size = new System.Drawing.Size(294, 29);
             this.ButtonCreateLesson.TabIndex = 0;
             this.ButtonCreateLesson.Tag = "Button";
             this.ButtonCreateLesson.Text = "Создать урок";
@@ -824,10 +867,58 @@
             // 
             // Other
             // 
+            this.Other.Controls.Add(this.OpenMotivation);
+            this.Other.Controls.Add(this.OpenPresent);
+            this.Other.Controls.Add(this.OpenMetodic);
+            this.Other.Controls.Add(this.OpenTest);
             this.Other.Location = new System.Drawing.Point(540, 12);
             this.Other.Name = "Other";
             this.Other.Size = new System.Drawing.Size(520, 637);
             this.Other.TabIndex = 8;
+            // 
+            // OpenMotivation
+            // 
+            this.OpenMotivation.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.OpenMotivation.Location = new System.Drawing.Point(253, 446);
+            this.OpenMotivation.Name = "OpenMotivation";
+            this.OpenMotivation.Size = new System.Drawing.Size(235, 40);
+            this.OpenMotivation.TabIndex = 3;
+            this.OpenMotivation.Text = "Как мотивировать студентов";
+            this.OpenMotivation.UseVisualStyleBackColor = true;
+            this.OpenMotivation.Click += new System.EventHandler(this.OpenMotivation_Click);
+            // 
+            // OpenPresent
+            // 
+            this.OpenPresent.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.OpenPresent.Location = new System.Drawing.Point(41, 346);
+            this.OpenPresent.Name = "OpenPresent";
+            this.OpenPresent.Size = new System.Drawing.Size(235, 40);
+            this.OpenPresent.TabIndex = 2;
+            this.OpenPresent.Text = "Как создавать презентацию";
+            this.OpenPresent.UseVisualStyleBackColor = true;
+            this.OpenPresent.Click += new System.EventHandler(this.OpenPresent_Click);
+            // 
+            // OpenMetodic
+            // 
+            this.OpenMetodic.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.OpenMetodic.Location = new System.Drawing.Point(253, 238);
+            this.OpenMetodic.Name = "OpenMetodic";
+            this.OpenMetodic.Size = new System.Drawing.Size(235, 40);
+            this.OpenMetodic.TabIndex = 1;
+            this.OpenMetodic.Text = "Методические приемы";
+            this.OpenMetodic.UseVisualStyleBackColor = true;
+            this.OpenMetodic.Click += new System.EventHandler(this.OpenMetodic_Click);
+            // 
+            // OpenTest
+            // 
+            this.OpenTest.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.OpenTest.Location = new System.Drawing.Point(41, 138);
+            this.OpenTest.Name = "OpenTest";
+            this.OpenTest.Size = new System.Drawing.Size(235, 40);
+            this.OpenTest.TabIndex = 0;
+            this.OpenTest.Text = "Тест";
+            this.OpenTest.UseVisualStyleBackColor = true;
+            this.OpenTest.Click += new System.EventHandler(this.OpenTest_Click);
             // 
             // CreateLesson
             // 
@@ -1075,7 +1166,7 @@
             this.LessonCompletePanel.Controls.Add(this.LessonStructureButton);
             this.LessonCompletePanel.Controls.Add(this.LessonCompletePictureBox);
             this.LessonCompletePanel.Controls.Add(this.LessonCompleteRichBox);
-            this.LessonCompletePanel.Location = new System.Drawing.Point(12, 12);
+            this.LessonCompletePanel.Location = new System.Drawing.Point(540, 12);
             this.LessonCompletePanel.Name = "LessonCompletePanel";
             this.LessonCompletePanel.Size = new System.Drawing.Size(520, 637);
             this.LessonCompletePanel.TabIndex = 10;
@@ -1109,6 +1200,373 @@
             this.LessonCompleteRichBox.TabIndex = 0;
             this.LessonCompleteRichBox.Text = "";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.RadioTB102);
+            this.panel1.Controls.Add(this.RadioTB101);
+            this.panel1.Controls.Add(this.RadioTB92);
+            this.panel1.Controls.Add(this.RadioTB91);
+            this.panel1.Controls.Add(this.RadioTB82);
+            this.panel1.Controls.Add(this.RadioTB81);
+            this.panel1.Controls.Add(this.RadioTB72);
+            this.panel1.Controls.Add(this.RadioTB71);
+            this.panel1.Controls.Add(this.RadioTB62);
+            this.panel1.Controls.Add(this.RadioTB61);
+            this.panel1.Controls.Add(this.RadioTB52);
+            this.panel1.Controls.Add(this.RadioTB51);
+            this.panel1.Controls.Add(this.RadioTB42);
+            this.panel1.Controls.Add(this.RadioTB41);
+            this.panel1.Controls.Add(this.RadioTB32);
+            this.panel1.Controls.Add(this.RadioTB31);
+            this.panel1.Controls.Add(this.RadioTB22);
+            this.panel1.Controls.Add(this.RadioTB21);
+            this.panel1.Controls.Add(this.RadioTB12);
+            this.panel1.Controls.Add(this.RadioTB11);
+            this.panel1.Controls.Add(this.TestBox10);
+            this.panel1.Controls.Add(this.TestBox9);
+            this.panel1.Controls.Add(this.TestBox8);
+            this.panel1.Controls.Add(this.TestBox7);
+            this.panel1.Controls.Add(this.TestBox6);
+            this.panel1.Controls.Add(this.TestBox5);
+            this.panel1.Controls.Add(this.TestBox4);
+            this.panel1.Controls.Add(this.TestBox3);
+            this.panel1.Controls.Add(this.TestBox2);
+            this.panel1.Controls.Add(this.TestBox1);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(520, 637);
+            this.panel1.TabIndex = 11;
+            // 
+            // TestBox1
+            // 
+            this.TestBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TestBox1.Location = new System.Drawing.Point(42, 55);
+            this.TestBox1.Name = "TestBox1";
+            this.TestBox1.Size = new System.Drawing.Size(354, 46);
+            this.TestBox1.TabIndex = 0;
+            this.TestBox1.Text = "";
+            // 
+            // TestBox2
+            // 
+            this.TestBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TestBox2.Location = new System.Drawing.Point(42, 107);
+            this.TestBox2.Name = "TestBox2";
+            this.TestBox2.Size = new System.Drawing.Size(354, 46);
+            this.TestBox2.TabIndex = 1;
+            this.TestBox2.Text = "";
+            // 
+            // TestBox3
+            // 
+            this.TestBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TestBox3.Location = new System.Drawing.Point(42, 159);
+            this.TestBox3.Name = "TestBox3";
+            this.TestBox3.Size = new System.Drawing.Size(354, 46);
+            this.TestBox3.TabIndex = 2;
+            this.TestBox3.Text = "";
+            // 
+            // TestBox4
+            // 
+            this.TestBox4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TestBox4.Location = new System.Drawing.Point(42, 211);
+            this.TestBox4.Name = "TestBox4";
+            this.TestBox4.Size = new System.Drawing.Size(354, 46);
+            this.TestBox4.TabIndex = 3;
+            this.TestBox4.Text = "";
+            // 
+            // TestBox5
+            // 
+            this.TestBox5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TestBox5.Location = new System.Drawing.Point(42, 263);
+            this.TestBox5.Name = "TestBox5";
+            this.TestBox5.Size = new System.Drawing.Size(354, 46);
+            this.TestBox5.TabIndex = 4;
+            this.TestBox5.Text = "";
+            // 
+            // TestBox6
+            // 
+            this.TestBox6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TestBox6.Location = new System.Drawing.Point(42, 315);
+            this.TestBox6.Name = "TestBox6";
+            this.TestBox6.Size = new System.Drawing.Size(354, 46);
+            this.TestBox6.TabIndex = 5;
+            this.TestBox6.Text = "";
+            // 
+            // TestBox7
+            // 
+            this.TestBox7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TestBox7.Location = new System.Drawing.Point(42, 367);
+            this.TestBox7.Name = "TestBox7";
+            this.TestBox7.Size = new System.Drawing.Size(354, 46);
+            this.TestBox7.TabIndex = 6;
+            this.TestBox7.Text = "";
+            // 
+            // TestBox8
+            // 
+            this.TestBox8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TestBox8.Location = new System.Drawing.Point(42, 419);
+            this.TestBox8.Name = "TestBox8";
+            this.TestBox8.Size = new System.Drawing.Size(354, 46);
+            this.TestBox8.TabIndex = 7;
+            this.TestBox8.Text = "";
+            // 
+            // TestBox9
+            // 
+            this.TestBox9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TestBox9.Location = new System.Drawing.Point(42, 471);
+            this.TestBox9.Name = "TestBox9";
+            this.TestBox9.Size = new System.Drawing.Size(354, 46);
+            this.TestBox9.TabIndex = 8;
+            this.TestBox9.Text = "";
+            // 
+            // TestBox10
+            // 
+            this.TestBox10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TestBox10.Location = new System.Drawing.Point(42, 523);
+            this.TestBox10.Name = "TestBox10";
+            this.TestBox10.Size = new System.Drawing.Size(354, 46);
+            this.TestBox10.TabIndex = 9;
+            this.TestBox10.Text = "";
+            // 
+            // RadioTB11
+            // 
+            this.RadioTB11.AutoSize = true;
+            this.RadioTB11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RadioTB11.Location = new System.Drawing.Point(416, 55);
+            this.RadioTB11.Name = "RadioTB11";
+            this.RadioTB11.Size = new System.Drawing.Size(36, 23);
+            this.RadioTB11.TabIndex = 10;
+            this.RadioTB11.TabStop = true;
+            this.RadioTB11.Text = "+";
+            this.RadioTB11.UseVisualStyleBackColor = true;
+            // 
+            // RadioTB12
+            // 
+            this.RadioTB12.AutoSize = true;
+            this.RadioTB12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RadioTB12.Location = new System.Drawing.Point(470, 55);
+            this.RadioTB12.Name = "RadioTB12";
+            this.RadioTB12.Size = new System.Drawing.Size(33, 23);
+            this.RadioTB12.TabIndex = 11;
+            this.RadioTB12.TabStop = true;
+            this.RadioTB12.Text = "-";
+            this.RadioTB12.UseVisualStyleBackColor = true;
+            // 
+            // RadioTB22
+            // 
+            this.RadioTB22.AutoSize = true;
+            this.RadioTB22.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RadioTB22.Location = new System.Drawing.Point(470, 107);
+            this.RadioTB22.Name = "RadioTB22";
+            this.RadioTB22.Size = new System.Drawing.Size(33, 23);
+            this.RadioTB22.TabIndex = 13;
+            this.RadioTB22.TabStop = true;
+            this.RadioTB22.Text = "-";
+            this.RadioTB22.UseVisualStyleBackColor = true;
+            // 
+            // RadioTB21
+            // 
+            this.RadioTB21.AutoSize = true;
+            this.RadioTB21.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RadioTB21.Location = new System.Drawing.Point(416, 107);
+            this.RadioTB21.Name = "RadioTB21";
+            this.RadioTB21.Size = new System.Drawing.Size(36, 23);
+            this.RadioTB21.TabIndex = 12;
+            this.RadioTB21.TabStop = true;
+            this.RadioTB21.Text = "+";
+            this.RadioTB21.UseVisualStyleBackColor = true;
+            // 
+            // RadioTB32
+            // 
+            this.RadioTB32.AutoSize = true;
+            this.RadioTB32.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RadioTB32.Location = new System.Drawing.Point(470, 159);
+            this.RadioTB32.Name = "RadioTB32";
+            this.RadioTB32.Size = new System.Drawing.Size(33, 23);
+            this.RadioTB32.TabIndex = 15;
+            this.RadioTB32.TabStop = true;
+            this.RadioTB32.Text = "-";
+            this.RadioTB32.UseVisualStyleBackColor = true;
+            // 
+            // RadioTB31
+            // 
+            this.RadioTB31.AutoSize = true;
+            this.RadioTB31.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RadioTB31.Location = new System.Drawing.Point(416, 159);
+            this.RadioTB31.Name = "RadioTB31";
+            this.RadioTB31.Size = new System.Drawing.Size(36, 23);
+            this.RadioTB31.TabIndex = 14;
+            this.RadioTB31.TabStop = true;
+            this.RadioTB31.Text = "+";
+            this.RadioTB31.UseVisualStyleBackColor = true;
+            // 
+            // RadioTB42
+            // 
+            this.RadioTB42.AutoSize = true;
+            this.RadioTB42.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RadioTB42.Location = new System.Drawing.Point(470, 211);
+            this.RadioTB42.Name = "RadioTB42";
+            this.RadioTB42.Size = new System.Drawing.Size(33, 23);
+            this.RadioTB42.TabIndex = 17;
+            this.RadioTB42.TabStop = true;
+            this.RadioTB42.Text = "-";
+            this.RadioTB42.UseVisualStyleBackColor = true;
+            // 
+            // RadioTB41
+            // 
+            this.RadioTB41.AutoSize = true;
+            this.RadioTB41.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RadioTB41.Location = new System.Drawing.Point(416, 211);
+            this.RadioTB41.Name = "RadioTB41";
+            this.RadioTB41.Size = new System.Drawing.Size(36, 23);
+            this.RadioTB41.TabIndex = 16;
+            this.RadioTB41.TabStop = true;
+            this.RadioTB41.Text = "+";
+            this.RadioTB41.UseVisualStyleBackColor = true;
+            // 
+            // RadioTB52
+            // 
+            this.RadioTB52.AutoSize = true;
+            this.RadioTB52.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RadioTB52.Location = new System.Drawing.Point(470, 263);
+            this.RadioTB52.Name = "RadioTB52";
+            this.RadioTB52.Size = new System.Drawing.Size(33, 23);
+            this.RadioTB52.TabIndex = 19;
+            this.RadioTB52.TabStop = true;
+            this.RadioTB52.Text = "-";
+            this.RadioTB52.UseVisualStyleBackColor = true;
+            // 
+            // RadioTB51
+            // 
+            this.RadioTB51.AutoSize = true;
+            this.RadioTB51.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RadioTB51.Location = new System.Drawing.Point(416, 263);
+            this.RadioTB51.Name = "RadioTB51";
+            this.RadioTB51.Size = new System.Drawing.Size(36, 23);
+            this.RadioTB51.TabIndex = 18;
+            this.RadioTB51.TabStop = true;
+            this.RadioTB51.Text = "+";
+            this.RadioTB51.UseVisualStyleBackColor = true;
+            // 
+            // RadioTB62
+            // 
+            this.RadioTB62.AutoSize = true;
+            this.RadioTB62.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RadioTB62.Location = new System.Drawing.Point(470, 315);
+            this.RadioTB62.Name = "RadioTB62";
+            this.RadioTB62.Size = new System.Drawing.Size(33, 23);
+            this.RadioTB62.TabIndex = 21;
+            this.RadioTB62.TabStop = true;
+            this.RadioTB62.Text = "-";
+            this.RadioTB62.UseVisualStyleBackColor = true;
+            // 
+            // RadioTB61
+            // 
+            this.RadioTB61.AutoSize = true;
+            this.RadioTB61.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RadioTB61.Location = new System.Drawing.Point(416, 315);
+            this.RadioTB61.Name = "RadioTB61";
+            this.RadioTB61.Size = new System.Drawing.Size(36, 23);
+            this.RadioTB61.TabIndex = 20;
+            this.RadioTB61.TabStop = true;
+            this.RadioTB61.Text = "+";
+            this.RadioTB61.UseVisualStyleBackColor = true;
+            // 
+            // RadioTB72
+            // 
+            this.RadioTB72.AutoSize = true;
+            this.RadioTB72.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RadioTB72.Location = new System.Drawing.Point(470, 367);
+            this.RadioTB72.Name = "RadioTB72";
+            this.RadioTB72.Size = new System.Drawing.Size(33, 23);
+            this.RadioTB72.TabIndex = 23;
+            this.RadioTB72.TabStop = true;
+            this.RadioTB72.Text = "-";
+            this.RadioTB72.UseVisualStyleBackColor = true;
+            // 
+            // RadioTB71
+            // 
+            this.RadioTB71.AutoSize = true;
+            this.RadioTB71.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RadioTB71.Location = new System.Drawing.Point(416, 367);
+            this.RadioTB71.Name = "RadioTB71";
+            this.RadioTB71.Size = new System.Drawing.Size(36, 23);
+            this.RadioTB71.TabIndex = 22;
+            this.RadioTB71.TabStop = true;
+            this.RadioTB71.Text = "+";
+            this.RadioTB71.UseVisualStyleBackColor = true;
+            // 
+            // RadioTB82
+            // 
+            this.RadioTB82.AutoSize = true;
+            this.RadioTB82.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RadioTB82.Location = new System.Drawing.Point(470, 419);
+            this.RadioTB82.Name = "RadioTB82";
+            this.RadioTB82.Size = new System.Drawing.Size(33, 23);
+            this.RadioTB82.TabIndex = 25;
+            this.RadioTB82.TabStop = true;
+            this.RadioTB82.Text = "-";
+            this.RadioTB82.UseVisualStyleBackColor = true;
+            // 
+            // RadioTB81
+            // 
+            this.RadioTB81.AutoSize = true;
+            this.RadioTB81.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RadioTB81.Location = new System.Drawing.Point(416, 419);
+            this.RadioTB81.Name = "RadioTB81";
+            this.RadioTB81.Size = new System.Drawing.Size(36, 23);
+            this.RadioTB81.TabIndex = 24;
+            this.RadioTB81.TabStop = true;
+            this.RadioTB81.Text = "+";
+            this.RadioTB81.UseVisualStyleBackColor = true;
+            // 
+            // RadioTB92
+            // 
+            this.RadioTB92.AutoSize = true;
+            this.RadioTB92.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RadioTB92.Location = new System.Drawing.Point(470, 474);
+            this.RadioTB92.Name = "RadioTB92";
+            this.RadioTB92.Size = new System.Drawing.Size(33, 23);
+            this.RadioTB92.TabIndex = 27;
+            this.RadioTB92.TabStop = true;
+            this.RadioTB92.Text = "-";
+            this.RadioTB92.UseVisualStyleBackColor = true;
+            // 
+            // RadioTB91
+            // 
+            this.RadioTB91.AutoSize = true;
+            this.RadioTB91.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RadioTB91.Location = new System.Drawing.Point(416, 474);
+            this.RadioTB91.Name = "RadioTB91";
+            this.RadioTB91.Size = new System.Drawing.Size(36, 23);
+            this.RadioTB91.TabIndex = 26;
+            this.RadioTB91.TabStop = true;
+            this.RadioTB91.Text = "+";
+            this.RadioTB91.UseVisualStyleBackColor = true;
+            // 
+            // RadioTB102
+            // 
+            this.RadioTB102.AutoSize = true;
+            this.RadioTB102.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RadioTB102.Location = new System.Drawing.Point(470, 523);
+            this.RadioTB102.Name = "RadioTB102";
+            this.RadioTB102.Size = new System.Drawing.Size(33, 23);
+            this.RadioTB102.TabIndex = 29;
+            this.RadioTB102.TabStop = true;
+            this.RadioTB102.Text = "-";
+            this.RadioTB102.UseVisualStyleBackColor = true;
+            // 
+            // RadioTB101
+            // 
+            this.RadioTB101.AutoSize = true;
+            this.RadioTB101.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RadioTB101.Location = new System.Drawing.Point(416, 523);
+            this.RadioTB101.Name = "RadioTB101";
+            this.RadioTB101.Size = new System.Drawing.Size(36, 23);
+            this.RadioTB101.TabIndex = 28;
+            this.RadioTB101.TabStop = true;
+            this.RadioTB101.Text = "+";
+            this.RadioTB101.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1119,14 +1577,15 @@
             this.Controls.Add(this.HelperPictureBox);
             this.Controls.Add(this.HelperButtonClose);
             this.Controls.Add(this.ButtonHome);
-            this.Controls.Add(this.Literatures);
-            this.Controls.Add(this.Menu);
             this.Controls.Add(this.MainMenu);
+            this.Controls.Add(this.Menu);
+            this.Controls.Add(this.Literatures);
             this.Controls.Add(this.Instruction);
             this.Controls.Add(this.TechnologicalMap);
             this.Controls.Add(this.CreateLesson);
             this.Controls.Add(this.Other);
             this.Controls.Add(this.LessonCompletePanel);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Form1";
@@ -1138,10 +1597,13 @@
             this.Menu.PerformLayout();
             this.Instruction.ResumeLayout(false);
             this.TechnologicalMap.ResumeLayout(false);
+            this.Other.ResumeLayout(false);
             this.CreateLesson.ResumeLayout(false);
             this.LessonPanel2.ResumeLayout(false);
             this.LessonCompletePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LessonCompletePictureBox)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1230,5 +1692,40 @@
         private RichTextBox LessonCompleteRichBox;
         private PictureBox LessonCompletePictureBox;
         private Button LessonStructureButton;
+        private Button OpenMotivation;
+        private Button OpenPresent;
+        private Button OpenMetodic;
+        private Button OpenTest;
+        private Panel panel1;
+        private RichTextBox TestBox1;
+        private RichTextBox TestBox2;
+        private RadioButton RadioTB102;
+        private RadioButton RadioTB101;
+        private RadioButton RadioTB92;
+        private RadioButton RadioTB91;
+        private RadioButton RadioTB82;
+        private RadioButton RadioTB81;
+        private RadioButton RadioTB72;
+        private RadioButton RadioTB71;
+        private RadioButton RadioTB62;
+        private RadioButton RadioTB61;
+        private RadioButton RadioTB52;
+        private RadioButton RadioTB51;
+        private RadioButton RadioTB42;
+        private RadioButton RadioTB41;
+        private RadioButton RadioTB32;
+        private RadioButton RadioTB31;
+        private RadioButton RadioTB22;
+        private RadioButton RadioTB21;
+        private RadioButton RadioTB12;
+        private RadioButton RadioTB11;
+        private RichTextBox TestBox10;
+        private RichTextBox TestBox9;
+        private RichTextBox TestBox8;
+        private RichTextBox TestBox7;
+        private RichTextBox TestBox6;
+        private RichTextBox TestBox5;
+        private RichTextBox TestBox4;
+        private RichTextBox TestBox3;
     }
 }

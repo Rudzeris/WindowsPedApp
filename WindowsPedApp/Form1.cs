@@ -613,6 +613,26 @@ namespace WindowsPedApp
             }
         }
 
+        private void OpenTest_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OpenMetodic_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OpenPresent_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OpenMotivation_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //public class ClassTechnicalMaps
         //{
         //    public RichTextBox TTechnicalMap = new RichTextBox();
