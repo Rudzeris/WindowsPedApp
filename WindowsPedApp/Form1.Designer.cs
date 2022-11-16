@@ -329,6 +329,7 @@
             this.LiteraturesRichTextBox.Size = new System.Drawing.Size(420, 570);
             this.LiteraturesRichTextBox.TabIndex = 0;
             this.LiteraturesRichTextBox.Text = resources.GetString("LiteraturesRichTextBox.Text");
+            this.LiteraturesRichTextBox.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.Clicked_To_Link);
             // 
             // ButtonHome
             // 
@@ -420,6 +421,7 @@
             this.InstructionRichText.Size = new System.Drawing.Size(420, 570);
             this.InstructionRichText.TabIndex = 1;
             this.InstructionRichText.Text = resources.GetString("InstructionRichText.Text");
+            this.InstructionRichText.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.Clicked_To_Link);
             // 
             // TechnologicalMap
             // 
@@ -1894,6 +1896,7 @@
             this.MethodicalTextBox.Size = new System.Drawing.Size(420, 570);
             this.MethodicalTextBox.TabIndex = 0;
             this.MethodicalTextBox.Text = "";
+            this.MethodicalTextBox.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.Clicked_To_Link);
             // 
             // PresentPanel
             // 
@@ -1913,11 +1916,12 @@
             this.PresentTextBox.Size = new System.Drawing.Size(420, 570);
             this.PresentTextBox.TabIndex = 1;
             this.PresentTextBox.Text = "";
+            this.PresentTextBox.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.Clicked_To_Link);
             // 
             // MotivationPanel
             // 
             this.MotivationPanel.Controls.Add(this.MotivationTextBox);
-            this.MotivationPanel.Location = new System.Drawing.Point(12, 12);
+            this.MotivationPanel.Location = new System.Drawing.Point(540, 12);
             this.MotivationPanel.Name = "MotivationPanel";
             this.MotivationPanel.Size = new System.Drawing.Size(520, 637);
             this.MotivationPanel.TabIndex = 15;
@@ -1932,6 +1936,7 @@
             this.MotivationTextBox.Size = new System.Drawing.Size(420, 570);
             this.MotivationTextBox.TabIndex = 1;
             this.MotivationTextBox.Text = "";
+            this.MotivationTextBox.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.Clicked_To_Link);
             // 
             // Form1
             // 
@@ -1939,7 +1944,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1370, 661);
-            this.Controls.Add(this.MotivationPanel);
             this.Controls.Add(this.HelperLabel);
             this.Controls.Add(this.HelperPictureBox);
             this.Controls.Add(this.HelperButtonClose);
@@ -1956,6 +1960,7 @@
             this.Controls.Add(this.TestPanel);
             this.Controls.Add(this.MethodicalTextPanel);
             this.Controls.Add(this.PresentPanel);
+            this.Controls.Add(this.MotivationPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Form1";

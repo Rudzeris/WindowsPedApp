@@ -1,5 +1,6 @@
 ﻿using System.Collections.Specialized;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace WindowsPedApp
@@ -113,7 +114,7 @@ namespace WindowsPedApp
             MethodicalPanel.Visible = false;
             MethodicalTextPanel.Visible = false;
             PresentPanel.Visible = false;
-
+            MotivationPanel.Visible = false;
         }
 
         private void OpenMainMenu()
@@ -206,6 +207,9 @@ namespace WindowsPedApp
             {
                 OpenMethodical(sender,e);
             }else if(Text == "Presentation")
+            {
+                OpenOther(sender, e);
+            }else if(Text == "Motivation")
             {
                 OpenOther(sender, e);
             }
@@ -706,7 +710,11 @@ namespace WindowsPedApp
 
         private void OpenMotivation(object sender, EventArgs e)
         {
-
+            CloseAll();
+            Text = "Motivation";
+            MotivationPanel.Visible = true;
+            MotivationPanel.Location = locationDefault;
+            MotivationPanel.Size = new Size(sizeDefault);
         }
 
         private void TestResult()
@@ -836,6 +844,11 @@ namespace WindowsPedApp
         {
             OpenMethodicalReception();
             MethodicalTextBox.Text = "";
+        }
+
+        private void Clicked_To_Link(object sender, LinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo(e.LinkText) { UseShellExecute = true });
         }
 
         //public class ClassTechnicalMaps
