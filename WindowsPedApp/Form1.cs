@@ -112,6 +112,8 @@ namespace WindowsPedApp
             TestPanel.Visible = false;
             MethodicalPanel.Visible = false;
             MethodicalTextPanel.Visible = false;
+            PresentPanel.Visible = false;
+
         }
 
         private void OpenMainMenu()
@@ -203,6 +205,9 @@ namespace WindowsPedApp
             }else if (Text == "Methodical reception")
             {
                 OpenMethodical(sender,e);
+            }else if(Text == "Presentation")
+            {
+                OpenOther(sender, e);
             }
         }
         private void OpenInstruction(object sender, EventArgs e)
@@ -692,7 +697,11 @@ namespace WindowsPedApp
 
         private void OpenPresent(object sender, EventArgs e)
         {
-
+            CloseAll();
+            Text = "Presentation";
+            PresentPanel.Visible = true;
+            PresentPanel.Location = locationDefault;
+            PresentPanel.Size = new Size(sizeDefault);
         }
 
         private void OpenMotivation(object sender, EventArgs e)

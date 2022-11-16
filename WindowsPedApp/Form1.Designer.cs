@@ -170,6 +170,10 @@
             this.MethodicalButton1 = new System.Windows.Forms.Button();
             this.MethodicalTextPanel = new System.Windows.Forms.Panel();
             this.MethodicalTextBox = new System.Windows.Forms.RichTextBox();
+            this.PresentPanel = new System.Windows.Forms.Panel();
+            this.PresentTextBox = new System.Windows.Forms.RichTextBox();
+            this.MotivationPanel = new System.Windows.Forms.Panel();
+            this.MotivationTextBox = new System.Windows.Forms.RichTextBox();
             this.MainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HelperPictureBox)).BeginInit();
             this.Literatures.SuspendLayout();
@@ -194,6 +198,8 @@
             this.panel1.SuspendLayout();
             this.MethodicalPanel.SuspendLayout();
             this.MethodicalTextPanel.SuspendLayout();
+            this.PresentPanel.SuspendLayout();
+            this.MotivationPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainMenu
@@ -1873,19 +1879,59 @@
             // MethodicalTextPanel
             // 
             this.MethodicalTextPanel.Controls.Add(this.MethodicalTextBox);
-            this.MethodicalTextPanel.Location = new System.Drawing.Point(12, 12);
+            this.MethodicalTextPanel.Location = new System.Drawing.Point(540, 12);
             this.MethodicalTextPanel.Name = "MethodicalTextPanel";
             this.MethodicalTextPanel.Size = new System.Drawing.Size(520, 637);
             this.MethodicalTextPanel.TabIndex = 13;
             // 
             // MethodicalTextBox
             // 
+            this.MethodicalTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.MethodicalTextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MethodicalTextBox.Location = new System.Drawing.Point(50, 36);
             this.MethodicalTextBox.Name = "MethodicalTextBox";
+            this.MethodicalTextBox.ReadOnly = true;
             this.MethodicalTextBox.Size = new System.Drawing.Size(420, 570);
             this.MethodicalTextBox.TabIndex = 0;
             this.MethodicalTextBox.Text = "";
+            // 
+            // PresentPanel
+            // 
+            this.PresentPanel.Controls.Add(this.PresentTextBox);
+            this.PresentPanel.Location = new System.Drawing.Point(540, 12);
+            this.PresentPanel.Name = "PresentPanel";
+            this.PresentPanel.Size = new System.Drawing.Size(520, 637);
+            this.PresentPanel.TabIndex = 14;
+            // 
+            // PresentTextBox
+            // 
+            this.PresentTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.PresentTextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PresentTextBox.Location = new System.Drawing.Point(50, 36);
+            this.PresentTextBox.Name = "PresentTextBox";
+            this.PresentTextBox.ReadOnly = true;
+            this.PresentTextBox.Size = new System.Drawing.Size(420, 570);
+            this.PresentTextBox.TabIndex = 1;
+            this.PresentTextBox.Text = "";
+            // 
+            // MotivationPanel
+            // 
+            this.MotivationPanel.Controls.Add(this.MotivationTextBox);
+            this.MotivationPanel.Location = new System.Drawing.Point(12, 12);
+            this.MotivationPanel.Name = "MotivationPanel";
+            this.MotivationPanel.Size = new System.Drawing.Size(520, 637);
+            this.MotivationPanel.TabIndex = 15;
+            // 
+            // MotivationTextBox
+            // 
+            this.MotivationTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MotivationTextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MotivationTextBox.Location = new System.Drawing.Point(50, 36);
+            this.MotivationTextBox.Name = "MotivationTextBox";
+            this.MotivationTextBox.ReadOnly = true;
+            this.MotivationTextBox.Size = new System.Drawing.Size(420, 570);
+            this.MotivationTextBox.TabIndex = 1;
+            this.MotivationTextBox.Text = "";
             // 
             // Form1
             // 
@@ -1893,12 +1939,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1370, 661);
+            this.Controls.Add(this.MotivationPanel);
             this.Controls.Add(this.HelperLabel);
             this.Controls.Add(this.HelperPictureBox);
             this.Controls.Add(this.HelperButtonClose);
             this.Controls.Add(this.ButtonHome);
-            this.Controls.Add(this.MethodicalPanel);
             this.Controls.Add(this.Other);
+            this.Controls.Add(this.MethodicalPanel);
             this.Controls.Add(this.MainMenu);
             this.Controls.Add(this.Menu);
             this.Controls.Add(this.Literatures);
@@ -1908,6 +1955,7 @@
             this.Controls.Add(this.LessonCompletePanel);
             this.Controls.Add(this.TestPanel);
             this.Controls.Add(this.MethodicalTextPanel);
+            this.Controls.Add(this.PresentPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Form1";
@@ -1947,6 +1995,8 @@
             this.panel1.PerformLayout();
             this.MethodicalPanel.ResumeLayout(false);
             this.MethodicalTextPanel.ResumeLayout(false);
+            this.PresentPanel.ResumeLayout(false);
+            this.MotivationPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2094,5 +2144,9 @@
         private Button MethodicalButton1;
         private Panel MethodicalTextPanel;
         private RichTextBox MethodicalTextBox;
+        private Panel PresentPanel;
+        private RichTextBox PresentTextBox;
+        private Panel MotivationPanel;
+        private RichTextBox MotivationTextBox;
     }
 }
