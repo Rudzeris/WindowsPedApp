@@ -109,6 +109,7 @@ namespace WindowsPedApp
             Other.Visible = false;
             LessonPanel2.Visible = false;
             LessonCompletePanel.Visible = false;
+            TestPanel.Visible = false;
         }
 
         private void OpenMainMenu()
@@ -161,8 +162,9 @@ namespace WindowsPedApp
             if (Text == "Instruction" || Text == "Literatures" || Text == "Menu")
             {
                 OpenMainMenu();
-            }else
-            if (Text == "Main Menu" || Text=="Create Lesson" || Text=="Technological map" || Text == "Other" || Text == "Lesson Complete")
+            }
+            else
+            if (Text == "Main Menu" || Text == "Create Lesson" || Text == "Technological map" || Text == "Other" || Text == "Lesson Complete")
             {
                 if (Text == "Create Lesson" && LessonPoint1X != '#')
                 {
@@ -179,6 +181,19 @@ namespace WindowsPedApp
                 }
                 else
                     OpenMenu(sender, e);
+            }
+            else
+                if (Text == "Test")
+            {
+
+                if (TestButtonResult.BackColor != Color.Blue)
+                {
+                    OpenOther(sender, e);
+                }
+                else
+                {
+                    OpenTest(sender, e);
+                }
             }
         }
         private void OpenInstruction(object sender, EventArgs e)
@@ -613,24 +628,127 @@ namespace WindowsPedApp
             }
         }
 
-        private void OpenTest_Click(object sender, EventArgs e)
+        private void TestRadioDefault()
+        {
+            RadioTB11.Checked = false;
+            RadioTB12.Checked = false;
+            RadioTB21.Checked = false;
+            RadioTB22.Checked = false;
+            RadioTB31.Checked = false;
+            RadioTB32.Checked = false;
+            RadioTB41.Checked = false;
+            RadioTB42.Checked = false;
+            RadioTB51.Checked = false;
+            RadioTB52.Checked = false;
+            RadioTB61.Checked = false;
+            RadioTB62.Checked = false;
+            RadioTB71.Checked = false;
+            RadioTB72.Checked = false;
+            RadioTB81.Checked = false;
+            RadioTB82.Checked = false;
+            RadioTB91.Checked = false;
+            RadioTB92.Checked = false;
+            RadioTB101.Checked = false;
+            RadioTB102.Checked = false;
+        }
+
+        private void OpenTest(object sender, EventArgs e)
+        {
+            CloseAll();
+            Text = "Test";
+            TestPanel.Visible = true;
+            TestPanel.Location = locationDefault;
+            TestPanel.Size = new Size(sizeDefault);
+            TestRadioDefault();
+            RadioTBChecked();
+        }
+
+        private void OpenMetodic(object sender, EventArgs e)
         {
 
         }
 
-        private void OpenMetodic_Click(object sender, EventArgs e)
+        private void OpenPresent(object sender, EventArgs e)
         {
 
         }
 
-        private void OpenPresent_Click(object sender, EventArgs e)
+        private void OpenMotivation(object sender, EventArgs e)
         {
 
         }
 
-        private void OpenMotivation_Click(object sender, EventArgs e)
+        private void TestResult()
         {
+            int k = 0;
+            if (RadioTB11.Checked == true) k++;
+            if (RadioTB21.Checked == true) k++;
+            if (RadioTB31.Checked == true) k++;
+            if (RadioTB41.Checked == true) k++;
+            if (RadioTB51.Checked == true) k++;
+            if (RadioTB61.Checked == true) k++;
+            if (RadioTB71.Checked == true) k++;
+            if (RadioTB81.Checked == true) k++;
+            if (RadioTB91.Checked == true) k++;
+            if (RadioTB101.Checked == true) k++;
 
+            if (k >= 8)
+            {
+                TestBoxResult.Text = "Результат: Вы удовлетворены работой";
+            }
+            else
+            {
+                if (k >= 5)
+                {
+                    TestBoxResult.Text = "Результат: Есть что-то, что вам не понравилось в работе.";
+                }
+                else
+                {
+                    TestBoxResult.Text = "Результат: Вам ничего не нравится в работе";
+                }
+            }
+        }
+
+        private void RadioTBChecked()
+        {
+            int k = 0;
+            if(RadioTB11.Checked == true) k++;
+            else if(RadioTB12.Checked == true) k++;
+            if(RadioTB21.Checked == true) k++;
+            else if(RadioTB22.Checked == true) k++;
+            if(RadioTB31.Checked == true) k++;
+            else if(RadioTB32.Checked == true) k++;
+            if(RadioTB41.Checked == true) k++;
+            else if(RadioTB42.Checked == true) k++;
+            if(RadioTB51.Checked == true) k++;
+            else if (RadioTB52.Checked == true) k++;
+            if(RadioTB61.Checked == true) k++;
+            else if (RadioTB62.Checked == true) k++;
+            if(RadioTB71.Checked == true) k++;
+            else if (RadioTB72.Checked == true) k++;
+            if(RadioTB81.Checked == true) k++;
+            else if (RadioTB82.Checked == true) k++;
+            if(RadioTB91.Checked == true) k++;
+            else if (RadioTB92.Checked == true) k++;
+            if(RadioTB101.Checked ==true) k++;
+            else if (RadioTB102.Checked == true) k++;
+
+            if (k == 10) TestButtonResult.BackColor = Color.Green;
+            else TestButtonResult.BackColor = Color.Red;
+        }
+
+        private void RadioTB_Сhecked(object sender, EventArgs e)
+        {
+            RadioTBChecked();
+        }
+
+        private void TestButtonResult_Click(object sender, EventArgs e)
+        {
+            if (TestButtonResult.BackColor == Color.Green)
+            {
+                TestResult();
+                TestButtonResult.BackColor = Color.Blue;
+            }
         }
 
         //public class ClassTechnicalMaps
