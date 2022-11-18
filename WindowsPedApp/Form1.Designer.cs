@@ -222,7 +222,7 @@
             this.MainMenuNameProg.Name = "MainMenuNameProg";
             this.MainMenuNameProg.Size = new System.Drawing.Size(520, 47);
             this.MainMenuNameProg.TabIndex = 4;
-            this.MainMenuNameProg.Text = "Rudzeris App";
+            this.MainMenuNameProg.Text = "Название программы";
             this.MainMenuNameProg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ButtonMainMenuExit
