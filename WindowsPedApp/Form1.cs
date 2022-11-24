@@ -159,7 +159,7 @@ namespace WindowsPedApp
             LessonPoint23.BackColor = CreateLesson.BackColor;
             LessonPoint24.BackColor = CreateLesson.BackColor;
             LessonPoint25.BackColor = CreateLesson.BackColor;
-            LessonButton1.BackColor = Color.Green; LessonButton1.Text = "Далее";
+            LessonButton1.BackColor = Color.Green;
         }
 
         private void ButtonMainBack(object sender, EventArgs e)
@@ -229,7 +229,7 @@ namespace WindowsPedApp
 
 
             HelperLabel.Location = new Point(280, 230);
-            HelperButtonClose.Location = new Point(263 + 260, 204);
+            HelperButtonClose.Location = new Point(280, 230);
             HelperPictureBox.Location = new Point(389, 344);
 
         }
@@ -277,7 +277,7 @@ namespace WindowsPedApp
 
             OpenHelper(CreateLessonText);
             HelperLabel.Location = new Point(280, 230);
-            HelperButtonClose.Location = new Point(263 + 260, 204);
+            HelperButtonClose.Location = new Point(280, 220);
             HelperPictureBox.Location = new Point(389, 344);
             HelperNewLocation(-30, 140);
 
@@ -527,7 +527,7 @@ namespace WindowsPedApp
             LessonPoint1Default();
             LessonPoint11.BackColor = Color.Teal;
             LessonPoint1X = '1';
-            LessonButton1.BackColor = Color.Green; LessonButton1.Text = "Далее";
+            LessonButton1.BackColor = Color.Green;
             LessonPoint20.Text = LessonPoint11.Text;
         }
 
@@ -536,7 +536,7 @@ namespace WindowsPedApp
             LessonPoint1Default();
             LessonPoint12.BackColor = Color.Teal;
             LessonPoint1X = '2';
-            LessonButton1.BackColor = Color.Green; LessonButton1.Text = "Далее";
+            LessonButton1.BackColor = Color.Green;
             LessonPoint20.Text = LessonPoint12.Text;
         }
 
@@ -545,7 +545,7 @@ namespace WindowsPedApp
             LessonPoint1Default();
             LessonPoint13.BackColor = Color.Teal;
             LessonPoint1X = '3';
-            LessonButton1.BackColor = Color.Green; LessonButton1.Text = "Далее";
+            LessonButton1.BackColor = Color.Green;
             LessonPoint20.Text = LessonPoint13.Text;
         }
 
@@ -554,7 +554,7 @@ namespace WindowsPedApp
             LessonPoint1Default();
             LessonPoint14.BackColor = Color.Teal;
             LessonPoint1X = '4';
-            LessonButton1.BackColor = Color.Green; LessonButton1.Text = "Далее";
+            LessonButton1.BackColor = Color.Green;
             LessonPoint20.Text = LessonPoint14.Text;
         }
 
@@ -563,7 +563,7 @@ namespace WindowsPedApp
             LessonPoint1Default();
             LessonPoint15.BackColor = Color.Teal;
             LessonPoint1X = '5';
-            LessonButton1.BackColor = Color.Green; LessonButton1.Text = "Далее";
+            LessonButton1.BackColor = Color.Green;
             LessonPoint20.Text = LessonPoint15.Text;
         }
 
@@ -639,13 +639,13 @@ namespace WindowsPedApp
             {
                 LessonCompleteRichBox.Visible = false;
                 LessonCompletePictureBox.Visible = true;
-                LessonStructureButton.Text = "Скрыть структуру";
+                LessonStructureButton.Text = "СКРЫТЬ СТРУКТУРУ";
             }
             else
             {
                 LessonCompletePictureBox.Visible = false;
                 LessonCompleteRichBox.Visible = true;
-                LessonStructureButton.Text = "Показать структуру";
+                LessonStructureButton.Text = "ПОКАЗАТЬ СТРУКТУРУ";
             }
         }
 

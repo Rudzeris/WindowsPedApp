@@ -222,7 +222,7 @@
             this.MainMenuNameProg.Name = "MainMenuNameProg";
             this.MainMenuNameProg.Size = new System.Drawing.Size(520, 47);
             this.MainMenuNameProg.TabIndex = 4;
-            this.MainMenuNameProg.Text = "Название программы";
+            this.MainMenuNameProg.Text = "Помощник преподавателя";
             this.MainMenuNameProg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ButtonMainMenuExit
@@ -236,7 +236,7 @@
             this.ButtonMainMenuExit.Size = new System.Drawing.Size(294, 29);
             this.ButtonMainMenuExit.TabIndex = 3;
             this.ButtonMainMenuExit.Tag = "Button";
-            this.ButtonMainMenuExit.Text = "Выход";
+            this.ButtonMainMenuExit.Text = "ВЫХОД";
             this.ButtonMainMenuExit.UseVisualStyleBackColor = false;
             this.ButtonMainMenuExit.Click += new System.EventHandler(this.MainMenuButtonExit_Click);
             // 
@@ -251,7 +251,7 @@
             this.ButtonMainMenuLiteratures.Size = new System.Drawing.Size(294, 29);
             this.ButtonMainMenuLiteratures.TabIndex = 2;
             this.ButtonMainMenuLiteratures.Tag = "Button";
-            this.ButtonMainMenuLiteratures.Text = "Список литературы";
+            this.ButtonMainMenuLiteratures.Text = "СПИСОК ЛИТЕРАТУРЫ";
             this.ButtonMainMenuLiteratures.UseVisualStyleBackColor = false;
             this.ButtonMainMenuLiteratures.Click += new System.EventHandler(this.OpenLiteratures);
             // 
@@ -266,7 +266,7 @@
             this.ButtonMainMenuInstruction.Size = new System.Drawing.Size(294, 29);
             this.ButtonMainMenuInstruction.TabIndex = 0;
             this.ButtonMainMenuInstruction.Tag = "Button";
-            this.ButtonMainMenuInstruction.Text = "Инструкция";
+            this.ButtonMainMenuInstruction.Text = "ИНСТРУКЦИЯ";
             this.ButtonMainMenuInstruction.UseVisualStyleBackColor = false;
             this.ButtonMainMenuInstruction.Click += new System.EventHandler(this.OpenInstruction);
             // 
@@ -276,7 +276,7 @@
             this.HelperButtonClose.FlatAppearance.BorderSize = 0;
             this.HelperButtonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HelperButtonClose.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.HelperButtonClose.Location = new System.Drawing.Point(746, 204);
+            this.HelperButtonClose.Location = new System.Drawing.Point(1092, 206);
             this.HelperButtonClose.Name = "HelperButtonClose";
             this.HelperButtonClose.Size = new System.Drawing.Size(23, 23);
             this.HelperButtonClose.TabIndex = 6;
@@ -289,7 +289,7 @@
             // 
             this.HelperLabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.HelperLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.HelperLabel.Location = new System.Drawing.Point(730, 230);
+            this.HelperLabel.Location = new System.Drawing.Point(1079, 223);
             this.HelperLabel.Name = "HelperLabel";
             this.HelperLabel.Size = new System.Drawing.Size(270, 120);
             this.HelperLabel.TabIndex = 5;
@@ -302,9 +302,9 @@
             this.HelperPictureBox.BackgroundImage = global::WindowsPedApp.Resources.Resource1.Helper;
             this.HelperPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.HelperPictureBox.InitialImage = null;
-            this.HelperPictureBox.Location = new System.Drawing.Point(909, 344);
+            this.HelperPictureBox.Location = new System.Drawing.Point(1156, 346);
             this.HelperPictureBox.Name = "HelperPictureBox";
-            this.HelperPictureBox.Size = new System.Drawing.Size(100, 100);
+            this.HelperPictureBox.Size = new System.Drawing.Size(153, 150);
             this.HelperPictureBox.TabIndex = 1;
             this.HelperPictureBox.TabStop = false;
             // 
@@ -361,12 +361,12 @@
             this.ButtonOther.AutoSize = true;
             this.ButtonOther.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ButtonOther.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ButtonOther.Location = new System.Drawing.Point(113, 580);
+            this.ButtonOther.Location = new System.Drawing.Point(105, 580);
             this.ButtonOther.Name = "ButtonOther";
-            this.ButtonOther.Size = new System.Drawing.Size(294, 29);
+            this.ButtonOther.Size = new System.Drawing.Size(310, 29);
             this.ButtonOther.TabIndex = 3;
             this.ButtonOther.Tag = "Button";
-            this.ButtonOther.Text = "Дополнительно";
+            this.ButtonOther.Text = "ДОПОЛНИТЕЛЬНО";
             this.ButtonOther.UseVisualStyleBackColor = false;
             this.ButtonOther.Click += new System.EventHandler(this.OpenOther);
             // 
@@ -376,12 +376,12 @@
             this.ButtonCreateTechnologicalMap.AutoSize = true;
             this.ButtonCreateTechnologicalMap.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ButtonCreateTechnologicalMap.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ButtonCreateTechnologicalMap.Location = new System.Drawing.Point(113, 540);
+            this.ButtonCreateTechnologicalMap.Location = new System.Drawing.Point(105, 540);
             this.ButtonCreateTechnologicalMap.Name = "ButtonCreateTechnologicalMap";
-            this.ButtonCreateTechnologicalMap.Size = new System.Drawing.Size(294, 29);
+            this.ButtonCreateTechnologicalMap.Size = new System.Drawing.Size(310, 29);
             this.ButtonCreateTechnologicalMap.TabIndex = 2;
             this.ButtonCreateTechnologicalMap.Tag = "Button";
-            this.ButtonCreateTechnologicalMap.Text = "Создать технологическую карту";
+            this.ButtonCreateTechnologicalMap.Text = "СОЗДАТЬ ТЕХНОЛОГИЧЕСКУЮ КАРТУ";
             this.ButtonCreateTechnologicalMap.UseVisualStyleBackColor = false;
             this.ButtonCreateTechnologicalMap.Click += new System.EventHandler(this.OpenTechnologicalMap);
             // 
@@ -391,12 +391,12 @@
             this.ButtonCreateLesson.AutoSize = true;
             this.ButtonCreateLesson.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ButtonCreateLesson.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ButtonCreateLesson.Location = new System.Drawing.Point(113, 500);
+            this.ButtonCreateLesson.Location = new System.Drawing.Point(105, 500);
             this.ButtonCreateLesson.Name = "ButtonCreateLesson";
-            this.ButtonCreateLesson.Size = new System.Drawing.Size(294, 29);
+            this.ButtonCreateLesson.Size = new System.Drawing.Size(310, 29);
             this.ButtonCreateLesson.TabIndex = 0;
             this.ButtonCreateLesson.Tag = "Button";
-            this.ButtonCreateLesson.Text = "Создать урок";
+            this.ButtonCreateLesson.Text = "СОЗДАТЬ УРОК";
             this.ButtonCreateLesson.UseVisualStyleBackColor = false;
             this.ButtonCreateLesson.Click += new System.EventHandler(this.OpenCreateLesson);
             // 
@@ -922,46 +922,50 @@
             // 
             // OpenMotivationButton
             // 
+            this.OpenMotivationButton.BackColor = System.Drawing.SystemColors.ControlLight;
             this.OpenMotivationButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.OpenMotivationButton.Location = new System.Drawing.Point(253, 446);
+            this.OpenMotivationButton.Location = new System.Drawing.Point(266, 544);
             this.OpenMotivationButton.Name = "OpenMotivationButton";
-            this.OpenMotivationButton.Size = new System.Drawing.Size(235, 40);
+            this.OpenMotivationButton.Size = new System.Drawing.Size(235, 60);
             this.OpenMotivationButton.TabIndex = 3;
-            this.OpenMotivationButton.Text = "Как мотивировать студентов";
-            this.OpenMotivationButton.UseVisualStyleBackColor = true;
+            this.OpenMotivationButton.Text = "КАК МОТИВИРОВАТЬ СТУДЕНТОВ К ОБУЧЕНИЮ";
+            this.OpenMotivationButton.UseVisualStyleBackColor = false;
             this.OpenMotivationButton.Click += new System.EventHandler(this.OpenMotivation);
             // 
             // OpenPresentButton
             // 
+            this.OpenPresentButton.BackColor = System.Drawing.SystemColors.ControlLight;
             this.OpenPresentButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.OpenPresentButton.Location = new System.Drawing.Point(41, 346);
+            this.OpenPresentButton.Location = new System.Drawing.Point(25, 544);
             this.OpenPresentButton.Name = "OpenPresentButton";
-            this.OpenPresentButton.Size = new System.Drawing.Size(235, 40);
+            this.OpenPresentButton.Size = new System.Drawing.Size(235, 60);
             this.OpenPresentButton.TabIndex = 2;
-            this.OpenPresentButton.Text = "Как создавать презентацию";
-            this.OpenPresentButton.UseVisualStyleBackColor = true;
+            this.OpenPresentButton.Text = "РЕКОМЕНДАЦИИ ПО СОЗДАНИЮ ПРЕЗЕНТАЦИИ\r\n";
+            this.OpenPresentButton.UseVisualStyleBackColor = false;
             this.OpenPresentButton.Click += new System.EventHandler(this.OpenPresent);
             // 
             // OpenMetodicButton
             // 
+            this.OpenMetodicButton.BackColor = System.Drawing.SystemColors.ControlLight;
             this.OpenMetodicButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.OpenMetodicButton.Location = new System.Drawing.Point(253, 238);
+            this.OpenMetodicButton.Location = new System.Drawing.Point(266, 498);
             this.OpenMetodicButton.Name = "OpenMetodicButton";
             this.OpenMetodicButton.Size = new System.Drawing.Size(235, 40);
             this.OpenMetodicButton.TabIndex = 1;
-            this.OpenMetodicButton.Text = "Методические приемы";
-            this.OpenMetodicButton.UseVisualStyleBackColor = true;
+            this.OpenMetodicButton.Text = "МЕТОДИЧЕСКИЕ ПРИЕМЫ";
+            this.OpenMetodicButton.UseVisualStyleBackColor = false;
             this.OpenMetodicButton.Click += new System.EventHandler(this.OpenMethodical);
             // 
             // OpenTestButton
             // 
+            this.OpenTestButton.BackColor = System.Drawing.SystemColors.ControlLight;
             this.OpenTestButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.OpenTestButton.Location = new System.Drawing.Point(41, 138);
+            this.OpenTestButton.Location = new System.Drawing.Point(25, 498);
             this.OpenTestButton.Name = "OpenTestButton";
             this.OpenTestButton.Size = new System.Drawing.Size(235, 40);
             this.OpenTestButton.TabIndex = 0;
-            this.OpenTestButton.Text = "Тест";
-            this.OpenTestButton.UseVisualStyleBackColor = true;
+            this.OpenTestButton.Text = "ТЕСТ";
+            this.OpenTestButton.UseVisualStyleBackColor = false;
             this.OpenTestButton.Click += new System.EventHandler(this.OpenTest);
             // 
             // CreateLesson
@@ -1217,12 +1221,13 @@
             // 
             // LessonStructureButton
             // 
+            this.LessonStructureButton.BackColor = System.Drawing.SystemColors.ControlLight;
             this.LessonStructureButton.Location = new System.Drawing.Point(187, 7);
             this.LessonStructureButton.Name = "LessonStructureButton";
             this.LessonStructureButton.Size = new System.Drawing.Size(123, 23);
             this.LessonStructureButton.TabIndex = 2;
             this.LessonStructureButton.Text = "Скрыть структуру";
-            this.LessonStructureButton.UseVisualStyleBackColor = true;
+            this.LessonStructureButton.UseVisualStyleBackColor = false;
             this.LessonStructureButton.Click += new System.EventHandler(this.LessonStructureButton_Click);
             // 
             // LessonCompletePictureBox
@@ -1619,12 +1624,13 @@
             // 
             // TestButtonResult
             // 
+            this.TestButtonResult.BackColor = System.Drawing.SystemColors.ControlLight;
             this.TestButtonResult.Location = new System.Drawing.Point(425, 558);
             this.TestButtonResult.Name = "TestButtonResult";
             this.TestButtonResult.Size = new System.Drawing.Size(62, 62);
             this.TestButtonResult.TabIndex = 30;
-            this.TestButtonResult.Text = "Узнать";
-            this.TestButtonResult.UseVisualStyleBackColor = true;
+            this.TestButtonResult.Text = "УЗНАТЬ";
+            this.TestButtonResult.UseVisualStyleBackColor = false;
             this.TestButtonResult.Click += new System.EventHandler(this.TestButtonResult_Click);
             // 
             // TestBox10
@@ -1789,93 +1795,112 @@
             // 
             // MethodicalButton9
             // 
+            this.MethodicalButton9.BackColor = System.Drawing.SystemColors.ControlLight;
             this.MethodicalButton9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MethodicalButton9.Location = new System.Drawing.Point(35, 458);
+            this.MethodicalButton9.Location = new System.Drawing.Point(24, 390);
             this.MethodicalButton9.Name = "MethodicalButton9";
             this.MethodicalButton9.Size = new System.Drawing.Size(235, 50);
             this.MethodicalButton9.TabIndex = 12;
-            this.MethodicalButton9.UseVisualStyleBackColor = true;
+            this.MethodicalButton9.Text = "РЕФЛЕКСИЯ ДЕЯТЕЛЬНОСТИ";
+            this.MethodicalButton9.UseVisualStyleBackColor = false;
             this.MethodicalButton9.Click += new System.EventHandler(this.MethodicalButton9_Click);
             // 
             // MethodicalButton8
             // 
+            this.MethodicalButton8.BackColor = System.Drawing.SystemColors.ControlLight;
             this.MethodicalButton8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MethodicalButton8.Location = new System.Drawing.Point(255, 412);
+            this.MethodicalButton8.Location = new System.Drawing.Point(265, 344);
             this.MethodicalButton8.Name = "MethodicalButton8";
-            this.MethodicalButton8.Size = new System.Drawing.Size(235, 50);
+            this.MethodicalButton8.Size = new System.Drawing.Size(235, 96);
             this.MethodicalButton8.TabIndex = 11;
-            this.MethodicalButton8.UseVisualStyleBackColor = true;
+            this.MethodicalButton8.Text = "КОНТРОЛЬ ЗА ПРОЦЕССОМ И РЕЗУЛЬТАТОМ УЧЕБНОЙ ДЕЯТЕЛЬНОСТИ ОБУЧАЮЩИХСЯ";
+            this.MethodicalButton8.UseVisualStyleBackColor = false;
             this.MethodicalButton8.Click += new System.EventHandler(this.MethodicalButton8_Click);
             // 
             // MethodicalButton7
             // 
+            this.MethodicalButton7.BackColor = System.Drawing.SystemColors.ControlLight;
             this.MethodicalButton7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MethodicalButton7.Location = new System.Drawing.Point(35, 364);
+            this.MethodicalButton7.Location = new System.Drawing.Point(24, 296);
             this.MethodicalButton7.Name = "MethodicalButton7";
-            this.MethodicalButton7.Size = new System.Drawing.Size(235, 50);
+            this.MethodicalButton7.Size = new System.Drawing.Size(235, 88);
             this.MethodicalButton7.TabIndex = 10;
-            this.MethodicalButton7.UseVisualStyleBackColor = true;
+            this.MethodicalButton7.Text = "ОБОБЩЕНИЕ УСВОЕННОГО И ВКЛЮЧЕНИЕ ЕГО В СИСТЕМУ РАНЕЕ УСВОЕННЫХ ЗУН И УУД";
+            this.MethodicalButton7.UseVisualStyleBackColor = false;
             this.MethodicalButton7.Click += new System.EventHandler(this.MethodicalButton7_Click);
             // 
             // MethodicalButton6
             // 
+            this.MethodicalButton6.BackColor = System.Drawing.SystemColors.ControlLight;
             this.MethodicalButton6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MethodicalButton6.Location = new System.Drawing.Point(255, 318);
+            this.MethodicalButton6.Location = new System.Drawing.Point(265, 224);
             this.MethodicalButton6.Name = "MethodicalButton6";
-            this.MethodicalButton6.Size = new System.Drawing.Size(235, 50);
+            this.MethodicalButton6.Size = new System.Drawing.Size(235, 114);
             this.MethodicalButton6.TabIndex = 9;
-            this.MethodicalButton6.UseVisualStyleBackColor = true;
+            this.MethodicalButton6.Text = "САМОСТОЯТЕЛЬНОЕ ТВОРЧЕСКОЕ ИСПОЛЬЗОВАНИЕ СФОРМИРОВАННЫХ УМЕНИЙ И НАВЫКОВ";
+            this.MethodicalButton6.UseVisualStyleBackColor = false;
             this.MethodicalButton6.Click += new System.EventHandler(this.MethodicalButton6_Click);
             // 
             // MethodicalButton5
             // 
+            this.MethodicalButton5.BackColor = System.Drawing.SystemColors.ControlLight;
             this.MethodicalButton5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MethodicalButton5.Location = new System.Drawing.Point(35, 272);
+            this.MethodicalButton5.Location = new System.Drawing.Point(24, 164);
             this.MethodicalButton5.Name = "MethodicalButton5";
-            this.MethodicalButton5.Size = new System.Drawing.Size(235, 50);
+            this.MethodicalButton5.Size = new System.Drawing.Size(235, 126);
             this.MethodicalButton5.TabIndex = 8;
-            this.MethodicalButton5.UseVisualStyleBackColor = true;
+            this.MethodicalButton5.Text = "ПРИМЕНЕНИЕ ТЕОРЕТИЧЕСКИХ ПОЛОЖЕНИЙ В УСЛОВИЯХ ВЫПОЛНЕНИЯ УПРАЖНЕНИЙ И РЕШЕНИЯ ЗАД" +
+    "АЧ ";
+            this.MethodicalButton5.UseVisualStyleBackColor = false;
             this.MethodicalButton5.Click += new System.EventHandler(this.MethodicalButton5_Click);
             // 
             // MethodicalButton4
             // 
+            this.MethodicalButton4.BackColor = System.Drawing.SystemColors.ControlLight;
             this.MethodicalButton4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MethodicalButton4.Location = new System.Drawing.Point(255, 226);
+            this.MethodicalButton4.Location = new System.Drawing.Point(265, 69);
             this.MethodicalButton4.Name = "MethodicalButton4";
-            this.MethodicalButton4.Size = new System.Drawing.Size(235, 50);
+            this.MethodicalButton4.Size = new System.Drawing.Size(235, 149);
             this.MethodicalButton4.TabIndex = 7;
-            this.MethodicalButton4.UseVisualStyleBackColor = true;
+            this.MethodicalButton4.Text = "«ОТКРЫТИЕ» НОВЫХ ЗНАНИЙ ПЕРВИЧНОЕ ВОСПРИЯТИЕ И УСВОЕНИЕ НОВОГО ТЕОРЕТИЧЕСКОГО УЧЕ" +
+    "БНОГО МАТЕРИАЛА (ПРАВИЛ, ПОНЯТИЙ, АЛГОРИТМОВ…)";
+            this.MethodicalButton4.UseVisualStyleBackColor = false;
             this.MethodicalButton4.Click += new System.EventHandler(this.MethodicalButton4_Click);
             // 
             // MethodicalButton3
             // 
+            this.MethodicalButton3.BackColor = System.Drawing.SystemColors.ControlLight;
             this.MethodicalButton3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MethodicalButton3.Location = new System.Drawing.Point(35, 180);
+            this.MethodicalButton3.Location = new System.Drawing.Point(24, 68);
             this.MethodicalButton3.Name = "MethodicalButton3";
-            this.MethodicalButton3.Size = new System.Drawing.Size(235, 50);
+            this.MethodicalButton3.Size = new System.Drawing.Size(235, 90);
             this.MethodicalButton3.TabIndex = 6;
-            this.MethodicalButton3.UseVisualStyleBackColor = true;
+            this.MethodicalButton3.Text = "АКТУАЛИЗАЦИЯ ЗНАНИЙ В НАЧАЛЕ УРОКА ИЛИ В ПРОЦЕССЕ ЕГО ПО МЕРЕ НЕОБХОДИМОСТИ";
+            this.MethodicalButton3.UseVisualStyleBackColor = false;
             this.MethodicalButton3.Click += new System.EventHandler(this.MethodicalButton3_Click);
             // 
             // MethodicalButton2
             // 
+            this.MethodicalButton2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.MethodicalButton2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MethodicalButton2.Location = new System.Drawing.Point(255, 134);
+            this.MethodicalButton2.Location = new System.Drawing.Point(265, 13);
             this.MethodicalButton2.Name = "MethodicalButton2";
             this.MethodicalButton2.Size = new System.Drawing.Size(235, 50);
             this.MethodicalButton2.TabIndex = 5;
-            this.MethodicalButton2.UseVisualStyleBackColor = true;
+            this.MethodicalButton2.Text = "ПОСТАНОВКА ЦЕЛЕЙ УРОКА, МОТИВАЦИЯ УЧЕБНОЙ ДЕЯТЕЛЬНОСТИ";
+            this.MethodicalButton2.UseVisualStyleBackColor = false;
             this.MethodicalButton2.Click += new System.EventHandler(this.MethodicalButton2_Click);
             // 
             // MethodicalButton1
             // 
+            this.MethodicalButton1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.MethodicalButton1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MethodicalButton1.Location = new System.Drawing.Point(35, 88);
+            this.MethodicalButton1.Location = new System.Drawing.Point(24, 12);
             this.MethodicalButton1.Name = "MethodicalButton1";
             this.MethodicalButton1.Size = new System.Drawing.Size(235, 50);
             this.MethodicalButton1.TabIndex = 4;
             this.MethodicalButton1.Text = "ОРГАНИЗАЦИОННЫЙ МОМЕНТ ";
-            this.MethodicalButton1.UseVisualStyleBackColor = true;
+            this.MethodicalButton1.UseVisualStyleBackColor = false;
             this.MethodicalButton1.Click += new System.EventHandler(this.MethodicalButton1_Click);
             // 
             // MethodicalTextPanel
@@ -1944,23 +1969,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1370, 661);
-            this.Controls.Add(this.HelperLabel);
-            this.Controls.Add(this.HelperPictureBox);
-            this.Controls.Add(this.HelperButtonClose);
             this.Controls.Add(this.ButtonHome);
-            this.Controls.Add(this.Other);
+            this.Controls.Add(this.HelperButtonClose);
+            this.Controls.Add(this.HelperPictureBox);
+            this.Controls.Add(this.HelperLabel);
+            this.Controls.Add(this.MotivationPanel);
+            this.Controls.Add(this.PresentPanel);
+            this.Controls.Add(this.MethodicalTextPanel);
+            this.Controls.Add(this.LessonCompletePanel);
             this.Controls.Add(this.MethodicalPanel);
-            this.Controls.Add(this.MainMenu);
+            this.Controls.Add(this.Other);
             this.Controls.Add(this.Menu);
+            this.Controls.Add(this.CreateLesson);
+            this.Controls.Add(this.TestPanel);
+            this.Controls.Add(this.MainMenu);
             this.Controls.Add(this.Literatures);
             this.Controls.Add(this.Instruction);
             this.Controls.Add(this.TechnologicalMap);
-            this.Controls.Add(this.CreateLesson);
-            this.Controls.Add(this.LessonCompletePanel);
-            this.Controls.Add(this.TestPanel);
-            this.Controls.Add(this.MethodicalTextPanel);
-            this.Controls.Add(this.PresentPanel);
-            this.Controls.Add(this.MotivationPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Form1";
