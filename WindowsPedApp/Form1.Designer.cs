@@ -1940,7 +1940,7 @@
             this.PresentTextBox.ReadOnly = true;
             this.PresentTextBox.Size = new System.Drawing.Size(420, 570);
             this.PresentTextBox.TabIndex = 1;
-            this.PresentTextBox.Text = "";
+            this.PresentTextBox.Text = resources.GetString("PresentTextBox.Text");
             this.PresentTextBox.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.Clicked_To_Link);
             // 
             // MotivationPanel
@@ -1960,7 +1960,7 @@
             this.MotivationTextBox.ReadOnly = true;
             this.MotivationTextBox.Size = new System.Drawing.Size(420, 570);
             this.MotivationTextBox.TabIndex = 1;
-            this.MotivationTextBox.Text = "";
+            this.MotivationTextBox.Text = resources.GetString("MotivationTextBox.Text");
             this.MotivationTextBox.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.Clicked_To_Link);
             // 
             // Form1
@@ -1973,8 +1973,8 @@
             this.Controls.Add(this.HelperButtonClose);
             this.Controls.Add(this.HelperPictureBox);
             this.Controls.Add(this.HelperLabel);
-            this.Controls.Add(this.MotivationPanel);
             this.Controls.Add(this.PresentPanel);
+            this.Controls.Add(this.MotivationPanel);
             this.Controls.Add(this.MethodicalTextPanel);
             this.Controls.Add(this.LessonCompletePanel);
             this.Controls.Add(this.MethodicalPanel);
