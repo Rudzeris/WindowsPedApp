@@ -16,6 +16,8 @@ namespace WindowsPedApp
         string InstructionHelperText = "Здесь указан основной функционал приложения и как им пользоваться.";
         string MenuHelperText = "Это меню педагога.";
         string CreateLessonText = "Выберите урок в зависимости от дидактической цели. Здесь только одна кнопка - кнопка по центру.";
+        string OtherText = "Здесь вы можете проверить себя и узнать дополнительную информацию.";
+        string MethodicalText = "";
 
         //ClassTechnicalMaps CTM = new ClassTechnicalMaps();
 
@@ -27,11 +29,19 @@ namespace WindowsPedApp
             InitializeComponent();
             Size = new Size(560, 700);
 
+            MinimizeBox= false;
+
             LessonPoint11.SelectionAlignment = HorizontalAlignment.Center;
             LessonPoint12.SelectionAlignment = HorizontalAlignment.Center;
             LessonPoint13.SelectionAlignment = HorizontalAlignment.Center;
             LessonPoint14.SelectionAlignment = HorizontalAlignment.Center;
             LessonPoint15.SelectionAlignment = HorizontalAlignment.Center;
+            LessonPoint21.SelectionAlignment = HorizontalAlignment.Center;
+            LessonPoint22.SelectionAlignment = HorizontalAlignment.Center;
+            LessonPoint23.SelectionAlignment = HorizontalAlignment.Center;
+            LessonPoint24.SelectionAlignment = HorizontalAlignment.Center;
+            LessonPoint25.SelectionAlignment = HorizontalAlignment.Center;
+            LessonPoint26.SelectionAlignment = HorizontalAlignment.Center;
 
             OpenMainMenu();
         }
@@ -52,7 +62,7 @@ namespace WindowsPedApp
             HelperButtonClose.Visible = true;
             HelperLabel.Location = new Point(226, 230);
             HelperLabel.Size = new Size(270, 120);
-            HelperButtonClose.Location = new Point(226, 204);
+            HelperButtonClose.Location = new Point(226, 230);
             HelperPictureBox.Location = new Point(389, 344);
             HelperLabel.Text = str;
 
@@ -122,10 +132,7 @@ namespace WindowsPedApp
             Text = "Main Menu";
             CloseAll();
             OpenHelper(MainMenuHelperText);
-            int xy = 100;
-            HelperLabel.Size = new Size(HelperLabel.Size.Width, HelperLabel.Size.Height + xy);
-            HelperLabel.Location = new Point(HelperLabel.Location.X, HelperLabel.Location.Y - xy);
-            HelperButtonClose.Location = new Point(HelperButtonClose.Location.X, HelperButtonClose.Location.Y - xy);
+            HelperNewLocation(-50, -30);
             MainMenu.Visible = true;
             MainMenu.Size = new Size(sizeDefault);
             MainMenu.Location = locationDefault;
@@ -133,6 +140,7 @@ namespace WindowsPedApp
 
         private void LessonPoint1Default()
         {
+            LessonButton1.Text = "";
             LessonPoint1X = '#';
             LessonPoint11.BackColor = CreateLesson.BackColor;
             LessonPoint12.BackColor = CreateLesson.BackColor;
@@ -153,6 +161,7 @@ namespace WindowsPedApp
 
         private void LessonPoint2Default()
         {
+            LessonButton1.Text = "";
             LessonPoint2X = '#';
             LessonPoint21.BackColor = CreateLesson.BackColor;
             LessonPoint22.BackColor = CreateLesson.BackColor;
@@ -225,12 +234,12 @@ namespace WindowsPedApp
             Instruction.Visible = true;
             Instruction.Size = new Size(sizeDefault);
             Instruction.Location = locationDefault;
-            InstructionRichText.Size = new Size(200, 590);
+            InstructionRichText.Size = new Size(190, 590);
 
 
-            HelperLabel.Location = new Point(280, 230);
-            HelperButtonClose.Location = new Point(280, 230);
-            HelperPictureBox.Location = new Point(389, 344);
+            HelperLabel.Location = new Point(260, 230);
+            HelperButtonClose.Location = new Point(260, 230);
+            HelperPictureBox.Location = new Point(360, 344);
 
         }
         private void OpenLiteratures(object sender, EventArgs e)
@@ -251,6 +260,7 @@ namespace WindowsPedApp
             CloseAll();
             Text = "Menu";
             OpenHelper(MenuHelperText);
+            HelperNewLocation(-50, -30);
             Menu.Visible = true;
             Menu.Size = new Size(sizeDefault);
             Menu.Location = locationDefault;
@@ -302,6 +312,8 @@ namespace WindowsPedApp
             Other.Visible = true;
             Other.Location = locationDefault;
             Other.Size = new Size(sizeDefault);
+            OpenHelper(OtherText);
+            HelperNewLocation(-50, -50);
         }
 
         public void OpenLessonComplete(object sender, EventArgs e)
@@ -528,6 +540,7 @@ namespace WindowsPedApp
             LessonPoint11.BackColor = Color.Teal;
             LessonPoint1X = '1';
             LessonButton1.BackColor = Color.Green;
+            LessonButton1.Text = "Далее";
             LessonPoint20.Text = LessonPoint11.Text;
         }
 
@@ -537,6 +550,7 @@ namespace WindowsPedApp
             LessonPoint12.BackColor = Color.Teal;
             LessonPoint1X = '2';
             LessonButton1.BackColor = Color.Green;
+            LessonButton1.Text = "Далее";
             LessonPoint20.Text = LessonPoint12.Text;
         }
 
@@ -546,6 +560,7 @@ namespace WindowsPedApp
             LessonPoint13.BackColor = Color.Teal;
             LessonPoint1X = '3';
             LessonButton1.BackColor = Color.Green;
+            LessonButton1.Text = "Далее";
             LessonPoint20.Text = LessonPoint13.Text;
         }
 
@@ -555,6 +570,7 @@ namespace WindowsPedApp
             LessonPoint14.BackColor = Color.Teal;
             LessonPoint1X = '4';
             LessonButton1.BackColor = Color.Green;
+            LessonButton1.Text = "Далее";
             LessonPoint20.Text = LessonPoint14.Text;
         }
 
@@ -564,6 +580,7 @@ namespace WindowsPedApp
             LessonPoint15.BackColor = Color.Teal;
             LessonPoint1X = '5';
             LessonButton1.BackColor = Color.Green;
+            LessonButton1.Text = "Далее";
             LessonPoint20.Text = LessonPoint15.Text;
         }
 
@@ -573,6 +590,7 @@ namespace WindowsPedApp
             if (LessonPoint2X == '#')
             {
                 LessonPanel2.Visible = true;
+                LessonButton1.Text = "";
                 MainMenuCloseHelper(sender, e);
                 LessonPoint1Enabled(false);
                 OpenLessonPoint2X();
@@ -588,49 +606,55 @@ namespace WindowsPedApp
         private void LessonPoint21_Click(object sender, EventArgs e)
         {
             LessonPoint2Default();
-            LessonPoint21.BackColor = Color.Beige;
+            LessonPoint21.BackColor = Color.Teal;
             LessonPoint2X = '1';
             LessonButton1.BackColor = Color.Blue;
+            LessonButton1.Text = "Узнать результат";
         }
 
         private void LessonPoint22_Click(object sender, EventArgs e)
         {
             LessonPoint2Default();
-            LessonPoint22.BackColor = Color.Beige;
+            LessonPoint22.BackColor = Color.Teal;
             LessonPoint2X = '2';
             LessonButton1.BackColor = Color.Blue;
+            LessonButton1.Text = "Узнать результат";
         }
 
         private void LessonPoint23_Click(object sender, EventArgs e)
         {
             LessonPoint2Default();
-            LessonPoint23.BackColor = Color.Beige;
+            LessonPoint23.BackColor = Color.Teal;
             LessonPoint2X = '3';
             LessonButton1.BackColor = Color.Blue;
+            LessonButton1.Text = "Узнать результат";
         }
 
         private void LessonPoint24_Click(object sender, EventArgs e)
         {
             LessonPoint2Default();
-            LessonPoint24.BackColor = Color.Beige;
+            LessonPoint24.BackColor = Color.Teal;
             LessonPoint2X = '4';
             LessonButton1.BackColor = Color.Blue;
+            LessonButton1.Text = "Узнать результат";
         }
 
         private void LessonPoint25_Click(object sender, EventArgs e)
         {
             LessonPoint2Default();
-            LessonPoint25.BackColor = Color.Beige;
+            LessonPoint25.BackColor = Color.Teal;
             LessonPoint2X = '5';
             LessonButton1.BackColor = Color.Blue;
+            LessonButton1.Text = "Узнать результат";
         }
 
         private void LessonPoint26_Click(object sender, EventArgs e)
         {
             LessonPoint2Default();
-            LessonPoint26.BackColor = Color.Beige;
+            LessonPoint26.BackColor = Color.Teal;
             LessonPoint2X = '6';
             LessonButton1.BackColor = Color.Blue;
+            LessonButton1.Text = "Узнать результат";
         }
 
         private void LessonStructureButton_Click(object sender, EventArgs e)
@@ -691,6 +715,11 @@ namespace WindowsPedApp
             MethodicalPanel.Visible = true;
             MethodicalPanel.Location = locationDefault;
             MethodicalPanel.Size = new Size(sizeDefault);
+            OpenHelper(MethodicalText);
+            HelperNewLocation(-20, 150);
+            Point HLT = new Point(HelperLabel.Location.X-168, HelperLabel.Location.Y+100);
+            HelperLabel.Location = HLT;
+            HelperButtonClose.Location = HLT;
         }
 
         private void OpenMethodicalReception()

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.MainMenu = new System.Windows.Forms.Panel();
+            this.MainMenuOpenMenuButton = new System.Windows.Forms.Button();
             this.MainMenuNameProg = new System.Windows.Forms.Label();
             this.ButtonMainMenuExit = new System.Windows.Forms.Button();
             this.ButtonMainMenuLiteratures = new System.Windows.Forms.Button();
@@ -204,7 +205,8 @@
             // 
             // MainMenu
             // 
-            this.MainMenu.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.MainMenu.Controls.Add(this.MainMenuOpenMenuButton);
             this.MainMenu.Controls.Add(this.MainMenuNameProg);
             this.MainMenu.Controls.Add(this.ButtonMainMenuExit);
             this.MainMenu.Controls.Add(this.ButtonMainMenuLiteratures);
@@ -213,6 +215,21 @@
             this.MainMenu.Name = "MainMenu";
             this.MainMenu.Size = new System.Drawing.Size(520, 637);
             this.MainMenu.TabIndex = 0;
+            // 
+            // MainMenuOpenMenuButton
+            // 
+            this.MainMenuOpenMenuButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.MainMenuOpenMenuButton.AutoSize = true;
+            this.MainMenuOpenMenuButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.MainMenuOpenMenuButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MainMenuOpenMenuButton.Location = new System.Drawing.Point(112, 460);
+            this.MainMenuOpenMenuButton.Name = "MainMenuOpenMenuButton";
+            this.MainMenuOpenMenuButton.Size = new System.Drawing.Size(294, 29);
+            this.MainMenuOpenMenuButton.TabIndex = 5;
+            this.MainMenuOpenMenuButton.Tag = "Button";
+            this.MainMenuOpenMenuButton.Text = "МЕНЮ";
+            this.MainMenuOpenMenuButton.UseVisualStyleBackColor = false;
+            this.MainMenuOpenMenuButton.Click += new System.EventHandler(this.OpenMenu);
             // 
             // MainMenuNameProg
             // 
@@ -273,9 +290,11 @@
             // HelperButtonClose
             // 
             this.HelperButtonClose.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.HelperButtonClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.HelperButtonClose.FlatAppearance.BorderSize = 0;
             this.HelperButtonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HelperButtonClose.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.HelperButtonClose.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.HelperButtonClose.ForeColor = System.Drawing.Color.Black;
             this.HelperButtonClose.Location = new System.Drawing.Point(1092, 206);
             this.HelperButtonClose.Name = "HelperButtonClose";
             this.HelperButtonClose.Size = new System.Drawing.Size(23, 23);
@@ -288,6 +307,7 @@
             // HelperLabel
             // 
             this.HelperLabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.HelperLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.HelperLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.HelperLabel.Location = new System.Drawing.Point(1079, 223);
             this.HelperLabel.Name = "HelperLabel";
@@ -295,6 +315,7 @@
             this.HelperLabel.TabIndex = 5;
             this.HelperLabel.Text = "Тут будет текст, но это не точно";
             this.HelperLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.HelperLabel.Click += new System.EventHandler(this.MainMenuCloseHelper);
             // 
             // HelperPictureBox
             // 
@@ -310,6 +331,7 @@
             // 
             // Literatures
             // 
+            this.Literatures.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.Literatures.Controls.Add(this.LiteraturesRichTextBox);
             this.Literatures.Location = new System.Drawing.Point(540, 12);
             this.Literatures.Name = "Literatures";
@@ -320,7 +342,7 @@
             // 
             this.LiteraturesRichTextBox.AcceptsTab = true;
             this.LiteraturesRichTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.LiteraturesRichTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LiteraturesRichTextBox.BackColor = System.Drawing.Color.PapayaWhip;
             this.LiteraturesRichTextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LiteraturesRichTextBox.Location = new System.Drawing.Point(50, 36);
             this.LiteraturesRichTextBox.Name = "LiteraturesRichTextBox";
@@ -333,7 +355,7 @@
             // 
             // ButtonHome
             // 
-            this.ButtonHome.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ButtonHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ButtonHome.BackgroundImage = global::WindowsPedApp.Resources.Resource1.BackArrow;
             this.ButtonHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ButtonHome.FlatAppearance.BorderColor = System.Drawing.Color.White;
@@ -347,6 +369,7 @@
             // 
             // Menu
             // 
+            this.Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.Menu.Controls.Add(this.ButtonOther);
             this.Menu.Controls.Add(this.ButtonCreateTechnologicalMap);
             this.Menu.Controls.Add(this.ButtonCreateLesson);
@@ -402,6 +425,7 @@
             // 
             // Instruction
             // 
+            this.Instruction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.Instruction.Controls.Add(this.InstructionRichText);
             this.Instruction.Location = new System.Drawing.Point(540, 12);
             this.Instruction.Name = "Instruction";
@@ -412,7 +436,7 @@
             // 
             this.InstructionRichText.AcceptsTab = true;
             this.InstructionRichText.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.InstructionRichText.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.InstructionRichText.BackColor = System.Drawing.Color.PapayaWhip;
             this.InstructionRichText.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.InstructionRichText.Location = new System.Drawing.Point(50, 36);
             this.InstructionRichText.Name = "InstructionRichText";
@@ -425,6 +449,7 @@
             // 
             // TechnologicalMap
             // 
+            this.TechnologicalMap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.TechnologicalMap.Controls.Add(this.TechnologicalMap1);
             this.TechnologicalMap.Controls.Add(this.TechnologicalMap2);
             this.TechnologicalMap.Controls.Add(this.TAPL21);
@@ -911,6 +936,7 @@
             // 
             // Other
             // 
+            this.Other.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.Other.Controls.Add(this.OpenMotivationButton);
             this.Other.Controls.Add(this.OpenPresentButton);
             this.Other.Controls.Add(this.OpenMetodicButton);
@@ -970,7 +996,7 @@
             // 
             // CreateLesson
             // 
-            this.CreateLesson.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.CreateLesson.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.CreateLesson.Controls.Add(this.LessonPanel2);
             this.CreateLesson.Controls.Add(this.LessonButton1);
             this.CreateLesson.Controls.Add(this.LessonPoint15);
@@ -1211,6 +1237,7 @@
             // 
             // LessonCompletePanel
             // 
+            this.LessonCompletePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.LessonCompletePanel.Controls.Add(this.LessonStructureButton);
             this.LessonCompletePanel.Controls.Add(this.LessonCompletePictureBox);
             this.LessonCompletePanel.Controls.Add(this.LessonCompleteRichBox);
@@ -1242,6 +1269,7 @@
             // 
             // LessonCompleteRichBox
             // 
+            this.LessonCompleteRichBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.LessonCompleteRichBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LessonCompleteRichBox.Location = new System.Drawing.Point(50, 36);
             this.LessonCompleteRichBox.Name = "LessonCompleteRichBox";
@@ -1251,6 +1279,7 @@
             // 
             // TestPanel
             // 
+            this.TestPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.TestPanel.Controls.Add(this.panel10);
             this.TestPanel.Controls.Add(this.panel9);
             this.TestPanel.Controls.Add(this.panel8);
@@ -1779,6 +1808,7 @@
             // 
             // MethodicalPanel
             // 
+            this.MethodicalPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.MethodicalPanel.Controls.Add(this.MethodicalButton9);
             this.MethodicalPanel.Controls.Add(this.MethodicalButton8);
             this.MethodicalPanel.Controls.Add(this.MethodicalButton7);
@@ -1905,6 +1935,7 @@
             // 
             // MethodicalTextPanel
             // 
+            this.MethodicalTextPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.MethodicalTextPanel.Controls.Add(this.MethodicalTextBox);
             this.MethodicalTextPanel.Location = new System.Drawing.Point(540, 12);
             this.MethodicalTextPanel.Name = "MethodicalTextPanel";
@@ -1925,6 +1956,7 @@
             // 
             // PresentPanel
             // 
+            this.PresentPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.PresentPanel.Controls.Add(this.PresentTextBox);
             this.PresentPanel.Location = new System.Drawing.Point(540, 12);
             this.PresentPanel.Name = "PresentPanel";
@@ -1933,11 +1965,13 @@
             // 
             // PresentTextBox
             // 
-            this.PresentTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.PresentTextBox.BackColor = System.Drawing.Color.PapayaWhip;
+            this.PresentTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PresentTextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.PresentTextBox.Location = new System.Drawing.Point(50, 36);
             this.PresentTextBox.Name = "PresentTextBox";
             this.PresentTextBox.ReadOnly = true;
+            this.PresentTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.PresentTextBox.Size = new System.Drawing.Size(420, 570);
             this.PresentTextBox.TabIndex = 1;
             this.PresentTextBox.Text = resources.GetString("PresentTextBox.Text");
@@ -1945,6 +1979,7 @@
             // 
             // MotivationPanel
             // 
+            this.MotivationPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.MotivationPanel.Controls.Add(this.MotivationTextBox);
             this.MotivationPanel.Location = new System.Drawing.Point(540, 12);
             this.MotivationPanel.Name = "MotivationPanel";
@@ -1953,7 +1988,7 @@
             // 
             // MotivationTextBox
             // 
-            this.MotivationTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MotivationTextBox.BackColor = System.Drawing.Color.PapayaWhip;
             this.MotivationTextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MotivationTextBox.Location = new System.Drawing.Point(50, 36);
             this.MotivationTextBox.Name = "MotivationTextBox";
@@ -1967,12 +2002,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(1370, 661);
             this.Controls.Add(this.ButtonHome);
             this.Controls.Add(this.HelperButtonClose);
-            this.Controls.Add(this.HelperPictureBox);
             this.Controls.Add(this.HelperLabel);
+            this.Controls.Add(this.HelperPictureBox);
+            this.Controls.Add(this.MainMenu);
             this.Controls.Add(this.PresentPanel);
             this.Controls.Add(this.MotivationPanel);
             this.Controls.Add(this.MethodicalTextPanel);
@@ -1982,7 +2018,6 @@
             this.Controls.Add(this.Menu);
             this.Controls.Add(this.CreateLesson);
             this.Controls.Add(this.TestPanel);
-            this.Controls.Add(this.MainMenu);
             this.Controls.Add(this.Literatures);
             this.Controls.Add(this.Instruction);
             this.Controls.Add(this.TechnologicalMap);
@@ -2178,5 +2213,6 @@
         private RichTextBox PresentTextBox;
         private Panel MotivationPanel;
         private RichTextBox MotivationTextBox;
+        private Button MainMenuOpenMenuButton;
     }
 }
