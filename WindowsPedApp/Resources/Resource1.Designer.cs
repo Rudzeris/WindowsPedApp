@@ -89,5 +89,15 @@ namespace WindowsPedApp.Resources {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
+        /// </summary>
+        public static System.Drawing.Icon unnamed__1_ {
+            get {
+                object obj = ResourceManager.GetObject("unnamed__1_", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
     }
 }
