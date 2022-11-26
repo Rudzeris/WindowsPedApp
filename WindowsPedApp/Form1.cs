@@ -29,7 +29,8 @@ namespace WindowsPedApp
             InitializeComponent();
             Size = new Size(560, 700);
 
-            MinimizeBox= false;
+            //MinimizeBox= false;
+            MaximizeBox = false;
 
             LessonPoint11.SelectionAlignment = HorizontalAlignment.Center;
             LessonPoint12.SelectionAlignment = HorizontalAlignment.Center;
