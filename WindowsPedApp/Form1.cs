@@ -56,14 +56,14 @@ namespace WindowsPedApp
             HelperPictureBox.Location = new Point(HelperPictureBox.Location.X + x, HelperPictureBox.Location.Y + y);
         }
 
-        private void OpenHelper(string str)
+        private void OpenHelper(string str, int x = 0, int y = 0)
         {
             HelperPictureBox.Visible = true;
             HelperLabel.Visible = true;
             HelperButtonClose.Visible = true;
-            HelperLabel.Location = new Point(226, 230);
-            HelperLabel.Size = new Size(270, 120);
-            HelperButtonClose.Location = new Point(226, 230);
+            HelperLabel.Location = new Point(226 - x, 230 - y);
+            HelperLabel.Size = new Size(270 + x, 120 + y);
+            HelperButtonClose.Location = new Point(226 - x, 230 - y);
             HelperPictureBox.Location = new Point(389, 344);
             HelperLabel.Text = str;
 
@@ -132,7 +132,7 @@ namespace WindowsPedApp
         {
             Text = "Main Menu";
             CloseAll();
-            OpenHelper(MainMenuHelperText);
+            OpenHelper(MainMenuHelperText, 60, 50);
             HelperNewLocation(-50, -30);
             MainMenu.Visible = true;
             MainMenu.Size = new Size(sizeDefault);
@@ -212,7 +212,7 @@ namespace WindowsPedApp
             }
             else if (Text == "Methodical receptions")
             {
-                OpenOther(sender, e);
+                OpenMenu(sender, e);
             }
             else if (Text == "Methodical reception")
             {
@@ -224,7 +224,7 @@ namespace WindowsPedApp
             }
             else if (Text == "Motivation")
             {
-                OpenOther(sender, e);
+                OpenMenu(sender, e);
             }
         }
         private void OpenInstruction(object sender, EventArgs e)
@@ -261,7 +261,7 @@ namespace WindowsPedApp
             CloseAll();
             Text = "Menu";
             OpenHelper(MenuHelperText);
-            HelperNewLocation(-50, -30);
+            HelperNewLocation(-50, -130);
             Menu.Visible = true;
             Menu.Size = new Size(sizeDefault);
             Menu.Location = locationDefault;
@@ -718,7 +718,7 @@ namespace WindowsPedApp
             MethodicalPanel.Size = new Size(sizeDefault);
             OpenHelper(MethodicalText);
             HelperNewLocation(-20, 150);
-            Point HLT = new Point(HelperLabel.Location.X-168, HelperLabel.Location.Y+100);
+            Point HLT = new Point(HelperLabel.Location.X - 168, HelperLabel.Location.Y + 100);
             HelperLabel.Location = HLT;
             HelperButtonClose.Location = HLT;
         }

@@ -10,6 +10,10 @@
     <ApplicationIcon>Resources\unnamed (1).ico</ApplicationIcon>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Interop.Word">
       <WrapperTool>tlbimp</WrapperTool>
