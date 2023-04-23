@@ -154,6 +154,7 @@
             TestBox2 = new RichTextBox();
             TestBox1 = new RichTextBox();
             MethodicalPanel = new Panel();
+            LessonButton2 = new Button();
             MethodicalButton9 = new Button();
             MethodicalButton8 = new Button();
             MethodicalButton7 = new Button();
@@ -169,6 +170,8 @@
             OtherPanelTextBox = new RichTextBox();
             MotivationPanel = new Panel();
             MotivationTextBox = new RichTextBox();
+            OpenTestPanel = new Panel();
+            button1 = new Button();
             MainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)HelperPictureBox).BeginInit();
             Literatures.SuspendLayout();
@@ -194,6 +197,7 @@
             MethodicalTextPanel.SuspendLayout();
             OtherTextPanel.SuspendLayout();
             MotivationPanel.SuspendLayout();
+            OpenTestPanel.SuspendLayout();
             SuspendLayout();
             // 
             // MainMenu
@@ -998,7 +1002,7 @@
             OpenTestButton.TabIndex = 0;
             OpenTestButton.Text = "ТЕСТ ДЛЯ ПЕДАГОГА";
             OpenTestButton.UseVisualStyleBackColor = false;
-            OpenTestButton.Click += OpenTest;
+            OpenTestButton.Click += OpenPrevTest;
             // 
             // CreateLesson
             // 
@@ -1695,6 +1699,7 @@
             // MethodicalPanel
             // 
             MethodicalPanel.BackColor = Color.FromArgb(255, 224, 192);
+            MethodicalPanel.Controls.Add(LessonButton2);
             MethodicalPanel.Controls.Add(MethodicalButton9);
             MethodicalPanel.Controls.Add(MethodicalButton8);
             MethodicalPanel.Controls.Add(MethodicalButton7);
@@ -1709,11 +1714,20 @@
             MethodicalPanel.Size = new Size(520, 637);
             MethodicalPanel.TabIndex = 12;
             // 
+            // LessonButton2
+            // 
+            LessonButton2.Location = new Point(48, 540);
+            LessonButton2.Name = "LessonButton2";
+            LessonButton2.Size = new Size(420, 50);
+            LessonButton2.TabIndex = 13;
+            LessonButton2.UseVisualStyleBackColor = true;
+            LessonButton2.Click += LessonButton1_Click;
+            // 
             // MethodicalButton9
             // 
             MethodicalButton9.BackColor = SystemColors.ControlLight;
             MethodicalButton9.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            MethodicalButton9.Location = new Point(24, 390);
+            MethodicalButton9.Location = new Point(24, 404);
             MethodicalButton9.Name = "MethodicalButton9";
             MethodicalButton9.Size = new Size(235, 50);
             MethodicalButton9.TabIndex = 12;
@@ -1725,7 +1739,7 @@
             // 
             MethodicalButton8.BackColor = SystemColors.ControlLight;
             MethodicalButton8.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            MethodicalButton8.Location = new Point(265, 344);
+            MethodicalButton8.Location = new Point(265, 370);
             MethodicalButton8.Name = "MethodicalButton8";
             MethodicalButton8.Size = new Size(235, 96);
             MethodicalButton8.TabIndex = 11;
@@ -1737,7 +1751,7 @@
             // 
             MethodicalButton7.BackColor = SystemColors.ControlLight;
             MethodicalButton7.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            MethodicalButton7.Location = new Point(24, 296);
+            MethodicalButton7.Location = new Point(24, 300);
             MethodicalButton7.Name = "MethodicalButton7";
             MethodicalButton7.Size = new Size(235, 88);
             MethodicalButton7.TabIndex = 10;
@@ -1749,7 +1763,7 @@
             // 
             MethodicalButton6.BackColor = SystemColors.ControlLight;
             MethodicalButton6.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            MethodicalButton6.Location = new Point(265, 224);
+            MethodicalButton6.Location = new Point(265, 250);
             MethodicalButton6.Name = "MethodicalButton6";
             MethodicalButton6.Size = new Size(235, 114);
             MethodicalButton6.TabIndex = 9;
@@ -1761,7 +1775,7 @@
             // 
             MethodicalButton5.BackColor = SystemColors.ControlLight;
             MethodicalButton5.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            MethodicalButton5.Location = new Point(24, 164);
+            MethodicalButton5.Location = new Point(24, 167);
             MethodicalButton5.Name = "MethodicalButton5";
             MethodicalButton5.Size = new Size(235, 126);
             MethodicalButton5.TabIndex = 8;
@@ -1773,7 +1787,7 @@
             // 
             MethodicalButton4.BackColor = SystemColors.ControlLight;
             MethodicalButton4.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            MethodicalButton4.Location = new Point(265, 69);
+            MethodicalButton4.Location = new Point(265, 93);
             MethodicalButton4.Name = "MethodicalButton4";
             MethodicalButton4.Size = new Size(235, 149);
             MethodicalButton4.TabIndex = 7;
@@ -1799,7 +1813,7 @@
             MethodicalButton2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
             MethodicalButton2.Location = new Point(265, 13);
             MethodicalButton2.Name = "MethodicalButton2";
-            MethodicalButton2.Size = new Size(235, 50);
+            MethodicalButton2.Size = new Size(235, 70);
             MethodicalButton2.TabIndex = 5;
             MethodicalButton2.Text = "ПОСТАНОВКА ЦЕЛЕЙ УРОКА, МОТИВАЦИЯ УЧЕБНОЙ ДЕЯТЕЛЬНОСТИ";
             MethodicalButton2.UseVisualStyleBackColor = false;
@@ -1882,6 +1896,30 @@
             MotivationTextBox.Text = resources.GetString("MotivationTextBox.Text");
             MotivationTextBox.LinkClicked += Clicked_To_Link;
             // 
+            // OpenTestPanel
+            // 
+            OpenTestPanel.BackColor = Color.FromArgb(255, 224, 192);
+            OpenTestPanel.Controls.Add(button1);
+            OpenTestPanel.Location = new Point(540, 12);
+            OpenTestPanel.Name = "OpenTestPanel";
+            OpenTestPanel.Size = new Size(520, 637);
+            OpenTestPanel.TabIndex = 16;
+            // 
+            // button1
+            // 
+            button1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            button1.AutoSize = true;
+            button1.BackColor = SystemColors.ControlLight;
+            button1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.Location = new Point(113, 540);
+            button1.Name = "button1";
+            button1.Size = new Size(294, 49);
+            button1.TabIndex = 3;
+            button1.Tag = "Button";
+            button1.Text = "НАЧАТЬ ТЕСТ";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += OpenTest;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1892,16 +1930,17 @@
             Controls.Add(HelperButtonClose);
             Controls.Add(HelperLabel);
             Controls.Add(HelperPictureBox);
-            Controls.Add(Other);
+            Controls.Add(MethodicalPanel);
             Controls.Add(CreateLesson);
+            Controls.Add(Other);
+            Controls.Add(TestPanel);
+            Controls.Add(OpenTestPanel);
             Controls.Add(Menu);
             Controls.Add(MainMenu);
             Controls.Add(OtherTextPanel);
             Controls.Add(MotivationPanel);
             Controls.Add(MethodicalTextPanel);
             Controls.Add(LessonCompletePanel);
-            Controls.Add(MethodicalPanel);
-            Controls.Add(TestPanel);
             Controls.Add(Literatures);
             Controls.Add(Instruction);
             Controls.Add(TechnologicalMap);
@@ -1945,6 +1984,8 @@
             MethodicalTextPanel.ResumeLayout(false);
             OtherTextPanel.ResumeLayout(false);
             MotivationPanel.ResumeLayout(false);
+            OpenTestPanel.ResumeLayout(false);
+            OpenTestPanel.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -2090,5 +2131,8 @@
         private Button MainMenuOpenMenuButton;
         private Button OpenDiagMotivationButton;
         private RichTextBox LessonPoint16;
+        private Panel OpenTestPanel;
+        private Button button1;
+        private Button LessonButton2;
     }
 }

@@ -16,14 +16,15 @@ namespace WindowsPedApp
         string InstructionHelperText = "Здесь указан основной функционал приложения и как им пользоваться.";
         string MenuHelperText = "Это меню педагога.";
         string CreateLessonText1 = "Выберите урок в зависимости от дидактической цели. Здесь только одна кнопка - кнопка по центру.";
-        string CreateLessonText2 = "";
-        string CreateLessonText3 = "";
+        string CreateLessonText2 = "Переменная: CreateLessonText2";
+        string CreateLessonText3 = "Переменная: CreateLessonText3";
         string OtherText = "Здесь вы можете проверить себя и узнать дополнительную информацию.";
-        string MethodicalText = "";
-
+        string MethodicalText = "Переменная: MethodicalText";
+        string TeacherTestText = "Переменная: TeacherTestText";
         //ClassTechnicalMaps CTM = new ClassTechnicalMaps();
         Color defaultButtonColor = SystemColors.ControlLight;
         Color selectButtonColor = Color.Teal;
+        bool MethodicalSelect = false;
 
 
         struct MethodicalReceptionsStructure
@@ -168,6 +169,7 @@ namespace WindowsPedApp
             MethodicalTextPanel.Visible = false;
             OtherTextPanel.Visible = false;
             MotivationPanel.Visible = false;
+            OpenTestPanel.Visible = false;
         }
 
         private void OpenMainMenu()
@@ -280,6 +282,7 @@ namespace WindowsPedApp
         }
         private void OpenMenu(object sender, EventArgs e)
         {
+            MethodicalSelect = false;
             CloseAll();
             Text = "Menu";
             OpenHelper(MenuHelperText);
@@ -302,6 +305,7 @@ namespace WindowsPedApp
         }
         private void OpenCreateLesson(object sender, EventArgs e)
         {
+            MethodicalSelect = true;
             CloseAll();
             LessonNumber = 0;
             LessonPoint1X = 0;
@@ -390,6 +394,8 @@ namespace WindowsPedApp
 
         private void OpenLessonPoint2X()
         {
+            MethodicalPanel.Visible = false;
+            CreateLesson.Visible = true;
             LessonPointDefault();
             OpenHelper("Текст для 2-го задания", 54, -20, 80, -80);
             HelperNewLocation(-30, 56);
@@ -467,6 +473,9 @@ namespace WindowsPedApp
 
         private void OpenLessonPoint3X()
         {
+            LessonButton2.BackColor = Color.Green;
+            LessonButton2.Text = "Далее";
+            Text = "Create Lesson";
             LessonNumber = 3;
         }
         private void CreateLessonRichTextBox()
@@ -727,7 +736,11 @@ namespace WindowsPedApp
                     break;
                 case 2:
                     if (LessonPoint2X != 0)
-                        OpenLessonComplete(sender, e);
+                        OpenMethodical(sender, e);
+                    //MainMenuCloseHelper(sender, e);
+                    break;
+                case 3:
+                    OpenLessonComplete(sender, e);
                     break;
             }
 
@@ -773,6 +786,17 @@ namespace WindowsPedApp
             RadioTB102.Checked = false;
         }
 
+        private void OpenPrevTest(object sender, EventArgs e)
+        {
+            CloseAll();
+            Text = "Test";
+            OpenHelper(TeacherTestText);
+            HelperNewLocation(-50, -50);
+            OpenTestPanel.Visible = true;
+            OpenTestPanel.Location = locationDefault;
+            OpenTestPanel.Size = new Size(sizeDefault);
+        }
+
         private void OpenTest(object sender, EventArgs e)
         {
             CloseAll();
@@ -784,15 +808,44 @@ namespace WindowsPedApp
             RadioTBChecked();
         }
 
+        private void MethodicalButtonDefault()
+        {
+            MethodicalButton1.BackColor = defaultButtonColor;
+            MethodicalButton2.BackColor = defaultButtonColor;
+            MethodicalButton3.BackColor = defaultButtonColor;
+            MethodicalButton4.BackColor = defaultButtonColor;
+            MethodicalButton5.BackColor = defaultButtonColor;
+            MethodicalButton6.BackColor = defaultButtonColor;
+            MethodicalButton7.BackColor = defaultButtonColor;
+            MethodicalButton8.BackColor = defaultButtonColor;
+            MethodicalButton9.BackColor = defaultButtonColor;
+            foreach (var i in MethodicalReceptions)
+            {
+                i.Off();
+            }
+        }
+
         private void OpenMethodical(object sender, EventArgs e)
         {
             CloseAll();
-            Text = "Methodical receptions";
+            LessonButton2.Visible = false;
+            MethodicalButtonDefault();
+
+            if (MethodicalSelect)
+            {
+                OpenLessonPoint3X();
+                LessonButton2.Visible = true;
+            }
+            else
+                Text = "Methodical receptions";
             MethodicalPanel.Visible = true;
             MethodicalPanel.Location = locationDefault;
             MethodicalPanel.Size = new Size(sizeDefault);
             OpenHelper(MethodicalText);
-            HelperNewLocation(-20, 150);
+            if (MethodicalSelect)
+                HelperNewLocation(-20, 150);
+            else
+                HelperNewLocation(-20, 150);
             Point HLT = new Point(HelperLabel.Location.X - 168, HelperLabel.Location.Y + 100);
             HelperLabel.Location = HLT;
             HelperButtonClose.Location = HLT;
@@ -917,134 +970,260 @@ namespace WindowsPedApp
         }
         private void MethodicalButton1_Click(object sender, EventArgs e)
         {
-            byte MRn = 0;
-            if (MethodicalReceptions[MRn].GetPoint())
+            if (!MethodicalSelect)
             {
-                MethodicalReceptions[MRn].Off();
-                MethodicalButton1.BackColor = defaultButtonColor;
+                CloseAll();
+                Text = "Methodical reception";
+                OtherPanelTextBox.Text = MethodicalReceptions[0].GetText();
+                OtherTextPanel.Visible = true;
+                OtherTextPanel.Location = locationDefault;
+                OtherTextPanel.Size = new Size(sizeDefault);
+                OtherPanelTextBox.SelectionStart = 0;
+                OtherPanelTextBox.ScrollToCaret();
             }
             else
             {
-                MethodicalReceptions[MRn].On();
-                MethodicalButton1.BackColor = selectButtonColor;
+                byte MRn = 0;
+                if (MethodicalReceptions[MRn].GetPoint())
+                {
+                    MethodicalReceptions[MRn].Off();
+                    MethodicalButton1.BackColor = defaultButtonColor;
+                }
+                else
+                {
+                    MethodicalReceptions[MRn].On();
+                    MethodicalButton1.BackColor = selectButtonColor;
+                }
             }
         }
 
         private void MethodicalButton2_Click(object sender, EventArgs e)
         {
-            byte MRn = 1;
-            if (MethodicalReceptions[MRn].GetPoint())
+            if (!MethodicalSelect)
             {
-                MethodicalReceptions[MRn].Off();
-                MethodicalButton2.BackColor = defaultButtonColor;
+                CloseAll();
+                Text = "Methodical reception";
+                OtherPanelTextBox.Text = MethodicalReceptions[1].GetText();
+                OtherTextPanel.Visible = true;
+                OtherTextPanel.Location = locationDefault;
+                OtherTextPanel.Size = new Size(sizeDefault);
+                OtherPanelTextBox.SelectionStart = 0;
+                OtherPanelTextBox.ScrollToCaret();
             }
             else
             {
-                MethodicalReceptions[MRn].On();
-                MethodicalButton2.BackColor = selectButtonColor;
+                byte MRn = 1;
+                if (MethodicalReceptions[MRn].GetPoint())
+                {
+                    MethodicalReceptions[MRn].Off();
+                    MethodicalButton2.BackColor = defaultButtonColor;
+                }
+                else
+                {
+                    MethodicalReceptions[MRn].On();
+                    MethodicalButton2.BackColor = selectButtonColor;
+                }
             }
         }
 
         private void MethodicalButton3_Click(object sender, EventArgs e)
         {
-            byte MRn = 2;
-            if (MethodicalReceptions[MRn].GetPoint())
+            if (!MethodicalSelect)
             {
-                MethodicalReceptions[MRn].Off();
-                MethodicalButton3.BackColor = defaultButtonColor;
+                CloseAll();
+                Text = "Methodical reception";
+                OtherPanelTextBox.Text = MethodicalReceptions[2].GetText();
+                OtherTextPanel.Visible = true;
+                OtherTextPanel.Location = locationDefault;
+                OtherTextPanel.Size = new Size(sizeDefault);
+                OtherPanelTextBox.SelectionStart = 0;
+                OtherPanelTextBox.ScrollToCaret();
             }
             else
             {
-                MethodicalReceptions[MRn].On();
-                MethodicalButton3.BackColor = selectButtonColor;
+                byte MRn = 2;
+                if (MethodicalReceptions[MRn].GetPoint())
+                {
+                    MethodicalReceptions[MRn].Off();
+                    MethodicalButton3.BackColor = defaultButtonColor;
+                }
+                else
+                {
+                    MethodicalReceptions[MRn].On();
+                    MethodicalButton3.BackColor = selectButtonColor;
+                }
             }
         }
 
         private void MethodicalButton4_Click(object sender, EventArgs e)
         {
-            byte MRn = 3;
-            if (MethodicalReceptions[MRn].GetPoint())
+            if (!MethodicalSelect)
             {
-                MethodicalReceptions[MRn].Off();
-                MethodicalButton4.BackColor = defaultButtonColor;
+                CloseAll();
+                Text = "Methodical reception";
+                OtherPanelTextBox.Text = MethodicalReceptions[3].GetText();
+                OtherTextPanel.Visible = true;
+                OtherTextPanel.Location = locationDefault;
+                OtherTextPanel.Size = new Size(sizeDefault);
+                OtherPanelTextBox.SelectionStart = 0;
+                OtherPanelTextBox.ScrollToCaret();
             }
             else
             {
-                MethodicalReceptions[MRn].On();
-                MethodicalButton4.BackColor = selectButtonColor;
+                byte MRn = 3;
+                if (MethodicalReceptions[MRn].GetPoint())
+                {
+                    MethodicalReceptions[MRn].Off();
+                    MethodicalButton4.BackColor = defaultButtonColor;
+                }
+                else
+                {
+                    MethodicalReceptions[MRn].On();
+                    MethodicalButton4.BackColor = selectButtonColor;
+                }
             }
         }
 
         private void MethodicalButton5_Click(object sender, EventArgs e)
         {
-            byte MRn = 4;
-            if (MethodicalReceptions[MRn].GetPoint())
+            if (!MethodicalSelect)
             {
-                MethodicalReceptions[MRn].Off();
-                MethodicalButton5.BackColor = defaultButtonColor;
+                CloseAll();
+                Text = "Methodical reception";
+                OtherPanelTextBox.Text = MethodicalReceptions[4].GetText();
+                OtherTextPanel.Visible = true;
+                OtherTextPanel.Location = locationDefault;
+                OtherTextPanel.Size = new Size(sizeDefault);
+                OtherPanelTextBox.SelectionStart = 0;
+                OtherPanelTextBox.ScrollToCaret();
             }
             else
             {
-                MethodicalReceptions[MRn].On();
-                MethodicalButton5.BackColor = selectButtonColor;
+                byte MRn = 4;
+                if (MethodicalReceptions[MRn].GetPoint())
+                {
+                    MethodicalReceptions[MRn].Off();
+                    MethodicalButton5.BackColor = defaultButtonColor;
+                }
+                else
+                {
+                    MethodicalReceptions[MRn].On();
+                    MethodicalButton5.BackColor = selectButtonColor;
+                }
             }
         }
 
         private void MethodicalButton6_Click(object sender, EventArgs e)
         {
-            byte MRn = 5;
-            if (MethodicalReceptions[MRn].GetPoint())
+            if (!MethodicalSelect)
             {
-                MethodicalReceptions[MRn].Off();
-                MethodicalButton6.BackColor = defaultButtonColor;
+                CloseAll();
+                Text = "Methodical reception";
+                OtherPanelTextBox.Text = MethodicalReceptions[5].GetText();
+                OtherTextPanel.Visible = true;
+                OtherTextPanel.Location = locationDefault;
+                OtherTextPanel.Size = new Size(sizeDefault);
+                OtherPanelTextBox.SelectionStart = 0;
+                OtherPanelTextBox.ScrollToCaret();
             }
             else
             {
-                MethodicalReceptions[MRn].On();
-                MethodicalButton6.BackColor = selectButtonColor;
+                byte MRn = 5;
+                if (MethodicalReceptions[MRn].GetPoint())
+                {
+                    MethodicalReceptions[MRn].Off();
+                    MethodicalButton6.BackColor = defaultButtonColor;
+                }
+                else
+                {
+                    MethodicalReceptions[MRn].On();
+                    MethodicalButton6.BackColor = selectButtonColor;
+                }
             }
         }
         private void MethodicalButton7_Click(object sender, EventArgs e)
         {
-            byte MRn = 6;
-            if (MethodicalReceptions[MRn].GetPoint())
+            if (!MethodicalSelect)
             {
-                MethodicalReceptions[MRn].Off();
-                MethodicalButton7.BackColor = defaultButtonColor;
+                CloseAll();
+                Text = "Methodical reception";
+                OtherPanelTextBox.Text = MethodicalReceptions[6].GetText();
+                OtherTextPanel.Visible = true;
+                OtherTextPanel.Location = locationDefault;
+                OtherTextPanel.Size = new Size(sizeDefault);
+                OtherPanelTextBox.SelectionStart = 0;
+                OtherPanelTextBox.ScrollToCaret();
             }
             else
             {
-                MethodicalReceptions[MRn].On();
-                MethodicalButton7.BackColor = selectButtonColor;
+                byte MRn = 6;
+                if (MethodicalReceptions[MRn].GetPoint())
+                {
+                    MethodicalReceptions[MRn].Off();
+                    MethodicalButton7.BackColor = defaultButtonColor;
+                }
+                else
+                {
+                    MethodicalReceptions[MRn].On();
+                    MethodicalButton7.BackColor = selectButtonColor;
+                }
             }
         }
         private void MethodicalButton8_Click(object sender, EventArgs e)
         {
-            byte MRn = 7;
-            if (MethodicalReceptions[MRn].GetPoint())
+            if (!MethodicalSelect)
             {
-                MethodicalReceptions[MRn].Off();
-                MethodicalButton8.BackColor = defaultButtonColor;
+                CloseAll();
+                Text = "Methodical reception";
+                OtherPanelTextBox.Text = MethodicalReceptions[7].GetText();
+                OtherTextPanel.Visible = true;
+                OtherTextPanel.Location = locationDefault;
+                OtherTextPanel.Size = new Size(sizeDefault);
+                OtherPanelTextBox.SelectionStart = 0;
+                OtherPanelTextBox.ScrollToCaret();
             }
             else
             {
-                MethodicalReceptions[MRn].On();
-                MethodicalButton8.BackColor = selectButtonColor;
+                byte MRn = 7;
+                if (MethodicalReceptions[MRn].GetPoint())
+                {
+                    MethodicalReceptions[MRn].Off();
+                    MethodicalButton8.BackColor = defaultButtonColor;
+                }
+                else
+                {
+                    MethodicalReceptions[MRn].On();
+                    MethodicalButton8.BackColor = selectButtonColor;
+                }
             }
         }
 
         private void MethodicalButton9_Click(object sender, EventArgs e)
         {
-            byte MRn = 8;
-            if (MethodicalReceptions[MRn].GetPoint())
+            if (!MethodicalSelect)
             {
-                MethodicalReceptions[MRn].Off();
-                MethodicalButton9.BackColor = defaultButtonColor;
+                CloseAll();
+                Text = "Methodical reception";
+                OtherPanelTextBox.Text = MethodicalReceptions[8].GetText();
+                OtherTextPanel.Visible = true;
+                OtherTextPanel.Location = locationDefault;
+                OtherTextPanel.Size = new Size(sizeDefault);
+                OtherPanelTextBox.SelectionStart = 0;
+                OtherPanelTextBox.ScrollToCaret();
             }
             else
             {
-                MethodicalReceptions[MRn].On();
-                MethodicalButton9.BackColor = selectButtonColor;
+                byte MRn = 8;
+                if (MethodicalReceptions[MRn].GetPoint())
+                {
+                    MethodicalReceptions[MRn].Off();
+                    MethodicalButton9.BackColor = defaultButtonColor;
+                }
+                else
+                {
+                    MethodicalReceptions[MRn].On();
+                    MethodicalButton9.BackColor = selectButtonColor;
+                }
             }
         }
 
