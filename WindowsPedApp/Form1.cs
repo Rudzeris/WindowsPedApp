@@ -736,9 +736,11 @@ namespace WindowsPedApp
                     break;
                 case 2:
                     if (LessonPoint2X != 0)
+                    {
                         OpenMethodical(sender, e);
-                    //MainMenuCloseHelper(sender, e);
-                    break;
+                        MainMenuCloseHelper(sender, e);
+                    }
+                        break;
                 case 3:
                     OpenLessonComplete(sender, e);
                     break;
