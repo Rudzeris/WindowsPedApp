@@ -740,7 +740,7 @@ namespace WindowsPedApp
                         OpenMethodical(sender, e);
                         MainMenuCloseHelper(sender, e);
                     }
-                        break;
+                    break;
                 case 3:
                     OpenLessonComplete(sender, e);
                     break;
