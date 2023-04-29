@@ -99,14 +99,7 @@
             OpenPresentButton = new Button();
             OpenTestButton = new Button();
             CreateLesson = new Panel();
-            LessonPanel2 = new Panel();
-            LessonPoint20 = new RichTextBox();
-            LessonPoint26 = new RichTextBox();
-            LessonPoint25 = new RichTextBox();
-            LessonPoint24 = new RichTextBox();
-            LessonPoint23 = new RichTextBox();
-            LessonPoint22 = new RichTextBox();
-            LessonPoint21 = new RichTextBox();
+            LessonPoint16 = new RichTextBox();
             LessonButton1 = new Button();
             LessonPoint15 = new RichTextBox();
             LessonPoint14 = new RichTextBox();
@@ -161,6 +154,7 @@
             TestBox2 = new RichTextBox();
             TestBox1 = new RichTextBox();
             MethodicalPanel = new Panel();
+            LessonButton2 = new Button();
             MethodicalButton9 = new Button();
             MethodicalButton8 = new Button();
             MethodicalButton7 = new Button();
@@ -172,10 +166,12 @@
             MethodicalButton1 = new Button();
             MethodicalTextPanel = new Panel();
             MethodicalTextBox = new RichTextBox();
-            PresentPanel = new Panel();
-            PresentTextBox = new RichTextBox();
+            OtherTextPanel = new Panel();
+            OtherPanelTextBox = new RichTextBox();
             MotivationPanel = new Panel();
             MotivationTextBox = new RichTextBox();
+            OpenTestPanel = new Panel();
+            button1 = new Button();
             MainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)HelperPictureBox).BeginInit();
             Literatures.SuspendLayout();
@@ -184,7 +180,6 @@
             TechnologicalMap.SuspendLayout();
             Other.SuspendLayout();
             CreateLesson.SuspendLayout();
-            LessonPanel2.SuspendLayout();
             LessonCompletePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)LessonCompletePictureBox).BeginInit();
             TestPanel.SuspendLayout();
@@ -200,8 +195,9 @@
             panel1.SuspendLayout();
             MethodicalPanel.SuspendLayout();
             MethodicalTextPanel.SuspendLayout();
-            PresentPanel.SuspendLayout();
+            OtherTextPanel.SuspendLayout();
             MotivationPanel.SuspendLayout();
+            OpenTestPanel.SuspendLayout();
             SuspendLayout();
             // 
             // MainMenu
@@ -982,6 +978,7 @@
             OpenDiagMotivationButton.TabIndex = 3;
             OpenDiagMotivationButton.Text = "ДИАГНОСТИКА УЧЕБНОЙ МОТИВАЦИИ СТУДЕНТОВ";
             OpenDiagMotivationButton.UseVisualStyleBackColor = false;
+            OpenDiagMotivationButton.Click += OpenDiagnosticMotivationStudent;
             // 
             // OpenPresentButton
             // 
@@ -1005,12 +1002,12 @@
             OpenTestButton.TabIndex = 0;
             OpenTestButton.Text = "ТЕСТ ДЛЯ ПЕДАГОГА";
             OpenTestButton.UseVisualStyleBackColor = false;
-            OpenTestButton.Click += OpenTest;
+            OpenTestButton.Click += OpenPrevTest;
             // 
             // CreateLesson
             // 
             CreateLesson.BackColor = Color.FromArgb(255, 224, 192);
-            CreateLesson.Controls.Add(LessonPanel2);
+            CreateLesson.Controls.Add(LessonPoint16);
             CreateLesson.Controls.Add(LessonButton1);
             CreateLesson.Controls.Add(LessonPoint15);
             CreateLesson.Controls.Add(LessonPoint14);
@@ -1022,141 +1019,25 @@
             CreateLesson.Size = new Size(520, 637);
             CreateLesson.TabIndex = 9;
             // 
-            // LessonPanel2
+            // LessonPoint16
             // 
-            LessonPanel2.Controls.Add(LessonPoint20);
-            LessonPanel2.Controls.Add(LessonPoint26);
-            LessonPanel2.Controls.Add(LessonPoint25);
-            LessonPanel2.Controls.Add(LessonPoint24);
-            LessonPanel2.Controls.Add(LessonPoint23);
-            LessonPanel2.Controls.Add(LessonPoint22);
-            LessonPanel2.Controls.Add(LessonPoint21);
-            LessonPanel2.Location = new Point(24, 350);
-            LessonPanel2.Name = "LessonPanel2";
-            LessonPanel2.Size = new Size(476, 249);
-            LessonPanel2.TabIndex = 6;
-            // 
-            // LessonPoint20
-            // 
-            LessonPoint20.BackColor = Color.FromArgb(192, 255, 192);
-            LessonPoint20.BorderStyle = BorderStyle.FixedSingle;
-            LessonPoint20.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            LessonPoint20.HideSelection = false;
-            LessonPoint20.Location = new Point(24, 3);
-            LessonPoint20.MaxLength = 80;
-            LessonPoint20.Name = "LessonPoint20";
-            LessonPoint20.ReadOnly = true;
-            LessonPoint20.RightToLeft = RightToLeft.No;
-            LessonPoint20.ScrollBars = RichTextBoxScrollBars.None;
-            LessonPoint20.Size = new Size(420, 51);
-            LessonPoint20.TabIndex = 13;
-            LessonPoint20.Text = "Наш выбор";
-            // 
-            // LessonPoint26
-            // 
-            LessonPoint26.BackColor = SystemColors.ControlLightLight;
-            LessonPoint26.BorderStyle = BorderStyle.FixedSingle;
-            LessonPoint26.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            LessonPoint26.HideSelection = false;
-            LessonPoint26.Location = new Point(24, 220);
-            LessonPoint26.MaxLength = 80;
-            LessonPoint26.Name = "LessonPoint26";
-            LessonPoint26.ReadOnly = true;
-            LessonPoint26.RightToLeft = RightToLeft.No;
-            LessonPoint26.ScrollBars = RichTextBoxScrollBars.None;
-            LessonPoint26.Size = new Size(420, 26);
-            LessonPoint26.TabIndex = 12;
-            LessonPoint26.Text = "F";
-            LessonPoint26.Click += LessonPoint26_Click;
-            // 
-            // LessonPoint25
-            // 
-            LessonPoint25.BackColor = SystemColors.ControlLightLight;
-            LessonPoint25.BorderStyle = BorderStyle.FixedSingle;
-            LessonPoint25.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            LessonPoint25.HideSelection = false;
-            LessonPoint25.Location = new Point(24, 188);
-            LessonPoint25.MaxLength = 80;
-            LessonPoint25.Name = "LessonPoint25";
-            LessonPoint25.ReadOnly = true;
-            LessonPoint25.RightToLeft = RightToLeft.No;
-            LessonPoint25.ScrollBars = RichTextBoxScrollBars.None;
-            LessonPoint25.Size = new Size(420, 26);
-            LessonPoint25.TabIndex = 11;
-            LessonPoint25.Text = "E";
-            LessonPoint25.Click += LessonPoint25_Click;
-            // 
-            // LessonPoint24
-            // 
-            LessonPoint24.BackColor = SystemColors.ControlLightLight;
-            LessonPoint24.BorderStyle = BorderStyle.FixedSingle;
-            LessonPoint24.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            LessonPoint24.HideSelection = false;
-            LessonPoint24.Location = new Point(24, 156);
-            LessonPoint24.MaxLength = 80;
-            LessonPoint24.Name = "LessonPoint24";
-            LessonPoint24.ReadOnly = true;
-            LessonPoint24.RightToLeft = RightToLeft.No;
-            LessonPoint24.ScrollBars = RichTextBoxScrollBars.None;
-            LessonPoint24.Size = new Size(420, 26);
-            LessonPoint24.TabIndex = 10;
-            LessonPoint24.Text = "D";
-            LessonPoint24.Click += LessonPoint24_Click;
-            // 
-            // LessonPoint23
-            // 
-            LessonPoint23.BackColor = SystemColors.ControlLightLight;
-            LessonPoint23.BorderStyle = BorderStyle.FixedSingle;
-            LessonPoint23.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            LessonPoint23.HideSelection = false;
-            LessonPoint23.Location = new Point(24, 124);
-            LessonPoint23.MaxLength = 80;
-            LessonPoint23.Name = "LessonPoint23";
-            LessonPoint23.ReadOnly = true;
-            LessonPoint23.RightToLeft = RightToLeft.No;
-            LessonPoint23.ScrollBars = RichTextBoxScrollBars.None;
-            LessonPoint23.Size = new Size(420, 26);
-            LessonPoint23.TabIndex = 9;
-            LessonPoint23.Text = "C";
-            LessonPoint23.Click += LessonPoint23_Click;
-            // 
-            // LessonPoint22
-            // 
-            LessonPoint22.BackColor = SystemColors.ControlLightLight;
-            LessonPoint22.BorderStyle = BorderStyle.FixedSingle;
-            LessonPoint22.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            LessonPoint22.HideSelection = false;
-            LessonPoint22.Location = new Point(24, 92);
-            LessonPoint22.MaxLength = 80;
-            LessonPoint22.Name = "LessonPoint22";
-            LessonPoint22.ReadOnly = true;
-            LessonPoint22.RightToLeft = RightToLeft.No;
-            LessonPoint22.ScrollBars = RichTextBoxScrollBars.None;
-            LessonPoint22.Size = new Size(420, 26);
-            LessonPoint22.TabIndex = 8;
-            LessonPoint22.Text = "B";
-            LessonPoint22.Click += LessonPoint22_Click;
-            // 
-            // LessonPoint21
-            // 
-            LessonPoint21.BackColor = SystemColors.ControlLightLight;
-            LessonPoint21.BorderStyle = BorderStyle.FixedSingle;
-            LessonPoint21.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            LessonPoint21.HideSelection = false;
-            LessonPoint21.Location = new Point(24, 60);
-            LessonPoint21.MaxLength = 80;
-            LessonPoint21.Name = "LessonPoint21";
-            LessonPoint21.ReadOnly = true;
-            LessonPoint21.RightToLeft = RightToLeft.No;
-            LessonPoint21.ScrollBars = RichTextBoxScrollBars.None;
-            LessonPoint21.Size = new Size(420, 26);
-            LessonPoint21.TabIndex = 7;
-            LessonPoint21.Text = "A";
-            LessonPoint21.Click += LessonPoint21_Click;
+            LessonPoint16.BackColor = SystemColors.ControlLightLight;
+            LessonPoint16.BorderStyle = BorderStyle.FixedSingle;
+            LessonPoint16.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            LessonPoint16.HideSelection = false;
+            LessonPoint16.Location = new Point(48, 288);
+            LessonPoint16.MaxLength = 80;
+            LessonPoint16.Name = "LessonPoint16";
+            LessonPoint16.ReadOnly = true;
+            LessonPoint16.RightToLeft = RightToLeft.No;
+            LessonPoint16.ScrollBars = RichTextBoxScrollBars.None;
+            LessonPoint16.Size = new Size(420, 44);
+            LessonPoint16.TabIndex = 6;
+            LessonPoint16.Text = "";
             // 
             // LessonButton1
             // 
-            LessonButton1.Location = new Point(48, 288);
+            LessonButton1.Location = new Point(48, 538);
             LessonButton1.Name = "LessonButton1";
             LessonButton1.Size = new Size(420, 50);
             LessonButton1.TabIndex = 5;
@@ -1818,6 +1699,7 @@
             // MethodicalPanel
             // 
             MethodicalPanel.BackColor = Color.FromArgb(255, 224, 192);
+            MethodicalPanel.Controls.Add(LessonButton2);
             MethodicalPanel.Controls.Add(MethodicalButton9);
             MethodicalPanel.Controls.Add(MethodicalButton8);
             MethodicalPanel.Controls.Add(MethodicalButton7);
@@ -1832,11 +1714,20 @@
             MethodicalPanel.Size = new Size(520, 637);
             MethodicalPanel.TabIndex = 12;
             // 
+            // LessonButton2
+            // 
+            LessonButton2.Location = new Point(48, 540);
+            LessonButton2.Name = "LessonButton2";
+            LessonButton2.Size = new Size(420, 50);
+            LessonButton2.TabIndex = 13;
+            LessonButton2.UseVisualStyleBackColor = true;
+            LessonButton2.Click += LessonButton1_Click;
+            // 
             // MethodicalButton9
             // 
             MethodicalButton9.BackColor = SystemColors.ControlLight;
             MethodicalButton9.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            MethodicalButton9.Location = new Point(24, 390);
+            MethodicalButton9.Location = new Point(24, 404);
             MethodicalButton9.Name = "MethodicalButton9";
             MethodicalButton9.Size = new Size(235, 50);
             MethodicalButton9.TabIndex = 12;
@@ -1848,7 +1739,7 @@
             // 
             MethodicalButton8.BackColor = SystemColors.ControlLight;
             MethodicalButton8.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            MethodicalButton8.Location = new Point(265, 344);
+            MethodicalButton8.Location = new Point(265, 370);
             MethodicalButton8.Name = "MethodicalButton8";
             MethodicalButton8.Size = new Size(235, 96);
             MethodicalButton8.TabIndex = 11;
@@ -1860,7 +1751,7 @@
             // 
             MethodicalButton7.BackColor = SystemColors.ControlLight;
             MethodicalButton7.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            MethodicalButton7.Location = new Point(24, 296);
+            MethodicalButton7.Location = new Point(24, 300);
             MethodicalButton7.Name = "MethodicalButton7";
             MethodicalButton7.Size = new Size(235, 88);
             MethodicalButton7.TabIndex = 10;
@@ -1872,7 +1763,7 @@
             // 
             MethodicalButton6.BackColor = SystemColors.ControlLight;
             MethodicalButton6.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            MethodicalButton6.Location = new Point(265, 224);
+            MethodicalButton6.Location = new Point(265, 250);
             MethodicalButton6.Name = "MethodicalButton6";
             MethodicalButton6.Size = new Size(235, 114);
             MethodicalButton6.TabIndex = 9;
@@ -1884,7 +1775,7 @@
             // 
             MethodicalButton5.BackColor = SystemColors.ControlLight;
             MethodicalButton5.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            MethodicalButton5.Location = new Point(24, 164);
+            MethodicalButton5.Location = new Point(24, 167);
             MethodicalButton5.Name = "MethodicalButton5";
             MethodicalButton5.Size = new Size(235, 126);
             MethodicalButton5.TabIndex = 8;
@@ -1896,7 +1787,7 @@
             // 
             MethodicalButton4.BackColor = SystemColors.ControlLight;
             MethodicalButton4.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            MethodicalButton4.Location = new Point(265, 69);
+            MethodicalButton4.Location = new Point(265, 93);
             MethodicalButton4.Name = "MethodicalButton4";
             MethodicalButton4.Size = new Size(235, 149);
             MethodicalButton4.TabIndex = 7;
@@ -1922,7 +1813,7 @@
             MethodicalButton2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
             MethodicalButton2.Location = new Point(265, 13);
             MethodicalButton2.Name = "MethodicalButton2";
-            MethodicalButton2.Size = new Size(235, 50);
+            MethodicalButton2.Size = new Size(235, 70);
             MethodicalButton2.TabIndex = 5;
             MethodicalButton2.Text = "ПОСТАНОВКА ЦЕЛЕЙ УРОКА, МОТИВАЦИЯ УЧЕБНОЙ ДЕЯТЕЛЬНОСТИ";
             MethodicalButton2.UseVisualStyleBackColor = false;
@@ -1961,28 +1852,28 @@
             MethodicalTextBox.Text = "";
             MethodicalTextBox.LinkClicked += Clicked_To_Link;
             // 
-            // PresentPanel
+            // OtherTextPanel
             // 
-            PresentPanel.BackColor = Color.FromArgb(255, 224, 192);
-            PresentPanel.Controls.Add(PresentTextBox);
-            PresentPanel.Location = new Point(540, 12);
-            PresentPanel.Name = "PresentPanel";
-            PresentPanel.Size = new Size(520, 637);
-            PresentPanel.TabIndex = 14;
+            OtherTextPanel.BackColor = Color.FromArgb(255, 224, 192);
+            OtherTextPanel.Controls.Add(OtherPanelTextBox);
+            OtherTextPanel.Location = new Point(540, 12);
+            OtherTextPanel.Name = "OtherTextPanel";
+            OtherTextPanel.Size = new Size(520, 637);
+            OtherTextPanel.TabIndex = 14;
             // 
-            // PresentTextBox
+            // OtherPanelTextBox
             // 
-            PresentTextBox.BackColor = Color.PapayaWhip;
-            PresentTextBox.BorderStyle = BorderStyle.FixedSingle;
-            PresentTextBox.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            PresentTextBox.Location = new Point(50, 36);
-            PresentTextBox.Name = "PresentTextBox";
-            PresentTextBox.ReadOnly = true;
-            PresentTextBox.RightToLeft = RightToLeft.No;
-            PresentTextBox.Size = new Size(420, 570);
-            PresentTextBox.TabIndex = 1;
-            PresentTextBox.Text = resources.GetString("PresentTextBox.Text");
-            PresentTextBox.LinkClicked += Clicked_To_Link;
+            OtherPanelTextBox.BackColor = Color.PapayaWhip;
+            OtherPanelTextBox.BorderStyle = BorderStyle.FixedSingle;
+            OtherPanelTextBox.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            OtherPanelTextBox.Location = new Point(50, 36);
+            OtherPanelTextBox.Name = "OtherPanelTextBox";
+            OtherPanelTextBox.ReadOnly = true;
+            OtherPanelTextBox.RightToLeft = RightToLeft.No;
+            OtherPanelTextBox.Size = new Size(420, 570);
+            OtherPanelTextBox.TabIndex = 1;
+            OtherPanelTextBox.Text = resources.GetString("OtherPanelTextBox.Text");
+            OtherPanelTextBox.LinkClicked += Clicked_To_Link;
             // 
             // MotivationPanel
             // 
@@ -2005,6 +1896,30 @@
             MotivationTextBox.Text = resources.GetString("MotivationTextBox.Text");
             MotivationTextBox.LinkClicked += Clicked_To_Link;
             // 
+            // OpenTestPanel
+            // 
+            OpenTestPanel.BackColor = Color.FromArgb(255, 224, 192);
+            OpenTestPanel.Controls.Add(button1);
+            OpenTestPanel.Location = new Point(540, 12);
+            OpenTestPanel.Name = "OpenTestPanel";
+            OpenTestPanel.Size = new Size(520, 637);
+            OpenTestPanel.TabIndex = 16;
+            // 
+            // button1
+            // 
+            button1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            button1.AutoSize = true;
+            button1.BackColor = SystemColors.ControlLight;
+            button1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.Location = new Point(113, 540);
+            button1.Name = "button1";
+            button1.Size = new Size(294, 49);
+            button1.TabIndex = 3;
+            button1.Tag = "Button";
+            button1.Text = "НАЧАТЬ ТЕСТ";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += OpenTest;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -2015,16 +1930,17 @@
             Controls.Add(HelperButtonClose);
             Controls.Add(HelperLabel);
             Controls.Add(HelperPictureBox);
+            Controls.Add(MethodicalPanel);
+            Controls.Add(CreateLesson);
             Controls.Add(Other);
+            Controls.Add(TestPanel);
+            Controls.Add(OpenTestPanel);
             Controls.Add(Menu);
             Controls.Add(MainMenu);
-            Controls.Add(PresentPanel);
+            Controls.Add(OtherTextPanel);
             Controls.Add(MotivationPanel);
             Controls.Add(MethodicalTextPanel);
             Controls.Add(LessonCompletePanel);
-            Controls.Add(MethodicalPanel);
-            Controls.Add(CreateLesson);
-            Controls.Add(TestPanel);
             Controls.Add(Literatures);
             Controls.Add(Instruction);
             Controls.Add(TechnologicalMap);
@@ -2041,7 +1957,6 @@
             TechnologicalMap.ResumeLayout(false);
             Other.ResumeLayout(false);
             CreateLesson.ResumeLayout(false);
-            LessonPanel2.ResumeLayout(false);
             LessonCompletePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)LessonCompletePictureBox).EndInit();
             TestPanel.ResumeLayout(false);
@@ -2067,8 +1982,10 @@
             panel1.PerformLayout();
             MethodicalPanel.ResumeLayout(false);
             MethodicalTextPanel.ResumeLayout(false);
-            PresentPanel.ResumeLayout(false);
+            OtherTextPanel.ResumeLayout(false);
             MotivationPanel.ResumeLayout(false);
+            OpenTestPanel.ResumeLayout(false);
+            OpenTestPanel.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -2144,14 +2061,6 @@
         private RichTextBox LessonPoint13;
         private RichTextBox LessonPoint12;
         private Button LessonButton1;
-        private Panel LessonPanel2;
-        private RichTextBox LessonPoint23;
-        private RichTextBox LessonPoint22;
-        private RichTextBox LessonPoint21;
-        private RichTextBox LessonPoint26;
-        private RichTextBox LessonPoint25;
-        private RichTextBox LessonPoint24;
-        private RichTextBox LessonPoint20;
         private Panel LessonCompletePanel;
         private RichTextBox LessonCompleteRichBox;
         private PictureBox LessonCompletePictureBox;
@@ -2215,11 +2124,15 @@
         private Button MethodicalButton1;
         private Panel MethodicalTextPanel;
         private RichTextBox MethodicalTextBox;
-        private Panel PresentPanel;
-        private RichTextBox PresentTextBox;
+        private Panel OtherTextPanel;
+        private RichTextBox OtherPanelTextBox;
         private Panel MotivationPanel;
         private RichTextBox MotivationTextBox;
         private Button MainMenuOpenMenuButton;
         private Button OpenDiagMotivationButton;
+        private RichTextBox LessonPoint16;
+        private Panel OpenTestPanel;
+        private Button button1;
+        private Button LessonButton2;
     }
 }
