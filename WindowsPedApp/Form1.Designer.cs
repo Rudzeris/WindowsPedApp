@@ -99,8 +99,8 @@
             OpenPresentButton = new Button();
             OpenTestButton = new Button();
             CreateLesson = new Panel();
-            LessonPoint16 = new RichTextBox();
             LessonButton1 = new Button();
+            LessonPoint16 = new RichTextBox();
             LessonPoint15 = new RichTextBox();
             LessonPoint14 = new RichTextBox();
             LessonPoint13 = new RichTextBox();
@@ -1007,8 +1007,8 @@
             // CreateLesson
             // 
             CreateLesson.BackColor = Color.FromArgb(255, 224, 192);
-            CreateLesson.Controls.Add(LessonPoint16);
             CreateLesson.Controls.Add(LessonButton1);
+            CreateLesson.Controls.Add(LessonPoint16);
             CreateLesson.Controls.Add(LessonPoint15);
             CreateLesson.Controls.Add(LessonPoint14);
             CreateLesson.Controls.Add(LessonPoint13);
@@ -1018,6 +1018,15 @@
             CreateLesson.Name = "CreateLesson";
             CreateLesson.Size = new Size(520, 637);
             CreateLesson.TabIndex = 9;
+            // 
+            // LessonButton1
+            // 
+            LessonButton1.Location = new Point(48, 538);
+            LessonButton1.Name = "LessonButton1";
+            LessonButton1.Size = new Size(420, 50);
+            LessonButton1.TabIndex = 6;
+            LessonButton1.UseVisualStyleBackColor = true;
+            LessonButton1.Click += LessonButton1_Click;
             // 
             // LessonPoint16
             // 
@@ -1032,17 +1041,9 @@
             LessonPoint16.RightToLeft = RightToLeft.No;
             LessonPoint16.ScrollBars = RichTextBoxScrollBars.None;
             LessonPoint16.Size = new Size(420, 44);
-            LessonPoint16.TabIndex = 6;
-            LessonPoint16.Text = "";
-            // 
-            // LessonButton1
-            // 
-            LessonButton1.Location = new Point(48, 538);
-            LessonButton1.Name = "LessonButton1";
-            LessonButton1.Size = new Size(420, 50);
-            LessonButton1.TabIndex = 5;
-            LessonButton1.UseVisualStyleBackColor = true;
-            LessonButton1.Click += LessonButton1_Click;
+            LessonPoint16.TabIndex = 5;
+            LessonPoint16.Text = "s";
+            LessonPoint16.Click += LessonPoint16_Click;
             // 
             // LessonPoint15
             // 
