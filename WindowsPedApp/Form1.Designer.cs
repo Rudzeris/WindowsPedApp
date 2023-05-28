@@ -111,6 +111,7 @@
             LessonCompletePictureBox = new PictureBox();
             LessonCompleteRichBox = new RichTextBox();
             TestPanel = new Panel();
+            TestButtonOpenTestPanel2 = new Button();
             panel10 = new Panel();
             RadioTB101 = new RadioButton();
             RadioTB102 = new RadioButton();
@@ -172,6 +173,8 @@
             MotivationTextBox = new RichTextBox();
             OpenTestPanel = new Panel();
             button1 = new Button();
+            TestPanel2 = new Panel();
+            Test2TextBox = new RichTextBox();
             MainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)HelperPictureBox).BeginInit();
             Literatures.SuspendLayout();
@@ -198,6 +201,7 @@
             OtherTextPanel.SuspendLayout();
             MotivationPanel.SuspendLayout();
             OpenTestPanel.SuspendLayout();
+            TestPanel2.SuspendLayout();
             SuspendLayout();
             // 
             // MainMenu
@@ -1175,6 +1179,7 @@
             // TestPanel
             // 
             TestPanel.BackColor = Color.FromArgb(255, 224, 192);
+            TestPanel.Controls.Add(TestButtonOpenTestPanel2);
             TestPanel.Controls.Add(panel10);
             TestPanel.Controls.Add(panel9);
             TestPanel.Controls.Add(panel8);
@@ -1201,6 +1206,17 @@
             TestPanel.Name = "TestPanel";
             TestPanel.Size = new Size(520, 637);
             TestPanel.TabIndex = 11;
+            // 
+            // TestButtonOpenTestPanel2
+            // 
+            TestButtonOpenTestPanel2.BackColor = SystemColors.ControlLight;
+            TestButtonOpenTestPanel2.Location = new Point(474, 558);
+            TestButtonOpenTestPanel2.Name = "TestButtonOpenTestPanel2";
+            TestButtonOpenTestPanel2.Size = new Size(23, 62);
+            TestButtonOpenTestPanel2.TabIndex = 42;
+            TestButtonOpenTestPanel2.Text = "=\r\n>\r\n=";
+            TestButtonOpenTestPanel2.UseVisualStyleBackColor = false;
+            TestButtonOpenTestPanel2.Click += OpenTestPanel2;
             // 
             // panel10
             // 
@@ -1549,7 +1565,7 @@
             // TestButtonResult
             // 
             TestButtonResult.BackColor = SystemColors.ControlLight;
-            TestButtonResult.Location = new Point(425, 558);
+            TestButtonResult.Location = new Point(410, 558);
             TestButtonResult.Name = "TestButtonResult";
             TestButtonResult.Size = new Size(62, 62);
             TestButtonResult.TabIndex = 30;
@@ -1921,6 +1937,29 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += OpenTest;
             // 
+            // TestPanel2
+            // 
+            TestPanel2.BackColor = Color.FromArgb(255, 224, 192);
+            TestPanel2.Controls.Add(Test2TextBox);
+            TestPanel2.Location = new Point(540, 12);
+            TestPanel2.Name = "TestPanel2";
+            TestPanel2.Size = new Size(520, 637);
+            TestPanel2.TabIndex = 2;
+            // 
+            // Test2TextBox
+            // 
+            Test2TextBox.AcceptsTab = true;
+            Test2TextBox.Anchor = AnchorStyles.Top;
+            Test2TextBox.BackColor = Color.PapayaWhip;
+            Test2TextBox.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Test2TextBox.Location = new Point(50, 36);
+            Test2TextBox.Name = "Test2TextBox";
+            Test2TextBox.ReadOnly = true;
+            Test2TextBox.ScrollBars = RichTextBoxScrollBars.Vertical;
+            Test2TextBox.Size = new Size(420, 570);
+            Test2TextBox.TabIndex = 0;
+            Test2TextBox.Text = resources.GetString("Test2TextBox.Text");
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1931,18 +1970,19 @@
             Controls.Add(HelperButtonClose);
             Controls.Add(HelperLabel);
             Controls.Add(HelperPictureBox);
+            Controls.Add(TestPanel);
+            Controls.Add(OpenTestPanel);
+            Controls.Add(TestPanel2);
             Controls.Add(MethodicalPanel);
             Controls.Add(CreateLesson);
             Controls.Add(Other);
-            Controls.Add(TestPanel);
-            Controls.Add(OpenTestPanel);
+            Controls.Add(Literatures);
             Controls.Add(Menu);
             Controls.Add(MainMenu);
             Controls.Add(OtherTextPanel);
             Controls.Add(MotivationPanel);
             Controls.Add(MethodicalTextPanel);
             Controls.Add(LessonCompletePanel);
-            Controls.Add(Literatures);
             Controls.Add(Instruction);
             Controls.Add(TechnologicalMap);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -1987,6 +2027,7 @@
             MotivationPanel.ResumeLayout(false);
             OpenTestPanel.ResumeLayout(false);
             OpenTestPanel.PerformLayout();
+            TestPanel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -2135,5 +2176,8 @@
         private Panel OpenTestPanel;
         private Button button1;
         private Button LessonButton2;
+        private Button TestButtonOpenTestPanel2;
+        private Panel TestPanel2;
+        private RichTextBox Test2TextBox;
     }
 }

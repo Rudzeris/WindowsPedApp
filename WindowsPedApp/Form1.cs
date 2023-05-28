@@ -13,7 +13,7 @@ namespace WindowsPedApp
             "Оно поможет грамотно и интересно составить нетрадиционные занятия для студентов. " +
             "Это уникальное приложение поможет повысить мотивацию обучающихся, " +
             "а также облегчить нелёгкий труд по подготовке к занятиям.";
-           
+
         string InstructionHelperText = "Здесь расписана основная функция приложения и то, как рекомендуется работать с материалами.";
         string MenuHelperText = "С помощью этого меню, Вы можете узнать много полезной информации. Нажмите на интересующую Вас клавишу.";
         string CreateLessonText1 = "Выберите урок в зависимости от дидактической цели.";
@@ -23,6 +23,7 @@ namespace WindowsPedApp
         string MethodicalText = "Здесь Вы можете посмотреть различные методические приемы по мотивации студентов на разных этапах урока.";
         string MethodicalTextSelect = "Выберите этап урока, на котором хотели бы использовать методические приёмы по повышению мотивации студентов. Можно выбрать несколько. После закройте это окошечко и нажмите кнопку Далее.";
         string TeacherTestText = "Тест на удовлетворённость работой (Р. Кунина).";
+        string TestRecomendation = "Рекомендации по тесту";
         //ClassTechnicalMaps CTM = new ClassTechnicalMaps();
         Color defaultButtonColor = SystemColors.ControlLight;
         Color selectButtonColor = Color.Teal;
@@ -174,6 +175,7 @@ namespace WindowsPedApp
             OtherTextPanel.Visible = false;
             MotivationPanel.Visible = false;
             OpenTestPanel.Visible = false;
+            TestPanel2.Visible = false;
         }
 
         private void OpenMainMenu()
@@ -261,6 +263,10 @@ namespace WindowsPedApp
             {
                 OpenMenu(sender, e);
             }
+            else if (Text == "Test Recomendation")
+            {
+                OpenOther(sender, e);
+            }
         }
         private void OpenInstruction(object sender, EventArgs e)
         {
@@ -342,7 +348,7 @@ namespace WindowsPedApp
             Other.Visible = true;
             Other.Location = locationDefault;
             Other.Size = new Size(sizeDefault);
-            OpenHelper(OtherText);
+            OpenHelper(OtherText, 10, 10, 0, 0);
             HelperNewLocation(-50, -50);
         }
 
@@ -803,6 +809,7 @@ namespace WindowsPedApp
             RadioTB92.Checked = false;
             RadioTB101.Checked = false;
             RadioTB102.Checked = false;
+            TestBoxResult.Text = "Результат: ";
         }
 
         private void OpenPrevTest(object sender, EventArgs e)
@@ -818,11 +825,13 @@ namespace WindowsPedApp
 
         private void OpenTest(object sender, EventArgs e)
         {
+            TestButtonOpenTestPanel2.Visible = false;
             CloseAll();
             Text = "Test";
             TestPanel.Visible = true;
             TestPanel.Location = locationDefault;
             TestPanel.Size = new Size(sizeDefault);
+
             TestRadioDefault();
             RadioTBChecked();
         }
@@ -863,13 +872,13 @@ namespace WindowsPedApp
 
             if (MethodicalSelect)
             {
-                OpenHelper(MethodicalTextSelect,80,0,88,-100);
+                OpenHelper(MethodicalTextSelect, 80, 0, 88, -100);
                 //LessonButton2.Text = "-_-";
                 HelperNewLocation(-30, 150);
             }
             else
             {
-                OpenHelper(MethodicalText,80,0,88,-100);
+                OpenHelper(MethodicalText, 80, 0, 88, -100);
                 HelperNewLocation(-30, 150);
             }
             //Point HLT = new Point(HelperLabel.Location.X - 168, HelperLabel.Location.Y + 100);
@@ -926,9 +935,12 @@ namespace WindowsPedApp
             if (k >= 8)
             {
                 TestBoxResult.Text = "Результат: Вы удовлетворены работой, у вас высокий показатель.";
+
+                TestButtonOpenTestPanel2.Visible = false;
             }
             else
             {
+                TestButtonOpenTestPanel2.Visible = true;
                 if (k >= 5)
                 {
                     TestBoxResult.Text = "Результат: Есть что-то, что вас не устраивает в работе, средний показатель.";
@@ -1256,6 +1268,16 @@ namespace WindowsPedApp
         private void Clicked_To_Link(object sender, LinkClickedEventArgs e)
         {
             Process.Start(new ProcessStartInfo(e.LinkText) { UseShellExecute = true });
+        }
+
+        private void OpenTestPanel2(object sender, EventArgs e)
+        {
+            Text = "Test Recomendation";
+            CloseAll();
+            Test2TextBox.Text = TestRecomendation;
+            TestPanel2.Visible = true;
+            TestPanel2.Size = new Size(sizeDefault);
+            TestPanel2.Location = locationDefault;
         }
 
         //public class ClassTechnicalMaps
