@@ -1210,11 +1210,11 @@
             // TestButtonOpenTestPanel2
             // 
             TestButtonOpenTestPanel2.BackColor = SystemColors.ControlLight;
-            TestButtonOpenTestPanel2.Location = new Point(474, 558);
+            TestButtonOpenTestPanel2.Location = new Point(412, 521);
             TestButtonOpenTestPanel2.Name = "TestButtonOpenTestPanel2";
-            TestButtonOpenTestPanel2.Size = new Size(23, 62);
+            TestButtonOpenTestPanel2.Size = new Size(105, 33);
             TestButtonOpenTestPanel2.TabIndex = 42;
-            TestButtonOpenTestPanel2.Text = "=\r\n>\r\n=";
+            TestButtonOpenTestPanel2.Text = "Рекомендации";
             TestButtonOpenTestPanel2.UseVisualStyleBackColor = false;
             TestButtonOpenTestPanel2.Click += OpenTestPanel2;
             // 
@@ -1224,7 +1224,7 @@
             panel10.Controls.Add(RadioTB102);
             panel10.Location = new Point(410, 490);
             panel10.Name = "panel10";
-            panel10.Size = new Size(87, 61);
+            panel10.Size = new Size(87, 25);
             panel10.TabIndex = 41;
             // 
             // RadioTB101
@@ -1565,7 +1565,7 @@
             // TestButtonResult
             // 
             TestButtonResult.BackColor = SystemColors.ControlLight;
-            TestButtonResult.Location = new Point(410, 558);
+            TestButtonResult.Location = new Point(429, 558);
             TestButtonResult.Name = "TestButtonResult";
             TestButtonResult.Size = new Size(62, 62);
             TestButtonResult.TabIndex = 30;
