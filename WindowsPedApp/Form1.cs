@@ -189,6 +189,15 @@ namespace WindowsPedApp
             MainMenu.Location = locationDefault;
         }
 
+        private void LessonPointVisibleDefault()
+        {
+            LessonPoint11.Visible = true;
+            LessonPoint12.Visible = true;
+            LessonPoint13.Visible = true;
+            LessonPoint14.Visible = true;
+            LessonPoint15.Visible = true;
+            LessonPoint16.Visible=true;
+        }
         private void LessonPointDefault()
         {
             LessonPoint11.BackColor = CreateLesson.BackColor;
@@ -197,11 +206,11 @@ namespace WindowsPedApp
             LessonPoint14.BackColor = CreateLesson.BackColor;
             LessonPoint15.BackColor = CreateLesson.BackColor;
             LessonPoint16.BackColor = CreateLesson.BackColor;
-            LessonPoint11.Visible = true;
-            LessonPoint12.Visible = true;
-            LessonPoint13.Visible = true;
-            LessonPoint14.Visible = true;
-            LessonPoint15.Visible = true;
+            //LessonPoint11.Visible = true;
+            //LessonPoint12.Visible = true;
+            //LessonPoint13.Visible = true;
+            //LessonPoint14.Visible = true;
+            //LessonPoint15.Visible = true;
             //LessonPoint16.Visible=true;
             LessonButton1.BackColor = Color.Red;
             LessonButton1.Text = "";
@@ -374,6 +383,7 @@ namespace WindowsPedApp
             HelperNewLocation(-30, 56);
 
             LessonPointDefault();
+            LessonPointVisibleDefault();
             LessonNumber = 1;
             LessonPoint11.Text = "Урок усвоения новых знаний ";
             LessonPoint12.Text = "Урок комплексного применения знаний (урок закрепления изученного материала) ";
@@ -414,6 +424,7 @@ namespace WindowsPedApp
             MethodicalPanel.Visible = false;
             CreateLesson.Visible = true;
             LessonPointDefault();
+            LessonPointVisibleDefault();
             OpenHelper("Выберите урок в зависимости от его формы.", 54, -20, 80, -80);
             HelperNewLocation(-30, 56);
             LessonNumber = 2;
