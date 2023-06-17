@@ -190,12 +190,10 @@
             CheckYButton1 = new Button();
             CheckYLabel1 = new Label();
             CheckYTextBox1 = new RichTextBox();
-            CheckYButton8 = new Button();
+            CheckYTextBox7 = new RichTextBox();
+            CheckYTextBox6 = new RichTextBox();
             CheckYButton7 = new Button();
             CheckYButton6 = new Button();
-            CheckYTextBox6 = new RichTextBox();
-            CheckYTextBox7 = new RichTextBox();
-            CheckYTextBox8 = new RichTextBox();
             MainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)HelperPictureBox).BeginInit();
             Literatures.SuspendLayout();
@@ -2001,18 +1999,16 @@
             // CheckYourselfPanel
             // 
             CheckYourselfPanel.BackColor = Color.FromArgb(255, 224, 192);
+            CheckYourselfPanel.Controls.Add(CheckYTextBox7);
+            CheckYourselfPanel.Controls.Add(CheckYTextBox6);
+            CheckYourselfPanel.Controls.Add(CheckYButton7);
+            CheckYourselfPanel.Controls.Add(CheckYButton6);
             CheckYourselfPanel.Controls.Add(CheckYButtonReset);
             CheckYourselfPanel.Controls.Add(CheckYNextButton);
             CheckYourselfPanel.Controls.Add(CheckYTextBox4);
             CheckYourselfPanel.Controls.Add(CheckYTextBox3);
             CheckYourselfPanel.Controls.Add(CheckYTextBox2);
-            CheckYourselfPanel.Controls.Add(CheckYButton8);
-            CheckYourselfPanel.Controls.Add(CheckYButton7);
-            CheckYourselfPanel.Controls.Add(CheckYButton6);
             CheckYourselfPanel.Controls.Add(CheckYButton5);
-            CheckYourselfPanel.Controls.Add(CheckYTextBox8);
-            CheckYourselfPanel.Controls.Add(CheckYTextBox7);
-            CheckYourselfPanel.Controls.Add(CheckYTextBox6);
             CheckYourselfPanel.Controls.Add(CheckYTextBox5);
             CheckYourselfPanel.Controls.Add(CheckYButton4);
             CheckYourselfPanel.Controls.Add(CheckYButton3);
@@ -2033,6 +2029,7 @@
             CheckYButtonReset.Name = "CheckYButtonReset";
             CheckYButtonReset.Size = new Size(104, 46);
             CheckYButtonReset.TabIndex = 49;
+            CheckYButtonReset.Text = "Отмена";
             CheckYButtonReset.UseVisualStyleBackColor = false;
             CheckYButtonReset.Click += CheckYButtonReset_Click;
             // 
@@ -2052,12 +2049,12 @@
             CheckYTextBox4.BackColor = SystemColors.ControlLightLight;
             CheckYTextBox4.BorderStyle = BorderStyle.FixedSingle;
             CheckYTextBox4.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            CheckYTextBox4.Location = new Point(38, 251);
+            CheckYTextBox4.Location = new Point(14, 251);
             CheckYTextBox4.MaxLength = 150;
             CheckYTextBox4.Name = "CheckYTextBox4";
             CheckYTextBox4.ReadOnly = true;
             CheckYTextBox4.ScrollBars = RichTextBoxScrollBars.None;
-            CheckYTextBox4.Size = new Size(369, 46);
+            CheckYTextBox4.Size = new Size(284, 46);
             CheckYTextBox4.TabIndex = 47;
             CheckYTextBox4.Text = "";
             // 
@@ -2066,12 +2063,12 @@
             CheckYTextBox3.BackColor = SystemColors.ControlLightLight;
             CheckYTextBox3.BorderStyle = BorderStyle.FixedSingle;
             CheckYTextBox3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            CheckYTextBox3.Location = new Point(38, 191);
+            CheckYTextBox3.Location = new Point(14, 191);
             CheckYTextBox3.MaxLength = 150;
             CheckYTextBox3.Name = "CheckYTextBox3";
             CheckYTextBox3.ReadOnly = true;
             CheckYTextBox3.ScrollBars = RichTextBoxScrollBars.None;
-            CheckYTextBox3.Size = new Size(369, 46);
+            CheckYTextBox3.Size = new Size(284, 46);
             CheckYTextBox3.TabIndex = 46;
             CheckYTextBox3.Text = "";
             // 
@@ -2080,12 +2077,12 @@
             CheckYTextBox2.BackColor = SystemColors.ControlLightLight;
             CheckYTextBox2.BorderStyle = BorderStyle.FixedSingle;
             CheckYTextBox2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            CheckYTextBox2.Location = new Point(38, 131);
+            CheckYTextBox2.Location = new Point(14, 131);
             CheckYTextBox2.MaxLength = 150;
             CheckYTextBox2.Name = "CheckYTextBox2";
             CheckYTextBox2.ReadOnly = true;
             CheckYTextBox2.ScrollBars = RichTextBoxScrollBars.None;
-            CheckYTextBox2.Size = new Size(369, 46);
+            CheckYTextBox2.Size = new Size(284, 46);
             CheckYTextBox2.TabIndex = 45;
             CheckYTextBox2.Text = "";
             // 
@@ -2093,10 +2090,11 @@
             // 
             CheckYButton5.BackColor = SystemColors.ControlLight;
             CheckYButton5.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            CheckYButton5.Location = new Point(413, 308);
+            CheckYButton5.Location = new Point(304, 308);
             CheckYButton5.Name = "CheckYButton5";
-            CheckYButton5.Size = new Size(104, 46);
+            CheckYButton5.Size = new Size(185, 128);
             CheckYButton5.TabIndex = 41;
+            CheckYButton5.Text = "«Открытие» новых знаний первичное восприятие и усвоение нового теоретического учебного материала (правил, понятий, алгоритмов…)";
             CheckYButton5.UseVisualStyleBackColor = false;
             CheckYButton5.Click += CheckYButtonX_Click;
             // 
@@ -2105,22 +2103,22 @@
             CheckYTextBox5.BackColor = SystemColors.ControlLightLight;
             CheckYTextBox5.BorderStyle = BorderStyle.FixedSingle;
             CheckYTextBox5.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            CheckYTextBox5.Location = new Point(38, 308);
+            CheckYTextBox5.Location = new Point(14, 308);
             CheckYTextBox5.MaxLength = 150;
             CheckYTextBox5.Name = "CheckYTextBox5";
             CheckYTextBox5.ReadOnly = true;
             CheckYTextBox5.ScrollBars = RichTextBoxScrollBars.None;
-            CheckYTextBox5.Size = new Size(369, 46);
+            CheckYTextBox5.Size = new Size(284, 117);
             CheckYTextBox5.TabIndex = 37;
-            CheckYTextBox5.Text = "";
+            CheckYTextBox5.Text = "Рассказ одного обучающегося прерывается в любом месте и продолжается другим обучающимся. Прием применим в случае, когда предполагается развернутый, логически связный ответ.";
             // 
             // CheckYButton4
             // 
             CheckYButton4.BackColor = SystemColors.ControlLight;
             CheckYButton4.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            CheckYButton4.Location = new Point(413, 251);
+            CheckYButton4.Location = new Point(304, 251);
             CheckYButton4.Name = "CheckYButton4";
-            CheckYButton4.Size = new Size(104, 46);
+            CheckYButton4.Size = new Size(185, 46);
             CheckYButton4.TabIndex = 36;
             CheckYButton4.UseVisualStyleBackColor = false;
             CheckYButton4.Click += CheckYButtonX_Click;
@@ -2129,9 +2127,9 @@
             // 
             CheckYButton3.BackColor = SystemColors.ControlLight;
             CheckYButton3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            CheckYButton3.Location = new Point(413, 191);
+            CheckYButton3.Location = new Point(304, 191);
             CheckYButton3.Name = "CheckYButton3";
-            CheckYButton3.Size = new Size(104, 46);
+            CheckYButton3.Size = new Size(185, 46);
             CheckYButton3.TabIndex = 35;
             CheckYButton3.UseVisualStyleBackColor = false;
             CheckYButton3.Click += CheckYButtonX_Click;
@@ -2140,9 +2138,9 @@
             // 
             CheckYButton2.BackColor = SystemColors.ControlLight;
             CheckYButton2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            CheckYButton2.Location = new Point(413, 131);
+            CheckYButton2.Location = new Point(304, 131);
             CheckYButton2.Name = "CheckYButton2";
-            CheckYButton2.Size = new Size(104, 46);
+            CheckYButton2.Size = new Size(185, 46);
             CheckYButton2.TabIndex = 34;
             CheckYButton2.UseVisualStyleBackColor = false;
             CheckYButton2.Click += CheckYButtonX_Click;
@@ -2151,9 +2149,9 @@
             // 
             CheckYButton1.BackColor = SystemColors.ControlLight;
             CheckYButton1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            CheckYButton1.Location = new Point(413, 71);
+            CheckYButton1.Location = new Point(304, 71);
             CheckYButton1.Name = "CheckYButton1";
-            CheckYButton1.Size = new Size(104, 46);
+            CheckYButton1.Size = new Size(185, 46);
             CheckYButton1.TabIndex = 33;
             CheckYButton1.UseVisualStyleBackColor = false;
             CheckYButton1.Click += CheckYButtonX_Click;
@@ -2161,100 +2159,74 @@
             // CheckYLabel1
             // 
             CheckYLabel1.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            CheckYLabel1.Location = new Point(37, 29);
+            CheckYLabel1.Location = new Point(36, 4);
             CheckYLabel1.Name = "CheckYLabel1";
-            CheckYLabel1.Size = new Size(370, 33);
+            CheckYLabel1.Size = new Size(370, 65);
             CheckYLabel1.TabIndex = 32;
-            CheckYLabel1.Text = "Ы";
+            CheckYLabel1.Text = "Педагог дает студенту задание, а тот не хочет его выполнять и при \nэтом заявляет: «Я не хочу это делать!» -Какой должна быть реакция \nпедагога? ";
+            CheckYLabel1.TextAlign = ContentAlignment.BottomCenter;
             // 
             // CheckYTextBox1
             // 
             CheckYTextBox1.BackColor = SystemColors.ControlLightLight;
             CheckYTextBox1.BorderStyle = BorderStyle.FixedSingle;
             CheckYTextBox1.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            CheckYTextBox1.Location = new Point(38, 71);
+            CheckYTextBox1.Location = new Point(14, 85);
             CheckYTextBox1.MaxLength = 150;
             CheckYTextBox1.Name = "CheckYTextBox1";
             CheckYTextBox1.ReadOnly = true;
             CheckYTextBox1.ScrollBars = RichTextBoxScrollBars.None;
-            CheckYTextBox1.Size = new Size(369, 46);
+            CheckYTextBox1.Size = new Size(284, 46);
             CheckYTextBox1.TabIndex = 6;
             CheckYTextBox1.Text = "";
-            // 
-            // CheckYButton8
-            // 
-            CheckYButton8.BackColor = SystemColors.ControlLight;
-            CheckYButton8.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            CheckYButton8.Location = new Point(413, 488);
-            CheckYButton8.Name = "CheckYButton8";
-            CheckYButton8.Size = new Size(104, 46);
-            CheckYButton8.TabIndex = 44;
-            CheckYButton8.UseVisualStyleBackColor = false;
-            CheckYButton8.Click += CheckYButtonX_Click;
-            // 
-            // CheckYButton7
-            // 
-            CheckYButton7.BackColor = SystemColors.ControlLight;
-            CheckYButton7.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            CheckYButton7.Location = new Point(413, 428);
-            CheckYButton7.Name = "CheckYButton7";
-            CheckYButton7.Size = new Size(104, 46);
-            CheckYButton7.TabIndex = 43;
-            CheckYButton7.UseVisualStyleBackColor = false;
-            CheckYButton7.Click += CheckYButtonX_Click;
-            // 
-            // CheckYButton6
-            // 
-            CheckYButton6.BackColor = SystemColors.ControlLight;
-            CheckYButton6.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            CheckYButton6.Location = new Point(413, 368);
-            CheckYButton6.Name = "CheckYButton6";
-            CheckYButton6.Size = new Size(104, 46);
-            CheckYButton6.TabIndex = 42;
-            CheckYButton6.UseVisualStyleBackColor = false;
-            CheckYButton6.Click += CheckYButtonX_Click;
-            // 
-            // CheckYTextBox6
-            // 
-            CheckYTextBox6.BackColor = SystemColors.ControlLightLight;
-            CheckYTextBox6.BorderStyle = BorderStyle.FixedSingle;
-            CheckYTextBox6.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            CheckYTextBox6.Location = new Point(38, 368);
-            CheckYTextBox6.MaxLength = 150;
-            CheckYTextBox6.Name = "CheckYTextBox6";
-            CheckYTextBox6.ReadOnly = true;
-            CheckYTextBox6.ScrollBars = RichTextBoxScrollBars.None;
-            CheckYTextBox6.Size = new Size(369, 46);
-            CheckYTextBox6.TabIndex = 38;
-            CheckYTextBox6.Text = "";
             // 
             // CheckYTextBox7
             // 
             CheckYTextBox7.BackColor = SystemColors.ControlLightLight;
             CheckYTextBox7.BorderStyle = BorderStyle.FixedSingle;
             CheckYTextBox7.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            CheckYTextBox7.Location = new Point(38, 428);
+            CheckYTextBox7.Location = new Point(14, 503);
             CheckYTextBox7.MaxLength = 150;
             CheckYTextBox7.Name = "CheckYTextBox7";
             CheckYTextBox7.ReadOnly = true;
             CheckYTextBox7.ScrollBars = RichTextBoxScrollBars.None;
-            CheckYTextBox7.Size = new Size(369, 46);
-            CheckYTextBox7.TabIndex = 39;
+            CheckYTextBox7.Size = new Size(284, 46);
+            CheckYTextBox7.TabIndex = 53;
             CheckYTextBox7.Text = "";
             // 
-            // CheckYTextBox8
+            // CheckYTextBox6
             // 
-            CheckYTextBox8.BackColor = SystemColors.ControlLightLight;
-            CheckYTextBox8.BorderStyle = BorderStyle.FixedSingle;
-            CheckYTextBox8.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            CheckYTextBox8.Location = new Point(38, 488);
-            CheckYTextBox8.MaxLength = 150;
-            CheckYTextBox8.Name = "CheckYTextBox8";
-            CheckYTextBox8.ReadOnly = true;
-            CheckYTextBox8.ScrollBars = RichTextBoxScrollBars.None;
-            CheckYTextBox8.Size = new Size(369, 46);
-            CheckYTextBox8.TabIndex = 40;
-            CheckYTextBox8.Text = "";
+            CheckYTextBox6.BackColor = SystemColors.ControlLightLight;
+            CheckYTextBox6.BorderStyle = BorderStyle.FixedSingle;
+            CheckYTextBox6.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            CheckYTextBox6.Location = new Point(14, 443);
+            CheckYTextBox6.MaxLength = 150;
+            CheckYTextBox6.Name = "CheckYTextBox6";
+            CheckYTextBox6.ReadOnly = true;
+            CheckYTextBox6.ScrollBars = RichTextBoxScrollBars.None;
+            CheckYTextBox6.Size = new Size(284, 46);
+            CheckYTextBox6.TabIndex = 52;
+            CheckYTextBox6.Text = "";
+            // 
+            // CheckYButton7
+            // 
+            CheckYButton7.BackColor = SystemColors.ControlLight;
+            CheckYButton7.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            CheckYButton7.Location = new Point(304, 503);
+            CheckYButton7.Name = "CheckYButton7";
+            CheckYButton7.Size = new Size(185, 46);
+            CheckYButton7.TabIndex = 51;
+            CheckYButton7.UseVisualStyleBackColor = false;
+            // 
+            // CheckYButton6
+            // 
+            CheckYButton6.BackColor = SystemColors.ControlLight;
+            CheckYButton6.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            CheckYButton6.Location = new Point(304, 443);
+            CheckYButton6.Name = "CheckYButton6";
+            CheckYButton6.Size = new Size(185, 46);
+            CheckYButton6.TabIndex = 50;
+            CheckYButton6.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -2493,11 +2465,9 @@
         private RichTextBox CheckYTextBox2;
         private Button CheckYNextButton;
         private Button CheckYButtonReset;
-        private Button CheckYButton8;
-        private Button CheckYButton7;
-        private Button CheckYButton6;
-        private RichTextBox CheckYTextBox8;
         private RichTextBox CheckYTextBox7;
         private RichTextBox CheckYTextBox6;
+        private Button CheckYButton7;
+        private Button CheckYButton6;
     }
 }

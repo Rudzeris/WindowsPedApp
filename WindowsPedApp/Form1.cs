@@ -1,6 +1,7 @@
 ﻿using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Numerics;
 using System.Windows.Forms;
 
 namespace WindowsPedApp
@@ -1347,7 +1348,6 @@ namespace WindowsPedApp
             CheckYListButton.Add(CheckYButton5);
             CheckYListButton.Add(CheckYButton6);
             CheckYListButton.Add(CheckYButton7);
-            CheckYListButton.Add(CheckYButton8);
 
             CheckYListText.Add(CheckYTextBox1);
             CheckYListText.Add(CheckYTextBox2);
@@ -1356,7 +1356,6 @@ namespace WindowsPedApp
             CheckYListText.Add(CheckYTextBox5);
             CheckYListText.Add(CheckYTextBox6);
             CheckYListText.Add(CheckYTextBox7);
-            CheckYListText.Add(CheckYTextBox8);
         }
         private void OpenCheckYourself(object sender, EventArgs e)
         {
@@ -1367,9 +1366,12 @@ namespace WindowsPedApp
             checkYNum = 0;
             AddListCheckY();
             CheckY1();
+            foreach (var i in answerList)
+                i.Clear();
+            answerList.Clear();
         }
 
-        private void EnableCheckYourself(byte x)
+        private void EnableCheckYourself(byte x, Point location, Size size, int widthButtom)
         {
             for (byte i = 0; i < CheckYListText.Count && i < CheckYListButton.Count; i++)
             {
@@ -1382,16 +1384,37 @@ namespace WindowsPedApp
             {
                 CheckYListButton[i].Visible = true;
                 CheckYListText[i].Visible = true;
+                CheckYListText[i].Location = new Point(location.X, location.Y + (size.Height + 14) * i);
+                CheckYListText[i].Size = size;
+                CheckYListButton[i].Location = new Point(location.X + 4 + size.Width, location.Y + (size.Height + 14) * i);
+                CheckYListButton[i].Size = new Size(widthButtom, size.Height);
             }
         }
 
-        private void TextCheckYourself(List<string> texts, List<string> answers)
+        private void TextCheckYourself(List<string> texts, List<string> answers, bool randoms)
         {
             byte a, b, c, d;
             a = (byte)texts.Count;
             b = (byte)answers.Count;
             c = (byte)CheckYListButton.Count;
             d = (byte)CheckYListText.Count;
+            if (randoms)
+            {
+                // Создание генератора случайных чисел
+                Random random = new Random();
+
+                // Перемешивание элементов в списке
+                int n = answers.Count;
+                while (n > 1)
+                {
+                    n--;
+                    int k = random.Next(n + 1);
+                    string value = answers[k];
+                    answers[k] = answers[n];
+                    answers[n] = value;
+                }
+            }
+
             for (byte i = 0; i < a && i < b && i < c && i < d; i++)
             {
                 CheckYListButton[i].Text = answers[i];
@@ -1401,18 +1424,32 @@ namespace WindowsPedApp
 
         private void CheckedScoreCheckYourself()
         {
-            byte c, d;
-            c = (byte)CheckYListButton.Count;
-            d = (byte)CheckYListText.Count;
-            for (byte i = 0; i < c && i < d; i++)
-            {
+            byte a, b;
 
+            List<string> temp=new List<string>();
+            foreach(var i in answerList)
+            {
+                foreach(var j in i)
+                {
+                    temp.Add(j);
+                }
+            }
+            a = (byte)answer.Count;
+            b = (byte)answerList.Count;
+            for (byte i = 0; i < a && i < b; i++)
+            {
+                if (answer[i] == temp[i])
+                {
+                    checkScore++;
+                }
             }
         }
 
         private void CheckY1()
         {
+            CheckYLabel1.Size = new Size(370, 65);
             CheckYLabel1.Text = "В зависимости от дидактической цели урока, соотнесите между собой более подходящую формму занятий.";
+
             checkYNum = 1;
             List<string> texts = new List<string>();
             List<string> answers = new List<string>();
@@ -1431,12 +1468,18 @@ namespace WindowsPedApp
             //5
             texts.Add("Урок коррекции знаний (работа над ошибками)");
             answers.Add("Экзамен");
-            EnableCheckYourself((byte)texts.Count);
-            TextCheckYourself(texts, answers);
+
+            if (answerList.Count == checkYNum - 1)
+                answerList.Add(answers);
+
+            EnableCheckYourself((byte)texts.Count, new Point(14, 85), new Size(284, 60),185);
+            TextCheckYourself(texts, answers,true);
         }
-        private void CheckY2()
+        private void CheckY21()
         {
-            checkYNum = 2;
+            CheckYLabel1.Size = new Size(370, 65);
+            CheckYLabel1.Text = "Соотнесите между собой методические приёмы и этапы урока.";
+            checkYNum = 21;
             List<string> texts = new List<string>();
             List<string> answers = new List<string>();
             //1
@@ -1448,43 +1491,102 @@ namespace WindowsPedApp
             //3
             texts.Add("Преподаватель намеренно неполно раскрывает тему, предложив обучающимся задать дораскрывающие ее вопросы.");
             answers.Add("«Открытие» новых знаний первичное восприятие и усвоение нового теоретического учебного материала (правил, понятий, алгоритмов…)");
-            //4
-            texts.Add("");
-            answers.Add("");
-            //5
-            texts.Add("");
-            answers.Add("");
-            //6
-            texts.Add("");
-            answers.Add("");
-            //7
-            texts.Add("");
-            answers.Add("");
-            //8
-            texts.Add("");
-            answers.Add("");
-            EnableCheckYourself((byte)texts.Count);
-            TextCheckYourself(texts, answers);
+
+            if (answerList.Count == (checkYNum / 10 - 1))
+                answerList.Add(answers);
+
+            EnableCheckYourself((byte)texts.Count, new Point(14, 85), new Size(284, 128),185);
+            TextCheckYourself(texts, answers,true);
         }
+        private void CheckY22()
+        {
+            CheckYLabel1.Size = new Size(370, 65);
+            CheckYLabel1.Text = "Соотнесите между собой методические приёмы и этапы урока.";
+            checkYNum = 22;
+            List<string> texts = new List<string>();
+            List<string> answers = new List<string>();
+            //1
+            texts.Add("Студентам раздаются распечатанные интеллект – карты с отсутствующими связями, понятиями. Ребята восполняют интеллект-кату. Прием эффективен, если преподаватель при объяснении нового материала демонстрировал полностью заполненную интеллект-карту.");
+            answers.Add("Применение теоретических положений в условиях выполнения упражнений и решения задач");
+            //2
+            texts.Add("Студенты восстанавливают текстовый фрагмент, намеренно «поврежденный» преподавателем.");
+            answers.Add("Самостоятельное творческое использование сформированных умений и навыков");
+            //3
+            texts.Add("Обучающиеся подбирают (или придумывают) свои примеры, задачи, гипотезы, идеи, вопросы, связывающие последний изученный материал с любой ранее изученной темой, указанной преподавателем.");
+            answers.Add("Обобщение усвоенного и включение его в систему ранее усвоенных зун и ууд");
+
+            if (answerList.Count == checkYNum / 10 - 1)
+                foreach (var i in answers)
+                    answerList[checkYNum / 10 - 1].Add(i);
+
+            EnableCheckYourself((byte)texts.Count, new Point(14, 85), new Size(284, 141),185);
+            TextCheckYourself(texts, answers,true);
+        }
+        private void CheckY23()
+        {
+            CheckYLabel1.Size = new Size(370, 65);
+            CheckYLabel1.Text = "Соотнесите между собой методические приёмы и этапы урока.";
+            checkYNum = 23;
+            List<string> texts = new List<string>();
+            List<string> answers = new List<string>();
+            //1
+            texts.Add("Рассказ одного обучающегося прерывается в любом месте и продолжается другим обучающимся. Прием применим в случае, когда предполагается развернутый, логически связный ответ.");
+            answers.Add("Контроль за процессом и результатом учебной деятельности обучающихся");
+            //2
+            texts.Add("Обучающиеся моделируют или представляют свое понимание, действия в виде рисунка или схемы.");
+            answers.Add("Рефлексия деятельности");
+            //3
+            texts.Add("Предлагается тема урока и слова \"помощники\": Повторим; Изучим; Узнаем; Проверим. С помощью слов \"помощников\" учащиеся формулируют цели урока.");
+            answers.Add("Постановка целей урока, мотивация учебной деятельности");
+
+            if (answerList.Count == checkYNum / 10 - 1)
+                foreach (var i in answers)
+                    answerList[checkYNum / 10 - 1].Add(i);
+
+            EnableCheckYourself((byte)texts.Count, new Point(14, 85), new Size(284, 117),185);
+            TextCheckYourself(texts, answers,true);
+        }
+
+
+        
         private void CheckY3()
         {
-            checkYNum = 3;
-            EnableCheckYourself(4);
+            CheckYLabel1.Size = new Size(370, 65);
+            CheckYLabel1.Text = checkScore.ToString();
+            checkYNum = 23;
+            List<string> texts = new List<string>();
+            List<string> answers = new List<string>();
+            //1
+            texts.Add("");
+            answers.Add("");
+            //2
+            texts.Add("");
+            answers.Add("");
+            //3
+            texts.Add("");
+            answers.Add("");
+
+            if (answerList.Count == checkYNum / 10 - 1)
+                foreach (var i in answers)
+                    answerList[checkYNum / 10 - 1].Add(i);
+
+            EnableCheckYourself((byte)texts.Count, new Point(14, 85), new Size(284, 117),185);
+            TextCheckYourself(texts, answers,false);
         }
         private void CheckY4()
         {
             checkYNum = 4;
-            EnableCheckYourself(4);
+            //EnableCheckYourself(4);
         }
         private void CheckY5()
         {
             checkYNum = 5;
-            EnableCheckYourself(4);
+            // EnableCheckYourself(4);
         }
         private void CheckYEnd()
         {
             checkYNum = 0;
-            EnableCheckYourself(0);
+            //EnableCheckYourself(0);
         }
 
         private void CheckYButtonX_Click(object sender, EventArgs e)
@@ -1503,9 +1605,15 @@ namespace WindowsPedApp
             switch (checkYNum)
             {
                 case 1:
-                    CheckY2();
+                    CheckY21();
                     break;
-                case 2:
+                case 21:
+                    CheckY22();
+                    break;
+                case 22:
+                    CheckY23();
+                    break;
+                case 23:
                     CheckY3();
                     break;
                 case 3:
@@ -1529,7 +1637,7 @@ namespace WindowsPedApp
                     CheckY1();
                     break;
                 case 2:
-                    CheckY2();
+                    CheckY21();
                     break;
                 case 3:
                     CheckY3();
