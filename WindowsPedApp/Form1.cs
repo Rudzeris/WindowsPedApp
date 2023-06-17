@@ -104,14 +104,15 @@ namespace WindowsPedApp
             HelperPictureBox.Location = new Point(HelperPictureBox.Location.X + x, HelperPictureBox.Location.Y + y);
         }
 
-        private void OpenHelper(string str, int x = 0, int y = 0, int x2 = 0, int y2 = 0)
+        private void OpenHelper(string str, int xSize = 0, int ySize = 0, int xLocation = 0, int yLocation = 0)
         {
+            // Размер и местоположение меняется только для текста
             HelperPictureBox.Visible = true;
             HelperLabel.Visible = true;
             HelperButtonClose.Visible = true;
-            HelperLabel.Location = new Point(226 - x - x2, 230 - y - y2);
-            HelperLabel.Size = new Size(270 + x, 120 + y);
-            HelperButtonClose.Location = new Point(226 - x - x2, 230 - y - y2);
+            HelperLabel.Location = new Point(226 - xSize - xLocation, 230 - ySize - yLocation);
+            HelperLabel.Size = new Size(270 + xSize, 120 + ySize);
+            HelperButtonClose.Location = new Point(226 - xSize - xLocation, 230 - ySize - yLocation);
             HelperPictureBox.Location = new Point(389, 344);
             HelperLabel.Text = str;
 
@@ -176,6 +177,7 @@ namespace WindowsPedApp
             MotivationPanel.Visible = false;
             OpenTestPanel.Visible = false;
             TestPanel2.Visible = false;
+            CheckYourselfPanel.Visible = false;
         }
 
         private void OpenMainMenu()
@@ -196,7 +198,7 @@ namespace WindowsPedApp
             LessonPoint13.Visible = true;
             LessonPoint14.Visible = true;
             LessonPoint15.Visible = true;
-            LessonPoint16.Visible=true;
+            LessonPoint16.Visible = true;
         }
         private void LessonPointDefault()
         {
@@ -206,12 +208,6 @@ namespace WindowsPedApp
             LessonPoint14.BackColor = CreateLesson.BackColor;
             LessonPoint15.BackColor = CreateLesson.BackColor;
             LessonPoint16.BackColor = CreateLesson.BackColor;
-            //LessonPoint11.Visible = true;
-            //LessonPoint12.Visible = true;
-            //LessonPoint13.Visible = true;
-            //LessonPoint14.Visible = true;
-            //LessonPoint15.Visible = true;
-            //LessonPoint16.Visible=true;
             LessonButton1.BackColor = Color.Red;
             LessonButton1.Text = "";
         }
@@ -311,11 +307,13 @@ namespace WindowsPedApp
             MethodicalSelect = false;
             CloseAll();
             Text = "Menu";
-            OpenHelper(MenuHelperText);
-            HelperNewLocation(-50, -130);
+            OpenHelper(MenuHelperText, 0, 0, 0, 0);
+            HelperNewLocation(-50, -160);
             Menu.Visible = true;
             Menu.Size = new Size(sizeDefault);
             Menu.Location = locationDefault;
+            CheckYListButton.Clear();
+            CheckYListText.Clear();
         }
         private void MainMenuCloseHelper(object sender, EventArgs e)
         {
@@ -1291,49 +1289,258 @@ namespace WindowsPedApp
             TestPanel2.Location = locationDefault;
         }
 
-        //public class ClassTechnicalMaps
-        //{
-        //    public RichTextBox TTechnicalMap = new RichTextBox();
-        //    public RichTextBox TTeacher = new RichTextBox();
-        //    public RichTextBox TGroup = new RichTextBox();
-        //    public RichTextBox TSubject = new RichTextBox();
-        //    public RichTextBox TLessonTopic = new RichTextBox();
-        //    public DateTimePicker TDate = new DateTimePicker();
-        //    public RichTextBox TTask1 = new RichTextBox();
-        //    public RichTextBox TTask2 = new RichTextBox();
-        //    public RichTextBox TTask3 = new RichTextBox();
-        //    public RichTextBox TResult1 = new RichTextBox();
-        //    public RichTextBox TResult2 = new RichTextBox();
-        //    public RichTextBox TResult3 = new RichTextBox();
-        //    public RichTextBox TFCR1 = new RichTextBox();
-        //    public RichTextBox TFCR2 = new RichTextBox();
-        //    public RichTextBox TFCR3 = new RichTextBox();
-        //    public RichTextBox TResource1 = new RichTextBox();
-        //    public RichTextBox TResource2 = new RichTextBox();
-        //    public RichTextBox TTAPL1 = new RichTextBox();
-        //    public RichTextBox TTAPL2 = new RichTextBox();
-        //    public ClassTechnicalMaps()
-        //    {
-        //        TTechnicalMap.Text = "";
-        //        TTeacher.Text = "";
-        //        TGroup.Text = "";
-        //        TSubject.Text = "";
-        //        TLessonTopic.Text = "";
-        //        TDate.Text = "";
-        //        TTask1.Text = "";
-        //        TTask2.Text = "";
-        //        TTask3.Text = "";
-        //        TResult1.Text = "";
-        //        TResult2.Text = "";
-        //        TResult3.Text = "";
-        //        TFCR1.Text = "";
-        //        TFCR2.Text = "";
-        //        TFCR3.Text = "";
-        //        TResource1.Text = "";
-        //        TResource2.Text = "";
-        //        TTAPL1.Text = "";
-        //        TTAPL2.Text = "";
-        //    }
-        //};
+        // -------------------- Проверь себя ------------------------
+        List<Button> CheckYListButton = new List<Button>();
+        List<RichTextBox> CheckYListText = new List<RichTextBox>();
+        List<string> answer = new List<string>();
+        List<List<string>> answerList = new List<List<string>>();
+        byte checkYNum = 0; // номер задания
+        byte checkScore = 0; // Очки
+
+        private void CreateAnswerListCheckYourself()
+        {
+            foreach (var i in answerList)
+                i.Clear();
+            answerList.Clear();
+
+            List<string> answers = new List<string>();
+            //1
+            answer.Clear();
+            answers.Add("Лекция");
+            answers.Add("Урок-суд");
+            answers.Add("Диспут");
+            answers.Add("Коллоквиум");
+            answers.Add("Экзамен");
+
+            answerList.Add(answers);
+
+            //2
+            answer.Clear();
+            answers.Add("");
+
+            answerList.Add(answers);
+
+            //3
+            answer.Clear();
+            answers.Add("");
+
+            answerList.Add(answers);
+
+            //4
+            answer.Clear();
+            answers.Add("");
+
+            answerList.Add(answers);
+
+            //5
+            answer.Clear();
+            answers.Add("");
+
+            answerList.Add(answers);
+        }
+        private void AddListCheckY()
+        {
+            CheckYListButton.Add(CheckYButton1);
+            CheckYListButton.Add(CheckYButton2);
+            CheckYListButton.Add(CheckYButton3);
+            CheckYListButton.Add(CheckYButton4);
+            CheckYListButton.Add(CheckYButton5);
+            CheckYListButton.Add(CheckYButton6);
+            CheckYListButton.Add(CheckYButton7);
+            CheckYListButton.Add(CheckYButton8);
+
+            CheckYListText.Add(CheckYTextBox1);
+            CheckYListText.Add(CheckYTextBox2);
+            CheckYListText.Add(CheckYTextBox3);
+            CheckYListText.Add(CheckYTextBox4);
+            CheckYListText.Add(CheckYTextBox5);
+            CheckYListText.Add(CheckYTextBox6);
+            CheckYListText.Add(CheckYTextBox7);
+            CheckYListText.Add(CheckYTextBox8);
+        }
+        private void OpenCheckYourself(object sender, EventArgs e)
+        {
+            Text = "Check Youself";
+            CloseAll();
+            CheckYourselfPanel.Visible = true;
+            CheckYourselfPanel.Location = locationDefault;
+            checkYNum = 0;
+            AddListCheckY();
+            CheckY1();
+        }
+
+        private void EnableCheckYourself(byte x)
+        {
+            for (byte i = 0; i < CheckYListText.Count && i < CheckYListButton.Count; i++)
+            {
+                CheckYListButton[i].Visible = false;
+                CheckYListButton[i].Enabled = true;
+                CheckYListButton[i].BackColor = defaultButtonColor;
+                CheckYListText[i].Visible = false;
+            }
+            for (byte i = 0; i < x && i < CheckYListText.Count && i < CheckYListButton.Count; i++)
+            {
+                CheckYListButton[i].Visible = true;
+                CheckYListText[i].Visible = true;
+            }
+        }
+
+        private void TextCheckYourself(List<string> texts, List<string> answers)
+        {
+            byte a, b, c, d;
+            a = (byte)texts.Count;
+            b = (byte)answers.Count;
+            c = (byte)CheckYListButton.Count;
+            d = (byte)CheckYListText.Count;
+            for (byte i = 0; i < a && i < b && i < c && i < d; i++)
+            {
+                CheckYListButton[i].Text = answers[i];
+                CheckYListText[i].Text = texts[i];
+            }
+        }
+
+        private void CheckedScoreCheckYourself()
+        {
+            byte c, d;
+            c = (byte)CheckYListButton.Count;
+            d = (byte)CheckYListText.Count;
+            for (byte i = 0; i < c && i < d; i++)
+            {
+
+            }
+        }
+
+        private void CheckY1()
+        {
+            CheckYLabel1.Text = "В зависимости от дидактической цели урока, соотнесите между собой более подходящую формму занятий.";
+            checkYNum = 1;
+            List<string> texts = new List<string>();
+            List<string> answers = new List<string>();
+            //1
+            texts.Add("Урок усвоения новых знаний");
+            answers.Add("Лекция");
+            //2
+            texts.Add("Урок комплексного применения знаний (урок закрепления изученного материала)");
+            answers.Add("Урок-суд");
+            //3
+            texts.Add("Урок рефлексии по ФГОС (систематизации и обобщения полученных знаний)");
+            answers.Add("Диспут");
+            //4
+            texts.Add("Урок развивающего контроля");
+            answers.Add("Коллоквиум");
+            //5
+            texts.Add("Урок коррекции знаний (работа над ошибками)");
+            answers.Add("Экзамен");
+            EnableCheckYourself((byte)texts.Count);
+            TextCheckYourself(texts, answers);
+        }
+        private void CheckY2()
+        {
+            checkYNum = 2;
+            List<string> texts = new List<string>();
+            List<string> answers = new List<string>();
+            //1
+            texts.Add("Преподаватель начинает урок с пословицы или поговорки, относящейся к теме урока.");
+            answers.Add("Организационные момент");
+            //2
+            texts.Add("Преподаватель вместе с обучающимися обсуждает вопрос: насколько качественно выполнено домашнее задание.");
+            answers.Add("Актуализация знаний в начале урока или в процессе его по мере необходимости");
+            //3
+            texts.Add("Преподаватель намеренно неполно раскрывает тему, предложив обучающимся задать дораскрывающие ее вопросы.");
+            answers.Add("«Открытие» новых знаний первичное восприятие и усвоение нового теоретического учебного материала (правил, понятий, алгоритмов…)");
+            //4
+            texts.Add("");
+            answers.Add("");
+            //5
+            texts.Add("");
+            answers.Add("");
+            //6
+            texts.Add("");
+            answers.Add("");
+            //7
+            texts.Add("");
+            answers.Add("");
+            //8
+            texts.Add("");
+            answers.Add("");
+            EnableCheckYourself((byte)texts.Count);
+            TextCheckYourself(texts, answers);
+        }
+        private void CheckY3()
+        {
+            checkYNum = 3;
+            EnableCheckYourself(4);
+        }
+        private void CheckY4()
+        {
+            checkYNum = 4;
+            EnableCheckYourself(4);
+        }
+        private void CheckY5()
+        {
+            checkYNum = 5;
+            EnableCheckYourself(4);
+        }
+        private void CheckYEnd()
+        {
+            checkYNum = 0;
+            EnableCheckYourself(0);
+        }
+
+        private void CheckYButtonX_Click(object sender, EventArgs e)
+        {
+            string buttonText = ((Button)sender).Text;
+            if (!answer.Contains(buttonText))
+            {
+                answer.Add(buttonText);
+                ((Button)sender).Enabled = false;
+                ((Button)sender).BackColor = selectButtonColor;
+            }
+        }
+
+        private void CheckYNextButton_Click(object sender, EventArgs e)
+        {
+            switch (checkYNum)
+            {
+                case 1:
+                    CheckY2();
+                    break;
+                case 2:
+                    CheckY3();
+                    break;
+                case 3:
+                    CheckY4();
+                    break;
+                case 4:
+                    CheckY5();
+                    break;
+                case 5:
+                    CheckYEnd();
+                    break;
+            }
+        }
+
+        private void CheckYButtonReset_Click(object sender, EventArgs e)
+        {
+            answer.Clear();
+            switch (checkYNum)
+            {
+                case 1:
+                    CheckY1();
+                    break;
+                case 2:
+                    CheckY2();
+                    break;
+                case 3:
+                    CheckY3();
+                    break;
+                case 4:
+                    CheckY4();
+                    break;
+                case 5:
+                    CheckY5();
+                    break;
+            }
+        }
     }
 }
