@@ -1293,52 +1293,15 @@ namespace WindowsPedApp
         // -------------------- Проверь себя ------------------------
         List<Button> CheckYListButton = new List<Button>();
         List<RichTextBox> CheckYListText = new List<RichTextBox>();
+        List<string> answertemp = new List<string>();
         List<string> answer = new List<string>();
-        List<List<string>> answerList = new List<List<string>>();
+        List<string> answerList = new List<string>();
+        List<string> checkY3 = new List<string>();
         byte checkYNum = 0; // номер задания
         byte checkScore = 0; // Очки
+        byte maxCheckedY = 0;
+        const bool isItRandom = true;
 
-        private void CreateAnswerListCheckYourself()
-        {
-            foreach (var i in answerList)
-                i.Clear();
-            answerList.Clear();
-
-            List<string> answers = new List<string>();
-            //1
-            answer.Clear();
-            answers.Add("Лекция");
-            answers.Add("Урок-суд");
-            answers.Add("Диспут");
-            answers.Add("Коллоквиум");
-            answers.Add("Экзамен");
-
-            answerList.Add(answers);
-
-            //2
-            answer.Clear();
-            answers.Add("");
-
-            answerList.Add(answers);
-
-            //3
-            answer.Clear();
-            answers.Add("");
-
-            answerList.Add(answers);
-
-            //4
-            answer.Clear();
-            answers.Add("");
-
-            answerList.Add(answers);
-
-            //5
-            answer.Clear();
-            answers.Add("");
-
-            answerList.Add(answers);
-        }
         private void AddListCheckY()
         {
             CheckYListButton.Add(CheckYButton1);
@@ -1366,9 +1329,7 @@ namespace WindowsPedApp
             checkYNum = 0;
             AddListCheckY();
             CheckY1();
-            foreach (var i in answerList)
-                i.Clear();
-            answerList.Clear();
+            //answerList.Clear();
         }
 
         private void EnableCheckYourself(byte x, Point location, Size size, int widthButtom)
@@ -1384,14 +1345,14 @@ namespace WindowsPedApp
             {
                 CheckYListButton[i].Visible = true;
                 CheckYListText[i].Visible = true;
-                CheckYListText[i].Location = new Point(location.X, location.Y + (size.Height + 14) * i);
+                CheckYListText[i].Location = new Point(location.X, location.Y + (size.Height + 2) * i);
                 CheckYListText[i].Size = size;
-                CheckYListButton[i].Location = new Point(location.X + 4 + size.Width, location.Y + (size.Height + 14) * i);
+                CheckYListButton[i].Location = new Point(location.X + 4 + size.Width, location.Y + (size.Height + 2) * i);
                 CheckYListButton[i].Size = new Size(widthButtom, size.Height);
             }
         }
 
-        private void TextCheckYourself(List<string> texts, List<string> answers, bool randoms)
+        private void TextCheckYourself(List<string> answers, List<string> texts, bool randoms)
         {
             byte a, b, c, d;
             a = (byte)texts.Count;
@@ -1425,24 +1386,19 @@ namespace WindowsPedApp
         private void CheckedScoreCheckYourself()
         {
             byte a, b;
-
-            List<string> temp=new List<string>();
-            foreach(var i in answerList)
-            {
-                foreach(var j in i)
-                {
-                    temp.Add(j);
-                }
-            }
+            checkScore = 0;
             a = (byte)answer.Count;
             b = (byte)answerList.Count;
             for (byte i = 0; i < a && i < b; i++)
             {
-                if (answer[i] == temp[i])
+                if (answer[i] == answerList[i])
                 {
                     checkScore++;
                 }
             }
+           // MessageBox.Show(a.ToString() + ", " + b.ToString()+", ", checkScore.ToString());
+
+            //CheckYLabel1.Text += ", " + checkScore.ToString();
         }
 
         private void CheckY1()
@@ -1450,7 +1406,7 @@ namespace WindowsPedApp
             CheckYLabel1.Size = new Size(370, 65);
             CheckYLabel1.Text = "В зависимости от дидактической цели урока, соотнесите между собой более подходящую формму занятий.";
 
-            checkYNum = 1;
+            checkYNum += 1;
             List<string> texts = new List<string>();
             List<string> answers = new List<string>();
             //1
@@ -1469,17 +1425,22 @@ namespace WindowsPedApp
             texts.Add("Урок коррекции знаний (работа над ошибками)");
             answers.Add("Экзамен");
 
-            if (answerList.Count == checkYNum - 1)
-                answerList.Add(answers);
+            // string xy = (answerList.Count == checkYNum - 1).ToString() + " = " + (answerList.Count).ToString() + " == " + checkYNum.ToString();
+            if(checkYNum==1)
+            foreach (var i in answers)
+            {
+                answerList.Add(i);
+            }
 
-            EnableCheckYourself((byte)texts.Count, new Point(14, 85), new Size(284, 60),185);
-            TextCheckYourself(texts, answers,true);
+            EnableCheckYourself((byte)texts.Count, new Point(14, 85), new Size(284, 60), 185);
+            TextCheckYourself(answers, texts, isItRandom);
+            checkYNum = 1;
         }
         private void CheckY21()
         {
             CheckYLabel1.Size = new Size(370, 65);
             CheckYLabel1.Text = "Соотнесите между собой методические приёмы и этапы урока.";
-            checkYNum = 21;
+            checkYNum += 1;
             List<string> texts = new List<string>();
             List<string> answers = new List<string>();
             //1
@@ -1492,17 +1453,20 @@ namespace WindowsPedApp
             texts.Add("Преподаватель намеренно неполно раскрывает тему, предложив обучающимся задать дораскрывающие ее вопросы.");
             answers.Add("«Открытие» новых знаний первичное восприятие и усвоение нового теоретического учебного материала (правил, понятий, алгоритмов…)");
 
-            if (answerList.Count == (checkYNum / 10 - 1))
-                answerList.Add(answers);
-
-            EnableCheckYourself((byte)texts.Count, new Point(14, 85), new Size(284, 128),185);
-            TextCheckYourself(texts, answers,true);
+            if (checkYNum == 21)
+                foreach (var i in answers)
+            {
+                answerList.Add(i);
+            }
+            EnableCheckYourself((byte)texts.Count, new Point(14, 85), new Size(284, 141), 185);
+            TextCheckYourself(answers, texts, isItRandom);
+            checkYNum = 21;
         }
         private void CheckY22()
         {
             CheckYLabel1.Size = new Size(370, 65);
             CheckYLabel1.Text = "Соотнесите между собой методические приёмы и этапы урока.";
-            checkYNum = 22;
+            checkYNum += 1;
             List<string> texts = new List<string>();
             List<string> answers = new List<string>();
             //1
@@ -1515,18 +1479,21 @@ namespace WindowsPedApp
             texts.Add("Обучающиеся подбирают (или придумывают) свои примеры, задачи, гипотезы, идеи, вопросы, связывающие последний изученный материал с любой ранее изученной темой, указанной преподавателем.");
             answers.Add("Обобщение усвоенного и включение его в систему ранее усвоенных зун и ууд");
 
-            if (answerList.Count == checkYNum / 10 - 1)
+            if (checkYNum == 22)
                 foreach (var i in answers)
-                    answerList[checkYNum / 10 - 1].Add(i);
+            {
+                answerList.Add(i);
+            }
 
-            EnableCheckYourself((byte)texts.Count, new Point(14, 85), new Size(284, 141),185);
-            TextCheckYourself(texts, answers,true);
+            EnableCheckYourself((byte)texts.Count, new Point(14, 85), new Size(284, 141), 185);
+            TextCheckYourself(answers, texts, isItRandom);
+            checkYNum = 22;
         }
         private void CheckY23()
         {
             CheckYLabel1.Size = new Size(370, 65);
             CheckYLabel1.Text = "Соотнесите между собой методические приёмы и этапы урока.";
-            checkYNum = 23;
+            checkYNum +=1;
             List<string> texts = new List<string>();
             List<string> answers = new List<string>();
             //1
@@ -1539,105 +1506,276 @@ namespace WindowsPedApp
             texts.Add("Предлагается тема урока и слова \"помощники\": Повторим; Изучим; Узнаем; Проверим. С помощью слов \"помощников\" учащиеся формулируют цели урока.");
             answers.Add("Постановка целей урока, мотивация учебной деятельности");
 
-            if (answerList.Count == checkYNum / 10 - 1)
+            if (checkYNum == 23)
                 foreach (var i in answers)
-                    answerList[checkYNum / 10 - 1].Add(i);
+            {
+                answerList.Add(i);
+            }
 
-            EnableCheckYourself((byte)texts.Count, new Point(14, 85), new Size(284, 117),185);
-            TextCheckYourself(texts, answers,true);
+            EnableCheckYourself((byte)texts.Count, new Point(14, 85), new Size(284, 117), 185);
+            TextCheckYourself(answers, texts, isItRandom);
+            checkYNum = 23;
         }
 
 
-        
+
         private void CheckY3()
         {
-            CheckYLabel1.Size = new Size(370, 65);
-            CheckYLabel1.Text = checkScore.ToString();
-            checkYNum = 23;
+            checkYNum = 3;
+            CheckYLabel1.Size = new Size(370, 65 + 50);
+            CheckYLabel1.Text = "Педагог дает студенту задание, а тот не хочет его выполнять и при \r\nэтом заявляет: «Я не хочу это делать!» -Какой должна быть реакция \r\nпедагога? ";
             List<string> texts = new List<string>();
-            List<string> answers = new List<string>();
-            //1
-            texts.Add("");
-            answers.Add("");
-            //2
-            texts.Add("");
-            answers.Add("");
-            //3
-            texts.Add("");
-            answers.Add("");
+            texts.Add("пусто");
+            texts.Add("пусто");
+            texts.Add("пусто");
+            texts.Add("пусто");
+            texts.Add("пусто");
+            texts.Add("пусто");
+            checkY3.Clear();
+            checkY3.Add("«Не хочешь -заставим!»");
+            checkY3.Add("«Для чего же ты тогда пришел учиться?»");
+            checkY3.Add("«Тем хуже для тебя, оставайся неучем. Твое поведение похоже на \r\nповедение человека, который назло своему лицу хотел бы отрезать себе \r\nнос.»");
+            checkY3.Add("«Ты отдаешь себе отчет в том, чем это может для тебя окончиться?»");
+            checkY3.Add("«Не мог бы ты объяснить, почему?»");
+            checkY3.Add("«Давай сядем и обсудим -может быть, ты и прав»");
 
-            if (answerList.Count == checkYNum / 10 - 1)
-                foreach (var i in answers)
-                    answerList[checkYNum / 10 - 1].Add(i);
+            maxCheckedY = 2;
 
-            EnableCheckYourself((byte)texts.Count, new Point(14, 85), new Size(284, 117),185);
-            TextCheckYourself(texts, answers,false);
+            EnableCheckYourself((byte)texts.Count, new Point(14, 85 + 44), new Size(0, 65), 185 + 284);
+            TextCheckYourself(checkY3, texts, isItRandom);
         }
         private void CheckY4()
         {
             checkYNum = 4;
-            //EnableCheckYourself(4);
+            CheckYLabel1.Size = new Size(370, 65 + 127);
+            CheckYLabel1.Text = "Студент разочарован своими учебными успехами, сомневается в своих \r\nспособностях и в том, что ему когда-либо удастся как следует понять и \r\nусвоить материал, и говорит педагогу: «Как вы думаете, удастся ли мне \r\nкогда-нибудь учиться на отлично и не отставать от остальных ребят?» -\r\nЧто должен на это ему ответить учитель?";
+            List<string> texts = new List<string>();
+            texts.Add("пусто");
+            texts.Add("пусто");
+            texts.Add("пусто");
+            texts.Add("пусто");
+            texts.Add("пусто");
+            texts.Add("пусто");
+            checkY3.Clear();
+            checkY3.Add("«Если честно сказать -сомневаюсь»");
+            checkY3.Add("«О, да, конечно, в этом ты можешь не сомневаться»");
+            checkY3.Add("«У тебя прекрасные способности, и я связываю с тобой большие \r\nнадежды»");
+            checkY3.Add("«Почему ты сомневаешься в себе?»");
+            checkY3.Add("«Давай поговорим и выясним проблемы»");
+            checkY3.Add("«Многое зависит от того, как мы с тобой будем работать»");
+
+
+            maxCheckedY = 2;
+
+            EnableCheckYourself((byte)texts.Count, new Point(14, 85 + 125), new Size(0, 42), 185 + 284);
+            TextCheckYourself(checkY3, texts, isItRandom);
         }
         private void CheckY5()
         {
             checkYNum = 5;
-            // EnableCheckYourself(4);
-        }
-        private void CheckYEnd()
-        {
-            checkYNum = 0;
-            //EnableCheckYourself(0);
+            CheckYLabel1.Size = new Size(370, 65 + 50);
+            CheckYLabel1.Text = "Студент, выразив педагогу свои сомнения по поводу возможности \r\nхорошего усвоения преподаваемого им предмета, говорит: «Я сказал \r\nвам о том, что меня беспокоит. Теперь вы скажите, в чем причина этого \r\nи как мне быть дальше?» -Что должен на это ответить педагог? ";
+            List<string> texts = new List<string>();
+            texts.Add("пусто");
+            texts.Add("пусто");
+            texts.Add("пусто");
+            texts.Add("пусто");
+            texts.Add("пусто");
+            texts.Add("пусто");
+            checkY3.Clear();
+            checkY3.Add("«У тебя, как мне кажется, комплекс неполноценности».");
+            checkY3.Add("«У тебя нет никаких оснований для беспокойства»");
+            checkY3.Add("«Прежде, чем я смогу высказать обоснованное мнение, мне \r\nнеобходимо лучше разобраться в сути проблемы»");
+            checkY3.Add("«Я не готов (а) сейчас дать тебе точный ответ, мне надо подумать»");
+            checkY3.Add("«Давай подождем, поработаем и вернемся к обсуждению этой \r\nпроблемы через некоторое время. Я думаю, что нам удастся ее \r\nрешить»");
+            checkY3.Add("«Не волнуйся, и у меня в свое время ничего не получалось»");
+
+            maxCheckedY = 2;
+
+            EnableCheckYourself((byte)texts.Count, new Point(14, 85 + 44), new Size(0, 65), 185 + 284);
+            TextCheckYourself(checkY3, texts, isItRandom);
         }
 
         private void CheckYButtonX_Click(object sender, EventArgs e)
         {
-            string buttonText = ((Button)sender).Text;
-            if (!answer.Contains(buttonText))
+            if (checkYNum >= 3 && checkYNum <= 5)
             {
-                answer.Add(buttonText);
+                byte temp = 0;
+                foreach (var i in CheckYListButton)
+                {
+                    if (!i.Visible) break;
+                    if (!i.Enabled)
+                    {
+                        temp += 1;
+                    }
+                }
+                if (temp == 2) return;
+            }
+            string buttonText = ((Button)sender).Text;
+            if (!answertemp.Contains(buttonText))
+            {
+                answertemp.Add(buttonText);
                 ((Button)sender).Enabled = false;
                 ((Button)sender).BackColor = selectButtonColor;
             }
+
         }
 
         private void CheckYNextButton_Click(object sender, EventArgs e)
         {
+
+            if (!(checkYNum >= 3 & checkYNum <= 5))
+            {
+                //MessageBox.Show("1Next");
+
+                bool temp = true;
+                foreach (var i in CheckYListButton)
+                {
+                    if (!i.Visible) break;
+                    if (i.Enabled)
+                    {
+                        temp = false;
+                        break;
+                    }
+                }
+                if (!temp) return;
+            }
+            else
+            {
+                //MessageBox.Show("2Next");
+
+                byte temp = 0;
+                foreach (var i in CheckYListButton)
+                {
+                    if (!i.Visible) break;
+                    if (!i.Enabled)
+                    {
+                        temp += 1;
+                    }
+                }
+                if (temp != 2) return;
+                temp = 4;
+                //MessageBox.Show("3Next");
+
+                for (byte i = 0; i < checkY3.Count; i++)
+                {
+                    foreach (var j in answer)
+                    {
+                        if (checkY3[i] == j)
+                        {
+                            temp += (byte)(i / 2);
+                        }
+                    }
+                }
+                checkScore += (byte)(temp / 2);
+            }
+            //MessageBox.Show(checkYNum.ToString());
+
+            bool information = false;
             switch (checkYNum)
             {
                 case 1:
+                    //MessageBox.Show("1CaseNext");
+                    if (information)
+                    {
+                        CheckedScoreCheckYourself();
+                        MessageBox.Show("Вы набрали: " + checkScore.ToString() +
+                            " очков из " + (answerList.Count).ToString()
+                            );
+                    }
+                    foreach (var i in answertemp)
+                    {
+                        answer.Add(i);
+                    }
+                    checkYNum = 20;
                     CheckY21();
                     break;
                 case 21:
+                    if (information) { 
+                        CheckedScoreCheckYourself();
+                    MessageBox.Show("Вы набрали: " + checkScore.ToString() +
+                        " очков из " + (answerList.Count).ToString()
+                        );
+                    }
+                    foreach (var i in answertemp)
+                    {
+                        answer.Add(i);
+                    }
                     CheckY22();
                     break;
                 case 22:
+                    if (information)
+                    {
+                        CheckedScoreCheckYourself();
+                        MessageBox.Show("Вы набрали: " + checkScore.ToString() +
+                            " очков из " + (answerList.Count).ToString()
+                            );
+                    }
+                    foreach (var i in answertemp)
+                    {
+                        answer.Add(i);
+                    }
                     CheckY23();
                     break;
                 case 23:
+                    if (information)
+                    {
+                        CheckedScoreCheckYourself();
+                        MessageBox.Show("Вы набрали: " + checkScore.ToString() +
+                            " очков из " + (answerList.Count).ToString()
+                            );
+                    }
+                    foreach (var i in answertemp)
+                    {
+                        answer.Add(i);
+                    }
+                    checkYNum = 2;
                     CheckY3();
                     break;
                 case 3:
+                    if (information)
+                    {
+                        MessageBox.Show("Вы набрали: " + checkScore.ToString() +
+                        " очков из " + (answerList.Count + 4 * 1).ToString()
+                        );
+                    }
                     CheckY4();
                     break;
                 case 4:
+                    if (information)
+                    {
+                        MessageBox.Show("Вы набрали: " + checkScore.ToString() +
+                        " очков из " + (answerList.Count + 4 * 2).ToString()
+                        );
+                    }
                     CheckY5();
                     break;
                 case 5:
-                    CheckYEnd();
+                    MessageBox.Show("Вы набрали: " + checkScore.ToString() +
+                        " очков из " + (answerList.Count + 4 * 3).ToString()
+                        );
+                    OpenMenu(sender, e);
                     break;
             }
         }
 
         private void CheckYButtonReset_Click(object sender, EventArgs e)
         {
-            answer.Clear();
+            //MessageBox.Show("Reset");
+            answertemp.Clear();
             switch (checkYNum)
             {
                 case 1:
                     CheckY1();
                     break;
-                case 2:
+                case 21:
                     CheckY21();
+                    break;
+                case 22:
+                    CheckY22();
+                    break;
+                case 23:
+                    CheckY23();
                     break;
                 case 3:
                     CheckY3();

@@ -2,7 +2,8 @@
   "profiles": {
     "WindowsPedApp": {
       "commandName": "Project",
-      "workingDirectory": "D:\\Programming\\WindowsPedApp\\WindowsPedApp\\bin\\Debug\\net6.0-windows"
+      "nativeDebugging": true,
+      "sqlDebugging": false
     }
   }
 }
