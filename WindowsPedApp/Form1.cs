@@ -272,6 +272,9 @@ namespace WindowsPedApp
             else if (Text == "Test Recomendation")
             {
                 OpenOther(sender, e);
+            } else if (Text == "Check Youself")
+            {
+                OpenMenu(sender, e);
             }
         }
         private void OpenInstruction(object sender, EventArgs e)
@@ -1327,6 +1330,10 @@ namespace WindowsPedApp
             CheckYourselfPanel.Visible = true;
             CheckYourselfPanel.Location = locationDefault;
             checkYNum = 0;
+            answertemp.Clear();
+            answer.Clear();
+            answerList.Clear();
+            checkY3.Clear();
             AddListCheckY();
             CheckY1();
             //answerList.Clear();
@@ -1352,8 +1359,9 @@ namespace WindowsPedApp
             }
         }
 
-        private void TextCheckYourself(List<string> answers, List<string> texts, bool randoms)
+        private void TextCheckYourself(List<string> temps, List<string> texts, bool randoms)
         {
+            List<string> answers = new List<string>(temps);
             byte a, b, c, d;
             a = (byte)texts.Count;
             b = (byte)answers.Count;
@@ -1396,7 +1404,7 @@ namespace WindowsPedApp
                     checkScore++;
                 }
             }
-           // MessageBox.Show(a.ToString() + ", " + b.ToString()+", ", checkScore.ToString());
+            //MessageBox.Show(a.ToString() + ", " + b.ToString()+", ", checkScore.ToString());
 
             //CheckYLabel1.Text += ", " + checkScore.ToString();
         }
@@ -1426,11 +1434,11 @@ namespace WindowsPedApp
             answers.Add("Экзамен");
 
             // string xy = (answerList.Count == checkYNum - 1).ToString() + " = " + (answerList.Count).ToString() + " == " + checkYNum.ToString();
-            if(checkYNum==1)
-            foreach (var i in answers)
-            {
-                answerList.Add(i);
-            }
+            if (checkYNum == 1)
+                foreach (var i in answers)
+                {
+                    answerList.Add(i);
+                }
 
             EnableCheckYourself((byte)texts.Count, new Point(14, 85), new Size(284, 60), 185);
             TextCheckYourself(answers, texts, isItRandom);
@@ -1455,9 +1463,9 @@ namespace WindowsPedApp
 
             if (checkYNum == 21)
                 foreach (var i in answers)
-            {
-                answerList.Add(i);
-            }
+                {
+                    answerList.Add(i);
+                }
             EnableCheckYourself((byte)texts.Count, new Point(14, 85), new Size(284, 141), 185);
             TextCheckYourself(answers, texts, isItRandom);
             checkYNum = 21;
@@ -1481,9 +1489,9 @@ namespace WindowsPedApp
 
             if (checkYNum == 22)
                 foreach (var i in answers)
-            {
-                answerList.Add(i);
-            }
+                {
+                    answerList.Add(i);
+                }
 
             EnableCheckYourself((byte)texts.Count, new Point(14, 85), new Size(284, 141), 185);
             TextCheckYourself(answers, texts, isItRandom);
@@ -1493,7 +1501,7 @@ namespace WindowsPedApp
         {
             CheckYLabel1.Size = new Size(370, 65);
             CheckYLabel1.Text = "Соотнесите между собой методические приёмы и этапы урока.";
-            checkYNum +=1;
+            checkYNum += 1;
             List<string> texts = new List<string>();
             List<string> answers = new List<string>();
             //1
@@ -1508,9 +1516,9 @@ namespace WindowsPedApp
 
             if (checkYNum == 23)
                 foreach (var i in answers)
-            {
-                answerList.Add(i);
-            }
+                {
+                    answerList.Add(i);
+                }
 
             EnableCheckYourself((byte)texts.Count, new Point(14, 85), new Size(284, 117), 185);
             TextCheckYourself(answers, texts, isItRandom);
@@ -1620,11 +1628,11 @@ namespace WindowsPedApp
             }
 
         }
-
+        bool informationCheckY = false;
         private void CheckYNextButton_Click(object sender, EventArgs e)
         {
 
-            if (!(checkYNum >= 3 & checkYNum <= 5))
+            if (!(checkYNum >= 3 & checkYNum <= 5)) // 1,21,22,23
             {
                 //MessageBox.Show("1Next");
 
@@ -1639,8 +1647,17 @@ namespace WindowsPedApp
                     }
                 }
                 if (!temp) return;
+                foreach (var i in answertemp)
+                {
+                    answer.Add(i);
+                }
+                answertemp.Clear();
+                if (informationCheckY)
+                {
+                    CheckedScoreCheckYourself();
+                }
             }
-            else
+            else // 3, 4, 5
             {
                 //MessageBox.Show("2Next");
 
@@ -1659,7 +1676,7 @@ namespace WindowsPedApp
 
                 for (byte i = 0; i < checkY3.Count; i++)
                 {
-                    foreach (var j in answer)
+                    foreach (var j in answertemp)
                     {
                         if (checkY3[i] == j)
                         {
@@ -1667,93 +1684,48 @@ namespace WindowsPedApp
                         }
                     }
                 }
+                foreach (var i in answertemp)
+                    answer.Add(i);
                 checkScore += (byte)(temp / 2);
             }
             //MessageBox.Show(checkYNum.ToString());
 
-            bool information = false;
+            if (informationCheckY)
+            {
+                MessageBox.Show("Вы набрали: " + checkScore.ToString()+",\nответов: "+answerList.Count.ToString()+", выборов: "+answer.Count.ToString());
+            }
             switch (checkYNum)
             {
                 case 1:
-                    //MessageBox.Show("1CaseNext");
-                    if (information)
-                    {
-                        CheckedScoreCheckYourself();
-                        MessageBox.Show("Вы набрали: " + checkScore.ToString() +
-                            " очков из " + (answerList.Count).ToString()
-                            );
-                    }
-                    foreach (var i in answertemp)
-                    {
-                        answer.Add(i);
-                    }
                     checkYNum = 20;
                     CheckY21();
                     break;
                 case 21:
-                    if (information) { 
-                        CheckedScoreCheckYourself();
-                    MessageBox.Show("Вы набрали: " + checkScore.ToString() +
-                        " очков из " + (answerList.Count).ToString()
-                        );
-                    }
-                    foreach (var i in answertemp)
-                    {
-                        answer.Add(i);
-                    }
                     CheckY22();
                     break;
                 case 22:
-                    if (information)
-                    {
-                        CheckedScoreCheckYourself();
-                        MessageBox.Show("Вы набрали: " + checkScore.ToString() +
-                            " очков из " + (answerList.Count).ToString()
-                            );
-                    }
-                    foreach (var i in answertemp)
-                    {
-                        answer.Add(i);
-                    }
                     CheckY23();
                     break;
                 case 23:
-                    if (information)
-                    {
-                        CheckedScoreCheckYourself();
-                        MessageBox.Show("Вы набрали: " + checkScore.ToString() +
-                            " очков из " + (answerList.Count).ToString()
-                            );
-                    }
-                    foreach (var i in answertemp)
-                    {
-                        answer.Add(i);
-                    }
+                    CheckedScoreCheckYourself();
                     checkYNum = 2;
                     CheckY3();
                     break;
                 case 3:
-                    if (information)
-                    {
-                        MessageBox.Show("Вы набрали: " + checkScore.ToString() +
-                        " очков из " + (answerList.Count + 4 * 1).ToString()
-                        );
-                    }
                     CheckY4();
                     break;
                 case 4:
-                    if (information)
-                    {
-                        MessageBox.Show("Вы набрали: " + checkScore.ToString() +
-                        " очков из " + (answerList.Count + 4 * 2).ToString()
-                        );
-                    }
                     CheckY5();
                     break;
                 case 5:
-                    MessageBox.Show("Вы набрали: " + checkScore.ToString() +
-                        " очков из " + (answerList.Count + 4 * 3).ToString()
-                        );
+                    string inform = "";
+                    if (checkScore <= 14)
+                        inform = "плохо";
+                    else if (checkScore <= 20)
+                        inform = "хорошо";
+                    else
+                        inform = "отчлично";
+                    MessageBox.Show("Вы набрали: " + checkScore.ToString() + " - " + inform);
                     OpenMenu(sender, e);
                     break;
             }
@@ -1761,6 +1733,8 @@ namespace WindowsPedApp
 
         private void CheckYButtonReset_Click(object sender, EventArgs e)
         {
+            //CheckedScoreCheckYourself();
+            if(informationCheckY) MessageBox.Show("Вы набрали: " + checkScore.ToString());
             //MessageBox.Show("Reset");
             answertemp.Clear();
             switch (checkYNum)
