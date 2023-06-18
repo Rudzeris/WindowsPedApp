@@ -323,7 +323,7 @@
             HelperButtonClose.Tag = "Button";
             HelperButtonClose.Text = "X";
             HelperButtonClose.UseVisualStyleBackColor = false;
-            HelperButtonClose.Click += MainMenuCloseHelper;
+            HelperButtonClose.Click += HelperClose;
             // 
             // HelperLabel
             // 
@@ -336,7 +336,7 @@
             HelperLabel.TabIndex = 5;
             HelperLabel.Text = "Тут будет текст, но это не точно";
             HelperLabel.TextAlign = ContentAlignment.MiddleCenter;
-            HelperLabel.Click += MainMenuCloseHelper;
+            HelperLabel.Click += HelperClose;
             // 
             // HelperPictureBox
             // 
@@ -2016,7 +2016,7 @@
             CheckYourselfPanel.Controls.Add(CheckYButton1);
             CheckYourselfPanel.Controls.Add(CheckYLabel1);
             CheckYourselfPanel.Controls.Add(CheckYTextBox1);
-            CheckYourselfPanel.Location = new Point(12, 12);
+            CheckYourselfPanel.Location = new Point(540, 12);
             CheckYourselfPanel.Name = "CheckYourselfPanel";
             CheckYourselfPanel.Size = new Size(520, 637);
             CheckYourselfPanel.TabIndex = 17;
@@ -2073,24 +2073,25 @@
             // 
             // CheckYButtonReset
             // 
-            CheckYButtonReset.BackColor = SystemColors.ControlLight;
+            CheckYButtonReset.BackColor = Color.Tan;
             CheckYButtonReset.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
             CheckYButtonReset.Location = new Point(413, 19);
             CheckYButtonReset.Name = "CheckYButtonReset";
             CheckYButtonReset.Size = new Size(104, 46);
             CheckYButtonReset.TabIndex = 49;
-            CheckYButtonReset.Text = "Отмена";
+            CheckYButtonReset.Text = "Отменить выбор";
             CheckYButtonReset.UseVisualStyleBackColor = false;
             CheckYButtonReset.Click += CheckYButtonReset_Click;
             // 
             // CheckYNextButton
             // 
-            CheckYNextButton.BackColor = SystemColors.ControlLight;
+            CheckYNextButton.BackColor = Color.Tan;
             CheckYNextButton.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
             CheckYNextButton.Location = new Point(38, 553);
             CheckYNextButton.Name = "CheckYNextButton";
             CheckYNextButton.Size = new Size(369, 46);
             CheckYNextButton.TabIndex = 48;
+            CheckYNextButton.Text = "Продолжить";
             CheckYNextButton.UseVisualStyleBackColor = false;
             CheckYNextButton.Click += CheckYNextButton_Click;
             // 

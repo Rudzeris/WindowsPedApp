@@ -25,6 +25,8 @@ namespace WindowsPedApp
         string MethodicalTextSelect = "Выберите этап урока, на котором хотели бы использовать методические приёмы по повышению мотивации студентов. Можно выбрать несколько. После закройте это окошечко и нажмите кнопку Далее.";
         string TeacherTestText = "Тест на удовлетворённость работой (Р. Кунина).";
         string TestRecomendation = "По результатам тестирования можно выделить шесть рекомендаций, которые помогут Вам поддерживать собственное благополучие \r\n\r\n1. Повышайте «эмоциональную» квалификацию\r\n\r\n \r\n    Профессиональное развитие является одним из важных факторов высокого субъективного благополучия учителей. Но программы повышения квалификации могут быть направлены не только на развитие профессиональных знаний, но и на сферу эмоций педагогов.\r\n\r\n    Пример программы по развитию осознанности —  программа «Повышение осведомленности и жизнестойкости в сфере образования» (Cultivating Awareness and Resilience in Education, CARE). Она предназначена для обучения учителей и других работников образовательной сферы. Педагогов учат тому, что называется осознанностью: успокаивать тело и разум с помощью дыхания и движения, а также использовать идеи позитивной психологии, чтобы лучше регулировать свои эмоции. \r\n\r\n    На программе же педагоги учатся сделать паузу, поразмышлять и получить более точное представление о ситуации. Например, в момент столкновения с триггером можно сфокусироваться на дыхании.  Сосредоточить внимание на дыхании — это простой способ замедлиться и переключить внимание со стрессовой ситуации, а также перевести свое тело из состояния стресса в состояние расслабления. Проследив за своим дыханием даже на протяжении 30 секунд, можно уберечь себя от поспешных выводов и поступков. \r\n\r\n    В течение дня также можно попробовать практиковать «самопроверку» — остановиться и подумать, что чувствуете вы и ваше тело: усталость, грусть, холод, жажду и т. д. Цель техники состоит в том, чтобы, осознав и признав свои ощущения,  почувствовать себя в настоящем моменте.    \r\n\r\n \r\n2. Установите рабочие границы\r\n\r\n    Соблюдение рабочих границ позволяет не только сохранить баланс между личной и профессиональной жизнью, но и улучшить общее психологическое состояние. \r\n\r\n    Начните с постановки небольших целей и для этого в течение недели или двух ведите дневник, записывая туда все свои дела. Это позволит увидеть закономерности в своем расписании и понять, что можно изменить. \r\n\r\n    Например, чтобы снизить затраты времени на планирование сделайте универсальный банк заданий и видов активности, из которых, как из конструктора, можно затем создавать различные занятия.\r\n\r\n    С помощью дневника необходимо найти и установить комфортные для себя границы между работой и личной жизнью. Сначала определите для себя время работы и время, когда вы не будете отвечать на рабочие сообщения или звонки. Сделайте полноценный перерыв на обед, не совмещая его с решением рабочих задач, установите  время для последней проверки электронной почты и мессенджеров. \r\n\r\n    Также важно не забывать о своих личных интересах и хобби. Учителя должны находить время для занятий спортом, чтения, путешествий или других увлечений, которые помогают им расслабиться и восстановить энергию. \r\n\r\n    Также эксперты фонда предостерегают: «Не переусердствуйте: учителя — люди добросовестные, и есть соблазн ответить «да» на все, о чем вас спрашивают. Спросите себя, поддерживают ли эти предложения ваши приоритеты, и говорите «нет», когда это необходимо».\r\n\r\n\r\n3. Укрепляйте отношения с коллегами\r\n\r\n    Исследования показали, что эмоциональное выгорание «заразно»: учителя, которые контактируют с «перегоревшими коллегами, сами подвергаются большему риску. Межличностные взаимодействия между педагогами действуют в школе как «каналы распространения выгорания». \r\n\r\n    Для учителей важны три группы поддержки. Директора школ могут создавать позитивную и благоприятную рабочую среду. Коллеги способны поддерживать друг друга, работать сообща, снижать групповой стресс и требования профессиональной жизни и помогать регулировать эмоции. Учащиеся могут стать «эмоциональным вознаграждением» за работу педагога и придавать смысл профессии.\r\n\r\n\r\n4. Учите учеников ценить ваши усилия\r\n\r\n    Это поможет создать атмосферу уважения и признания, которая, в свою очередь, повысит ваше субъективное благополучие.\r\n\r\n    Как учителя могут создать положительные отношения с обучающимися? Во-первых, они могут проявлять интерес к жизни и предпочтениям своих учеников; во-вторых, использовать позитивное общение, включая похвалу и поддержку, чтобы помочь учащимся почувствовать себя увереннее и успешнее; в-третьих, подключать различные инновационные методы, такие как игры и коллективные задания, чтобы помочь ученикам улучшить свои отношения друг с другом и с ними.\r\n\r\n \r\n5. Развивайте свою креативность\r\n\r\n    Подходите к подготовке занятий творчески, исследуйте разные методики и формы обучения. Это поможет не только сделать уроки более интересными для учеников, но и добавит вам энтузиазм и удовольствие от работы.\r\n\r\n    Исследования показывают, чем выше степень креативности у учителя, тем выше и уровень его благополучия. Такие учителя испытывают большее чувство удовлетворенности от своей работы и имеют более высокую мотивацию.\r\n\r\n    Важно участвовать в профессиональных сообществах людей со схожими интересами, которые могут поддержать новаторский взгляд педагога.\r\n\r\n    Развивать креативность учителя можно через изучение и внедрение новых методов обучения, направленных на развитие изобретательности учеников. Внедряя такие методы, педагог вынужден мыслить открыто, развивать и свои творческие способности. Например, учитель может задавать учащимся открытые вопросы, не имеющие одного верного ответа и требующие творческого поиска решения. \r\n\r\n\r\n6. Внедряйте технологии\r\n\r\n    Использование цифровых технологий может позволить учителям снизить стресс, связанный с подготовкой к урокам и оценкой работ студентов. Например, использование онлайн-инструментов для автоматического сбора, проверки и оценки работ, таких, как Учи.ру или  ЯКласс, может существенно сократить время, затрачиваемое на эти процессы.\r\n    С помощью различных сервисов можно лучше организовать свое рабочее время. Например, использовать различные планировщики задач, такие, как Notion или Evernote. \r\n\r\n    Благодаря развитию технологий упростилась и коммуникация. Исследования продемонстрировали, что использование цифровых средств общения позволяет установить с родителями учащихся более открытые, партнерские отношения. Однако увеличение количества цифровой коммуникации несет риск размывания границ между работой и личной жизнью. Решение можно найти, используя, например, сервис VK Мессенджер, который позволяет учителю иметь два профиля — личный и рабочий; а значит, во время отдыха можно продолжать общаться с родными и друзьями, не отвлекаясь на рабочую переписку.    \r\n\r\n    Такие сообщества, как, например, Форум классных руководителей или Амбассадоры цифрового образования,  позволяют участникам оперативно реагировать на запросы  и поддерживать друг друга и  в профессиональных вопросах, и в личном общении, делиться экспертизой и  участвовать в событиях друг друга (викторинах, семинарах и т. д.). \r\n\r\n    Кроме того, использование цифровых технологий может помочь учителям проводить более интерактивные уроки, что сделает их интереснее и для учеников, и для самих педагогов. Например, с помощью сервиса Учи.ру можно создавать игровые задания.\r\n";
+        string CheckYourselfText1 = "Посмотрите на очередность текста слева и нажимайте по такой же очереди на текст справа. Каждый верный ответ - 1 балл.";
+        string CheckYourselfText2 = "Вам нужно выбрать 2 подходящих варианта ответа. Каждый ответ оценивается от 1 до 2 балла.";
         //ClassTechnicalMaps CTM = new ClassTechnicalMaps();
         Color defaultButtonColor = SystemColors.ControlLight;
         Color selectButtonColor = Color.Teal;
@@ -98,22 +100,22 @@ namespace WindowsPedApp
         Point sizeDefault = new Point(520, 637);
         Point locationDefault = new Point(12, 12);
 
-        private void HelperNewLocation(int x, int y)
+        private void HelperNewLocation(int xRight, int yDown)
         {
-            HelperLabel.Location = new Point(HelperLabel.Location.X + x, HelperLabel.Location.Y + y);
-            HelperButtonClose.Location = new Point(HelperButtonClose.Location.X + x, HelperButtonClose.Location.Y + y);
-            HelperPictureBox.Location = new Point(HelperPictureBox.Location.X + x, HelperPictureBox.Location.Y + y);
+            HelperLabel.Location = new Point(HelperLabel.Location.X + xRight, HelperLabel.Location.Y + yDown);
+            HelperButtonClose.Location = new Point(HelperButtonClose.Location.X + xRight, HelperButtonClose.Location.Y + yDown);
+            HelperPictureBox.Location = new Point(HelperPictureBox.Location.X + xRight, HelperPictureBox.Location.Y + yDown);
         }
 
-        private void OpenHelper(string str, int xSize = 0, int ySize = 0, int xLocation = 0, int yLocation = 0)
+        private void OpenHelper(string str, int xSize = 0, int ySize = 0, int xLocationLeft = 0, int yLocationUp = 0)
         {
             // Размер и местоположение меняется только для текста
             HelperPictureBox.Visible = true;
             HelperLabel.Visible = true;
             HelperButtonClose.Visible = true;
-            HelperLabel.Location = new Point(226 - xSize - xLocation, 230 - ySize - yLocation);
+            HelperLabel.Location = new Point(226 - xSize - xLocationLeft, 230 - ySize - yLocationUp);
             HelperLabel.Size = new Size(270 + xSize, 120 + ySize);
-            HelperButtonClose.Location = new Point(226 - xSize - xLocation, 230 - ySize - yLocation);
+            HelperButtonClose.Location = new Point(226 - xSize - xLocationLeft, 230 - ySize - yLocationUp);
             HelperPictureBox.Location = new Point(389, 344);
             HelperLabel.Text = str;
 
@@ -161,7 +163,7 @@ namespace WindowsPedApp
         {
             object a = new object();
             EventArgs b = new EventArgs();
-            MainMenuCloseHelper(a, b);
+            HelperClose(a, b);
             Instruction.Visible = false;
             MainMenu.Visible = false;
             Literatures.Visible = false;
@@ -272,7 +274,8 @@ namespace WindowsPedApp
             else if (Text == "Рекомендации по тесту")
             {
                 OpenOther(sender, e);
-            } else if (Text == "Проверь себя")
+            }
+            else if (Text == "Проверь себя")
             {
                 OpenMenu(sender, e);
             }
@@ -300,7 +303,7 @@ namespace WindowsPedApp
             Literatures.Visible = true;
             Literatures.Size = new Size(sizeDefault);
             Literatures.Location = locationDefault;
-            MainMenuCloseHelper(sender, e);
+            HelperClose(sender, e);
         }
         private void MainMenuButtonExit_Click(object sender, EventArgs e)
         {
@@ -319,7 +322,7 @@ namespace WindowsPedApp
             CheckYListButton.Clear();
             CheckYListText.Clear();
         }
-        private void MainMenuCloseHelper(object sender, EventArgs e)
+        private void HelperClose(object sender, EventArgs e)
         {
             HelperPictureBox.Visible = false;
             HelperLabel.Visible = false;
@@ -1335,6 +1338,8 @@ namespace WindowsPedApp
             answerList.Clear();
             checkY3.Clear();
             AddListCheckY();
+            OpenHelper(CheckYourselfText1, 0, 0, 120, -130);
+            HelperNewLocation(-20, 60);
             CheckY1();
             //answerList.Clear();
         }
@@ -1411,6 +1416,7 @@ namespace WindowsPedApp
 
         private void CheckY1()
         {
+            CheckYNextButton.Text = "Продолжить";
             CheckYLabel1.Size = new Size(370, 65);
             CheckYLabel1.Text = "В зависимости от дидактической цели урока, соотнесите между собой более подходящую формму занятий.";
 
@@ -1525,10 +1531,10 @@ namespace WindowsPedApp
             checkYNum = 23;
         }
 
-
-
         private void CheckY3()
         {
+            OpenHelper(CheckYourselfText2, 0, 0, 0, 0);
+            HelperNewLocation(-20, 60);
             checkYNum = 3;
             CheckYLabel1.Size = new Size(370, 65 + 50);
             CheckYLabel1.Text = "Педагог дает студенту задание, а тот не хочет его выполнять и при \r\nэтом заявляет: «Я не хочу это делать!» -Какой должна быть реакция \r\nпедагога? ";
@@ -1580,6 +1586,8 @@ namespace WindowsPedApp
         }
         private void CheckY5()
         {
+            CheckYNextButton.Text = "Завершить";
+
             checkYNum = 5;
             CheckYLabel1.Size = new Size(370, 65 + 50);
             CheckYLabel1.Text = "Студент, выразив педагогу свои сомнения по поводу возможности \r\nхорошего усвоения преподаваемого им предмета, говорит: «Я сказал \r\nвам о том, что меня беспокоит. Теперь вы скажите, в чем причина этого \r\nи как мне быть дальше?» -Что должен на это ответить педагог? ";
@@ -1631,7 +1639,7 @@ namespace WindowsPedApp
         bool informationCheckY = false;
         private void CheckYNextButton_Click(object sender, EventArgs e)
         {
-
+            HelperClose(sender, e);
             if (!(checkYNum >= 3 & checkYNum <= 5)) // 1,21,22,23
             {
                 //MessageBox.Show("1Next");
@@ -1689,10 +1697,10 @@ namespace WindowsPedApp
                 checkScore += (byte)(temp / 2);
             }
             //MessageBox.Show(checkYNum.ToString());
-
+            
             if (informationCheckY)
             {
-                MessageBox.Show("Вы набрали: " + checkScore.ToString()+",\nответов: "+answerList.Count.ToString()+", выборов: "+answer.Count.ToString());
+                MessageBox.Show("Вы набрали: " + checkScore.ToString() + ",\nответов: " + answerList.Count.ToString() + ", выборов: " + answer.Count.ToString());
             }
             switch (checkYNum)
             {
@@ -1734,7 +1742,7 @@ namespace WindowsPedApp
         private void CheckYButtonReset_Click(object sender, EventArgs e)
         {
             //CheckedScoreCheckYourself();
-            if(informationCheckY) MessageBox.Show("Вы набрали: " + checkScore.ToString());
+            if (informationCheckY) MessageBox.Show("Вы набрали: " + checkScore.ToString());
             //MessageBox.Show("Reset");
             answertemp.Clear();
             switch (checkYNum)
