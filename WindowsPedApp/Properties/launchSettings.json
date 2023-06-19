@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "WindowsPedApp": {
+      "commandName": "Project",
+      "nativeDebugging": true,
+      "sqlDebugging": false
+    }
+  }
+}
