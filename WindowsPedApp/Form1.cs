@@ -1587,10 +1587,10 @@ namespace WindowsPedApp
         private void CheckY5()
         {
             CheckYNextButton.Text = "Завершить";
-
+            
             checkYNum = 5;
-            CheckYLabel1.Size = new Size(370, 65 + 50);
-            CheckYLabel1.Text = "Студент, выразив педагогу свои сомнения по поводу возможности \r\nхорошего усвоения преподаваемого им предмета, говорит: «Я сказал \r\nвам о том, что меня беспокоит. Теперь вы скажите, в чем причина этого \r\nи как мне быть дальше?» -Что должен на это ответить педагог? ";
+            CheckYLabel1.Size = new Size(390, 65 + 82);
+            CheckYLabel1.Text = "Студент, выразив педагогу свои сомнения по поводу возможности хорошего усвоения преподаваемого им предмета, говорит: «Я сказал вам о том, что меня беспокоит. Теперь вы скажите, в чем причина этого и как мне быть дальше?» -Что должен на это ответить педагог? ";
             List<string> texts = new List<string>();
             texts.Add("пусто");
             texts.Add("пусто");
@@ -1601,14 +1601,14 @@ namespace WindowsPedApp
             checkY3.Clear();
             checkY3.Add("«У тебя, как мне кажется, комплекс неполноценности».");
             checkY3.Add("«У тебя нет никаких оснований для беспокойства»");
-            checkY3.Add("«Прежде, чем я смогу высказать обоснованное мнение, мне \r\nнеобходимо лучше разобраться в сути проблемы»");
+            checkY3.Add("«Прежде, чем я смогу высказать обоснованное мнение, мне необходимо лучше разобраться в сути проблемы»");
             checkY3.Add("«Я не готов (а) сейчас дать тебе точный ответ, мне надо подумать»");
-            checkY3.Add("«Давай подождем, поработаем и вернемся к обсуждению этой \r\nпроблемы через некоторое время. Я думаю, что нам удастся ее \r\nрешить»");
+            checkY3.Add("«Давай подождем, поработаем и вернемся к обсуждению этой проблемы через некоторое время. Я думаю, что нам удастся ее решить»");
             checkY3.Add("«Не волнуйся, и у меня в свое время ничего не получалось»");
 
             maxCheckedY = 2;
 
-            EnableCheckYourself((byte)texts.Count, new Point(14, 85 + 44), new Size(0, 65), 185 + 284);
+            EnableCheckYourself((byte)texts.Count, new Point(14, 85+64), new Size(0, 65), 185 + 284);
             TextCheckYourself(checkY3, texts, isItRandom);
         }
 
@@ -1697,7 +1697,7 @@ namespace WindowsPedApp
                 checkScore += (byte)(temp / 2);
             }
             //MessageBox.Show(checkYNum.ToString());
-            
+
             if (informationCheckY)
             {
                 MessageBox.Show("Вы набрали: " + checkScore.ToString() + ",\nответов: " + answerList.Count.ToString() + ", выборов: " + answer.Count.ToString());

@@ -2212,7 +2212,7 @@
             CheckYLabel1.Font = new Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             CheckYLabel1.Location = new Point(36, 4);
             CheckYLabel1.Name = "CheckYLabel1";
-            CheckYLabel1.Size = new Size(370, 192);
+            CheckYLabel1.Size = new Size(370, 133);
             CheckYLabel1.TabIndex = 32;
             CheckYLabel1.Text = resources.GetString("CheckYLabel1.Text");
             CheckYLabel1.TextAlign = ContentAlignment.BottomCenter;
